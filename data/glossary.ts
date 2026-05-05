@@ -515,7 +515,7 @@ export const glossary: GlossaryTerm[] = [
     updatedAt: "2026-05-05",
   },
   {
-    slug: "mx-pri",
+    slug: "mx-prioritet",
     term: "Hva er MX-prioritet?",
     shortDefinition:
       "MX-prioritet er et tall som bestemmer rekkefølgen mellom flere mailservere for samme domene. Lavere tall betyr høyere prioritet. Brukes til failover — hvis primær mailserver er nede, prøver mottakere automatisk neste i listen.",
@@ -1036,6 +1036,266 @@ export const glossary: GlossaryTerm[] = [
     faq: [
       { question: "Hva koster redemption?", answer: "For gTLD typisk 800-1500 NOK. For .no varierer det mellom registrarer. Sett auto-renew for å unngå." },
       { question: "Hvor mange dager har jeg?", answer: "30 dager redemption + 5 pending delete for de fleste gTLD. For .no ligner prosessen, men sjekk hos registraren." },
+    ],
+    updatedAt: "2026-05-05",
+  },
+
+  // ── Tillegg 2026-05-05: IP, IPv6, redirect-301, HTTPS-only, Let's Encrypt, DANE, domeneparkering ──
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    term: "Hva er en IP-adresse?",
+    slug: "ip-adresse",
+    category: "dns",
+    shortDefinition:
+      "En IP-adresse er det numeriske «husnummeret» til en datamaskin på internett. DNS oversetter domenenavn som domene.io til IP-adresser så datamaskiner finner hverandre.",
+    simpleExplanation:
+      "Tenk på internett som et postsystem. Domenenavn er navn folk husker — IP-adresser er adressene postbudet faktisk leverer til. Når du skriver et domene i nettleseren, slår DNS opp navnet og finner riktig IP, og forespørselen sendes dit. Uten IP-adresser hadde ingenting funnet veien.",
+    technicalExplanation:
+      "En IP-adresse identifiserer en nettverksgrensesnittsenhet — server, ruter, telefon — på et IP-nettverk. Det finnes to versjoner i bruk: IPv4 (32 bit, skrevet som fire tall adskilt med punktum, f.eks. 185.199.108.153) og IPv6 (128 bit, skrevet som åtte hex-grupper, f.eks. 2606:4700:4700::1111). Et domene kan peke til én eller flere IP-adresser via A-pekere (IPv4) og AAAA-pekere (IPv6). IP-adresser tildeles av regionale registrarer (RIPE NCC dekker Europa) og rutes mellom nett via BGP.",
+    example:
+      "domene.io kan peke til IPv4-adressen 76.76.21.21 og IPv6-adressen 2606:4700:90:0::abcd. Begge svarer på samme forespørsel — nettleseren velger basert på hva som er tilgjengelig.",
+    importance:
+      "Forståelse av IP-adresser er grunnleggende når du skal sette opp en nettside, feilsøke DNS, eller flytte tjenester mellom servere. A- og AAAA-pekere i DNS-konfigurasjonen er det som kobler domenet til der innholdet faktisk ligger.",
+    relatedTerms: ["dns", "a-peker", "aaaa-peker", "ipv4-vs-ipv6"],
+    relatedGuides: [],
+    faq: [
+      {
+        question: "Hvor mange IP-adresser kan ett domene ha?",
+        answer:
+          "Så mange du vil. Du kan legge til flere A- eller AAAA-pekere på samme navn — det kalles round-robin DNS og er en enkel form for lastbalansering. CDN-tjenester gjør dette automatisk.",
+      },
+      {
+        question: "Endres IP-adressen min hvis jeg flytter webhotell?",
+        answer:
+          "Ja. Når du flytter til en ny leverandør, peker du A-pekeren til den nye serverens IP-adresse. DNS-oppdateringen kan ta opptil 48 timer å spre seg, avhengig av TTL.",
+      },
+      {
+        question: "Kan jeg se IP-adressen til et hvilket som helst domene?",
+        answer:
+          "Ja. Bruk DNS-verktøyet vårt eller kommandoen dig domene.no A i en terminal. IP-adressen er offentlig informasjon — den må være det for at internett skal fungere.",
+      },
+    ],
+    updatedAt: "2026-05-05",
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    term: "Hva er forskjellen på IPv4 og IPv6?",
+    slug: "ipv4-vs-ipv6",
+    category: "dns",
+    shortDefinition:
+      "IPv4 og IPv6 er to versjoner av IP-protokollen. IPv4 er den gamle (32-bits adresser, ca. 4 milliarder mulige), IPv6 er den nye (128-bits, praktisk talt uendelig). De fungerer parallelt, og moderne tjenester støtter begge.",
+    simpleExplanation:
+      "IPv4 ble laget i 1981 og hadde plass til omtrent 4 milliarder adresser. Det høres mye ut, men internett har vokst forbi det. IPv6 er erstatningen, med så mange adresser at hver smarttelefon på jorda kan ha milliarder. I praksis kjører nesten alle nettverk begge samtidig — det kalles dual-stack.",
+    technicalExplanation:
+      "IPv4 bruker 32 bit fordelt på fire oktetter (f.eks. 192.0.2.1) og er begrenset til ca. 4,3 milliarder unike adresser. Knapphet løses i dag med NAT, CGNAT og IPv4-utleie. IPv6 bruker 128 bit i åtte hex-grupper (f.eks. 2001:db8::1), gir 2^128 adresser, og er designet uten NAT-behov. I DNS bruker du A-peker for IPv4 og AAAA-peker for IPv6. Operativsystemer prioriterer normalt IPv6 hvis tilgjengelig (Happy Eyeballs).",
+    example:
+      "google.com har både A-peker (142.250.74.46) og AAAA-peker (2a00:1450:400f:80c::200e). Nettleseren prøver IPv6 først, faller tilbake til IPv4 hvis IPv6 er trege eller mangler.",
+    importance:
+      "For et domene betyr det: legg på AAAA-peker når det er mulig. Du gjør tjenesten raskere for IPv6-brukere (en stor andel mobiltrafikk), og du fremtidssikrer oppsettet. De fleste seriøse webhotell og CDN-er gjør dette automatisk.",
+    relatedTerms: ["ip-adresse", "a-peker", "aaaa-peker", "dns"],
+    relatedGuides: [],
+    faq: [
+      {
+        question: "Må jeg ha IPv6 på domenet mitt?",
+        answer:
+          "Ikke for at det skal fungere — IPv4 er fortsatt allestedsnærværende. Men hvis leverandøren støtter IPv6, bør du ha det aktivert. Det gir bedre ytelse for mobile brukere og er en svak rangeringsfaktor i Googles søk.",
+      },
+      {
+        question: "Hvordan sjekker jeg om nettsiden min har IPv6?",
+        answer:
+          "Bruk DNS-verktøyet vårt og se etter en AAAA-peker. Mangler den, har du bare IPv4. Mange webhoteller aktiverer IPv6 i en innstilling — sjekk dokumentasjonen.",
+      },
+      {
+        question: "Hvorfor brukes ikke IPv6 mer?",
+        answer:
+          "IPv6 er ikke bakoverkompatibel med IPv4, så internett må migreres gradvis — eldre rutere, gateway-er og firmware må erstattes. Cirka halvparten av Google-trafikken globalt er IPv6 i 2026, men distribusjonen varierer mye mellom regioner og nettverk.",
+      },
+    ],
+    updatedAt: "2026-05-05",
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    term: "Hva er en 301-redirect?",
+    slug: "redirect-301",
+    category: "dns",
+    shortDefinition:
+      "En 301-redirect er en permanent omdirigering fra én URL til en annen. Brukes når du flytter innhold, bytter domene eller konsoliderer sider — og søkemotorer overfører rangeringen til den nye adressen.",
+    simpleExplanation:
+      "Når du sender brev til en gammel adresse og posten har «ettersending», fungerer 301 på samme måten på nett. Brukeren havner automatisk på den nye siden, og Google forstår at innholdet er flyttet permanent. Etter en stund glemmer søkemotorene den gamle adressen og indekserer kun den nye.",
+    technicalExplanation:
+      "301 Moved Permanently er en HTTP-statuskode som signaliserer at en ressurs er flyttet permanent til adressen i Location-headeren. Søkemotorer overfører over tid praktisk talt all rangering til den nye adressen (Google bekreftet i 2016 at det ikke er noe rangeringstap ved 301-er hvis brukt riktig). Implementeres på serversiden — i nginx via return 301, i Apache via .htaccess RewriteRule, i Cloudflare via Page Rules eller Bulk Redirects. Skiller seg fra 302 (midlertidig) og 308 (permanent, men beholder HTTP-metoden).",
+    example:
+      "Ved overgang fra HTTP til HTTPS bruker du 301: alt på http://eksempel.no/* sender 301 til https://eksempel.no/$1. Søkemotorer flytter rangeringen, brukerne merker ingenting, og du får sikkerhetsfordelen.",
+    importance:
+      "Riktig bruk av 301 er forskjellen mellom en migrering som beholder rangering og en som taper alt. Når du bytter domene, restrukturerer URL-er, eller konsoliderer to nettsider, er 301 verktøyet som forteller søkemotorer hva som er hva.",
+    relatedTerms: ["https", "hsts"],
+    relatedGuides: [],
+    faq: [
+      {
+        question: "Hva er forskjellen på 301 og 302?",
+        answer:
+          "301 er permanent — søkemotorer overfører rangering til den nye adressen og slutter etterhvert å indeksere den gamle. 302 er midlertidig — søkemotorer beholder den gamle adressen i indeksen. Bruk 301 i 99 % av tilfellene; 302 kun for ekte midlertidige situasjoner som A/B-tester.",
+      },
+      {
+        question: "Hvor lenge bør jeg ha 301-redirects på plass?",
+        answer:
+          "Minst 12 måneder, helst permanent. Selv om Google overfører rangering relativt raskt (uker til måneder), kan eldre lenker fra andre nettsider fortsatt sende trafikk til gamle URL-er i flere år.",
+      },
+      {
+        question: "Kan jeg kjede 301-er?",
+        answer:
+          "Teknisk ja, men unngå det. Hver omdirigering legger til ventetid og tar kraft fra rangeringen. Hvis A → B → C, sett heller A → C direkte. Google følger normalt opp til 5 omdirigeringer i serie før de gir opp.",
+      },
+    ],
+    updatedAt: "2026-05-05",
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    term: "Hva er HTTPS-only og HSTS?",
+    slug: "https-only",
+    category: "dnssec",
+    shortDefinition:
+      "HTTPS-only betyr at nettsiden kun aksepterer kryptert trafikk. HSTS er en mekanisme som ber nettleseren huske dette og automatisk bruke HTTPS, selv om brukeren skriver HTTP.",
+    simpleExplanation:
+      "Du har sikkert lagt merke til at de fleste nettsider i dag har en hengelås i adressefeltet — det betyr HTTPS, altså kryptert tilkobling. HTTPS-only går et steg lenger og slår av HTTP helt. HSTS gjør at nettleseren automatisk bytter til HTTPS allerede før den prøver å laste siden, så ingen kan legge seg imellom og snoke.",
+    technicalExplanation:
+      "HTTPS-only oppnås ved å konfigurere serveren til å returnere 301 fra alle HTTP-forespørsler til HTTPS-versjonen. HSTS (HTTP Strict Transport Security) implementeres via Strict-Transport-Security-headeren, som forteller nettleseren å kun bruke HTTPS i en gitt tid (f.eks. 'max-age=31536000; includeSubDomains; preload'). Med preload-flagget kan domenet legges til Chromium HSTS-listen via hstspreload.org — da hardkodes HTTPS i nettleseren. Beskytter mot SSL-stripping og ondsinnet HTTP-svar på første besøk.",
+    example:
+      "Etter at HSTS er aktivert med preload, vil en bruker som skriver eksempel.no i adressefeltet aldri sende en HTTP-forespørsel — nettleseren går rett til HTTPS, selv på første besøk og selv på et åpent café-WiFi.",
+    importance:
+      "I 2026 er HTTPS-only de facto standard. Søkemotorer ranker det høyere, nettlesere advarer mot HTTP-sider, og de fleste moderne API-er, payment-tjenester og webhooks krever HTTPS. HSTS er det siste stykket som tetter et lite men reelt sikkerhetshull i overgangen.",
+    relatedTerms: ["https", "hsts", "tls", "ssl"],
+    relatedGuides: [],
+    faq: [
+      {
+        question: "Trenger jeg HSTS hvis jeg allerede har 301 fra HTTP til HTTPS?",
+        answer:
+          "Ja. 301 hjelper på etterfølgende besøk, men første gang en bruker skriver eksempel.no, sender nettleseren en HTTP-forespørsel som kan kapres på et utrygt nettverk. HSTS forhindrer dette ved at nettleseren husker å bruke HTTPS for fremtidige besøk.",
+      },
+      {
+        question: "Hva er HSTS preload?",
+        answer:
+          "En liste over domener som hardkodes i Chromium-baserte nettlesere (Chrome, Edge, Brave) og Firefox. Når domenet er der, brukes HTTPS uansett — selv på aller første besøk. Krever søknad via hstspreload.org og oppfyllelse av strenge krav (HSTS-header med preload-flagg, gyldig sertifikat, alle subdomener på HTTPS).",
+      },
+      {
+        question: "Kan jeg skru av HSTS senere?",
+        answer:
+          "Ja, men det tar tid. Du må sette max-age til 0 og vente til alle eksisterende brukere har vært innom siden så cachen utløper. Hvis du har søkt om preload, må du bruke fjerningsskjemaet på hstspreload.org — det kan ta måneder å bli fjernet fra listen.",
+      },
+    ],
+    updatedAt: "2026-05-05",
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    term: "Hva er Let's Encrypt?",
+    slug: "lets-encrypt",
+    category: "dnssec",
+    shortDefinition:
+      "Let's Encrypt er en gratis, automatisert sertifiseringsmyndighet som utsteder TLS/SSL-sertifikater. Drives av non-profit Internet Security Research Group og utgjør i dag flertallet av sertifikater på det offentlige internett.",
+    simpleExplanation:
+      "Før Let's Encrypt måtte du betale for et SSL-sertifikat, og prosessen var manuell. Det stoppet mange små nettsider fra å aktivere HTTPS. Let's Encrypt gjorde det gratis og automatisk — de fleste webhoteller og plattformer bruker det i dag uten at du tenker over det. Når du ser hengelåsen i nettleseren, er sjansen god for at sertifikatet kom fra Let's Encrypt.",
+    technicalExplanation:
+      "Let's Encrypt bruker ACME-protokollen (RFC 8555) for å automatisere domenevalidering, utstedelse og fornying. Sertifikater er gyldige i 90 dager — kort levetid med tanke på automatisk fornying tvinger frem god rotasjonshygiene. Validering skjer via HTTP-01 (legg en fil under /.well-known/acme-challenge/), DNS-01 (legg en TXT-peker), eller TLS-ALPN-01. Klienter inkluderer Certbot, acme.sh, Caddy (innebygd), og Cloudflare (skjult bak deres proxy). Støtter wildcard-sertifikater via DNS-01.",
+    example:
+      "Når du peker et domene mot Vercel, Netlify eller Cloudflare Pages, utsteder de automatisk et Let's Encrypt-sertifikat innen sekunder. Du gjør ingenting — det bare fungerer.",
+    importance:
+      "Let's Encrypt har drevet HTTPS-andelen på nettet fra ca. 30 % i 2015 til over 95 % i 2026. For et nytt domene betyr det: du trenger praktisk talt aldri å betale for, eller manuelt installere, et grunnleggende sertifikat. Tjenesten er stabil nok til at de fleste produksjonsmiljøer bruker den.",
+    relatedTerms: ["ssl", "tls", "https", "wildcard-sertifikat"],
+    relatedGuides: [],
+    faq: [
+      {
+        question: "Er Let's Encrypt-sertifikater dårligere enn betalte?",
+        answer:
+          "Nei — de bruker samme kryptografi og er like betrodde av nettlesere. Forskjellen ligger i nivået av validering: Let's Encrypt tilbyr kun Domain Validation (DV), mens betalte alternativer kan tilby Organization Validation (OV) og Extended Validation (EV) som bekrefter selskapsidentitet. For de aller fleste nettsider er DV mer enn nok.",
+      },
+      {
+        question: "Hva skjer hvis Let's Encrypt går ned?",
+        answer:
+          "Eksisterende sertifikater fortsetter å være gyldige til de utløper. Men automatisk fornying stopper — så hvis tjenesten er nede i mer enn 30 dager, må du bytte til en annen sertifiseringsmyndighet. I praksis har de hatt høy oppetid, og ZeroSSL og Buypass tilbyr ACME-kompatible alternativer.",
+      },
+      {
+        question: "Må jeg fornye sertifikatene selv?",
+        answer:
+          "Nei, hvis du bruker en moderne klient (Certbot, Caddy, eller en plattform som Vercel). Den fornyer automatisk når sertifikatet er innen 30 dager fra utløp. Hvis du har manuell oppsett, må du sette opp en cron-jobb eller systemd timer.",
+      },
+    ],
+    updatedAt: "2026-05-05",
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    term: "Hva er DANE?",
+    slug: "dane",
+    category: "dnssec",
+    shortDefinition:
+      "DANE (DNS-based Authentication of Named Entities) er en standard som lar deg publisere TLS-sertifikatinformasjon i DNS, beskyttet av DNSSEC. Brukes mest for sikker e-postoverføring (SMTP).",
+    simpleExplanation:
+      "Vanligvis stoler nettleseren på et stort antall sertifiseringsmyndigheter (CA-er) — hvilken som helst av dem kan utstede et sertifikat for domenet ditt. DANE snur dette: domeneeieren legger en TLSA-peker i DNS som sier «mitt sertifikat er dette og bare dette». Hvis noen prøver å mate inn et annet sertifikat — selv om det er gyldig fra en CA — vil mottakeren avvise det.",
+    technicalExplanation:
+      "DANE krever DNSSEC — uten signerte DNS-svar er TLSA-pekeren manipulerbar. TLSA-pekeren publiseres på _<port>._<protocol>.<domain> (f.eks. _25._tcp.eksempel.no for SMTP) og inneholder sertifikatets hash sammen med usage-, selector- og matching-felt. For SMTP brukes DANE primært via MTA-STS-alternativet — Postfix, Exim og store e-postoperatører som Comcast og hver av de norske ISP-ene støtter det. For HTTPS er DANE foreslått, men nettleserne har historisk ikke implementert det fordi DNSSEC-validering tar lang tid.",
+    example:
+      "Ved sending av e-post fra postfix til en mottaker med DANE-konfigurasjon, slår serveren opp _25._tcp.mottaker.no, validerer TLSA-pekeren mot DNSSEC-signaturer, og krever at sertifikatet matcher før den fortsetter med STARTTLS-oppgradering.",
+    importance:
+      "DANE løser et virkelig sikkerhetshull i e-postoverføring: en angriper med kontroll over en mellomliggende ruter kan ellers fjerne STARTTLS-svaret og tvinge frem ukryptert overføring. Med DANE må mottakerens sertifikat matche eksakt — og DNSSEC sikrer at TLSA-pekeren ikke kan forfalskes. For organisasjoner som tar e-postsikkerhet på alvor (banker, det offentlige), er DANE-MTA et viktig tiltak.",
+    relatedTerms: ["dnssec", "tls", "smtp", "mx-peker"],
+    relatedGuides: [],
+    faq: [
+      {
+        question: "Trenger jeg DANE for et vanlig domene?",
+        answer:
+          "Sannsynligvis ikke. DANE for HTTPS støttes praktisk talt ikke i nettlesere. DANE for SMTP er nyttig hvis du driver din egen mailserver og kommuniserer med organisasjoner som krever det — ellers gir det liten praktisk nytte foreløpig.",
+      },
+      {
+        question: "Hvordan sjekker jeg om et domene har DANE?",
+        answer:
+          "Slå opp _25._tcp.<domene>.<tld> i et DNS-verktøy som støtter TLSA-pekere, eller bruk Internet.nl sitt DANE-test som validerer hele kjeden. Krever at domenet også har DNSSEC aktivert — uten det er TLSA-pekeren ubrukelig.",
+      },
+      {
+        question: "Hva er forskjellen på DANE og MTA-STS?",
+        answer:
+          "Begge sikrer SMTP-overføring, men på forskjellige måter. DANE bruker DNSSEC og publiserer sertifikatinformasjon i DNS. MTA-STS bruker DNS bare til oppdagelse, og henter den faktiske policyen via HTTPS — og er enklere å implementere uten DNSSEC. Mange sender med begge for redundans.",
+      },
+    ],
+    updatedAt: "2026-05-05",
+  },
+
+  // ──────────────────────────────────────────────────────────────────────────
+  {
+    term: "Hva er domeneparkering?",
+    slug: "domeneparkering",
+    category: "domeneinvestering",
+    shortDefinition:
+      "Domeneparkering er praksisen med å la et registrert, men ubrukt domene vise en standardside — ofte med annonser eller kontaktinformasjon for salg. Holder domenet i live mens eieren venter på en kjøper eller et fremtidig prosjekt.",
+    simpleExplanation:
+      "Hvis du eier et domene du ikke bruker akkurat nå, har du to valg: la det stå tomt (besøkende får feil), eller «parkere» det. En parkert side er en enkel landingsside som forteller at domenet er ledig for salg, eller bare bekrefter at det er registrert. Investorer som eier hundrevis av domener parkerer dem alle automatisk gjennom plattformer som Sedo, Dan.com eller Afternic.",
+    technicalExplanation:
+      "Teknisk er parkering bare DNS-konfigurasjon: A-pekeren peker mot en parkeringsleverandørs server, som returnerer en automatisk generert side basert på domenets nøkkelord. Mer avanserte parkeringer integrerer pay-per-click-annonser via Google AdSense for Domains eller lignende, og videresender brukerinteresse til kjøpsskjemaer. Salgsleverandører som Dan.com tilbyr standardiserte 'BIN' (buy-it-now)-sider og Escrow-håndtering.",
+    example:
+      "En domeneinvestor eier oslohotell.no men har ingen aktiv tjeneste der. Domenet er parkert hos Dan.com med en enkel side som sier «Dette domenet er til salgs» og en lenke til kjøpsskjema. Trafikk fra direkte typing eller gamle lenker konverteres til salgshenvendelser.",
+    importance:
+      "For domeneinvestorer er parkering inntektskilden mens de venter på kjøper. For vanlige eiere er parkering en ryddig måte å håndtere domener du ikke bruker akkurat nå — bedre enn at besøkende møter en feilmelding eller et utløpt sertifikat.",
+    relatedTerms: ["domeneinvestering", "domeneutleie", "registrar"],
+    relatedGuides: [],
+    faq: [
+      {
+        question: "Tjener man penger på parkerte domener?",
+        answer:
+          "Sjelden mye. Inntekt fra parkering er lav på generiske domener (få cents per klikk), men kan være meningsfull på domener med eksisterende type-in-trafikk — typisk korte, beskrivende domener på populære TLD-er. For de fleste er parkering en service mens man venter på salg, ikke en inntektskilde.",
+      },
+      {
+        question: "Påvirker parkering SEO hvis jeg senere bygger en nettside?",
+        answer:
+          "Nei, ikke direkte. Søkemotorer behandler parkerte domener som tomme. Når du senere lanserer en ekte nettside, starter du på et nøytralt utgangspunkt. Unntaket er hvis det parkerte domenet har vært brukt til lavkvalitets ad-traffic — da kan det ha en svak negativ effekt som forsvinner over tid.",
+      },
+      {
+        question: "Kan jeg parkere et .no-domene?",
+        answer:
+          "Ja, men Norid har retningslinjer mot ren spekulasjon. .no-innehavere må kunne dokumentere reell bruk eller plan. I praksis aksepteres en parkeringsside med kontaktinformasjon — det er rene salgssider med kun annonser som er problematisk hvis det vekker oppmerksomhet.",
+      },
     ],
     updatedAt: "2026-05-05",
   },

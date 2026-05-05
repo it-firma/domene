@@ -743,6 +743,142 @@ export const comparisons: Comparison[] = [
     ],
     updatedAt: "2026-05-05",
   },
+
+  // ── Tillegg 2026-05-05: Sekskant-sammenligning av seks registrarer på 7 strategiske TLD-er ──
+  {
+    slug: "norske-registrarer-fokus",
+    title: "Sammenligning av norske registrarer på 7 strategiske TLD-er",
+    description:
+      "Direkte prissammenligning av seks registrarer for norske kunder, fokusert på .no, nordiske TLD-er, .com, .io og .ai. Alle priser inkl. mva.",
+    intro:
+      "Vi har manuelt verifisert priser hos seks registrarer som retter seg mot norske kunder: tre uavhengige (Domeneshop, Webhuset, Simply.com) og tre Group.One-eide (Uniweb, One.com, ProISP). Alle priser i NOK inkludert 25% mva for direkte sammenlignbarhet. Førsteårspriser kan være lavere enn vist — disse er fornyingsprisene som er det som faktisk teller over tid.",
+    methodology:
+      "Priser er hentet direkte fra leverandørenes prislister og bestillingsskjema (verifisert 5. mai 2026). Tre leverandører (Domeneshop) oppgir inkl. mva — de andre er konvertert fra eks. mva ved 1.25x. ProISP bekreftet via handlekurv-skjermbilde. Vinneren per TLD er den med lavest fornyingspris.",
+    columns: [
+      { key: "no_renew", label: ".no fornying" },
+      { key: "se_renew", label: ".se fornying" },
+      { key: "dk_renew", label: ".dk fornying" },
+      { key: "fi_renew", label: ".fi fornying" },
+      { key: "com_renew", label: ".com fornying" },
+      { key: "io_renew", label: ".io fornying" },
+      { key: "ai_renew", label: ".ai fornying" },
+    ],
+    providers: [
+      {
+        name: "Domeneshop",
+        href: "https://domene.shop",
+        values: {
+          no_renew: "199 kr",
+          se_renew: "275 kr",
+          dk_renew: "220 kr",
+          fi_renew: "220 kr",
+          com_renew: "220 kr",
+          io_renew: "875 kr",
+          ai_renew: "2750 kr",
+        },
+        note: "Norsk eid og uavhengig. Vinner på .fi. Volumrabatt fra 5+ domener.",
+      },
+      {
+        name: "Webhuset",
+        href: "https://www.webhuset.no",
+        values: {
+          no_renew: "124 kr",
+          se_renew: "311 kr",
+          dk_renew: "249 kr",
+          fi_renew: "474 kr",
+          com_renew: "188 kr",
+          io_renew: "874 kr",
+          ai_renew: "3749 kr",
+        },
+        note: "Norsk eid og uavhengig. Vinner på .no, .com og .io. Bergen-basert.",
+      },
+      {
+        name: "Uniweb",
+        href: "https://www.uniweb.no",
+        values: {
+          no_renew: "300 kr",
+          se_renew: "320 kr",
+          dk_renew: "320 kr",
+          fi_renew: "450 kr",
+          com_renew: "336 kr",
+          io_renew: "1036 kr",
+          ai_renew: "1624 kr",
+        },
+        note: "Del av Group.One-konsernet (sammen med ProISP og One.com).",
+      },
+      {
+        name: "One.com",
+        href: "https://www.one.com/no",
+        values: {
+          no_renew: "286 kr",
+          se_renew: "306 kr",
+          dk_renew: "188 kr",
+          fi_renew: "344 kr",
+          com_renew: "349 kr",
+          io_renew: "1012 kr",
+          ai_renew: "2388 kr",
+        },
+        note: "Dansk hovedkontor, del av Group.One. Vinner på .dk.",
+      },
+      {
+        name: "ProISP",
+        href: "https://www.proisp.no",
+        values: {
+          no_renew: "275 kr",
+          se_renew: "320 kr",
+          dk_renew: "320 kr",
+          fi_renew: "249 kr",
+          com_renew: "336 kr",
+          io_renew: "974 kr",
+          ai_renew: "1624 kr",
+        },
+        note: "Del av Group.One. Teknisk profil, samme .ai-pris som Uniweb.",
+      },
+      {
+        name: "Simply.com",
+        href: "https://www.simply.com/no",
+        values: {
+          no_renew: "175 kr",
+          se_renew: "251 kr",
+          dk_renew: "192 kr",
+          fi_renew: "283 kr",
+          com_renew: "250 kr",
+          io_renew: "1165 kr",
+          ai_renew: "1835 kr",
+        },
+        note: "Dansk uavhengig (tidligere UnoEuro). Vinner på .se.",
+      },
+    ],
+    importantNotes: [
+      "Tre av seks (Uniweb, One.com, ProISP) er Group.One-konsern — bekreftet av identisk pris på .ai (1 624 kr) hos Uniweb og ProISP.",
+      "Førsteårspriser er ofte langt lavere (Simply .se fra 6 kr, Webhuset .no fra 9 kr) — beregn alltid totalkostnad over 3-5 år.",
+      "Domeneshop er den eneste med automatisk volumrabatt fra 5+ domener.",
+      "For .ai er internasjonale registrarer som Porkbun ofte rimeligere enn alle seks i sammenligningen.",
+    ],
+    faq: [
+      {
+        question: "Hvilken registrar er rimeligst totalt?",
+        answer:
+          "Det avhenger av TLD-mix. Webhuset vinner på .no, .com og .io. Domeneshop vinner på .fi. Simply.com vinner på .se. One.com vinner på .dk. Uniweb og ProISP deler førsteplass på .ai. Beregn totalkostnad over 3-5 år for din spesifikke portefølje.",
+      },
+      {
+        question: "Hvorfor har Uniweb og ProISP samme pris på .ai?",
+        answer:
+          "Begge er del av Group.One-konsernet. Identisk pris (1 624 kr inkl. mva) bekrefter samme bakliggende infrastruktur. Det betyr at hvis du fordeler domener mellom dem som risikospredning, oppnår du det ikke — du er fortsatt avhengig av samme selskap.",
+      },
+      {
+        question: "Er disse prisene inkludert mva?",
+        answer:
+          "Ja, alle priser i tabellen er inkludert 25% mva. Domeneshop oppgir slik på sin prisliste. De andre fem oppgir eks. mva — vi har konvertert ved å multiplisere med 1.25 for direkte sammenligning. Ved kjøp som privatperson er prisen i tabellen det du faktisk betaler.",
+      },
+      {
+        question: "Bør jeg flytte domenet hvis en annen registrar er billigere?",
+        answer:
+          "Sjelden lønnsomt for én eller to domener — flytteprosessen tar tid og noen registrarer krever fornyingsbetaling som del av flytting. For 10+ domener kan det gi reell besparelse, særlig hvis du flytter til en med volumrabatt eller bedre nordiske priser. Beregn besparelsen over 3 år før du bestemmer deg.",
+      },
+    ],
+    updatedAt: "2026-05-05",
+  },
 ];
 
 export const findComparison = (slug: string) =>

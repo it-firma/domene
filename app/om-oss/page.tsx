@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   alternates: { canonical: canonical("/om-oss") },
 };
 
+const isRealHref = (href: string) => href !== "#" && href.length > 0;
+
 export default function AboutPage() {
   const crumbs = [
     { label: "Hjem", href: "/" },
@@ -80,17 +82,29 @@ export default function AboutPage() {
               domene.io er én av fire portaler under DomainNordic Advisory Group.
             </p>
             <ul className="flex flex-col gap-2 list-none m-0 p-0">
-              {site.family.map((f) => (
-                <li
-                  key={f.name}
-                  className="flex items-center justify-between font-display text-[14px]"
-                >
-                  <span className="text-ink font-medium">{f.name}</span>
-                  <span className="text-muted-light text-[12.5px]">
-                    {f.country}
-                  </span>
-                </li>
-              ))}
+              {site.family.map((f) => {
+                const live = isRealHref(f.url);
+                return (
+                  <li
+                    key={f.name}
+                    className="flex items-center justify-between font-display text-[14px]"
+                  >
+                    {live ? (
+                      <Link
+                        href={f.url}
+                        className="text-ink font-medium hover:text-brand"
+                      >
+                        {f.name}
+                      </Link>
+                    ) : (
+                      <span className="text-ink/70 font-medium">{f.name}</span>
+                    )}
+                    <span className="text-muted-light text-[12.5px]">
+                      {live ? f.country : `${f.country} · kommer`}
+                    </span>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </section>

@@ -31,14 +31,19 @@ const cols: { title: string; items: { label: string; href: string }[] }[] = [
     title: "Selskap",
     items: [
       { label: "Om oss", href: "/om-oss" },
-      { label: "DomainNordic", href: "#" },
+      { label: "DomainNordic", href: "/om-oss" },
       { label: "Kontakt", href: "/kontakt" },
       { label: "Eksperthjelp", href: "/eksperthjelp" },
     ],
   },
 ];
 
+/** True when href is a real route, not a placeholder. */
+const isRealHref = (href: string) => href !== "#" && href.length > 0;
+
 export function Footer() {
+  const hasLinkedin = isRealHref(site.social.linkedin);
+  const hasX = isRealHref(site.social.x);
   return (
     <footer className="bg-[#050A1E] text-white/70">
       <div className="mx-auto max-w-container px-7 py-20">
@@ -52,22 +57,28 @@ export function Footer() {
               rådgivningsgruppe som hjelper bedrifter med strategisk eierskap av
               domener — bygget for langsiktige eiendeler, ikke transaksjoner.
             </p>
-            <div className="flex gap-2.5">
-              <Link
-                href={site.social.linkedin}
-                aria-label="LinkedIn"
-                className="flex h-[38px] w-[38px] items-center justify-center rounded-full bg-white/[0.06] text-white/70 transition hover:bg-white/[0.12] hover:text-white"
-              >
-                <Icon.Linkedin size={16} />
-              </Link>
-              <Link
-                href={site.social.x}
-                aria-label="X"
-                className="flex h-[38px] w-[38px] items-center justify-center rounded-full bg-white/[0.06] text-white/70 transition hover:bg-white/[0.12] hover:text-white"
-              >
-                <Icon.X size={14} />
-              </Link>
-            </div>
+            {(hasLinkedin || hasX) && (
+              <div className="flex gap-2.5">
+                {hasLinkedin && (
+                  <Link
+                    href={site.social.linkedin}
+                    aria-label="LinkedIn"
+                    className="flex h-[38px] w-[38px] items-center justify-center rounded-full bg-white/[0.06] text-white/70 transition hover:bg-white/[0.12] hover:text-white"
+                  >
+                    <Icon.Linkedin size={16} />
+                  </Link>
+                )}
+                {hasX && (
+                  <Link
+                    href={site.social.x}
+                    aria-label="X"
+                    className="flex h-[38px] w-[38px] items-center justify-center rounded-full bg-white/[0.06] text-white/70 transition hover:bg-white/[0.12] hover:text-white"
+                  >
+                    <Icon.X size={14} />
+                  </Link>
+                )}
+              </div>
+            )}
           </div>
 
           <div>
@@ -98,12 +109,21 @@ export function Footer() {
               <ul className="flex flex-col gap-2.5">
                 {col.items.map((item) => (
                   <li key={item.href + item.label}>
-                    <Link
-                      href={item.href}
-                      className="font-display text-sm text-white/75 transition hover:text-white"
-                    >
-                      {item.label}
-                    </Link>
+                    {isRealHref(item.href) ? (
+                      <Link
+                        href={item.href}
+                        className="font-display text-sm text-white/75 transition hover:text-white"
+                      >
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <span
+                        className="font-display text-sm text-white/40 cursor-default"
+                        title="Kommer snart"
+                      >
+                        {item.label}
+                      </span>
+                    )}
                   </li>
                 ))}
               </ul>

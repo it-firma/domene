@@ -7,6 +7,7 @@ import { GlossaryCard } from "@/components/GlossaryCard";
 import { ToolCard } from "@/components/ToolCard";
 import { KnowledgeBaseSidebar } from "@/components/KnowledgeBaseSidebar";
 import { AnswerBox } from "@/components/AnswerBox";
+import { CrossLinkBox } from "@/components/CrossLinkBox";
 import { FAQ } from "@/components/FAQ";
 import { Summary } from "@/components/Summary";
 import { CTA } from "@/components/CTA";
@@ -48,6 +49,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
 
   const catGuides = guidesByCategory(cat.slug);
   const startHere = cat.startHere ? findGuide(cat.startHere) : undefined;
+  const matchingTerm = findGlossary(cat.slug);
 
   const guidesByDifficulty: Record<Difficulty, typeof catGuides> = {
     nybegynner: catGuides.filter((g) => g.difficulty === "nybegynner"),
@@ -97,6 +99,18 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
               </p>
 
               <AnswerBox>{cat.shortAnswer}</AnswerBox>
+
+              {matchingTerm && (
+                <CrossLinkBox
+                  eyebrow="Rask definisjon"
+                  title={matchingTerm.term}
+                  description={
+                    matchingTerm.shortDefinition.split(".")[0] + "."
+                  }
+                  href={`/ordliste/${matchingTerm.slug}`}
+                  ctaLabel="Se ordlisten"
+                />
+              )}
 
               {/* Start here */}
               {startHere && (

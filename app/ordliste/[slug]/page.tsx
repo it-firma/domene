@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { AnswerBox } from "@/components/AnswerBox";
+import { CrossLinkBox } from "@/components/CrossLinkBox";
 import { FAQ } from "@/components/FAQ";
 import { RelatedLinks } from "@/components/RelatedLinks";
 import { CTA } from "@/components/CTA";
@@ -44,6 +45,7 @@ export default function GlossaryTermPage({
   const t = findGlossary(params.slug);
   if (!t) notFound();
   const cat = findCategory(t.category);
+  const matchingCategory = findCategory(t.slug);
 
   const crumbs = [
     { label: "Hjem", href: "/" },
@@ -92,6 +94,16 @@ export default function GlossaryTermPage({
           </h1>
 
           <AnswerBox>{t.shortDefinition}</AnswerBox>
+
+          {matchingCategory && (
+            <CrossLinkBox
+              eyebrow="Gå dypere"
+              title={matchingCategory.h1}
+              description={matchingCategory.shortDescription}
+              href={`/kunnskapsbase/${matchingCategory.slug}`}
+              ctaLabel="Utforsk kategorien"
+            />
+          )}
 
           <section className="mt-12">
             <h2 className="font-display text-[22px] font-medium tracking-[-0.01em] text-ink mb-3">

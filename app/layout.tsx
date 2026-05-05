@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { StructuredData } from "@/components/StructuredData";
+import {
+  CookieConsentProvider,
+  CookieConsentBanner,
+  CookieConsentPreferences,
+} from "@/components/CookieConsent";
 import { ldOrganization, ldWebsite, canonical } from "@/lib/seo";
 import { site } from "@/lib/site";
 import "./globals.css";
@@ -80,6 +85,27 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap"
           rel="stylesheet"
         />
+        {/*
+          Google Consent Mode v2 — initialiser FØR analytics-script lastes.
+          Setter alle samtykke-kategorier til "denied" som utgangspunkt;
+          CookieConsentProvider oppdaterer dette når brukeren gir samtykke.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('consent', 'default', {
+                'analytics_storage': 'denied',
+                'ad_storage': 'denied',
+                'functionality_storage': 'denied',
+                'personalization_storage': 'denied',
+                'security_storage': 'granted',
+                'wait_for_update': 500
+              });
+            `,
+          }}
+        />
       </head>
       <body className="font-display">
         <a
@@ -88,9 +114,13 @@ export default function RootLayout({
         >
           Hopp til innhold
         </a>
-        <Header />
-        <main id="main">{children}</main>
-        <Footer />
+        <CookieConsentProvider>
+          <Header />
+          <main id="main">{children}</main>
+          <Footer />
+          <CookieConsentBanner />
+          <CookieConsentPreferences />
+        </CookieConsentProvider>
         <StructuredData data={[ldOrganization(), ldWebsite()]} />
       </body>
     </html>

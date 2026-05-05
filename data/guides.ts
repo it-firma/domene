@@ -1468,6 +1468,436 @@ export const guides: Guide[] = [
     relatedTools: ["domenesjekk"],
     nextStep: { label: "Sjekk domenetilgjengelighet", href: "/verktoy/domenesjekk" },
   },
+
+  // ── Tillegg 2026-05-05: 5 flagship-guider (varemerke, internasjonale domener, SEO, utleie, investering) ──
+  {
+    slug: "varemerke-og-domene",
+    title: "Varemerke og domenenavn — slik unngår du konflikt og beskytter posisjonen din",
+    description:
+      "En praktisk gjennomgang for bedrifter: hvordan velge domener som ikke krenker andres varemerker, hvordan beskytte ditt eget navn, og hvilke alternativer du har når noen registrerer et domene som ligner på din merkevare.",
+    category: "juridisk-og-varemerke",
+    difficulty: "viderekommen",
+    readingTime: 14,
+    updatedAt: "2026-05-05",
+
+    shortAnswer:
+      "Sjekk varemerkeregistrene (Patentstyret for Norge, EUIPO for EU, WIPO globalt) før du registrerer et domene som ligner et eksisterende merke. Hvis noen har registrert et domene som krenker ditt varemerke, har du tre veier: forhandling, UDRP-klage (for gTLD-er) eller alternativ tvisteløsning gjennom Norid for .no-domener. Forebygging er alltid billigere enn rettssak.",
+
+    sections: [
+      {
+        heading: "Hva er forskjellen på et domene og et varemerke?",
+        paragraphs: ["Et domenenavn er en teknisk identifikator i DNS-systemet — det er først og fremst en adresse. Du kan registrere det hos en registrar etter prinsippet «først til mølla», uten at noen sjekker om navnet ligner et eksisterende merke. Et varemerke, derimot, er en juridisk rettighet til å bruke et navn, en logo eller en frase i forbindelse med visse varer eller tjenester. Varemerker registreres hos Patentstyret (Norge), EUIPO (EU) eller WIPO (internasjonalt), og gir innehaveren enerett innen sin klasse og sitt geografiske område. To navn kan eksistere parallelt — én som domene, én som varemerke — uten at det er konflikt, så lenge de ikke peker på hverandre i markedet."],
+      },
+      {
+        heading: "Når blir et domenenavn et varemerkebrudd?",
+        paragraphs: ["Det er ikke nok at to navn er like. For at det skal være varemerkebrudd må domenet brukes i næringsvirksomhet på en måte som forveksler kunder, eller at registreringen er gjort i ond tro for å utnytte merket — det som kalles cybersquatting. Eksempel på det første: noen registrerer apple-norge.no og selger telefon-tilbehør under Apples utforming. Eksempel på det andre: noen registrerer storbedrift.no rett etter at selskapet er børsnotert, uten plan om å bruke det, og tilbyr salg til selskapet for 200 000 kr. Begge tilfeller kan utløse klage. Et domene som passivt eier et navn uten kommersielt formål er sjelden i seg selv et brudd — men det er heller ingen garanti."],
+      },
+      {
+        heading: "Sjekkliste før du registrerer et domene",
+        paragraphs: ["Gjør disse oppslagene i samme dag som du registrerer: Søk i Patentstyrets varemerkedatabase (varemerkeregisteret.no) på det aktuelle navnet og nærliggende variasjoner. Søk i EUIPOs database (euipo.europa.eu) hvis du planlegger virksomhet i EU. Søk i WIPOs Global Brand Database for internasjonal kontekst. Søk i Brønnøysundregistrene etter foretaksnavn med samme eller lignende navn. Gjør et Google-søk på navnet i kombinasjon med din bransje. Hvis noen av disse oppslagene treffer en aktør i samme eller nærliggende bransje — vurder navn på nytt eller søk juridisk vurdering."],
+      },
+      {
+        heading: "Slik beskytter du ditt eget varemerke",
+        paragraphs: ["Hvis du allerede har et registrert varemerke, eller bygger en merkevare det er verdt å beskytte, gjør disse stegene proaktivt: Registrer hovedvarianten (eksempel.no) sammen med åpenbare alternativer (.com, .net, .org), vanlige feilstavinger og separator-varianter (eksempel-as.no). Vurder defensiv registrering på utvalgte gTLD-er (.shop, .app, .io) hvis virksomheten din er digital. Bruk DNS-overvåkning (Whois.com Watchlist, MarkMonitor) for å bli varslet hvis noen registrerer domener som matcher mønsteret. Sett opp Google Alerts på merkenavnet ditt. Hold varemerkeregistreringen aktiv og fornyet — uten registrert merke har du ingenting å bygge en klage på."],
+      },
+      {
+        heading: "Hva gjør du hvis noen krenker ditt domene?",
+        paragraphs: ["Første steg er alltid en høflig henvendelse — mange tilfeller løser seg når den andre parten forstår situasjonen og ikke har juridisk støtte for sin posisjon. Hvis det ikke fungerer, har du tre formelle veier: For .no-domener kan du klage til Norids domenekonfliktordning. Behandlingen tar typisk 6-10 uker og koster en behandlingsavgift på rundt 5 000 kr. For gTLD-er (.com, .net, .org, .io osv.) er UDRP (Uniform Domain Name Dispute Resolution Policy) standardprosedyren — administreres av WIPO eller andre godkjente sentre, koster fra ca. 1 500 USD, og avgjøres på 60-90 dager. Som siste utvei finnes ordinær rettssak — dyrere og langsommere, men eneste alternativ hvis du krever erstatning utover overføring av domenet."],
+      },
+      {
+        heading: "UDRP: hva må til for å vinne?",
+        paragraphs: ["UDRP-klage krever at klageren beviser tre ting samtidig: at domenet er identisk eller forvirrende likt et varemerke klageren har rettigheter til, at registranten ikke har egne legitime rettigheter eller interesse i navnet, og at domenet er registrert og brukes i ond tro. Alle tre må oppfylles — én svak punkt og hele saken faller. «Ond tro» dokumenteres typisk gjennom mønstret atferd (registranten eier mange lignende domener), forsøk på salg til varemerkeinnehaveren, eller bruk som leder til misvisning. Vellykkede UDRP-klager fører typisk til at domenet overføres til klageren — men det gir ingen erstatning. Skal du ha erstatning også, må du gå rettens vei."],
+      },
+      {
+        heading: "Spesielt om .no: Norids regelverk",
+        paragraphs: ["Norid har eget regelverk for .no-domener som skiller seg fra UDRP. Registranten må være registrert i Brønnøysundregistrene (norsk organisasjon eller person), domenenavnet må følge Norids navnepolitikk (lengde, tegn, ingen ord på blokklister), og innehaver er ansvarlig for at registreringen ikke krenker tredjeparters rettigheter. Domenekonfliktordningen er forenklet og rimelig sammenlignet med UDRP, men dekker bare .no — for andre TLD-er må du gå andre veier. Hvis du vurderer å klage på et .no-domene, sjekk først at Norids vilkår for behandling er oppfylt: at klagen gjelder et registrert varemerke eller foretaksnavn, og at domenet brukes på en måte som krenker."],
+      },
+    ],
+
+    faq: [
+      {
+        question: "Kan jeg miste et domene jeg har eid lenge fordi noen registrerer et varemerke?",
+        answer:
+          "Sjelden, men det skjer. Tidsprioritet teller mye — har du brukt domenet aktivt og lovlig før varemerket ble registrert, har du normalt vern. Men hvis du har registrert domenet i ond tro fra starten (du visste navnet var i bruk og spekulerte i å selge senere), kan tidsprioritet ikke redde deg. Hovedregelen er: god tro + aktiv bruk = trygt. Spekulasjon = sårbart.",
+      },
+      {
+        question: "Må jeg registrere domenet før varemerket eller motsatt?",
+        answer:
+          "Helst i samme uke. Domenet er først til mølla — du mister sjansen hvis noen andre tar det først. Varemerket gir deg juridisk vern og verdi over tid. Mange bedrifter starter med å registrere domenet (rask handling), og sender varemerkesøknaden samme uke. Søknaden tar 6-12 måneder å få godkjent, men beskyttelsen virker tilbake til søknadsdatoen.",
+      },
+      {
+        question: "Hva koster det å registrere et varemerke i Norge?",
+        answer:
+          "Patentstyret tar fra 2 900 kr i grunnsøknad for én vareklasse, pluss 750 kr per ekstra klasse. Søknadsbehandling tar typisk 4-7 måneder. Det er mulig å gjøre det selv via altinn, men de fleste bruker en varemerkeagent (advokat eller patent-/varemerkeforvalter) hvis det er penger involvert — kostnad fra ca. 8 000-15 000 kr inkludert avgifter for en enkel sak.",
+      },
+      {
+        question: "Hva er forskjellen på UDRP og en rettssak?",
+        answer:
+          "UDRP er rask og rimelig, men begrenset i utfall: du kan vinne overføring av domenet, ikke erstatning eller andre krav. Rettssak gir bredere muligheter — erstatning for tap, midlertidig forføyning, dom som hindrer videre brudd — men er dyrere (typisk fra 100 000 kr i advokatkostnader) og tar 1-2 år. Mange bruker UDRP først; hvis utfallet ikke holder eller motparten anker, vurderes rettssak deretter.",
+      },
+      {
+        question: "Kan jeg bruke et generisk ord som varemerke?",
+        answer:
+          "Vanskelig. Helt generiske ord (epler.no for en eplebonde) får sjelden varemerkebeskyttelse fordi andre må kunne bruke ordet for sin virksomhet. Mer spesifikke eller kreative navn — beskrivende men ikke generiske, eller helt fantasifulle — er enklere å registrere. Hvis du planlegger en sterk merkevare, velg navn med distinktiv kraft. Det er både enklere å beskytte og lettere å bygge.",
+      },
+    ],
+
+    summary: [
+      "Domenenavn og varemerker er to separate systemer — registrering av et domene gir ingen varemerkerettigheter, og motsatt.",
+      "Sjekk Patentstyret, EUIPO og Brønnøysund før du registrerer et domene som ligner andre merker — forebygging er alltid billigere.",
+      "For .no-domener kan tvister løses gjennom Norids domenekonfliktordning. For gTLD-er brukes UDRP via WIPO eller andre sentre.",
+      "UDRP krever bevis for tre ting samtidig: identisk/forvirrende likhet, ingen legitim interesse, og ond tro. Alle tre må oppfylles.",
+      "Beskytt egen merkevare ved å registrere hovedvariant + åpenbare alternativer + sentrale gTLD-er, og overvåk for nye registreringer.",
+    ],
+
+    relatedTerms: ["varemerke", "udrp", "cybersquatting", "norid"],
+    relatedGuides: [],
+    relatedTools: [],
+  },
+
+  {
+    slug: "velge-internasjonale-domener",
+    title: "Internasjonale domener — slik velger du riktig TLD for hvert marked",
+    description:
+      "En strategisk gjennomgang for bedrifter som ekspanderer utenfor Norge: når du bør bruke landdomener (ccTLD), når .com er nok, hvordan håndtere flere språk og markeder, og hvilke domeneporteføljer som faktisk gir verdi.",
+    category: "internasjonale-domener",
+    difficulty: "viderekommen",
+    readingTime: 12,
+    updatedAt: "2026-05-05",
+
+    shortAnswer:
+      "Bruk ditt lands ccTLD (.no, .se, .dk) når du primært betjener det markedet — det gir bedre lokal SEO og signaliserer tilhørighet. Bruk en gTLD som .com når merkevaren skal være global. For internasjonal virksomhet med flere markeder fungerer en sentral .com med språkversjoner ofte bedre enn ti separate ccTLD-er. Defensiv registrering av hoved-ccTLD-er + nære variasjoner anbefales uansett.",
+
+    sections: [
+      {
+        heading: "ccTLD vs. gTLD: hva betyr det egentlig?",
+        paragraphs: ["ccTLD (country-code top-level domain) er TLD-er knyttet til land eller territorier — .no for Norge, .se for Sverige, .uk for Storbritannia. gTLD (generic top-level domain) er TLD-er uten geografisk binding — .com, .net, .org, og hundrevis av nyere som .app, .shop, .io. For brukere signaliserer en ccTLD lokal tilstedeværelse. For søkemotorer er det et sterkt geografisk signal: Google prioriterer .no-resultater for norske søk uten at du trenger å konfigurere noe. En .com krever derimot at du forteller Google hvilket marked du sikter mot, gjennom hreflang, Search Console-innstillinger og lokal innholdssignal."],
+      },
+      {
+        heading: "Strategi 1: Én sentral .com med språkversjoner",
+        paragraphs: ["Mest brukt av globale selskaper og SaaS-virksomheter: ett hoveddomene (eksempel.com), og språk i undermapper (eksempel.com/no, eksempel.com/sv, eksempel.com/de). Fordeler: all SEO-autoritet samles på ett sted, enklere teknisk infrastruktur, ett sertifikat, ett analytics-oppsett. Ulemper: lokale brukere kan oppfatte det som mindre lokalt forankret, og Google trenger tydelige hreflang-signaler for ikke å vise feil språk. Egner seg når merkevaren er global og målgruppen aksepterer det internasjonale uttrykket. Apple, Stripe og Notion bruker denne modellen."],
+      },
+      {
+        heading: "Strategi 2: ccTLD per marked",
+        paragraphs: ["Også vanlig — særlig hos eldre, etablerte selskaper og hos virksomheter med sterke lokale merkevarer. Du har eksempel.no, eksempel.se, eksempel.dk osv., hvert med eget innhold tilpasset markedet. Fordeler: maksimal lokal autoritet, klar signalverdi til kunder og søkemotorer, fleksibilitet i lokal markedsføring. Ulemper: SEO-autoritet fragmenteres, drift blir mer komplisert (flere DNS-oppsett, sertifikater, deployment-mål), risiko for at innhold blir ulikt på tvers av markeder. Egner seg når du faktisk har lokale team og budsjetter til å vedlikeholde flere nettsider på riktig nivå."],
+      },
+      {
+        heading: "Strategi 3: Hybrid — sentral .com + utvalgte ccTLD-er som omdirigeringer",
+        paragraphs: ["Mange velger en mellomvei: en sentral .com som hovedeiendom, kombinert med ccTLD-er for de viktigste markedene som omdirigerer til riktig språkside (eksempel.no → eksempel.com/no via 301). Det gir lokal merkevareinngang uten at du må vedlikeholde separate nettsider. Defensiv registrering uten aktiv bruk er også vanlig — du eier .se, .dk og .fi for å hindre at andre tar dem, men kjører all virksomhet via .com. Vurder dette hvis hoveddrivkraften er global og lokale markeder er sekundære."],
+      },
+      {
+        heading: "Hvordan velge: tre nøkkelspørsmål",
+        paragraphs: ["Før du bestemmer strategi, svar på disse tre spørsmålene konkret. (1) Hva er målgruppens forventning? Norske B2C-kunder forventer .no — en rent .com-side kan oppfattes som internasjonal og dermed mindre relevant. B2B-kunder bryr seg sjelden. (2) Hvor mye lokalt innhold vil du faktisk produsere? Hvis dere kun kommer til å oversette det engelske innholdet er det ikke verdt et eget domene. Hvis dere har lokale team som lager ekte lokalt innhold, gir egen ccTLD mer verdi. (3) Hvor avansert er teamet? Hvert ekstra domene øker driftsbelastningen — hreflang, sertifikater, monitoring, incident response. Vær ærlig om kapasiteten."],
+      },
+      {
+        heading: "EU-domenet (.eu) — hvem passer det for?",
+        paragraphs: [".eu er en geo-TLD knyttet til EU/EØS som målgruppe. Den krever at registranten har bostedsadresse, etablering eller hovedkontor innenfor EU/EØS. For norske selskaper er det mulig å registrere .eu via norsk bedrift med EØS-tilknytning. Egnet hvis virksomheten primært betjener europeiske kunder og vil signalisere europeisk identitet — vanlig hos institusjoner, transportselskaper og enkelte teknologi-aktører. Mindre vanlig som hovedspor for kommersielle norske bedrifter, fordi .com og .no normalt dekker behovet."],
+      },
+      {
+        heading: "IDN: domener med æ, ø, å og spesialtegn",
+        paragraphs: ["Internationalized Domain Names (IDN) gjør at domener kan inneholde tegn utenfor ASCII — kafé.no, blåhøst.no, søknad.no. Teknisk konverteres de til Punycode (xn--kaf-dla.no) for DNS, men brukerne ser den lokale formen. Norid tillater æ, ø, å i .no-domener. For norske merkevarer med spesialtegn er det ofte verdt å registrere både IDN-versjonen (kafé.no) og ASCII-varianten (kafe.no eller kaffe.no), og la den ene 301-omdirigere til den andre. ASCII-versjonen er fortsatt mer praktisk for trykte materialer og tekniske integrasjoner."],
+      },
+      {
+        heading: "Anbefalt baseline-portefølje for norske bedrifter",
+        paragraphs: ["For en bedrift som planlegger nordisk eller internasjonal vekst er en god grunnportefølje: hoveddomenet på .no (kjernen), .com som internasjonal merkevareforsvarer, og ccTLD-er for naboland du faktisk planlegger å selge til (typisk .se og .dk for nordisk strategi). Vurder å legge til vanlige feilstavinger og åpenbare variasjoner. Hold deg unna defensiv overregistrering på hundrevis av nye gTLD-er — det er sjelden verdt kostnaden, og en sterk merkevare beskyttes bedre gjennom varemerkeregistrering enn gjennom å samle på domener."],
+      },
+    ],
+
+    faq: [
+      {
+        question: "Bør jeg registrere domenet på alle nye gTLD-er som .shop, .app, .io?",
+        answer:
+          "Som hovedregel nei. Det er hundrevis av gTLD-er, og defensiv registrering på alle blir fort dyrt uten reell verdi. Vurder kun de som er direkte relevante for virksomheten din: .shop for nettbutikk, .app for app-virksomhet, .io for tekniske produkter. Beskytt deg heller gjennom varemerkeregistrering — det dekker uansett TLD.",
+      },
+      {
+        question: "Påvirker valget av TLD søkeresultatene mine?",
+        answer:
+          "Ja, men kanskje mindre enn du tror. ccTLD-er gir et sterkt geografisk signal som hjelper for lokale søk i det landet. gTLD-er er nøytrale, og kan målrettes geografisk via Google Search Console. På tvers av land slår innholdskvalitet og lenker ofte sterkere enn TLD-valg. Velg TLD ut fra strategi og merkevare først, ikke ren SEO.",
+      },
+      {
+        question: "Hva er hreflang og når trenger jeg det?",
+        answer:
+          "Hreflang er en HTML-tag eller HTTP-header som forteller søkemotorer hvilken språkversjon som er ment for hvilken målgruppe (f.eks. nb-NO for norsk i Norge, sv-SE for svensk i Sverige). Du trenger det når du har samme eller lignende innhold på flere språk eller for flere land — uansett om de ligger på én ccTLD med språkundermapper eller på separate ccTLD-er.",
+      },
+      {
+        question: "Kan jeg overføre et domene mellom land hvis virksomheten flytter?",
+        answer:
+          "Du kan overføre domener mellom registrarer relativt enkelt — det er bare en transfer-prosess med auth-kode. Men hvis det er et ccTLD med residenskrav (.no krever norsk Brønnøysund-registrering, .eu krever EØS-tilknytning), må eieren oppfylle kravene i det nye landet. For norske selskaper som flytter utenlands, kan .no-domenet beholdes så lenge selskapet eksisterer i Norge.",
+      },
+      {
+        question: "Hvor mye koster en bred internasjonal portefølje?",
+        answer:
+          "Avhengig av omfang. En typisk nordisk portefølje (.no, .com, .se, .dk + 2-3 variasjoner per land) kommer fort på 3 000-5 000 kr i året i ren registrering. Legger du til monitoring, varemerkeregistrering og defensiv registrering på utvalgte gTLD-er kan totalkostnaden bli 15 000-30 000 kr/år for en mellomstor merkevare. Større aktører bruker spesialisert merkevare-forvaltning som ligger på et helt annet kostnadsnivå.",
+      },
+    ],
+
+    summary: [
+      "ccTLD (.no, .se, .dk) gir sterkt lokalt signal — bruk når du primært betjener det landet.",
+      "gTLD (.com, .org) er nøytrale og passer global merkevare — krever hreflang for å målrette geografisk.",
+      "Hybrid med .com som hovedspor og ccTLD-er som omdirigeringer er ofte den enkleste strategien for norske bedrifter med internasjonale ambisjoner.",
+      "Defensiv registrering bør være målrettet, ikke bredt: hovedland + nære variasjoner. Varemerkeregistrering beskytter bedre enn å samle på TLD-er.",
+      "Vurder kapasiteten din realistisk — hvert ekstra domene krever drift, sertifikater, og innhold som faktisk er verdt å lese.",
+    ],
+
+    relatedTerms: ["cctld", "gtld", "idn", "punycode"],
+    relatedGuides: ["varemerke-og-domene"],
+    relatedTools: [],
+  },
+
+  {
+    slug: "domene-og-seo",
+    title: "Domenenavn og SEO — hvor mye betyr egentlig valget?",
+    description:
+      "En ærlig gjennomgang av hva domenenavnet faktisk betyr for søkemotoroptimalisering i 2026: hvilke faktorer som teller, hvilke myter som fortsatt sirkulerer, og hvordan du tar et valg som ikke holder deg tilbake.",
+    category: "seo-og-synlighet",
+    difficulty: "nybegynner",
+    readingTime: 11,
+    updatedAt: "2026-05-05",
+
+    shortAnswer:
+      "Domenenavnet har moderat direkte SEO-effekt i 2026. Mest betyr det for klikkrate fra søkeresultater (et tydelig, troverdig navn får flere klikk) og for å signalisere geografisk tilhørighet (.no for norske søk). Eksakte nøkkelord i domenet (best-bil-oslo.no) gir liten fordel og kan virke spammy. Velg et navn du kan bygge en merkevare rundt — det vil betjene deg bedre i lengden.",
+
+    sections: [
+      {
+        heading: "Hva domenenavnet faktisk påvirker (og ikke)",
+        paragraphs: ["Tre ting domenet faktisk påvirker: (1) Klikkrate fra søkeresultater — et navn som er kort, lett å lese og virker troverdig får flere klikk enn et med tall, bindestreker eller forvirrende tegn. (2) Geografisk relevans for ccTLD-er — Google bruker .no som sterkt signal for at innholdet er ment for norske brukere. (3) Branded search — sterke domener bygger merkevarer, og merkevaresøk («ekspres» søkt direkte) er den sterkeste rangeringssignaleren over tid. Det domenenavnet ikke gjør i 2026: gir deg en direkte rangeringsfordel ved å inneholde nøkkelord. Exact-match domains (EMD) ble nedprioritert av Google fra 2012 og fremover, og navnet er én av hundrevis av faktorer som teller."],
+      },
+      {
+        heading: "Eksakte nøkkelord i domenet — hvorfor det ikke fungerer",
+        paragraphs: ["Det var en tid da billigeflybilletter.no kunne rangere på «billige flybilletter» bare i kraft av navnet. Den tiden er over. Google har eksplisitt sagt at exact-match domains ikke gir spesiell rangeringsfordel siden 2012. Det som ofte skjer i dag er det motsatte: keyword-stuffed domener oppfattes som lav-tillit av brukere og av algoritmene — særlig hvis innholdet ikke holder mål. Du kan rangere bra med et generisk-sounding domene, men det er en uphill battle. Velg heller et navn som lar deg bygge en merkevare, så har du en eiendel som vokser i verdi."],
+      },
+      {
+        heading: "ccTLD og lokal SEO: når .no betyr noe",
+        paragraphs: ["For søk gjort i Norge på norsk gir .no en konkret fordel — Google prioriterer ccTLD-er i lokal kontekst. Hvis virksomheten din primært selger i Norge, er .no derfor sterkere enn .com for organisk trafikk fra norske søk. Effekten avtar når du sikter på flere markeder, eller når søket gjøres på engelsk. Hvis du bare har én nettside og alle kundene er norske, er .no sannsynligvis det riktige valget. Hvis du planlegger nordisk eller internasjonal vekst, kan .com med norsk språkversjon være et bedre utgangspunkt på sikt."],
+      },
+      {
+        heading: "Hva med subdomener og undermapper?",
+        paragraphs: ["Et tilbakevendende spørsmål: bør blogg ligge på blog.eksempel.no eller eksempel.no/blogg? Svaret avhenger av kontekst, men hovedanbefalingen i 2026 er undermapper når det er innholdsmessig sammenheng. Subdomener behandles av søkemotorer som delvis separate eiendommer, og fragmenterer SEO-autoriteten din. Undermapper holder all autoritet samlet på hoveddomenet. Bruk subdomener bare når innholdet faktisk er en separat eiendom — som en kundeportal (app.eksempel.no), et helpdesk-system (support.eksempel.no), eller et språkkode-skille (no.eksempel.com)."],
+      },
+      {
+        heading: "Domenealder: en seig myte",
+        paragraphs: ["«Eldre domener rangerer bedre» er delvis sant, men ofte misforstått. Det Google faktisk verdsetter er ikke alder i seg selv, men signalene som tendensielt følger med alder: etablerte lenker, konsistent innhold over tid, lite utskiftning av eier. Et 10 år gammelt domene som har vært uvirksomt eller hatt ulikt innhold gir deg lite. Et 6 måneder gammelt domene med høy innholdskvalitet og naturlig lenkeprofil kan rangere godt. Hvis du kjøper et eldre domene, er det viktigere å undersøke historien (Wayback Machine, ahrefs/semrush, manuelle straffer i Search Console) enn alderen alene."],
+      },
+      {
+        heading: "Bytte av domene: hva skjer med rangeringene?",
+        paragraphs: ["Hvis du flytter fra eksempel-firma.no til ekspresbyrå.no, taper du ikke nødvendigvis rangeringen — men det krever ordentlig håndtering. Sett opp 301-omdirigeringer fra alle gamle URL-er til de nye (én-til-én, ikke alt til forsiden). Oppdater Search Console med adresseendring. Oppdater interne lenker. Behold gamle domenet aktivt med 301 i minst 12 måneder, helst lengre. Forvent en midlertidig dipp på 2-8 uker i organisk trafikk mens Google reindekserer. Etter migrering returnerer rangeringen normalt — i noen tilfeller blir den endog sterkere fordi det nye domenet matcher merkevaren bedre."],
+      },
+      {
+        heading: "Praktiske valgkriterier",
+        paragraphs: ["Når du står foran valget, vekt disse i denne rekkefølgen: (1) Er navnet enkelt å si og skrive — kan du si det i telefonen uten å stave? (2) Er det fritt fra varemerke-konflikter — sjekk Patentstyret og EUIPO. (3) Er det kort nok — under 15 tegn er ideelt, under 20 er greit. (4) Står det seg over tid — vil dere fortsatt selge dette om 10 år? (5) Er ccTLD eller gTLD riktig — basert på markedet ditt. Eksakte nøkkelord, lengde for SEO-formål, og defensiv registrering på 20 TLD-er er sekundære vurderinger."],
+      },
+    ],
+
+    faq: [
+      {
+        question: "Er bindestreker i domenet dårlig for SEO?",
+        answer:
+          "Ikke direkte for rangeringen, men praktisk talt ja. Bindestreker oppfattes som mindre profesjonelle av brukere og er vanskeligere å si høyt («prikk-strek-prikk»). Hvis hoveddomenet uten bindestrek er opptatt, er ofte et helt nytt navn bedre enn samme navn med bindestrek. Spørsmålet du bør stille er ikke «kan Google lese det», men «kan kunden huske det».",
+      },
+      {
+        question: "Bør jeg kjøpe vanlige feilstavinger av domenet mitt?",
+        answer:
+          "Ja, men målrettet. Registrer 1-3 åpenbare feilstavinger (ekspresbyrå.no + ekspresbyra.no + eksprebyrå.no) og 301-omdiriger dem til hovedformen. Det fanger trafikk og hindrer at andre profitterer på navnet ditt. Gå ikke amok — du trenger ikke alle teoretiske kombinasjoner. SEO-effekten av defensiv registrering er minimal, men brand-effekten kan være verdt det.",
+      },
+      {
+        question: "Hva er forskjellen på domain authority og domeneautoritet?",
+        answer:
+          "Domain Authority (DA) er en proprietær score fra Moz (0-100) som estimerer hvor godt et domene kan rangere. Det er ikke en Google-faktor — Google bruker ikke DA. Lignende: Ahrefs har Domain Rating (DR), Semrush har Authority Score. Disse er nyttige som proxy for sammenligning mellom nettsider, men er ikke det Google selv ser på. Reelle rangeringsfaktorer er innhold, lenker, brukersignaler, teknisk helse og merkevarestyrke.",
+      },
+      {
+        question: "Hjelper det å ha nøkkelord i URL-stien?",
+        answer:
+          "Ja, mer enn i selve domenet. eksempel.no/billige-flybilletter er bedre enn eksempel.no/p/12345 for både brukere og søkemotorer — det forteller hva siden handler om. Korte, beskrivende URL-er med ett-til-tre nøkkelord gir både bedre klikkrate og lettere indeksering. Men dette gjelder URL-stien, ikke domenenavnet.",
+      },
+      {
+        question: "Bør et nytt selskap velge ccTLD eller .com fra start?",
+        answer:
+          "Default for norske selskaper med norsk kundebase: .no. Det signaliserer lokal tilhørighet, gir bedre rangeringssignaler i Norge, og er enklere for kundene. Velg .com hvis dere planlegger å være globalt fra dag én, navnet er ikke ledig på .no, eller dere bygger en internasjonal merkevare hvor .com gir bedre signal. Mange velger begge: .no som primær, .com som forsvar.",
+      },
+    ],
+
+    summary: [
+      "Domenet har moderat direkte SEO-effekt — klikkrate, geo-signal og merkevareverdi er det viktigste det faktisk gjør.",
+      "Exact-match domains gir ingen spesiell rangeringsfordel siden 2012. Velg navn for merkevarestyrke, ikke nøkkelord.",
+      ".no gir tydelig fordel for søk i Norge på norsk. .com er mer nøytralt og krever hreflang for geo-målretting.",
+      "Bruk undermapper, ikke subdomener, for innhold som er innholdsmessig sammenhengende — det holder SEO-autoriteten samlet.",
+      "Ved domenebytte: 301-omdirigering, Search Console-oppdatering, behold gamle domenet i 12+ måneder.",
+    ],
+
+    relatedTerms: ["cctld", "https", "subdomene"],
+    relatedGuides: ["velge-internasjonale-domener", "varemerke-og-domene"],
+    relatedTools: [],
+  },
+
+  {
+    slug: "domeneutleie-guide",
+    title: "Domeneutleie — slik fungerer det, og når lønner det seg?",
+    description:
+      "Domeneutleie er en lite kjent, men juridisk solid modell for å bruke et domene man ikke eier. Denne guiden forklarer hvordan utleie skiller seg fra kjøp og overdragelse, hvilke risikomomenter som finnes, og når en leieavtale gir mening for både eier og leietaker.",
+    category: "domeneutleie",
+    difficulty: "viderekommen",
+    readingTime: 10,
+    updatedAt: "2026-05-05",
+
+    shortAnswer:
+      "Domeneutleie er en kontraktsfestet ordning der eieren beholder eierskapet, mens leietakeren bruker domenet mot et månedlig eller årlig vederlag. Det egner seg for premium-domener som ville vært prohibitivt dyre å kjøpe utenfor en avtale, eller som rente-til-eie-løsning. Risikomomentene er reelle — leietaker mister tilgang ved kontraktsbrudd og må passe på fornying, DNS-tilgang og avtalefestet eierovergang. Anbefales bare med tydelig kontrakt og advokatbistand.",
+
+    sections: [
+      {
+        heading: "Hva er domeneutleie egentlig?",
+        paragraphs: ["I en typisk leieavtale forblir den juridiske registranten av domenet uendret hos eieren. Leietakeren får kontroll over DNS — i praksis muligheten til å peke domenet mot egen nettside, e-post og andre tjenester. Dette skjer enten ved at leietaker får brukertilgang i registrarens kontrollpanel (vanligst), eller ved at eieren selv gjør konfigurasjonen på leietakers vegne. Avtalen regulerer leiebeløp, varighet, oppsigelsesvilkår, og hvilke krav leietakeren kan stille hvis eieren ikke overholder forpliktelsene sine — typisk fornying av domenet og opprettholdelse av DNS-konfigurasjon."],
+      },
+      {
+        heading: "Hvem er det egnet for?",
+        paragraphs: ["Tre typiske scenarier. (1) En oppstartsbedrift som vil ha et premium-domene som koster 200 000 kr å kjøpe, men ikke kan ta den investeringen i seed-fasen. Leie 5 000 kr per måned i to år, med opsjon til kjøp, kan gi tilgang til navnet uten å binde kapitalen. (2) En kampanje eller tidsbegrenset prosjekt som trenger et eksisterende domene i en avgrenset periode — typisk 6-24 måneder rundt en lansering. (3) En investor som ikke vil selge, men vil ha kontantstrøm fra eiendelen sin. For etablerte virksomheter med langsiktig perspektiv er kjøp ofte bedre — du eier eiendelen, slipper avhengigheten, og kan justere som du vil."],
+      },
+      {
+        heading: "Lease-to-own: rente-til-eie-modellen",
+        paragraphs: ["En populær variant er lease-to-own, eller rente-til-eie. Leietakeren betaler månedlig leie i en avtalt periode (typisk 12-60 måneder), og en del eller hele beløpet teller mot et endelig kjøp. Modellen gir leietaker tid til å vurdere om domenet er verdt investeringen mens virksomheten bygges, og gir eieren stabil inntekt og en realistisk utgang. Plattformer som Dan.com (eid av GoDaddy) og Sedo tilbyr standardiserte lease-to-own-avtaler med automatisert overføring av eierskap når sluttvederlag er betalt. For .no-domener må slike avtaler ofte settes opp manuelt med advokat."],
+      },
+      {
+        heading: "Risikomomenter for leietaker",
+        paragraphs: ["Leietaker står juridisk svakere enn eier. Hvis eieren går konkurs, dør eller bare slutter å fornye domenet, kan leietaker miste tilgangen — selv om kontrakten formelt fortsatt løper. Andre reelle risikoer: eieren overfører domenet til en ny eier som ikke er bundet av leieavtalen (med mindre kontrakten er tinglyst eller registrert tydelig), DNS-konfigurasjonen endres uten varsel, eller fornying glemmes. Mitigeringer: krev månedlig dokumentasjon på at domenet er fornyet, ha alternativ DNS-tilgang skriftlig sikret, sett opp varsling på utløpsdato fra et tredjeparts WHOIS-overvåkningsverktøy, og inkluder klausul om umiddelbar overføring ved mislighold."],
+      },
+      {
+        heading: "Risikomomenter for utleier",
+        paragraphs: ["Utleier har også utfordringer. Hvis leietaker bygger betydelig SEO-autoritet og merkevareverdi på domenet, kan det bli juridisk komplisert å avslutte leieforholdet senere — leietaker kan argumentere for goodwill og krav på kompensasjon ved oppsigelse. Hvis leietakeren bruker domenet til ulovlig virksomhet (svindel, opphavsrettsbrudd, defamation), kan utleier som registrant teknisk holdes ansvarlig overfor tredjeparter. Mitigeringer: tydelige bruksbegrensninger i kontrakten, krav om at leietakers virksomhet er lovlig og beskrevet, klausul om umiddelbar oppsigelse ved misligholdt bruk, og forsikring som dekker tredjepartskrav."],
+      },
+      {
+        heading: "Praktisk: hvordan setter man opp en leieavtale?",
+        paragraphs: ["Stegene for en seriøs leieavtale: (1) Bli enig om vilkår skriftlig — leiebeløp, varighet, evt. opsjon til kjøp, oppsigelse, mislighold, ansvar for fornying og DNS. (2) Få avtalen kvalitetssikret av en advokat med erfaring innen IT-rett eller kontraktsrett. (3) Etablere DNS-tilgang for leietaker — enten gjennom brukerkonto i registrar (Domeneshop og Webhuset støtter delegert tilgang), eller ved at eieren utfører endringer på forespørsel. (4) Sette opp betalingsplan og automatisk fornyingsbekreftelse. (5) Dokumentere status månedlig — verifiser at domenet er fornyet, at DNS er korrekt, at fakturering går som avtalt. (6) Ha en plan for kontraktsslutt — overføring til kjøper eller tilbakelevering til eier."],
+      },
+      {
+        heading: "Skattemessige forhold",
+        paragraphs: ["I Norge behandles leieinntekter fra domeneutleie som inntekt for utleier, og leiekostnaden er fradragsberettiget for leietaker hvis domenet brukes i næringsvirksomhet. For lease-to-own kan strukturen kompliseres: deler av betalingen kan kategoriseres som forskudd på kjøpesum (ikke fradragsberettiget umiddelbart) snarere enn ren leie. Dette har vesentlige skattemessige konsekvenser, og avtalen bør derfor utformes i samråd med regnskapsfører eller skatteadvokat — særlig hvis beløpene er betydelige."],
+      },
+    ],
+
+    faq: [
+      {
+        question: "Hvor mye koster det å leie et premium-domene?",
+        answer:
+          "Helt avhengig av domenets verdi. Lette generiske domener kan leies fra 500-2 000 kr/måned, mens premium-domener på engelsk kan koste 5 000-50 000 kr/måned eller mer. En tommelfingerregel er at årlig leie tilsvarer 8-12 % av kjøpsprisen — så et domene verdt 200 000 kr leies typisk for 1 500-2 000 kr/måned.",
+      },
+      {
+        question: "Kan jeg leie et .no-domene?",
+        answer:
+          "Teknisk ja, men juridisk komplisert. Norids regelverk krever at registranten har norsk Brønnøysund-registrering. Leietakeren får i praksis bruksrett, men ikke eierskap, og må forholde seg til at eieren juridisk er ansvarlig. Norid har ikke en formell utleieordning slik andre TLD-er har — alt foregår mellom partene. Anbefales kun med advokatbistand.",
+      },
+      {
+        question: "Hva skjer hvis utleier dør?",
+        answer:
+          "Avhengig av avtalen og hvor godt sikret den er. I et godt utformet kontrakt overføres rettighetene til arvingene som binder seg til leieavtalens vilkår. I praksis kan dødsfall utløse uklarhet — domenet er en immateriell eiendel som må forvaltes gjennom dødsboet. Sørg for at avtalen har en klausul om hva som skjer ved dødsfall, og vurder om eieren kan opprette en pant eller annen sikring som beskytter leietaker.",
+      },
+      {
+        question: "Er det vanlig å leie domener i Norge?",
+        answer:
+          "Mindre vanlig enn i USA, men forekommer — særlig for premium-domener og rundt oppstartsmiljøer. Det er sjelden offentlig kjent, fordi avtalene er private og domenet utad ser ut som en vanlig registrering. Det betyr ikke at det ikke skjer; det betyr at du ikke nødvendigvis vet om noen leier domenet de bruker.",
+      },
+      {
+        question: "Hva er forskjellen på leie og lisens?",
+        answer:
+          "Begrepene brukes overlappende, men teknisk: en lisens gir bruksrett til navnet i bestemte sammenhenger (f.eks. som varemerke), uten DNS-tilgang. En leieavtale gir teknisk kontroll — å peke domenet mot din nettside og e-post. I praksis brukes ord som «domain lease» eller «domain rental» for det vi her kaller utleie. Lisensiering er mer relevant når domenet er sterkt knyttet til et registrert varemerke som lisensieres separat.",
+      },
+    ],
+
+    summary: [
+      "Domeneutleie lar leietaker bruke et domene mens eieren beholder den juridiske registreringen.",
+      "Lease-to-own er en populær variant der månedlige innbetalinger teller mot et endelig kjøp.",
+      "Leietaker bør sikre seg mot manglende fornying, DNS-endringer og eieroverdragelse gjennom kontraktklausuler.",
+      "Utleier bør beskytte seg mot misbruk og uventet goodwill-claim gjennom bruksbegrensninger og klare oppsigelsesvilkår.",
+      "Skattemessige forhold er ikke trivielle — kontrakten bør gjennomgås av advokat og regnskapsfører før signering.",
+    ],
+
+    relatedTerms: ["registrant", "norid", "auth-kode"],
+    relatedGuides: ["domene-og-seo"],
+    relatedTools: [],
+  },
+
+  {
+    slug: "domeneinvestering-grunnleggende",
+    title: "Domeneinvestering — slik fungerer markedet, og er det noe for deg?",
+    description:
+      "Domener kan kjøpes som investering, men det er ikke enkelt å tjene penger på. Denne guiden går gjennom hvordan markedet faktisk fungerer, hva som driver verdi, hvordan en realistisk strategi ser ut, og hvilke fallgruver som tømmer kontoen for de fleste som prøver.",
+    category: "domeneinvestering",
+    difficulty: "viderekommen",
+    readingTime: 13,
+    updatedAt: "2026-05-05",
+
+    shortAnswer:
+      "Domeneinvestering kan være lønnsomt, men markedet er illikvid og verdivurdering er subjektiv. De fleste som prøver, taper penger fordi de overvurderer hvor lett det er å selge domener. Realistisk investering krever tålmodighet (2-7 års holdetid), kapital til å absorbere tap, og kunnskap om hvilke navn som faktisk har sluttbrukere som vil betale. Anbefales ikke som hovedinntekt — egner seg bedre som kompetanse-aktivitet ved siden av annen virksomhet.",
+
+    sections: [
+      {
+        heading: "Hvordan markedet faktisk fungerer",
+        paragraphs: ["Det er ikke ett domenemarked, men flere segmenter med svært ulik dynamikk. (1) Premium-segmentet: korte, generiske ord på .com (cars.com, voice.com) som handles mellom store aktører for 6-8 sifrede beløp — sjelden tilgjengelig for nybegynnere. (2) Brandable-segmentet: konstruerte navn som høres som mulige merkevarer (Stripo, Notion, Zendesk-typen) — typiske priser 1 000-50 000 USD. (3) Geo-segmentet: by + bransje-kombinasjoner (oslohotell.no, bergenadvokat.no) — 5 000-100 000 kr i nordisk marked. (4) Massevolum: hundretusener av spekulative registreringer som omsettes på drop-catching og auksjoner for under 1 000 kr — der de fleste nybegynnere taper penger. Forstå hvilket segment du opererer i før du kjøper."],
+      },
+      {
+        heading: "Hva driver verdi i et domene?",
+        paragraphs: ["Fem faktorer som faktisk teller, sortert etter betydning. (1) Søkbarhet og minneverdi — kan navnet sies på telefonen, skrives uten feil, huskes? (2) Sluttbrukerrelevans — finnes det faktiske bedrifter som vil betale for å bruke det? Et fancy ord uten bransje-tilknytning er verdt mindre enn et middels ord med tydelig kjøper. (3) TLD — .com har fortsatt premie-status globalt, .no for norsk marked, andre TLD-er handles til lavere priser. (4) Kortlengde — hvert tegn under 8 øker verdien betydelig, særlig under 5. (5) Renommé — navn med historikk, eldre registrering, og uten brente lenker har høyere likviditet. Det som ikke driver verdi i 2026, til tross for myter: nøkkelordtetthet for SEO, antall søkeresultater på Google for navnet, eller estimater fra automatiske verdsettingsverktøy."],
+      },
+      {
+        heading: "Realistisk avkastning og holdetid",
+        paragraphs: ["Et velkjent tall fra domeneindustrien: under 2 % av spekulativt registrerte domener selges hvert år. Det betyr at hvis du eier 1 000 domener, selger du kanskje 20 i året. For at modellen skal være lønnsom, må de 20 som selger dekke fornying av alle 1 000 pluss gi avkastning. Med fornying på 100-300 kr per domene per år, er driftsbudsjettet på 100 000-300 000 kr i året — bare for å beholde porteføljen. De som tjener penger har enten små, kuraterte porteføljer av høykvalitetsnavn (5-50 stykker) eller massive volumer (5 000+) med automatisering. Den klassiske «kjøp 100 og bli rik»-tilnærmingen ender oftest i tap."],
+      },
+      {
+        heading: "Tre realistiske strategier for nybegynnere",
+        paragraphs: ["(1) Brand-kuratering: Bruk 6-12 måneder på å lære deg hva som er en god brandable. Bygg en mikroportefølje på 10-30 domener du har vurdert nøye. Forvent 1-3 års holdetid før noen selges. Mål: 3-5x avkastning på de som selger, med tap på dem som ikke selger. (2) Hand-registration på utløpende navn: Følg drop-lister hos Norid og store registrar-er. Ved norske kontekst, registrer .no-domener som tidligere har vært brukt og slippes tilbake — se om de har eksisterende lenker eller historikk. Krever tålmodighet og daglig følging. (3) Geo-spesialisering: Lær én by eller region grundig. Registrer kombinasjoner (bydel + bransje, område + tjeneste) der du har lokal innsikt i hvilke virksomheter kan ha behov. Selg lokalt, gjerne direkte til virksomhetene. Mest realistisk for norske nybegynnere."],
+      },
+      {
+        heading: "Hvor selger du faktisk domener?",
+        paragraphs: ["Største plattformer: Sedo, Dan.com (eid av GoDaddy), Afternic (også GoDaddy), og Atom (tidligere Squadhelp) for brandables. Alle krever gebyr — typisk 10-20 % på solgt sum. Norske aktører som Domeneshop tilbyr egne markedsplasser i mindre skala. Direkte salg til sluttbruker gir høyest pris, men krever proaktivt salg — du må identifisere mulige kjøpere og kontakte dem. Auksjon ved utløp via NameJet, GoDaddy Auctions eller DropCatch fungerer for noen typer navn. Den vanlige feilen for nybegynnere er å parkere domener på en automatisk salgsside og vente — det fungerer sjelden uten at du driver noe trafikk dit."],
+      },
+      {
+        heading: "Cybersquatting: linjen du ikke skal krysse",
+        paragraphs: ["Det er stor forskjell på lovlig domeneinvestering og cybersquatting. Lovlig: kjøpe generiske ord, by-bransje-kombinasjoner, brandables, eller utløpte domener uten tilknytning til eksisterende merkevarer. Ulovlig: registrere navn som ligner registrerte varemerker med hensikt å selge tilbake til varemerkeinnehaveren. Eksempel: registrere applewatchpro.no like etter at Apple lanserer en ny modell. Det er klart UDRP-territorium og kan medføre overføring uten kompensasjon, advokatkostnader, og ansvarssøksmål. En enkel test: hvis du planlegger å selge til en spesifikk navngitt aktør, vurder om navnet ditt har egen bruksverdi — hvis ikke, er du sannsynligvis i ond tro."],
+      },
+      {
+        heading: "Skatt og bokføring",
+        paragraphs: ["I Norge er gevinst fra salg av domener skattepliktig som kapitalinntekt eller næringsinntekt, avhengig av aktivitetsnivået. Hvis du registrerer noen få domener i året som privatperson og av og til selger ett, behandles det som kapitalinntekt. Hvis aktiviteten er omfattende — hundrevis av domener, regelmessige salg, system og rutiner — vil Skatteetaten kunne klassifisere det som næringsvirksomhet, med tilhørende krav til regnskap og merverdiavgift. Domener som eies regnes ikke som aktivitet i seg selv — det er kjøp og salg som teller. Føres alltid kjøps- og salgspris med kvitteringer; differansen er gevinst eller tap."],
+      },
+    ],
+
+    faq: [
+      {
+        question: "Hvor mye trenger jeg å starte med?",
+        answer:
+          "Som hobby-investor: 5 000-15 000 kr i året i registreringskostnader for en mikroportefølje på 10-30 domener gjør det realistisk å lære faget uten å ta stor risiko. For å gjøre det som ekte småbusiness trenger du minst 50 000 kr i året i 2-3 år før du sannsynligvis ser nettoavkastning. Som hovedinntekt: budsjett på 200 000+ kr i året, med forventning om at de første 1-2 årene er underskuddsår.",
+      },
+      {
+        question: "Bør jeg satse på .no eller .com?",
+        answer:
+          "Som norsk basert investor med begrensede ressurser: .no er mer realistisk. Markedet er mindre, du kan bygge lokal innsikt, og du konkurrerer ikke med globale spekulanter. .com er mer likvid og verdiene er høyere, men også konkurransen — du må kjenne markedet utenom Norge for å lykkes. De fleste norske domeneinvestorer har en miks: kjerne-aktiva på .no, eksperimentering på .com.",
+      },
+      {
+        question: "Er automatiske verdsettingsverktøy som EstiBot pålitelige?",
+        answer:
+          "Bare som grovestimat. Verktøyene bruker statistikk fra historiske salg, men selve markedet er så illikvid at to lignende domener kan selges for 5 000 USD og 50 000 USD. Bruk verktøyene til å unngå åpenbare overprisinger, ikke til å fastsette prisen din. Erfarne investorer baserer seg på sammenlignbare salg fra tilsvarende segmenter, ikke på algoritmiske estimater.",
+      },
+      {
+        question: "Kan jeg «catche» et domene som slippes?",
+        answer:
+          "Ja, men det er konkurranseutsatt. Drop-catching er praksisen med å være først til å registrere et domene som slippes tilbake etter at en eier ikke fornyer. For populære navn er det automatiserte tjenester (DropCatch, NameJet, SnapNames) som konkurrerer på millisekund-nivå. For mindre attraktive navn kan du gjøre det manuelt via en vanlig registrar — men sjansen er lav at de virkelig verdifulle slipper gjennom.",
+      },
+      {
+        question: "Hvordan vet jeg om et domene jeg vurderer å kjøpe har problematisk historikk?",
+        answer:
+          "Sjekk fire kilder. (1) Wayback Machine (archive.org) for å se hva som har ligget på domenet historisk. (2) Verktøy som ahrefs eller semrush for lenkeprofil — er det mange spam-lenker? (3) Google Search Console hvis du eier en lignende side du kan sammenligne mot. (4) Manuelle Google-søk på domenenavnet for å se om det har vært involvert i svindel eller tvister. Et domene med problematisk historikk kan bli «brent» — Google indekserer det dårlig selv etter eierskifte.",
+      },
+    ],
+
+    summary: [
+      "Domeneinvestering har reelt potensial, men er illikvid — under 2 % av spekulative registreringer selges hvert år.",
+      "Verdi drives av søkbarhet, sluttbrukerrelevans, TLD, kortlengde, og renommé — ikke nøkkelordtetthet eller automatiske estimater.",
+      "Tre realistiske startstrategier: brand-kuratering, hand-registration på utløpende navn, eller geo-spesialisering.",
+      "Skill mellom lovlig investering og cybersquatting — varemerkebrudd kan koste deg domenet og skape rettslige problemer.",
+      "I Norge skattes salg som kapital- eller næringsinntekt avhengig av aktivitetsnivå. Før alltid kjøp- og salgsdokumentasjon.",
+    ],
+
+    relatedTerms: ["domeneinvestering", "drop-catching", "redemption-period", "domeneparkering", "cybersquatting"],
+    relatedGuides: ["varemerke-og-domene", "domeneutleie-guide"],
+    relatedTools: [],
+  },
 ];
 
 export const findGuide = (slug: string) => guides.find((g) => g.slug === slug);
