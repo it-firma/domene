@@ -2,17 +2,15 @@ import Link from "next/link";
 import { Icon } from "@/lib/icons";
 
 /**
- * Section header with "N°XX — eyebrow" Fraunces italic and large title.
+ * Section header with eyebrow tagline (Fraunces italic) and large title.
  */
 export function SectionHead({
-  number,
   eyebrow,
   title,
   description,
   seeAll,
   variant = "light",
 }: {
-  number?: string;
   eyebrow: string;
   title: string;
   description?: string;
@@ -28,8 +26,6 @@ export function SectionHead({
             isDark ? "text-white/55" : "text-muted"
           }`}
         >
-          {number && <span className="mr-2">N°{number}</span>}
-          {number && <span className="mr-2 text-current/40">—</span>}
           {eyebrow}
         </div>
         <h2

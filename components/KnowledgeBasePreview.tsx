@@ -14,7 +14,7 @@ export function KnowledgeBasePreview() {
       <div className="container-prose">
         <div className="text-center mb-12">
           <div className="font-serif italic text-muted text-[14px] mb-2">
-            N°05 — Inne i kunnskapsbasen
+            Inne i kunnskapsbasen
           </div>
           <h2 className="font-display text-[28px] md:text-[36px] font-medium tracking-[-0.02em] leading-[1.15] text-ink m-0">
             Alt du trenger, organisert og lett å finne

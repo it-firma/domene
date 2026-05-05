@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Logo({
   variant = "light",
@@ -40,24 +41,18 @@ export function Logo({
 }
 
 /**
- * DN icon as inline SVG. Brand blue with subtle inner overlap.
- * Inline so it scales without raster artifacts.
+ * DN icon — uses PNG file from /public/dn-mark.png with transparent background.
+ * Works on both light and dark backgrounds.
  */
 export function DNMark({ size = 34 }: { size?: number }) {
   return (
-    <svg
+    <Image
+      src="/dn-mark.png"
+      alt=""
       width={size}
       height={size}
-      viewBox="0 0 100 100"
-      fill="none"
+      priority
       aria-hidden="true"
-    >
-      <path
-        d="M22 22h28a18 18 0 0 1 0 36H22V22Zm0 18v18h28a9 9 0 0 0 0-18h-9"
-        fill="#2563FF"
-      />
-      <path d="M62 22v54L40 22h22Z" fill="#1E4FD9" />
-      <path d="M62 22v54L40 22h22Z" fill="#2563FF" fillOpacity="0.85" />
-    </svg>
+    />
   );
 }

@@ -16,7 +16,8 @@ import { glossary } from "@/data/glossary";
 import { tools } from "@/data/tools";
 import { comparisons } from "@/data/comparisons";
 import { Icon } from "@/lib/icons";
-import { canonical } from "@/lib/seo";
+import { canonical, ldFaq } from "@/lib/seo";
+import { StructuredData } from "@/components/StructuredData";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -72,7 +73,6 @@ export default function HomePage() {
       <div className="bg-navy-mid pt-24 pb-16 -mt-px">
         <div className="container-prose">
           <SectionHead
-            number="03"
             eyebrow="Hva vi dekker"
             title="Utforsk våre hovedkategorier"
             seeAll={{ label: "Se alle kategorier", href: "/kunnskapsbase" }}
@@ -88,7 +88,6 @@ export default function HomePage() {
         {/* Featured guides */}
         <div className="container-prose mt-20">
           <SectionHead
-            number="04"
             eyebrow="Mest leste"
             title="Utvalgte guider"
             seeAll={{ label: "Se alle guider", href: "/guider" }}
@@ -109,7 +108,6 @@ export default function HomePage() {
       <section className="bg-white py-20">
         <div className="container-prose">
           <SectionHead
-            number="05"
             eyebrow="Siste oppdatert"
             title="Nye og oppdaterte artikler"
             description="Vi reviderer innholdet jevnlig — her er de fire nyeste."
@@ -127,7 +125,6 @@ export default function HomePage() {
       <section className="bg-white py-20">
         <div className="container-prose">
           <SectionHead
-            number="06"
             eyebrow="Praktiske ressurser"
             title="Verktøy og sammenligninger"
             description="Sjekk DNS, slå opp WHOIS, eller sammenlign leverandører før du tar valget."
@@ -166,7 +163,6 @@ export default function HomePage() {
       <section className="bg-surface-100 py-20">
         <div className="container-prose">
           <SectionHead
-            number="07"
             eyebrow="Begreper og definisjoner"
             title="Lær begrepene fra A til Å"
             description="Korte og presise forklaringer av de viktigste begrepene innen domener."
@@ -184,7 +180,6 @@ export default function HomePage() {
       <section className="bg-white py-20">
         <div className="container-prose">
           <SectionHead
-            number="08"
             eyebrow="Ofte stilte spørsmål"
             title="Vanlige spørsmål om domene.io"
           />
@@ -201,6 +196,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <StructuredData data={[ldFaq(homepageFaq)]} />
     </>
   );
 }

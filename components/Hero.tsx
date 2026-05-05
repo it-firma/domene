@@ -32,12 +32,8 @@ export function Hero() {
       </div>
 
       <div className="container-prose flex min-h-[100vh] flex-col justify-center pt-32 pb-32 relative">
-        <div className="font-serif italic text-white/70 text-[14px] mb-7 flex items-center gap-4">
-          <span>N°01</span>
-          <span className="block h-px w-8 bg-white/35" />
-          <span className="font-display not-italic text-[10.5px] font-medium uppercase tracking-[0.18em] text-white/65">
-            Norges kunnskapsbase om domener
-          </span>
+        <div className="font-display text-[10.5px] font-medium uppercase tracking-[0.18em] text-white/65 mb-7">
+          Norges kunnskapsbase om domener
         </div>
 
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
