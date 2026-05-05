@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-white text-ink;
+    font-family: var(--font-dm-sans), system-ui, sans-serif;
+  }
+
+  /* Focus states — accessibility */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-brand ring-offset-2 ring-offset-white;
+    border-radius: 8px;
+  }
+
+  /* Selection */
+  ::selection {
+    @apply bg-brand/20 text-ink;
+  }
+}
+
+@layer components {
+  .container-prose {
+    @apply mx-auto max-w-container px-7;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 rounded-full bg-brand px-5 py-3 text-sm font-medium text-white transition hover:bg-brand-dark hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 rounded-full border border-line-strong bg-white px-5 py-3 text-sm font-medium text-ink transition hover:border-brand hover:text-brand;
+  }
+
+  .btn-ghost-light {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/25 bg-transparent px-6 py-4 text-sm font-medium text-white/95 transition hover:border-white/50 hover:bg-white/10;
+  }
+
+  .pill-tag {
+    @apply inline-flex items-center rounded-full bg-surface-300 px-3 py-1 text-xs font-medium text-brand;
+  }
+
+  /* Body prose for article content */
+  .prose-body p {
+    @apply my-4 text-[15px] leading-7 text-ink/85;
+  }
+
+  .prose-body p strong {
+    @apply font-semibold text-ink;
+  }
+}
