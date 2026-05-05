@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { Hero } from "@/components/Hero";
-import { StatsBar } from "@/components/StatsBar";
 import { SectionHead } from "@/components/SectionHead";
 import { CategoryCard } from "@/components/CategoryCard";
 import { GuideCard } from "@/components/GuideCard";
@@ -68,7 +67,6 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <StatsBar />
 
       {/* Categories — wrapped in dn-section for navy bg */}
       <div className="bg-navy-mid pt-24 pb-16 -mt-px">
