@@ -80,14 +80,14 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
 
       <div className="bg-surface-100 pb-16">
         <div className="container-prose">
-          <div className="grid gap-10 lg:grid-cols-[280px_1fr]">
+          <div className="grid gap-8 xl:gap-12 lg:grid-cols-[280px_minmax(0,1fr)]">
             <aside className="hidden lg:block">
-              <div className="sticky top-24">
+              <div className="sticky top-24 max-h-[calc(100vh-100px)] overflow-y-auto overscroll-contain pr-1">
                 <KnowledgeBaseSidebar activeSlug={cat.slug} />
               </div>
             </aside>
 
-            <div className="min-w-0 max-w-[860px]">
+            <div className="min-w-0">
               <div className="font-serif italic text-muted text-[14px] mb-2">
                 Kategori
               </div>
@@ -145,7 +145,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                       <div className="font-display text-[11px] font-medium uppercase tracking-[0.18em] text-muted-light mb-4">
                         {lvl}
                       </div>
-                      <div className="grid gap-4 sm:grid-cols-2">
+                      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
                         {items.map((g) => (
                           <GuideCard key={g.slug} guide={g} />
                         ))}
@@ -161,7 +161,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                   <h2 className="font-display text-[20px] font-medium tracking-[-0.01em] text-ink mb-5">
                     Relaterte begreper
                   </h2>
-                  <div className="grid gap-3 sm:grid-cols-2">
+                  <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
                     {relatedTerms.map((t) => (
                       <GlossaryCard key={t.slug} term={t} />
                     ))}
@@ -175,7 +175,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                   <h2 className="font-display text-[20px] font-medium tracking-[-0.01em] text-ink mb-5">
                     Relaterte verktøy
                   </h2>
-                  <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
                     {relatedTools.map((t) => (
                       <ToolCard key={t.slug} tool={t} />
                     ))}
@@ -183,11 +183,13 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                 </section>
               )}
 
-              <FAQ items={cat.faq} />
-              <Summary items={cat.summary} />
+              <div className="max-w-[860px]">
+                <FAQ items={cat.faq} />
+                <Summary items={cat.summary} />
+              </div>
 
               {/* Next step */}
-              <div className="mt-12">
+              <div className="mt-12 max-w-[860px]">
                 <CTA
                   variant="light"
                   title={`Trenger du hjelp med ${cat.name.toLowerCase()}?`}

@@ -53,20 +53,20 @@ export default function KbOverviewPage() {
 
       <div className="bg-surface-100 py-16">
         <div className="container-prose">
-          <div className="grid gap-10 lg:grid-cols-[280px_1fr]">
+          <div className="grid gap-8 xl:gap-12 lg:grid-cols-[280px_minmax(0,1fr)]">
             <aside className="hidden lg:block">
-              <div className="sticky top-24">
+              <div className="sticky top-24 max-h-[calc(100vh-100px)] overflow-y-auto overscroll-contain pr-1">
                 <KnowledgeBaseSidebar />
               </div>
             </aside>
 
-            <div>
+            <div className="min-w-0">
               <SectionHead
                 eyebrow="Kategorier"
                 title="Alle kategorier"
                 description="Klikk en kategori for å se guider, verktøy, begreper og spørsmål."
               />
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
                 {categories.map((c) => (
                   <CategoryCard key={c.slug} category={c} />
                 ))}
@@ -78,8 +78,8 @@ export default function KbOverviewPage() {
                   title="Start her"
                   seeAll={{ label: "Se alle guider", href: "/guider" }}
                 />
-                <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-                  {guides.slice(0, 6).map((g) => (
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+                  {guides.slice(0, 8).map((g) => (
                     <GuideCard key={g.slug} guide={g} />
                   ))}
                 </div>
@@ -91,8 +91,8 @@ export default function KbOverviewPage() {
                   title="Fra ordlisten"
                   seeAll={{ label: "Se hele ordlisten", href: "/ordliste" }}
                 />
-                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                  {glossary.slice(0, 6).map((t) => (
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+                  {glossary.slice(0, 8).map((t) => (
                     <GlossaryCard key={t.slug} term={t} />
                   ))}
                 </div>
@@ -104,8 +104,8 @@ export default function KbOverviewPage() {
                   title="Verktøy"
                   seeAll={{ label: "Se alle verktøy", href: "/verktoy" }}
                 />
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {tools.slice(0, 3).map((t) => (
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+                  {tools.slice(0, 4).map((t) => (
                     <ToolCard key={t.slug} tool={t} />
                   ))}
                 </div>

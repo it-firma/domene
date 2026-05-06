@@ -36,7 +36,11 @@
 
 @layer components {
   .container-prose {
-    @apply mx-auto max-w-container px-7;
+    @apply mx-auto max-w-container px-5 md:px-8 xl:px-12;
+  }
+
+  .container-narrow {
+    @apply mx-auto max-w-container-narrow px-5 md:px-8 xl:px-12;
   }
 
   .btn-primary {
