@@ -317,3 +317,36 @@ export interface Provider {
   /** ISO date when last verified */
   updatedAt: string;
 }
+
+/* ─────────────────────────────────────────────────────────────
+   TLD DATABASE (/kunnskapsbase/tld/alle)
+   ───────────────────────────────────────────────────────────── */
+
+export type TldType =
+  | "ccTLD"          // Country-code TLD (.no, .se)
+  | "gTLD"           // Generic TLD (.com, .org)
+  | "sTLD"           // Sponsored TLD (.gov, .museum)
+  | "iTLD"           // Internationalized (IDN) TLD
+  | "infrastructure" // .arpa
+  | "brand";         // Brand-TLD (.google, .apple)
+
+export interface Tld {
+  /** TLD code without leading dot, e.g., "no", "com" */
+  code: string;
+  /** Display name with leading dot, e.g., ".no", ".com" */
+  name: string;
+  /** Category */
+  type: TldType;
+  /** For ccTLDs: country/region name */
+  country?: string;
+  /** 1-3 sentence neutral description */
+  description: string;
+  /** Registry operator that runs this TLD */
+  registry: string;
+  /** Year launched/delegated (when known) */
+  launched: number;
+  /** Is this commonly used? (for filtering "popular" view) */
+  popular: boolean;
+  /** Typical use case */
+  useCase: string;
+}

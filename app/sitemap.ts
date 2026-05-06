@@ -6,6 +6,7 @@ import { glossary } from "@/data/glossary";
 import { tools } from "@/data/tools";
 import { comparisons } from "@/data/comparisons";
 import { providers } from "@/data/providers";
+import { tlds } from "@/data/tlds";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url.replace(/\/$/, "");
@@ -82,6 +83,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: p.updatedAt,
       changeFrequency: "weekly" as const,
       priority: 0.85,
+    })),
+    {
+      url: `${base}/kunnskapsbase/tld/alle`,
+      lastModified: today,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    ...tlds.map((t) => ({
+      url: `${base}/kunnskapsbase/tld/${t.code}`,
+      lastModified: today,
+      changeFrequency: "monthly" as const,
+      priority: t.popular ? 0.7 : 0.5,
     })),
   ];
 }

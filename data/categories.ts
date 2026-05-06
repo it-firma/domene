@@ -618,6 +618,77 @@ export const categories: Category[] = [
     ],
     updatedAt: "2026-05-05",
   },
+  {
+    slug: "tld",
+    name: "TLD - toppnivådomener",
+    h1: "Alt om TLD-er (toppnivådomener)",
+    shortDescription:
+      "Hva er en TLD, hvor mange finnes, og hvordan velger du riktig? Komplett oversikt over toppnivådomener.",
+    intro:
+      "TLD står for Top-Level Domain - toppnivådomenet - og er den siste delen av et domenenavn etter punktumet, som .no, .com eller .org. Per februar 2026 finnes det 1 593 TLD-er i IANAs root-database, fordelt på flere kategorier: generiske (.com, .org, .tech), nasjonale (.no, .se, .dk), sponsede (.gov, .edu, .museum) og internasjonaliserte (.中国, .рф). Her samler vi alt du trenger å vite om TLD-er - fra hvordan de administreres til hvilke som passer for ditt prosjekt.",
+    shortAnswer:
+      "En TLD (Top-Level Domain) er den siste delen av et domenenavn, som .no eller .com. Per februar 2026 finnes det 1 593 TLD-er totalt, hvorav rundt 1 020 generiske (gTLD), 248 landkode (ccTLD), 14 sponsede (sTLD) og 150+ internasjonaliserte (IDN). TLD-er administreres av IANA på vegne av ICANN, mens hver enkelt TLD har sin egen registry-operatør. ICANN åpner andre runde av nye gTLD-er i april 2026.",
+    icon: "globe",
+    startHere: "hvordan-velge-domenenavn",
+    guides: [
+      "hvordan-velge-domenenavn",
+      "velge-internasjonale-domener",
+      "domene-og-seo",
+    ],
+    terms: ["tld", "gtld", "cctld", "idn", "punycode", "icann", "norid"],
+    tools: ["domenesjekk", "sammenlign-domenepriser"],
+    faq: [
+      {
+        question: "Hvor mange TLD-er finnes det?",
+        answer:
+          "Per februar 2026 finnes det 1 593 TLD-er i IANAs root-database. Av disse er rundt 1 020 generiske (gTLD), 248 landkode (ccTLD), 14 sponsede (sTLD), 3 restricted, 1 infrastructure (.arpa) og over 150 internasjonaliserte (IDN). I tillegg er 156 TLD-er tilbaketrukket eller pensjonert, og 11 brukes til testing. Antallet vokser jevnlig - ICANN åpner andre runde av nye gTLD-er i april 2026.",
+      },
+      {
+        question: "Hva er forskjellen på gTLD, ccTLD og sTLD?",
+        answer:
+          "gTLD (generic Top-Level Domain) er generiske TLD-er som .com, .org, .net og .tech - åpne for registrering uavhengig av geografi. ccTLD (country-code Top-Level Domain) er landkode-TLD-er som .no, .se og .dk, knyttet til et bestemt land. sTLD (sponsored Top-Level Domain) er sponsede TLD-er som .gov, .edu og .museum, med strenge krav til hvem som kan registrere.",
+      },
+      {
+        question: "Hvem administrerer TLD-ene?",
+        answer:
+          "ICANN (Internet Corporation for Assigned Names and Numbers) har overordnet ansvar for TLD-policy og delegering. IANA (Internet Assigned Numbers Authority), som opereres under ICANN, vedlikeholder root-databasen og koordinerer tekniske endringer. Hver enkelt TLD administreres av en registry-operatør - for eksempel Norid for .no, Verisign for .com, og PIR for .org.",
+      },
+      {
+        question: "Hvilken TLD bør jeg velge?",
+        answer:
+          "Velg basert på målgruppe og strategi. For norske bedrifter er .no det naturlige valget - signaliserer norsk tilknytning og er administrert av Norid. .com gir bredere internasjonal appell og passer for globale merkevarer. Tech-startups velger ofte .io eller .ai. E-handel kan bruke .shop eller .store. Mange registrerer flere TLD-er (typisk .no + .com) for å beskytte merkevaren.",
+      },
+      {
+        question: "Hva er internasjonaliserte TLD-er (IDN)?",
+        answer:
+          "IDN (Internationalized Domain Name) TLD-er er toppnivådomener i ikke-latinske skrift, som .中国 (Kina), .рф (Russland), .ভারত (India) eller .한국 (Sør-Korea). De ble innført i 2010 etter ICANN åpnet for søknader i 2009. Teknisk konverteres IDN-er til ASCII via Punycode for DNS-lookups, men vises i nativ skrift i nettlesere.",
+      },
+      {
+        question: "Kan jeg lage min egen TLD?",
+        answer:
+          "Ja, men det er kostbart og tidkrevende. ICANN åpnet markedet for nye gTLD-er i 2011 da over 1 200 nye TLD-er ble lagt til. Andre runde av søknadsvinduet åpner i april 2026 og varer 12-15 uker. Søknadsavgift og oppstartskost ligger typisk på flere millioner kroner, og søkere må velge en akkreditert Registry Service Provider fra ICANN sin liste.",
+      },
+      {
+        question: "Hva skjer med TLD-er som blir lagt ned?",
+        answer:
+          "Noen TLD-er pensjoneres når deres landkode endres - for eksempel .cs (Tsjekkoslovakia) ble erstattet av .cz og .sk, og .yu (Jugoslavia) ble erstattet av .ba, .hr, .me og andre. .su (Sovjetunionen) er fortsatt aktiv tross at landet ikke eksisterer. Per februar 2026 er 156 TLD-er offisielt tilbaketrukket eller pensjonert i IANAs database.",
+      },
+      {
+        question: "Hvilke TLD-er er mest populære i Norge?",
+        answer:
+          ".no dominerer i Norge med rundt 800 000 registrerte domener. .com er nummer to for norske bedrifter, fulgt av .org og .net. Nyere TLD-er som .io, .ai, .app og .dev har vokst sterkt blant tech-startups. For norsk e-handel er .shop og .store i vekst. Bedrifter registrerer ofte både .no og .com som minimum for å beskytte merkevaren.",
+      },
+    ],
+    summary: [
+      "TLD står for Top-Level Domain - den siste delen av et domene etter punktumet.",
+      "Per februar 2026 finnes 1 593 TLD-er totalt i IANAs root-database.",
+      "TLD-er deles i fire hovedkategorier: gTLD, ccTLD, sTLD og IDN.",
+      "ICANN administrerer policy, IANA vedlikeholder databasen, registry-operatører kjører hver TLD.",
+      "Norske bedrifter velger ofte .no for lokal forankring og .com for global appell.",
+      "ICANN åpner andre runde av nye gTLD-er i april 2026.",
+    ],
+    updatedAt: "2026-05-05",
+  },
 ];
 
 export const findCategory = (slug: string) =>
