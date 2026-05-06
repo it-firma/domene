@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GlossaryCard } from "@/components/GlossaryCard";
 import { SectionHead } from "@/components/SectionHead";
-import { KnowledgeBaseSidebar } from "@/components/KnowledgeBaseSidebar";
+import { SectionSidebar } from "@/components/SectionSidebar";
 import { StructuredData } from "@/components/StructuredData";
 import { canonical, ldBreadcrumb, ldCollectionPage } from "@/lib/seo";
 import { glossary } from "@/data/glossary";
@@ -74,7 +74,7 @@ export default function GlossaryOverviewPage() {
           <div className="grid gap-8 xl:gap-12 lg:grid-cols-[280px_minmax(0,1fr)]">
             <aside className="hidden lg:block">
               <div className="sticky top-24 max-h-[calc(100vh-100px)] overflow-y-auto overscroll-contain pr-1">
-                <KnowledgeBaseSidebar />
+                <SectionSidebar section="ordliste" />
               </div>
             </aside>
 
