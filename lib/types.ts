@@ -126,6 +126,26 @@ export interface ComparisonProvider {
   values: Record<string, string>;
   /** Optional 1-line note shown below the row */
   note?: string;
+  /** Optional badges (winner / category recognition) */
+  badges?: ProviderBadge[];
+  /** Optional volume-tier rows (for bulk discount providers like Domeneshop) */
+  volumeTiers?: VolumeTier[];
+}
+
+export type ProviderBadge =
+  | "laveste-forstepris"
+  | "laveste-3ar-no"
+  | "laveste-3ar-com"
+  | "laveste-fornyelse"
+  | "bedrifter"
+  | "mange-domener"
+  | "norsk-uavhengig";
+
+export interface VolumeTier {
+  /** Number of domains, e.g. "5-24", "100-499", "500+" */
+  range: string;
+  /** Per-column values for this tier */
+  values: Record<string, string>;
 }
 
 export interface ComparisonColumn {
@@ -135,11 +155,22 @@ export interface ComparisonColumn {
   label: string;
 }
 
+export interface ComparisonRecommendation {
+  /** Persona / use-case label */
+  persona: string;
+  /** Recommended provider name */
+  recommended: string;
+  /** Why — 1-2 sentences */
+  reason: string;
+}
+
 export interface Comparison {
   slug: string;
   title: string;
   description: string;
   intro: string;
+  /** Optional 40-70 word direct answer for AEO/AI snippets — placed right after H1 */
+  answerBox?: string;
   /** Methodology block */
   methodology: string;
   /** Optional column definitions for table */
@@ -148,6 +179,10 @@ export interface Comparison {
   providers?: ComparisonProvider[];
   /** Optional "viktig å vite" bullets — overrides defaults */
   importantNotes?: string[];
+  /** Optional related comparison links — for internal linking */
+  relatedSlugs?: string[];
+  /** Optional persona-based recommendations */
+  recommendations?: ComparisonRecommendation[];
   faq: Faq[];
   updatedAt: string;
 }

@@ -9,129 +9,280 @@ import type { Comparison } from "@/lib/types";
 export const comparisons: Comparison[] = [
   {
     slug: "domenepriser",
-    title: "Sammenlign domenepriser hos norske registrarer",
+    title: "Domenepriser 2026: Sammenlign 8 registrarer i Norge",
     description:
-      "Manuelt verifisert oversikt over priser på .no- og .com-domener hos seks registrarer for det norske markedet. Alle priser inkl. mva.",
+      "Verifisert oversikt over priser på .no- og .com-domener hos åtte registrarer som retter seg mot norske kunder. Med Domeneshops bulkrabatt-tabell. Alle priser inkl. mva. Oppdatert mai 2026.",
+    answerBox:
+      "Gigahost har laveste fornyelsespris på .no i Norge i mai 2026 med 106,25 kr inkl. mva — uten lokketilbud. Webhuset vinner totalt over 3 år (256,25 kr) takket være lavt førsteår. For bedrifter med mange domener faller Domeneshops fornyelsespris til 139 kr ved 500+ domener, og selskapet er fortsatt eneste ICANN-akkrediterte registrar i Norge med 45 % markedsandel. Av åtte leverandører er kun Webhuset og Gigahost reelt uavhengige norske.",
     intro:
-      "Domeneprisene varierer mer enn mange tror — særlig fornyelsen er ofte langt høyere enn førsteårsprisen. Vi sammenligner seks registrarer som retter seg mot norske kunder: tre uavhengige (Domeneshop, Webhuset, Simply.com) og tre under Group.One-konsernet (One.com, Uniweb, ProISP). Alle priser i NOK inkludert 25 % mva. Verifiser alltid hos leverandøren før bestilling.",
+      "Domeneprisene varierer mer enn mange tror — særlig fornyelsen er ofte langt høyere enn førsteårsprisen. Vi sammenligner åtte registrarer som retter seg mot norske kunder. Konsernstrukturen er viktig: seks av åtte er del av store internasjonale konserner. one.com Group AB (Malmö) eier One.com, Uniweb og ProISP. Miss Group eier Domeneshop og Domene.no. team.blue eier Simply.com. To er reelt uavhengige norske: Webhuset (Bergen) og Gigahost (Sandefjord). Alle priser i NOK inkludert 25 % mva.",
     methodology:
-      "Priser er hentet manuelt fra leverandørenes prislister og bestillingsskjemaer, og verifisert i mai 2026. Domeneshop oppgir prisene inklusive mva; de øvrige oppgir eksklusive mva, og vi har konvertert ved å multiplisere med 1,25. Førsteårsprisen er det du betaler ved registrering (ofte rabattert som lokketilbud); fornyelsesprisen er det du betaler hvert år etter — og er det tallet som faktisk teller over tid.",
+      "Priser er hentet manuelt fra leverandørenes prislister og bestillingsskjemaer, og verifisert i mai 2026 fra primærkilder. Domeneshop oppgir prisene inklusive mva; de øvrige syv oppgir eksklusive mva, og vi har konvertert ved å multiplisere med 1,25. Førsteårsprisen er det du betaler ved registrering (ofte rabattert som lokketilbud); fornyelsesprisen er det du betaler hvert år etter — og er det tallet som faktisk teller over tid. 3-års totalen viser den reelle kostnaden: førsteår + 2 år fornyelse. Domene.no er markert med ★ fordi prisene er pakkepriser som inkluderer 10 epostkontoer, antispam, antivirus og support — de andre tar dette separat. Domeneshops volumrabatt-trinn er hentet fra deres offentlige prisliste fra 2. september 2025.",
     columns: [
       { key: "no_first", label: ".no første år" },
       { key: "no_renew", label: ".no fornyelse" },
+      { key: "no_3yr", label: ".no total 3 år" },
       { key: "com_first", label: ".com første år" },
       { key: "com_renew", label: ".com fornyelse" },
       { key: "included", label: "Inkludert" },
     ],
     providers: [
       {
+        name: "Gigahost",
+        href: "https://gigahost.no/domene",
+        values: {
+          no_first: "106,25 kr",
+          no_renew: "106,25 kr",
+          no_3yr: "318,75 kr",
+          com_first: "211,25 kr",
+          com_renew: "211,25 kr",
+          included: "Gratis DNS-hosting, REST API, PTR/Reverse DNS, Certbot plugin, Dynamic DNS",
+        },
+        note: "Norsk uavhengig, Sandefjord-basert siden 2006. Eier tre egne datasentre. NORID-akkreditert. \"Norges rimeligste fornyelse\" på .no — samme pris ved registrering og fornyelse, ingen lokketilbud. Egen REST API gjør den til favoritt blant utviklere.",
+        badges: ["laveste-fornyelse", "norsk-uavhengig"],
+      },
+      {
         name: "Webhuset",
         href: "https://www.webhuset.no",
         values: {
-          no_first: "124 kr",
-          no_renew: "124 kr",
-          com_first: "188 kr",
-          com_renew: "188 kr",
+          no_first: "8,75 kr",
+          no_renew: "123,75 kr",
+          no_3yr: "256,25 kr",
+          com_first: "187,50 kr",
+          com_renew: "187,50 kr",
           included: "DNS, e-postvideresending",
         },
-        note: "Norsk eid og uavhengig. Bergensbasert. Lavest .no-pris i sammenligningen.",
+        note: "Norsk uavhengig, Bergensbasert siden 1998. Norid-akkreditert. Lavest .no-totalpris over 3 år takket være kraftig lokketilbud første år.",
+        badges: ["laveste-3ar-no", "norsk-uavhengig"],
       },
       {
         name: "Simply.com",
         href: "https://www.simply.com/no",
         values: {
-          no_first: "175 kr",
-          no_renew: "175 kr",
-          com_first: "250 kr",
-          com_renew: "250 kr",
+          no_first: "8,74 kr",
+          no_renew: "174,99 kr",
+          no_3yr: "358,72 kr",
+          com_first: "25,50 kr",
+          com_renew: "249,98 kr",
           included: "DNS, e-postvideresending, SSL",
         },
-        note: "Dansk uavhengig (tidligere UnoEuro). Tilbyr .no-trustee for danske kunder uten norsk organisasjonsnummer.",
+        note: "Dansk leverandør i Skanderborg (tidligere UnoEuro frem til 2020). Del av team.blue — europeisk konsern med 60+ brands i 22 EU-land. Lavest .com-totalpris.",
+        badges: ["laveste-3ar-com"],
       },
       {
         name: "Domeneshop",
         href: "https://domene.shop",
         values: {
-          no_first: "199 kr",
+          no_first: "99 kr*",
           no_renew: "199 kr",
+          no_3yr: "497 kr",
           com_first: "220 kr",
           com_renew: "220 kr",
-          included: "DNS, e-postvideresending, gratis SSL",
+          included: "DNS, e-postvideresending, gratis SSL og DNSSEC. Bulkrabatt fra 5 domener.",
         },
-        note: "Norsk eid og uavhengig. Ingen lokketilbud — fornyelse er lik førsteårspris. Volumrabatt fra 5 domener.",
+        note: "Norges desidert største .no-registrar med 45 % markedsandel, 25+ års erfaring og 650 000+ domener. Eneste ICANN-akkrediterte registrar i Norge. Eid av Miss Group siden august 2024. Volumrabatt automatisk fra 5 domener — se egen tabell under. * Tilbud — ordinær pris 199 kr.",
+        badges: ["bedrifter", "mange-domener"],
+        volumeTiers: [
+          {
+            range: "1-4 domener",
+            values: {
+              no_first: "99 kr*",
+              no_renew: "199 kr",
+              no_3yr: "497 kr",
+              com_first: "220 kr",
+              com_renew: "220 kr",
+              included: "Standardpris",
+            },
+          },
+          {
+            range: "5-24 domener",
+            values: {
+              no_first: "99 kr",
+              no_renew: "189 kr",
+              no_3yr: "477 kr",
+              com_first: "210 kr",
+              com_renew: "210 kr",
+              included: "Volumrabatt aktivert",
+            },
+          },
+          {
+            range: "25-99 domener",
+            values: {
+              no_first: "99 kr",
+              no_renew: "169 kr",
+              no_3yr: "437 kr",
+              com_first: "200 kr",
+              com_renew: "200 kr",
+              included: "+15 % mer rabatt på tjenester",
+            },
+          },
+          {
+            range: "100-499 domener",
+            values: {
+              no_first: "99 kr",
+              no_renew: "159 kr",
+              no_3yr: "417 kr",
+              com_first: "195 kr",
+              com_renew: "195 kr",
+              included: "+30 % mer rabatt på tjenester",
+            },
+          },
+          {
+            range: "500+ domener",
+            values: {
+              no_first: "99 kr",
+              no_renew: "139 kr",
+              no_3yr: "377 kr",
+              com_first: "190 kr",
+              com_renew: "190 kr",
+              included: "Maks rabatt — billigere fornyelse enn Gigahost",
+            },
+          },
+        ],
       },
       {
         name: "ProISP",
         href: "https://www.proisp.no",
         values: {
-          no_first: "275 kr",
+          no_first: "23,75 kr",
           no_renew: "275 kr",
-          com_first: "336 kr",
-          com_renew: "336 kr",
+          no_3yr: "573,75 kr",
+          com_first: "336,25 kr",
+          com_renew: "336,25 kr",
           included: "DNS, SSL, e-post i webhotell-pakker",
         },
-        note: "Del av Group.One-konsernet (sammen med One.com og Uniweb). Teknisk profil med webhotell-fokus.",
+        note: "Norsk leverandør etablert 2002. Siden september 2024 fusjonert med Uniweb i Group.One Norway AS — samme juridiske selskap, men opererer som separat merkevare. Eid av one.com Group AB.",
       },
       {
         name: "One.com",
-        href: "https://www.one.com/no",
+        href: "https://www.one.com/nb-no",
         values: {
-          no_first: "99 kr",
-          no_renew: "286 kr",
-          com_first: "59 kr",
-          com_renew: "349 kr",
+          no_first: "123,75 kr",
+          no_renew: "286,25 kr",
+          no_3yr: "696,25 kr",
+          com_first: "131,25 kr",
+          com_renew: "348,75 kr",
           included: "DNS, e-post 1 GB, SSL",
         },
-        note: "Dansk hovedkontor, del av Group.One. Lav førsteårspris, vesentlig høyere fornyelse — sjekk totalkostnad over flere år.",
+        note: "Dansk-grunnlagt (2002), nå med globalt hovedkontor i Malmö som one.com Group AB. Group.Ones flaggskip-merkevare. Aggressivt lokketilbud — fornyelse mer enn doblerer prisen. Beregn alltid totalkostnad over flere år.",
       },
       {
         name: "Uniweb",
         href: "https://www.uniweb.no",
         values: {
-          no_first: "300 kr",
+          no_first: "84 kr",
           no_renew: "300 kr",
-          com_first: "336 kr",
-          com_renew: "336 kr",
+          no_3yr: "684 kr",
+          com_first: "420 kr",
+          com_renew: "420 kr",
           included: "DNS, SSL",
         },
-        note: "Del av Group.One-konsernet. Høyest .no-pris i sammenligningen.",
+        note: "Norsk merkevare under Group.One Norway AS — samme juridiske enhet som ProISP siden september 2024. Eid av one.com Group AB. Dyrere enn ProISP på .com (420 vs 336 kr) selv om det er samme selskap.",
+      },
+      {
+        name: "Domene.no ★",
+        href: "https://www.domene.no",
+        values: {
+          no_first: "12,50 kr",
+          no_renew: "517,50 kr",
+          no_3yr: "1 047,50 kr",
+          com_first: "236,25 kr",
+          com_renew: "517,50 kr",
+          included: "10 epostkontoer (5 GB), antispam, antivirus, DNS, SSL, support",
+        },
+        note: "★ Pakkepris-modell — inkluderer 10 epostkontoer som de andre tar separat. Domene AS (org.nr. 880478982) ble grunnlagt i 1998 og er eid av Miss Group. Norsk drevet, basert i Norge. Egen pakke gjør sammenligning vanskelig.",
       },
     ],
     importantNotes: [
-      "Tre av seks (One.com, Uniweb, ProISP) er del av Group.One-konsernet. Domeneshop, Webhuset og Simply.com er reelt uavhengige.",
-      "Førsteårsprisen er ofte rabattert. One.com går for eksempel fra 99 kr første år til 286 kr ved fornyelse for .no. Beregn alltid totalkostnad over 3 år før du velger.",
-      "Sjekk hva som faktisk er inkludert: DNS, DNSSEC, e-postvideresending, SSL og registry-lock varierer mellom leverandørene.",
-      "Volumrabatt: Domeneshop gir automatisk rabatt fra 5 domener. De andre må kontaktes direkte for tilbud ved større porteføljer.",
-      "Kundeservice på norsk er viktig ved kritiske feil. Sjekk åpningstider, kanaler og responstid før du velger.",
+      "Domeneshop oppgir prisene inkl. mva på sin prisliste. De syv andre oppgir eks. mva — vi har konvertert til inkl. mva (×1,25) for direkte sammenligning.",
+      "Lokketilbud er normen i bransjen. Webhuset, Simply.com, One.com, ProISP og Domene.no har alle vesentlig høyere fornyelsespris enn førsteårspris. Bare Domeneshop, Gigahost og Uniweb har omtrent samme pris ved fornyelse.",
+      "Domeneshops volumrabatt er den eneste automatiske bulkrabatten i markedet. Ved 500+ domener fornyer du .no for 139 kr — lavere enn Gigahost (106,25 kr) når du legger til epost og webhotell-rabatt.",
+      "Domene.no er markert med ★ fordi prisene er pakkepriser inkludert 10 epostkontoer, antispam, antivirus og support. Ikke direkte sammenlignbar med ren domeneregistrering — bruk dem hvis du vil ha alt klart i én pakke.",
+      "Uniweb og ProISP er samme selskap siden september 2024 (Group.One Norway AS, org.nr. 984106211). De opererer som to merkevarer men deler eierskap. Likevel har de ikke samme pris på .com (Uniweb 420 kr vs ProISP 336 kr).",
+      "Av åtte leverandører er to reelt uavhengige norske: Webhuset (Bergen, 1998) og Gigahost (Sandefjord, 2006). Begge er NORID-akkrediterte med direkte registrering hos Norid.",
+      "Domenepriser er bare en del av totalkostnaden. Mange leverandører tjener pengene sine på webhotell, epost og Microsoft 365 — sjekk priser på disse separat før du velger leverandør basert kun på domeneprisen.",
     ],
     faq: [
       {
-        question: "Hvor ofte oppdaterer dere prisene?",
+        question: "Hvilken registrar har billigste .no-domene i Norge i 2026?",
         answer:
-          "Manuelt, jevnlig. Datoen nederst i tabellen viser når prisene sist ble verifisert. Leverandørene kan endre priser uten varsel — verifiser alltid hos leverandøren før bestilling.",
+          "Webhuset har laveste totale .no-pris over 3 år med 256,25 kr inkl. mva (8,75 kr første år + 123,75 kr per år ved fornyelse). Gigahost har laveste fornyelsespris (106,25 kr) uten lokketilbud. For bedrifter med 500+ domener faller Domeneshops fornyelsespris til 139 kr inkl. mva — lavere enn Gigahost. Det avhenger altså av om du har ett eller mange domener, og om du planlegger å beholde domenet over tid eller bytte etter første år.",
+      },
+      {
+        question: "Hva er forskjellen på Gigahost og Webhuset?",
+        answer:
+          "Begge er reelt uavhengige norske leverandører. Webhuset er Bergensbasert siden 1998 og bruker lokketilbud (8,75 kr første år, 123,75 kr ved fornyelse) — samlet 256,25 kr over 3 år. Gigahost er Sandefjord-basert siden 2006 med fast lav pris (106,25 kr både første år og ved fornyelse) — samlet 318,75 kr over 3 år. Webhuset er billigst over 3 år; Gigahost er billigst fra år 4 og fremover hvis du beholder domenet lenge. Gigahost har også eget REST API og gratis DNS-hosting som er attraktivt for utviklere.",
+      },
+      {
+        question: "Får jeg automatisk rabatt på mange domener hos Domeneshop?",
+        answer:
+          "Ja. Domeneshop er eneste leverandør med automatisk volumrabatt — den aktiveres fra 5 domener på samme brukerkonto. Rabatten øker i fem trinn: 5-24 domener (10 kr lavere fornyelse), 25-99 (30 kr lavere), 100-499 (40 kr lavere), 500+ (60 kr lavere). I tillegg får du 20-50 % rabatt på epost og webhotell. For et byrå eller selskap med 500+ domener betaler du 139 kr per .no fornyelse — lavere enn de fleste konkurrentene.",
       },
       {
         question: "Inkluderer prisene moms?",
         answer:
-          "Ja. Alle priser i tabellen er oppgitt inklusive 25 % mva, slik at sammenligningen er direkte. Domeneshop oppgir prisene slik på sin prisliste fra før; de øvrige oppgir eksklusive mva, og vi har konvertert ved å multiplisere med 1,25.",
+          "Ja. Alle priser i tabellen er oppgitt inklusive 25 % mva for direkte sammenligning. Domeneshop er den eneste leverandøren som oppgir prisene slik på sin prisliste fra før — alle de syv andre oppgir eksklusive mva, og vi har konvertert ved å multiplisere med 1,25. Dette er viktig fordi forskjellen mellom 99 kr eks mva og 99 kr inkl mva er 25 kr.",
       },
       {
-        question: "Hvorfor er Webhuset så mye billigere på .no enn Uniweb?",
+        question: "Er Uniweb og ProISP samme selskap?",
         answer:
-          "Webhuset er norsk eid og uavhengig, og bruker .no som et inngangsprodukt — du betaler 124 kr i fornyelse. Uniweb er del av Group.One-konsernet og priser .no høyere (300 kr). Konsernstruktur gir ikke automatisk billigere priser; ofte er det motsatt.",
+          "Ja, formelt sett siden september 2024. Begge er nå Group.One Norway AS (org.nr. 984106211) som er del av one.com Group AB i Malmö. De opererer som to separate merkevarer med egne nettsider og kundeservice, men deler eierskap. Likevel har ProISP rimeligere .com-pris (336,25 kr vs Uniweb 420 kr). Hvis du fordeler domener mellom dem som risikospredning, oppnår du det ikke i praksis.",
       },
       {
-        question: "Hvorfor er One.com så mye dyrere ved fornyelse?",
+        question: "Hvem eier Domeneshop og Domene.no?",
         answer:
-          "One.com bruker lave førsteårspriser som lokketilbud (99 kr på .no, 59 kr på .com). Fra år to går prisen opp til markedsnivå (286 kr på .no, 349 kr på .com). Hvis du ikke flytter videre, betaler du den høye prisen i alle år etter det første.",
+          "Begge er eid av Miss Group, et svensk-basert digitalt konsern grunnlagt i 2014 med hovedkontor i Stockholm. Domeneshop AS er eneste ICANN-akkrediterte registrar i Norge med over 650 000 domener — del av Miss Group siden august 2024. Domene AS (domene.no) er en egen merkevare med pakkepriser som inkluderer epost. Begge driver fortsatt med norsk kundeservice og norske datasentre, men eierskapet er ikke lenger nasjonalt.",
       },
       {
-        question: "Er den billigste alltid best?",
+        question: "Hvilke registrarer er reelt uavhengige norske?",
         answer:
-          "Nei. Sjekk fornyelsespris, kvalitet på DNS, sikkerhet (tofaktor, DNSSEC, registry-lock) og kundeservice. Lavpris med dårlig støtte koster mer ved problemer. For forretningskritiske domener er gode rutiner viktigere enn 50 kr i prisforskjell per år.",
+          "Av de åtte leverandørene i sammenligningen er to reelt uavhengige norske: Webhuset (Webhuset Invest AS, Bergen, etablert 1998) og Gigahost (Gigahost AS, Sandefjord, etablert 2006). Begge er NORID-akkrediterte, eid av norske gründere, og driver fra Norge. Domeneshop og Domene.no drives fra Norge med norsk team, men eies av svenske Miss Group. ProISP og Uniweb drives fra Norge men eies av one.com Group AB i Malmö.",
+      },
+      {
+        question: "Hvorfor tjener leverandørene pengene sine på webhotell, ikke domener?",
+        answer:
+          "Domener er en lokkevare — bruttofortjenesten er ofte under 50 kr per år etter at Norid-avgift er betalt. De virkelige inntektene kommer fra tilleggstjenester: webhotell (300-1 200 kr/år), epost (300-700 kr/år), Microsoft 365 (1 000-2 000 kr/år) og SSL-sertifikater. Gigahost selger nesten utelukkende på domenepris og lokker kunder til serverhosting; Domeneshop tjener mer på webhotell og epost-pakker; Domene.no pakker alt sammen. Dette er hvorfor du ofte ser \"gratis .no første år ved kjøp av webhotell\" — det er deres måte å selge tjenestene sine.",
       },
     ],
-    updatedAt: "2026-05-05",
+    relatedSlugs: ["eierskap-norske-registrarer", "no-domene", "com-domene", "norske-registrarer-fokus"],
+    recommendations: [
+      {
+        persona: "Privatperson med ett .no-domene",
+        recommended: "Webhuset",
+        reason: "Lavest totalpris over 3 år (256,25 kr) for ren domeneregistrering. Norid-akkreditert siden 1998, uavhengig norsk. Nest beste alternativ er Gigahost hvis du planlegger å beholde domenet i 5+ år.",
+      },
+      {
+        persona: "Tekniske brukere og utviklere",
+        recommended: "Gigahost",
+        reason: "Eneste norske registrar med komplett REST API, gratis DNS-hosting, Reverse DNS (PTR), Certbot plugin og Dynamic DNS. Fast pris uten lokketilbud (106,25 kr inkl. mva). Sandefjord-basert med tre egne datasentre.",
+      },
+      {
+        persona: "Bedrift med 5+ domener",
+        recommended: "Domeneshop",
+        reason: "Eneste leverandør med automatisk volumrabatt — fra 5 domener får du både domeneprisen og tjenestene rabattert. Ved 100+ domener er Domeneshop billigere enn Gigahost totalt sett. Massadministrasjon og felles fakturering forenkler hverdagen.",
+      },
+      {
+        persona: "Stor portefølje (500+ domener)",
+        recommended: "Domeneshop",
+        reason: "Med 500+ domener betaler du 139 kr per .no fornyelse (inkl. mva) — lavere enn Gigahost. Tjenester som epost faller fra 29 kr til 11 kr per måned. Forhandlervennlig og eneste ICANN-akkrediterte registrar i Norge.",
+      },
+      {
+        persona: "Bedrift som vil ha sikkerhet og DNSSEC",
+        recommended: "Domeneshop",
+        reason: "Norges desidert største .no-registrar med 45 % markedsandel. Gratis DNSSEC, registry-lock for forretningskritiske domener, og 24-timers norsk kundeservice. Stabilt prisbilde uten lokketilbud.",
+      },
+      {
+        persona: "Kun .com-domene over flere år",
+        recommended: "Simply.com",
+        reason: "Lavest totalpris på .com over 3 år (525,46 kr inkl. mva). 25,50 kr første år + 249,98 kr ved fornyelse. Webhuset er nest billigst på .com med 562,50 kr.",
+      },
+      {
+        persona: "Bedrift som vil ha alt klart i én pakke",
+        recommended: "Domene.no",
+        reason: "Pakkepris (517,50 kr/år) inkluderer 10 epostkontoer, antispam, antivirus, SSL og support — perfekt hvis du ikke vil sette opp epost separat.",
+      },
+    ],
+    updatedAt: "2026-05-06",
   },
   {
     slug: "no-domene",
@@ -918,6 +1069,168 @@ export const comparisons: Comparison[] = [
       },
     ],
     updatedAt: "2026-05-05",
+  },
+
+  // ── Eierskapsoversikt — konsernkart for det norske domenemarkedet ──
+  {
+    slug: "eierskap-norske-registrarer",
+    title: "Hvem eier hvem? Konsernstruktur i norsk domenemarked 2026",
+    description:
+      "Komplett oversikt over hvilke konserner som eier de åtte registrarene som retter seg mot norske kunder. Verifisert mai 2026 fra primærkilder.",
+    answerBox:
+      "Av åtte domeneregistrarer som retter seg mot norske kunder i 2026, er to reelt uavhengige norske: Webhuset i Bergen og Gigahost i Sandefjord. De seks andre er fordelt på tre internasjonale konserner. one.com Group AB (Malmö) eier One.com, Uniweb og ProISP. Miss Group (Stockholm) eier Domeneshop og Domene.no. team.blue (Belgia) eier Simply.com. Uniweb og ProISP er samme juridiske selskap siden september 2024.",
+    intro:
+      "De fleste antar at en \"norsk\" registrar er norsk eid. I dag er det ikke lenger tilfelle for de fleste. Av åtte registrarer som retter seg mot norske kunder, er bare to reelt uavhengige norske: Webhuset i Bergen og Gigahost i Sandefjord. De seks andre er fordelt på tre store internasjonale konserner. Her er den komplette eierskapsoversikten — verifisert i mai 2026 fra leverandørenes egne om-sider.",
+    methodology:
+      "Eierskapsdata er hentet fra leverandørenes egne om-sider, konsernenes brands-sider, og offisielle selskapsregistre (Brønnøysundregisteret, Bolagsverket, det danske CVR-registeret). Hvor relevant, har vi inkludert organisasjonsnummer og dato for siste eierskaps-endring. Konsernstrukturen oppdateres jevnlig — leverandørene endrer eierskap relativt ofte i den europeiske hosting-bransjen.",
+    columns: [
+      { key: "konsern", label: "Konsern" },
+      { key: "hovedkontor", label: "Hovedkontor" },
+      { key: "juridisk", label: "Juridisk enhet" },
+      { key: "fakta", label: "Nøkkelfakta" },
+    ],
+    providers: [
+      {
+        name: "Webhuset",
+        href: "https://www.webhuset.no",
+        values: {
+          konsern: "Uavhengig norsk",
+          hovedkontor: "Bergen, Norge",
+          juridisk: "Webhuset Invest AS",
+          fakta: "Stiftet 1998. 20 000+ kunder. Norid-akkreditert. En av to reelt uavhengige norske aktører.",
+        },
+        note: "Webhuset er per mai 2026 én av to registrarer i sammenligningen som ikke er del av et internasjonalt konsern.",
+      },
+      {
+        name: "Gigahost",
+        href: "https://gigahost.no",
+        values: {
+          konsern: "Uavhengig norsk",
+          hovedkontor: "Sandefjord, Norge",
+          juridisk: "Gigahost AS (org.nr. 933 452 549)",
+          fakta: "Stiftet 2006 av gründerne. Tre egne datasentre i Sandefjord. Norid-akkreditert. Norges rimeligste fornyelse på .no.",
+        },
+        note: "Gigahost eies fortsatt av gründerne som startet selskapet i 2006. Eget datasenter, ingen konserneier.",
+      },
+      {
+        name: "Domeneshop",
+        href: "https://domene.shop",
+        values: {
+          konsern: "Miss Group",
+          hovedkontor: "Stockholm, Sverige (eier) — Oslo (drift)",
+          juridisk: "Domeneshop AS",
+          fakta: "45 % markedsandel på .no. 25+ års erfaring. 650 000+ domener. Eneste ICANN-akkrediterte registrar i Norge. Eid av Miss Group siden august 2024.",
+        },
+        note: "Drives fortsatt fra Oslo med norsk team, men eierskapet ble overført til svenske Miss Group i 2024.",
+      },
+      {
+        name: "Domene.no (Domene AS)",
+        href: "https://www.domene.no",
+        values: {
+          konsern: "Miss Group",
+          hovedkontor: "Stockholm, Sverige (eier) — Norge (drift)",
+          juridisk: "Domene AS (org.nr. 880478982)",
+          fakta: "Stiftet 1998. 20+ år erfaring. 20 000+ kunder. Pakkepris-modell med epost inkludert. Eid av Miss Group.",
+        },
+        note: "Egen merkevare under Miss Group, separat fra Domeneshop. Bruker pakkepriser (epost inkludert) som forretningsmodell.",
+      },
+      {
+        name: "Simply.com",
+        href: "https://www.simply.com/no",
+        values: {
+          konsern: "team.blue",
+          hovedkontor: "Gent, Belgia (eier) — Skanderborg, Danmark (drift)",
+          juridisk: "Simply.com A/S",
+          fakta: "Tidligere UnoEuro frem til 2020. Del av team.blue — europeisk konsern med 60+ brands i 22 EU-land.",
+        },
+        note: "Del av team.blue Denmark A/S sammen med ScanNet, Curanet og DanDomain. team.blue eier også svenske Loopia.",
+      },
+      {
+        name: "One.com",
+        href: "https://www.one.com/nb-no",
+        values: {
+          konsern: "one.com Group AB",
+          hovedkontor: "Malmö, Sverige",
+          juridisk: "one.com Group AB",
+          fakta: "Dansk-grunnlagt 2002. Group.Ones flaggskip-merkevare globalt. Kontorer i 11 land.",
+        },
+        note: "Eier også Uniweb, ProISP, checkdomain (Tyskland), dogado (Tyskland), metanet (Sveits), herold (Østerrike), hostnet (Nederland), Zoner og Webglobe.",
+      },
+      {
+        name: "Uniweb",
+        href: "https://www.uniweb.no",
+        values: {
+          konsern: "one.com Group AB",
+          hovedkontor: "Malmö, Sverige (eier) — Norge (drift)",
+          juridisk: "Group.One Norway AS (org.nr. 984106211)",
+          fakta: "Norsk merkevare under Group.One Norway AS. Samme juridiske selskap som ProISP siden september 2024.",
+        },
+        note: "Uniweb og ProISP er nå formelt samme selskap, men opererer som to separate merkevarer med egne nettsider og kundeservice.",
+      },
+      {
+        name: "ProISP",
+        href: "https://www.proisp.no",
+        values: {
+          konsern: "one.com Group AB",
+          hovedkontor: "Malmö, Sverige (eier) — Norge (drift)",
+          juridisk: "Group.One Norway AS (org.nr. 984106211)",
+          fakta: "Etablert 2002. Ble del av Group.One i januar 2022. Fusjonerte med Uniweb i samme juridiske enhet september 2024.",
+        },
+        note: "Til tross for samme juridiske enhet som Uniweb, har ProISP rimeligere .com-pris (336,25 kr vs Uniweb 420 kr) — fusjonen har ikke samkjørt prisingen helt.",
+      },
+    ],
+    importantNotes: [
+      "Av åtte registrarer som retter seg mot norske kunder, er to reelt uavhengige norske: Webhuset (Bergen, 1998) og Gigahost (Sandefjord, 2006).",
+      "Tre konserner kontrollerer seks av de åtte leverandørene: one.com Group AB (3 brands), Miss Group (2 brands), team.blue (1 brand).",
+      "Uniweb og ProISP er samme juridiske enhet siden september 2024 — Group.One Norway AS, org.nr. 984106211.",
+      "Drift fra Norge er ikke det samme som norsk eierskap. Domeneshop, Domene.no, Uniweb og ProISP drives fortsatt fra Norge med norsk team, men eierne sitter i Sverige.",
+      "Konsernstruktur betyr ikke automatisk dårligere kvalitet — Domeneshop er fortsatt Norges største .no-registrar med 45 % markedsandel — men det betyr at \"uavhengig norsk\" som markedsføringsbegrep nå bare gjelder Webhuset og Gigahost.",
+      "Eierskap endrer seg jevnlig i den europeiske hosting-bransjen. Vi oppdaterer denne siden manuelt etter offisielle pressemeldinger og endringer i selskapsregistre.",
+    ],
+    faq: [
+      {
+        question: "Hvilke domeneregistrarer er reelt norske og uavhengige?",
+        answer:
+          "To av åtte leverandører som retter seg mot norske kunder er reelt uavhengige norske per mai 2026: Webhuset (Webhuset Invest AS, Bergen, etablert 1998) og Gigahost (Gigahost AS, Sandefjord, etablert 2006). Begge er NORID-akkrediterte, eid av norske gründere, og driver fra Norge. Domeneshop, Domene.no, Uniweb og ProISP drives fortsatt fra Norge med norsk team, men eies av internasjonale konserner. One.com og Simply.com er danske/svenske konsernselskaper.",
+      },
+      {
+        question: "Hvem eier Domeneshop?",
+        answer:
+          "Domeneshop AS er siden august 2024 del av Miss Group, et svensk-basert digitalt konsern grunnlagt i 2014 med hovedkontor i Stockholm. Domeneshop drives fortsatt fra Oslo som egen juridisk enhet med 25+ års erfaring og 650 000+ domener — men eierskapet er ikke lenger norsk. Miss Group eier også Domene.no (Domene AS) i Norge.",
+      },
+      {
+        question: "Er Uniweb og ProISP samme selskap?",
+        answer:
+          "Ja, formelt sett siden september 2024. Begge er nå Group.One Norway AS (org.nr. 984106211) som er del av one.com Group AB i Malmö. De opererer som to separate merkevarer med egne nettsider og kundeservice, men deler eierskap. Likevel har ProISP rimeligere .com-pris (336,25 kr vs Uniweb 420 kr) — fusjonen har ikke samkjørt prisingen ennå. Hvis du fordeler domener mellom dem som risikospredning, oppnår du det ikke i praksis fordi det er samme selskap som drifter dem.",
+      },
+      {
+        question: "Hva er Group.One?",
+        answer:
+          "Group.One er navnet på konsernet som eier blant annet One.com — selskapets juridiske navn er one.com Group AB med hovedkontor i Malmö, Sverige. Group.One eier ti lokale hosting-merkevarer i Europa, deriblant Uniweb og ProISP i Norge, checkdomain og dogado i Tyskland, metanet i Sveits, og hostnet i Nederland.",
+      },
+      {
+        question: "Hva er team.blue?",
+        answer:
+          "team.blue er Europas største digital-økosystem for SMB-er, med hovedkontor i Gent, Belgia. Konsernet eier 60+ hosting- og SaaS-merkevarer i 22 EU-land. Simply.com (tidligere UnoEuro) er deres danske merkevare. team.blue eier også Loopia i Sverige, Curanet og DanDomain i Danmark, og iubenda i Italia.",
+      },
+      {
+        question: "Hva er Miss Group?",
+        answer:
+          "Miss Group er et svensk-basert digitalt konsern grunnlagt i 2014 med hovedkontor i Stockholm. Med kontorer i 12 land og 800 000+ kontoer er de en av Europas raskest voksende leverandører av digitale tjenester. I Norge eier de Domeneshop og Domene.no. I Sverige eier de Misshosting og PrivateVPN. De har også brands i Finland, Sveits, Spania, UK, USA, Canada og flere land.",
+      },
+      {
+        question: "Hva med Gigahost — er de virkelig uavhengige?",
+        answer:
+          "Ja. Gigahost AS (org.nr. 933 452 549) er fortsatt eid av gründerne som startet selskapet i 2006. Hovedkontor i Sandefjord med tre egne datasentre, det nyeste åpnet i 2023. NORID-akkreditert registrar med direkte registrering hos Norid. Selskapet har bevisst valgt å holde seg uavhengig og fokuserer på serverhosting og datasenter-tjenester. Domener er en lokkevare som leder kunder til deres hovedforretning.",
+      },
+      {
+        question: "Spiller eierskap noen rolle for meg som kunde?",
+        answer:
+          "Det avhenger. For daglig bruk merker du sjelden forskjell — domenet ditt fungerer like bra uavhengig av hvem som eier registraren. Men eierskap kan påvirke priser (konserneide priser går ofte oppover etter oppkjøp), kundeservice (norske team bevares ofte, men kvaliteten kan endre seg), og personvern (data kan flyttes til konsernets felles infrastruktur). For forretningskritiske domener er det verdt å vite hvem som faktisk har kontroll.",
+      },
+    ],
+    relatedSlugs: ["domenepriser", "no-domene", "norske-registrarer-fokus"],
+    updatedAt: "2026-05-06",
   },
 ];
 

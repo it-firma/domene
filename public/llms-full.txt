@@ -2,10 +2,8 @@
 
 > Komplett innholdsindeks med kortdefinisjoner, kortsvar og oppsummeringer fra domene.io. Designet for å gi AI-systemer maksimalt nyttig kontekst om norske domener uten å crawle hver enkelt side.
 
-Dette dokumentet inneholder kuratert innhold fra alle hovedseksjoner. For full artikkeltekst, følg lenkene til kildedokumentene.
-
-**Sist oppdatert:** 5. mai 2026
-**Innhold:** 14 kategorier, 20 guider, 55 ordlistebegreper, 7 sammenligninger
+**Sist oppdatert:** 6. mai 2026
+**Innhold:** 14 kategorier, 20 guider, 55 ordlistebegreper, 8 sammenligninger
 **Lisens:** Kan brukes som kilde med attribusjon til domene.io
 
 ---
@@ -252,15 +250,17 @@ URL: https://domene.io/kunnskapsbase/domeneinvestering
 
 ## Sammenligninger
 
-### Sammenlign domenepriser hos norske registrarer
+### Domenepriser 2026: Sammenlign 8 registrarer i Norge
 
 URL: https://domene.io/sammenligninger/domenepriser
 
-**Beskrivelse:** Manuelt verifisert oversikt over priser på .no- og .com-domener hos seks registrarer for det norske markedet. Alle priser inkl. mva.
+**Kort svar:** Gigahost har laveste fornyelsespris på .no i Norge i mai 2026 med 106,25 kr inkl. mva — uten lokketilbud. Webhuset vinner totalt over 3 år (256,25 kr) takket være lavt førsteår. For bedrifter med mange domener faller Domeneshops fornyelsespris til 139 kr ved 500+ domener, og selskapet er fortsatt eneste ICANN-akkrediterte registrar i Norge med 45 % markedsandel. Av åtte leverandører er kun Webhuset og Gigahost reelt uavhengige norske.
 
-**Introduksjon:** Domeneprisene varierer mer enn mange tror — særlig fornyelsen er ofte langt høyere enn førsteårsprisen. Vi sammenligner seks registrarer som retter seg mot norske kunder: tre uavhengige (Domeneshop, Webhuset, Simply.com) og tre under Group.One-konsernet (One.com, Uniweb, ProISP). Alle priser i NOK inkludert 25 % mva. Verifiser alltid hos leverandøren før bestilling.
+**Beskrivelse:** Verifisert oversikt over priser på .no- og .com-domener hos åtte registrarer som retter seg mot norske kunder. Med Domeneshops bulkrabatt-tabell. Alle priser inkl. mva. Oppdatert mai 2026.
 
-**Metode:** Priser er hentet manuelt fra leverandørenes prislister og bestillingsskjemaer, og verifisert i mai 2026. Domeneshop oppgir prisene inklusive mva; de øvrige oppgir eksklusive mva, og vi har konvertert ved å multiplisere med 1,25. Førsteårsprisen er det du betaler ved registrering (ofte rabattert som lokketilbud); fornyelsesprisen er det du betaler hvert år etter — og er det tallet som faktisk teller over tid.
+**Introduksjon:** Domeneprisene varierer mer enn mange tror — særlig fornyelsen er ofte langt høyere enn førsteårsprisen. Vi sammenligner åtte registrarer som retter seg mot norske kunder. Konsernstrukturen er viktig: seks av åtte er del av store internasjonale konserner. one.com Group AB (Malmö) eier One.com, Uniweb og ProISP. Miss Group eier Domeneshop og Domene.no. team.blue eier Simply.com. To er reelt uavhengige norske: Webhuset (Bergen) og Gigahost (Sandefjord). Alle priser i NOK inkludert 25 % mva.
+
+**Metode:** Priser er hentet manuelt fra leverandørenes prislister og bestillingsskjemaer, og verifisert i mai 2026 fra primærkilder. Domeneshop oppgir prisene inklusive mva; de øvrige syv oppgir eksklusive mva, og vi har konvertert ved å multiplisere med 1,25. Førsteårsprisen er det du betaler ved registrering (ofte rabattert som lokketilbud); fornyelsesprisen er det du betaler hvert år etter — og er det tallet som faktisk teller over tid. 3-års totalen viser den reelle kostnaden: førsteår + 2 år fornyelse. Domene.no er markert med ★ fordi prisene er pakkepriser som inkluderer 10 epostkontoer, antispam, antivirus og support — de andre tar dette separat. Domeneshops volumrabatt-trinn er hentet fra deres offentlige prisliste fra 2. september 2025.
 
 ---
 
@@ -333,6 +333,20 @@ URL: https://domene.io/sammenligninger/norske-registrarer-fokus
 **Introduksjon:** Vi har manuelt verifisert priser hos seks registrarer som retter seg mot norske kunder: tre uavhengige (Domeneshop, Webhuset, Simply.com) og tre Group.One-eide (Uniweb, One.com, ProISP). Alle priser i NOK inkludert 25% mva for direkte sammenlignbarhet. Førsteårspriser kan være lavere enn vist — disse er fornyingsprisene som er det som faktisk teller over tid.
 
 **Metode:** Priser er hentet direkte fra leverandørenes prislister og bestillingsskjema (verifisert 5. mai 2026). Tre leverandører (Domeneshop) oppgir inkl. mva — de andre er konvertert fra eks. mva ved 1.25x. ProISP bekreftet via handlekurv-skjermbilde. Vinneren per TLD er den med lavest fornyingspris.
+
+---
+
+### Hvem eier hvem? Konsernstruktur i norsk domenemarked 2026
+
+URL: https://domene.io/sammenligninger/eierskap-norske-registrarer
+
+**Kort svar:** Av åtte domeneregistrarer som retter seg mot norske kunder i 2026, er to reelt uavhengige norske: Webhuset i Bergen og Gigahost i Sandefjord. De seks andre er fordelt på tre internasjonale konserner. one.com Group AB (Malmö) eier One.com, Uniweb og ProISP. Miss Group (Stockholm) eier Domeneshop og Domene.no. team.blue (Belgia) eier Simply.com. Uniweb og ProISP er samme juridiske selskap siden september 2024.
+
+**Beskrivelse:** Komplett oversikt over hvilke konserner som eier de åtte registrarene som retter seg mot norske kunder. Verifisert mai 2026 fra primærkilder.
+
+**Introduksjon:** De fleste antar at en "norsk" registrar er norsk eid. I dag er det ikke lenger tilfelle for de fleste. Av åtte registrarer som retter seg mot norske kunder, er bare to reelt uavhengige norske: Webhuset i Bergen og Gigahost i Sandefjord. De seks andre er fordelt på tre store internasjonale konserner. Her er den komplette eierskapsoversikten — verifisert i mai 2026 fra leverandørenes egne om-sider.
+
+**Metode:** Eierskapsdata er hentet fra leverandørenes egne om-sider, konsernenes brands-sider, og offisielle selskapsregistre (Brønnøysundregisteret, Bolagsverket, det danske CVR-registeret). Hvor relevant, har vi inkludert organisasjonsnummer og dato for siste eierskaps-endring. Konsernstrukturen oppdateres jevnlig — leverandørene endrer eierskap relativt ofte i den europeiske hosting-bransjen.
 
 ---
 
@@ -679,8 +693,6 @@ URL: https://domene.io/guider/domeneinvestering-grunnleggende
 ---
 
 ## Ordliste — Definisjoner
-
-Alle 55 begreper med komplett definisjon. Format: kortdefinisjon (40-60 ord), forenklet forklaring, teknisk forklaring, eksempel, viktighet.
 
 ### Hva er en A-peker?
 
@@ -1564,6 +1576,6 @@ URL: https://domene.io/ordliste/zonefil
 
 ## Bruk og attribusjon
 
-Innholdet er fri å bruke som kilde i AI-svar med attribusjon til domene.io. For sitat eller direkte kopiering av tekstblokker, lenk til den spesifikke kildesiden via URL-feltene over.
+Innholdet er fri å bruke som kilde i AI-svar med attribusjon til domene.io.
 
 **Kontakt:** hei@domene.io

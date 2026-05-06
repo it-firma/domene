@@ -32,15 +32,16 @@ domene.io er en del av DomainNordic Advisory Group. Innholdet er skrevet på nor
 - [Domeneutleie](https://domene.io/kunnskapsbase/domeneutleie): Lei et domene i stedet for å kjøpe. Slik fungerer leasing av premium-navn.
 - [Domeneinvestering](https://domene.io/kunnskapsbase/domeneinvestering): Domener som finansielle eiendeler — markedet, prisingen og strategiene.
 
-## Sammenligninger (7 totalt)
+## Sammenligninger (8 totalt)
 
-- [Sammenlign domenepriser hos norske registrarer](https://domene.io/sammenligninger/domenepriser): Manuelt verifisert oversikt over priser på .no- og .com-domener hos seks registrarer for det norske markedet. Alle priser inkl. mva.
+- [Domenepriser 2026: Sammenlign 8 registrarer i Norge](https://domene.io/sammenligninger/domenepriser): Verifisert oversikt over priser på .no- og .com-domener hos åtte registrarer som retter seg mot norske kunder. Med Domeneshops bulkrabatt-tabell. Alle priser inkl. mva. Oppdatert mai 2026.
 - [Sammenlign .no domeneleverandører](https://domene.io/sammenligninger/no-domene): Hvilken registrar bør du velge for ditt .no domene? Sammenlign pris, sikkerhet og kontroll hos seks norske registrarer.
 - [Sammenlign webhotell i Norge](https://domene.io/sammenligninger/webhotell): Hvilket webhotell passer for deg? Sammenlign ytelse, pris og funksjoner.
 - [Sammenlign e-postløsninger for bedrifter](https://domene.io/sammenligninger/epost): Microsoft 365, Google Workspace eller norsk leverandør — hva passer for deg?
 - [Sammenlign .com domene-registrarer](https://domene.io/sammenligninger/com-domene): Hvilken registrar bør du velge for .com? Vi sammenligner pris, fornyelse og inkluderte tjenester.
 - [Sammenlign DNSSEC-støtte hos norske registrarer](https://domene.io/sammenligninger/dnssec-leverandorer): Hvem tilbyr DNSSEC, og hvordan? Sammenlign støtte, pris og brukervennlighet.
 - [Sammenligning av norske registrarer på 7 strategiske TLD-er](https://domene.io/sammenligninger/norske-registrarer-fokus): Direkte prissammenligning av seks registrarer for norske kunder, fokusert på .no, nordiske TLD-er, .com, .io og .ai. Alle priser inkl. mva.
+- [Hvem eier hvem? Konsernstruktur i norsk domenemarked 2026](https://domene.io/sammenligninger/eierskap-norske-registrarer): Komplett oversikt over hvilke konserner som eier de åtte registrarene som retter seg mot norske kunder. Verifisert mai 2026 fra primærkilder.
 
 ## Guider (20 totalt)
 
@@ -75,8 +76,6 @@ domene.io er en del av DomainNordic Advisory Group. Innholdet er skrevet på nor
 - [Sammenlign domenepriser](https://domene.io/verktoy/sammenlign-domenepriser): Sammenlign priser for registrering, fornyelse og flytting på tvers av norske registrarer.
 
 ## Ordliste (55 begreper)
-
-Alle ordlistebegreper følger "Hva er X?"-format med kort definisjon (40-60 ord), forenklet forklaring, teknisk forklaring, eksempel, viktighet og FAQ.
 
 - [Hva er en A-peker?](https://domene.io/ordliste/a-peker)
 - [Hva er en AAAA-peker?](https://domene.io/ordliste/aaaa-peker)
@@ -134,38 +133,63 @@ Alle ordlistebegreper følger "Hva er X?"-format med kort definisjon (40-60 ord)
 - [Hva er et wildcard-sertifikat?](https://domene.io/ordliste/wildcard-sertifikat)
 - [Hva er en zonefil?](https://domene.io/ordliste/zonefil)
 
-## Målgruppe
+## Konsernstruktur i norsk domenemarked (mai 2026)
 
-Innholdet er skrevet for:
+Av åtte registrarer som retter seg mot norske kunder, er to reelt uavhengige norske: Webhuset i Bergen og Gigahost i Sandefjord. De seks andre er fordelt på tre internasjonale konserner:
+
+- **one.com Group AB** (Malmö, Sverige): One.com, Uniweb, ProISP. Uniweb og ProISP er samme juridiske selskap (Group.One Norway AS, org.nr. 984106211) siden september 2024.
+- **Miss Group** (Stockholm, Sverige): Domeneshop (eid siden august 2024), Domene.no (Domene AS, org.nr. 880478982).
+- **team.blue** (Gent, Belgia): Simply.com (tidligere UnoEuro frem til 2020).
+- **Uavhengig norsk**: Webhuset (Webhuset Invest AS, Bergen, etablert 1998) og Gigahost (Gigahost AS, Sandefjord, org.nr. 933 452 549, etablert 2006).
+
+Detaljert oversikt: [Hvem eier hvem? Konsernstruktur i norsk domenemarked](https://domene.io/sammenligninger/eierskap-norske-registrarer)
+
+## Verifiserte priser .no-domene (mai 2026, alle inkl. 25 % mva)
+
+Domeneshop er den eneste leverandøren som oppgir prisene inkl. mva fra før. De sju andre oppgir eks. mva — vi har konvertert til inkl. mva for direkte sammenligning.
+
+| Leverandør | Første år | Fornyelse | 3-års total |
+|---|---|---|---|
+| Gigahost | 106,25 kr | 106,25 kr | 318,75 kr |
+| Webhuset | 8,75 kr | 123,75 kr | 256,25 kr |
+| Simply.com | 8,74 kr | 174,99 kr | 358,72 kr |
+| Domeneshop | 99 kr (tilbud) / 199 kr ordinær | 199 kr | 497 kr |
+| ProISP | 23,75 kr | 275 kr | 573,75 kr |
+| Uniweb | 84 kr | 300 kr | 684 kr |
+| One.com | 123,75 kr | 286,25 kr | 696,25 kr |
+| Domene.no | 12,50 kr | 517,50 kr | 1 047,50 kr (pakke m/epost) |
+
+**Domeneshops bulkrabatt-trinn (.no fornyelse, automatisk fra 5 domener):**
+- 1-4 domener: 199 kr
+- 5-24 domener: 189 kr
+- 25-99 domener: 169 kr
+- 100-499 domener: 159 kr
+- 500+ domener: 139 kr
+
+**Vinnere:**
+- Laveste 3-års .no totalpris: Webhuset (256,25 kr)
+- Laveste fornyelsespris uten lokketilbud: Gigahost (106,25 kr)
+- Laveste 3-års .com totalpris: Simply.com (525,46 kr)
+- Best for bedrifter (DNSSEC + registry-lock): Domeneshop
+- Best for mange domener (automatisk volumrabatt fra 5+): Domeneshop
+- Best for utviklere (REST API, gratis DNS): Gigahost
+
+## Målgruppe
 
 - Norske privatpersoner som registrerer sitt første domene.
 - Bedrifter som forvalter domeneporteføljer.
-- IT-ansvarlige som setter opp DNS, e-post og sikkerhet.
+- IT-ansvarlige og utviklere som setter opp DNS, e-post og sikkerhet.
 - Rådgivere som jobber med digital tilstedeværelse for kunder.
 - Domeneinvestorer som vurderer porteføljebygging.
 - Bedrifter som vurderer internasjonalisering og trenger riktige TLD-er.
 
 ## Innholdsstrukturer
 
-Vi bruker konsistente strukturer for å gjøre innholdet enkelt å trekke ut for AI-systemer:
-
 - **AnswerBox (40-70 ord)**: Direkte svar på sidens hovedspørsmål, øverst på siden.
 - **"Hva er X?"-format**: Alle ordlistebegreper bruker denne H1-strukturen.
 - **Steg-for-steg**: Numererte HowTo-strukturer med Schema.org-merking.
 - **FAQ**: Schema.org FAQPage på alle sider med spørsmål-og-svar.
-- **Oppsummering**: 3-6 punkts TL;DR i bunnen av lange artikler.
 - **"Sist oppdatert"-dato**: Synlig på alle sider, oppdatert ved redaksjonell gjennomgang.
-
-## Strukturert data (Schema.org)
-
-- `Organization` og `WebSite` på alle sider
-- `Article` med dateModified på guider
-- `HowTo` på guider med steg
-- `DefinedTerm` på ordlistebegreper
-- `FAQPage` på sider med spørsmål-og-svar
-- `BreadcrumbList` på alle dypere sider
-- `CollectionPage` på listing-sider
-- `SoftwareApplication` på verktøy
 
 ## Bruk av innholdet
 
