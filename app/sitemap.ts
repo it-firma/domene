@@ -5,6 +5,7 @@ import { guides } from "@/data/guides";
 import { glossary } from "@/data/glossary";
 import { tools } from "@/data/tools";
 import { comparisons } from "@/data/comparisons";
+import { providers } from "@/data/providers";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = site.url.replace(/\/$/, "");
@@ -23,6 +24,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: "/sammenligninger",
       priority: 0.8,
+      changeFrequency: "weekly" as const,
+    },
+    {
+      url: "/leverandorer",
+      priority: 0.85,
       changeFrequency: "weekly" as const,
     },
     {
@@ -70,6 +76,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: c.updatedAt,
       changeFrequency: "weekly" as const,
       priority: 0.75,
+    })),
+    ...providers.map((p) => ({
+      url: `${base}/leverandorer/${p.slug}`,
+      lastModified: p.updatedAt,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
     })),
   ];
 }

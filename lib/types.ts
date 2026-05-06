@@ -247,3 +247,73 @@ export interface Comparison {
   faq: Faq[];
   updatedAt: string;
 }
+
+/* ─────────────────────────────────────────────────────────────
+   PROVIDER PROFILES (/leverandorer/[slug])
+   ───────────────────────────────────────────────────────────── */
+
+export interface ProviderPriceRow {
+  /** TLD label, e.g., ".no", ".com" */
+  tld: string;
+  /** Price first year, formatted with "kr", e.g., "8,75 kr" */
+  firstYear: string;
+  /** Renewal price per year, e.g., "123,75 kr" */
+  renewal: string;
+  /** Total cost over 3 years, e.g., "256,25 kr" */
+  threeYearTotal: string;
+}
+
+export interface ProviderFactBox {
+  /** "Konsern" — parent group label */
+  konsern: string;
+  /** Headquarter location, e.g., "Oslo, Norge" */
+  hovedkontor: string;
+  /** Legal entity, e.g., "Domeneshop AS" */
+  juridisk: string;
+  /** Year founded */
+  stiftet: string;
+  /** Org.nr if Norwegian, else "—" */
+  orgnr?: string;
+  /** Norid-akkreditert? */
+  norid: boolean;
+  /** ICANN-akkreditert? */
+  icann: boolean;
+  /** Approximate market share or domain count */
+  markedsandel?: string;
+  /** Website URL */
+  url: string;
+}
+
+export interface Provider {
+  slug: string;
+  /** Display name, e.g., "Domeneshop" */
+  name: string;
+  /** Short tagline shown above H1, e.g., "Norges største .no-registrar" */
+  tagline: string;
+  /** Editorial title with italic emphasis */
+  editorialTitle: { lead: string; emphasis: string; tail?: string };
+  /** Meta description */
+  description: string;
+  /** 40-70 word answer-box for AEO, placed near hero */
+  answerBox: string;
+  /** Conglomerate this provider belongs to */
+  conglomerate: ConglomerateCode;
+  /** Fact box data */
+  factBox: ProviderFactBox;
+  /** 250-400 word neutral introduction explaining what this provider is */
+  introduction: string[];
+  /** Pricing table rows (.no, .com, etc.) */
+  pricing: ProviderPriceRow[];
+  /** What's included in the basic package */
+  included: ProviderFeature[];
+  /** Optional notes about pricing (e.g., volume rabatt) */
+  pricingNote?: string;
+  /** Slugs of related comparisons */
+  relatedComparisons?: string[];
+  /** Slugs of other providers to suggest */
+  relatedProviders?: string[];
+  /** FAQ specific to this provider */
+  faq: Faq[];
+  /** ISO date when last verified */
+  updatedAt: string;
+}

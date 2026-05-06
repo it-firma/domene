@@ -24,6 +24,7 @@ const cols: { title: string; items: { label: string; href: string }[] }[] = [
       { label: "Guider", href: "/guider" },
       { label: "Verktøy", href: "/verktoy" },
       { label: "Sammenligninger", href: "/sammenligninger" },
+      { label: "Leverandører", href: "/leverandorer" },
       { label: "Ordliste", href: "/ordliste" },
     ],
   },

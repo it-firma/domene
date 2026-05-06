@@ -110,6 +110,7 @@ export function Header() {
             <MobileNavLink href="/guider" label="Guider" />
             <MobileNavLink href="/verktoy" label="Verktøy" />
             <MobileNavLink href="/sammenligninger" label="Sammenligninger" />
+            <MobileNavLink href="/leverandorer" label="Leverandører" />
             <MobileNavLink href="/ordliste" label="Ordliste" />
             <MobileNavLink href="/om-oss" label="Om oss" />
 

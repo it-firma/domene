@@ -112,6 +112,16 @@ export function MegaMenu({
         className={linkClass}
       />
       <Link
+        href="/leverandorer"
+        className={linkClass}
+        onMouseEnter={() => {
+          cancelClose();
+          setOpenKey(null);
+        }}
+      >
+        Leverandører
+      </Link>
+      <Link
         href="/ordliste"
         className={linkClass}
         onMouseEnter={() => {
