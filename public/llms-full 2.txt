@@ -1,0 +1,1581 @@
+# domene.io — Full innholdsindeks for AI-systemer
+
+> Komplett innholdsindeks med kortdefinisjoner, kortsvar og oppsummeringer fra domene.io. Designet for å gi AI-systemer maksimalt nyttig kontekst om norske domener uten å crawle hver enkelt side.
+
+**Sist oppdatert:** 6. mai 2026
+**Innhold:** 14 kategorier, 20 guider, 55 ordlistebegreper, 8 sammenligninger
+**Lisens:** Kan brukes som kilde med attribusjon til domene.io
+
+---
+
+## Hovedkategorier
+
+### Alt om .no domener
+
+URL: https://domene.io/kunnskapsbase/no-domene
+
+**Kortsvar:** Et .no domene er et nasjonalt toppnivådomene som administreres av Norid. Både privatpersoner og organisasjoner med tilknytning til Norge kan registrere .no domener. Reglene er strengere enn for generiske toppdomener, men gir samtidig høy tillit, lokal forankring og en stabil teknisk infrastruktur.
+
+**Introduksjon:** .no er Norges nasjonale toppnivådomene, administrert av Norid. Her samler vi det du trenger å vite om hvem som kan registrere et .no domene, hvilke krav som gjelder, hvordan registrering og fornyelse fungerer, og hvordan du flytter eller overdrar et .no domene på riktig måte.
+
+**Oppsummering:**
+- .no er Norges toppnivådomene, drevet av Norid.
+- Privatpersoner og organisasjoner med norsk tilknytning kan registrere.
+- Du eier ikke domenet permanent — du har bruksrett som må fornyes.
+- Du kan flytte .no domenet ditt fritt mellom registrarer.
+- Uten fornyelse går domenet i karantene før det frigis.
+
+---
+
+### Alt om domeneregistrering
+
+URL: https://domene.io/kunnskapsbase/domeneregistrering
+
+**Kortsvar:** Domeneregistrering er prosessen der du reserverer et domenenavn hos en akkreditert registrar. Du eier ikke domenet permanent, men har bruksrett så lenge du fornyer. Registreringen knytter domenet til en eier (registrant), DNS-oppsett og fornyelsesplan — alle kritiske detaljer å få riktig fra starten.
+
+**Introduksjon:** Domeneregistrering handler om mer enn å klikke kjøp. Riktig registrering sikrer at du eier domenet i eget navn, har kontroll på DNS, og unngår fallgruver som dårlig fornyelse, feil kontaktperson eller låst leverandør. Her finner du alt du trenger for å registrere domener trygt og strategisk.
+
+**Oppsummering:**
+- Du eier ikke domenet permanent — du har bruksrett.
+- Sjekk alltid at registrant-feltet i WHOIS er deg, ikke leverandøren.
+- Sammenlign førstepris, fornyelsespris og flyttepris.
+- Hold kontaktinformasjon oppdatert hos registraren.
+- Sett påminnelser om fornyelse i god tid.
+
+---
+
+### Alt om domeneflytting
+
+URL: https://domene.io/kunnskapsbase/domeneflytting
+
+**Kortsvar:** Domeneflytting er overføring av et domene fra én registrar til en annen, uten å miste eierskap eller funksjonalitet. Du trenger en autoriseringskode (auth-kode) fra dagens leverandør og må bekrefte flyttingen hos den nye. Med riktig forberedelse skjer det uten nedetid på nettside eller e-post.
+
+**Introduksjon:** Domeneflytting er retten din som domeneeier. Hvis du er misfornøyd med leverandøren, vil samle alt på ett sted, eller bare ønsker bedre pris, kan du flytte. Riktig prosess unngår nedetid på nettside og e-post — feil prosess kan koste deg tid og kunder.
+
+**Oppsummering:**
+- Du har full rett til å flytte domenet ditt.
+- Bevar DNS hos ny leverandør før du flytter, for å unngå nedetid.
+- Hent auth-kode fra dagens leverandør.
+- Ikke flytt hvis domenet utløper innen kort tid.
+- Bekreft alltid at du fortsatt står som eier etter flyttingen.
+
+---
+
+### Alt om DNS
+
+URL: https://domene.io/kunnskapsbase/dns
+
+**Kortsvar:** DNS står for Domain Name System og fungerer som internettets adressebok. DNS kobler domenenavnet ditt til riktig server, slik at nettsider, e-post og andre tjenester finner frem. Uten riktig DNS-oppsett vil domenet ikke peke til riktig sted, og tjenester slutter å fungere.
+
+**Introduksjon:** DNS — Domain Name System — er internettets adressebok. Hver gang noen besøker nettsiden din, sender e-post til deg, eller kobler til en tjeneste du har under domenet, er det DNS som peker dem riktig vei. Forstår du DNS, har du kontroll over alt som skjer rundt domenet ditt.
+
+**Oppsummering:**
+- DNS kobler domenenavn til IP-adresser og tjenester.
+- Navneservere er tjenere som lagrer DNS-postene for ditt domene.
+- TTL styrer hvor raskt endringer sprer seg.
+- DNSSEC sikrer at DNS-svarene er ekte.
+- Feil DNS er en hovedårsak til nedetid på nett og e-post.
+
+---
+
+### Alt om DNSSEC
+
+URL: https://domene.io/kunnskapsbase/dnssec
+
+**Kortsvar:** DNSSEC er en utvidelse av DNS som signerer svarene digitalt. Det betyr at brukerens datamaskin kan verifisere at DNS-svaret faktisk kommer fra den rettmessige eieren av domenet, og ikke fra en angriper. DNSSEC beskytter mot DNS-spoofing og cache-forgiftning.
+
+**Introduksjon:** DNSSEC — DNS Security Extensions — er en sikkerhetsstandard som signerer DNS-svar kryptografisk. Det forhindrer angrep der noen forsøker å lure besøkende til en falsk server. For domener med høy verdi eller behov for tillit er DNSSEC praktisk talt nødvendig.
+
+**Oppsummering:**
+- DNSSEC signerer DNS-svar kryptografisk.
+- Beskytter mot DNS-spoofing og cache-forgiftning.
+- Krever støtte både hos registrar og DNS-leverandør.
+- Feil oppsett kan gi nedetid — bruk leverandør med automatikk.
+- Sterkt anbefalt for forretningskritiske domener.
+
+---
+
+### Alt om e-post på eget domene
+
+URL: https://domene.io/kunnskapsbase/epost
+
+**Kortsvar:** E-post på eget domene gir profesjonelt utseende og full kontroll. Det krever korrekt MX-pekere som ruter e-post til en e-posttjener, samt SPF, DKIM og DMARC for å forhindre at meldingene markeres som spam eller misbrukes til phishing.
+
+**Introduksjon:** E-post på eget domene er ofte det første profesjonelle steget for en virksomhet. Men teknikken bak — MX, SPF, DKIM og DMARC — kan være forvirrende. Her samler vi det du trenger for å sette opp pålitelig e-post som ikke havner i spam-mappen.
+
+**Oppsummering:**
+- Eget domene gir profesjonell og kontrollert e-post.
+- MX-pekere bestemmer mottakerserver.
+- SPF, DKIM og DMARC beskytter mot misbruk og spam.
+- Feil oppsett er hovedårsak til at e-post forsvinner.
+- Test alltid med en e-postsjekk før du går live.
+
+---
+
+### Alt om webhotell
+
+URL: https://domene.io/kunnskapsbase/webhotell
+
+**Kortsvar:** Webhotell er en tjeneste som lagrer nettsiden din på en server som er tilgjengelig på internett. Domenet er adressen, webhotellet er huset. Et godt webhotell har god ytelse, daglig backup, SSL-sertifikat og en stabil teknisk plattform tilpasset behovene dine.
+
+**Introduksjon:** Et domene uten webhotell er som en adresse uten hus. Webhotell er der nettsiden din faktisk ligger lagret. Her lærer du hvordan webhotell henger sammen med domenet ditt, hva som påvirker ytelsen, og hvordan du sikrer driften med SSL og backup.
+
+**Oppsummering:**
+- Webhotell lagrer nettsiden på en server.
+- Domene og webhotell er separate tjenester.
+- SSL er obligatorisk i praksis i dag.
+- Backup er nødvendig — ikke valgfritt.
+- Ytelse påvirker både brukeropplevelse og søkemotorer.
+
+---
+
+### Alt om WHOIS
+
+URL: https://domene.io/kunnskapsbase/whois
+
+**Kortsvar:** WHOIS er et offentlig oppslagssystem som viser registreringsinformasjon for et domene — inkludert eier, kontaktinformasjon, registreringsdato og navneservere. WHOIS brukes til å sjekke domeneeierskap, undersøke konflikter og bekrefte at registrant er korrekt oppført.
+
+**Introduksjon:** WHOIS er det offentlige registeret som viser hvem som eier et domene, når det ble registrert, og hvilken registrar som administrerer det. Det er et verktøy for åpenhet, juridisk oppfølging og sikkerhet.
+
+**Oppsummering:**
+- WHOIS er det offentlige domeneregisteret.
+- Viser eier, registrar og registreringsdato.
+- Personverninnstillinger varierer mellom toppdomener.
+- Brukes til å sjekke eierskap og løse konflikter.
+- Hold alltid din WHOIS-info oppdatert.
+
+---
+
+### Alt om domener, SEO og synlighet
+
+URL: https://domene.io/kunnskapsbase/seo-og-synlighet
+
+**Kortsvar:** Domenenavnet i seg selv er ikke en stor SEO-faktor, men hvordan du forvalter det er. Konsistent valg av hoveddomene, riktige redirigeringer, HTTPS, godt teknisk DNS-oppsett, og en stabil historikk uten DNS-feil gir bedre forutsetninger for å rangere over tid.
+
+**Introduksjon:** Domenet ditt er fundamentet for synligheten din i søkemotorer. Valg av navn, toppdomene, redirigeringer og teknisk oppsett kan ha langsiktige konsekvenser for hvordan du rangerer. Her samler vi det du trenger å vite.
+
+**Oppsummering:**
+- Domenenavnet er en mindre rangeringsfaktor enn folk tror.
+- Velg merkevarenavn fremfor nøkkelord-stapping.
+- HTTPS er obligatorisk for SEO i dag.
+- Konsistent hoveddomene (med eller uten www) er viktig.
+- Tekniske DNS-feil kan skade synligheten over tid.
+
+---
+
+### Alt om domenesikkerhet
+
+URL: https://domene.io/kunnskapsbase/sikkerhet
+
+**Kortsvar:** Domenesikkerhet handler om å beskytte registreringen, DNS-oppsettet og e-postkonfigurasjonen mot uautorisert tilgang. De viktigste tiltakene er sterk innlogging hos registrar, tofaktor, registry-lock, DNSSEC, og e-postautentisering med SPF, DKIM og DMARC.
+
+**Introduksjon:** Domenet ditt er ofte selve kjernen i merkevaren din — og en angriper som tar kontroll, kan stjele e-post, omdirigere trafikk eller utgi seg for å være deg. Her får du en strukturert oversikt over hvordan du sikrer domenet ditt.
+
+**Oppsummering:**
+- Sterk innlogging og tofaktor er minimum.
+- Registry-lock anbefales for kritiske domener.
+- DNSSEC beskytter mot DNS-spoofing.
+- SPF, DKIM og DMARC beskytter e-postdomenet.
+- Hold WHOIS-kontaktene oppdatert og bemannet.
+
+---
+
+### Alt om juridiske forhold og varemerker for domener
+
+URL: https://domene.io/kunnskapsbase/juridisk-og-varemerke
+
+**Kortsvar:** Domeneregistrering er først til mølla, men varemerkerett kan slå inn. Hvis du registrerer et domene som er identisk eller forvekslingsbart med et eksisterende varemerke, kan rettighetshaveren kreve domenet overført. Sjekk varemerkeregister og selskapsnavn før du registrerer kommersielle domener.
+
+**Introduksjon:** Et domene kan kollidere med eksisterende varemerker eller selskap, og en feil registrering kan gi rettslige problemer. Her samler vi grunnlaget — men dette erstatter ikke konkret juridisk rådgivning i en sak.
+
+**Oppsummering:**
+- Domener og varemerker er adskilte rettigheter.
+- Først til mølla — men ikke uten unntak.
+- Sjekk varemerkeregisteret før du registrerer kommersielle domener.
+- Domenetvister kan løses gjennom UDRP eller .no-regler.
+- Et domene gir ikke varemerkebeskyttelse.
+
+---
+
+### Alt om internasjonale domener
+
+URL: https://domene.io/kunnskapsbase/internasjonale-domener
+
+**Kortsvar:** Internasjonale domener deles i tre: ccTLD (landskoder som .no, .se), gTLD (generiske som .com, .org), og nye gTLD (.app, .io). Velg basert på målgruppe — ccTLD signaliserer lokalt; gTLD passer for globale merkevarer. Norske bedrifter bør ofte registrere både .no og .com som minimum.
+
+**Introduksjon:** Når du tenker bredere enn det norske markedet, åpner det seg hundrevis av toppdomener. Her får du oversikt over generiske (.com, .net), nasjonale (.no, .se, .dk), og nye gTLD-er som .io og .app — pluss reglene som gjelder for IDN-domener med æ, ø og å.
+
+**Oppsummering:**
+- ccTLD signaliserer lokal tilhørighet; gTLD er globalt.
+- .no er styrt av Norid; .com og lignende av ICANN-akkrediterte registries.
+- IDN tillater æ, ø og å — bra for merkevare, viktig som defensiv registrering.
+- Mange selskap kjøper både .no og .com for å beskytte merkevaren.
+- Nye gTLD-er gir kreative muligheter, men sjekk pris og fornyelseskostnad.
+
+---
+
+### Alt om domeneutleie
+
+URL: https://domene.io/kunnskapsbase/domeneutleie
+
+**Kortsvar:** Domeneutleie er en avtale der du leier bruken av et domene i en gitt periode mot betaling, uten å overføre eierskap. Avtalen gir deg DNS-kontroll og rett til å bruke domenet kommersielt, men eieren beholder formell registrering. Krever skriftlig kontrakt med tydelige vilkår om varighet, oppsigelse og kjøpsopsjoner.
+
+**Introduksjon:** Drømme-domenet er ofte tatt — og når det er til salgs, kan prisen være for høy. Domeneutleie (domain leasing) lar deg bruke et eksisterende premium-domene mot månedlig eller årlig betaling, ofte med opsjon for senere kjøp. Det senker terskelen for nye merkevarer som vil teste markedet før full investering.
+
+**Oppsummering:**
+- Domeneutleie gir tilgang til premium-domener uten full kjøpesum.
+- Krever skriftlig avtale med tydelige vilkår.
+- Avtalen bør gi DNS-kontroll, kjøpsopsjon og oppsigelsestid.
+- Du bygger SEO-verdi som du risikerer å miste.
+- Egnet for nystartede selskaper som vil teste merkevare før investering.
+
+---
+
+### Alt om domeneinvestering
+
+URL: https://domene.io/kunnskapsbase/domeneinvestering
+
+**Kortsvar:** Domeneinvestering er kjøp og salg av domener som finansielle eiendeler. De mest verdifulle er korte, generiske og lett å huske — gjerne engelske substantiver på .com. Markedet drives av auksjoner (Sedo, GoDaddy), brokere og direkte handel. Profesjonelle investorer eier porteføljer på tusenvis av domener.
+
+**Introduksjon:** Domener handles som digitale eiendeler — fra hundre kroner til millioner. Markedet inkluderer auksjoner, brokerede salg og direkte handel. Bedrifter bør forstå dette landskapet både for å beskytte egne navn og vurdere strategiske kjøp.
+
+**Oppsummering:**
+- Domener handles som digitale eiendeler i et globalt marked.
+- Premium-domener er korte, generiske og lett å huske.
+- Auksjonsplasser, brokere og drop-catching er hovedkanalene.
+- Bedrifter bør registrere defensive domener før konkurrenter gjør det.
+- Få blir rike — markedet er konkurransepreget og krever ekspertise.
+
+---
+
+## Sammenligninger
+
+### Domenepriser 2026: Sammenlign 8 registrarer i Norge
+
+URL: https://domene.io/sammenligninger/domenepriser
+
+**Kort svar:** Gigahost har laveste fornyelsespris på .no i Norge i mai 2026 med 106,25 kr inkl. mva — uten lokketilbud. Webhuset vinner totalt over 3 år (256,25 kr) takket være lavt førsteår. For bedrifter med mange domener faller Domeneshops fornyelsespris til 139 kr ved 500+ domener, og selskapet er fortsatt eneste ICANN-akkrediterte registrar i Norge med 45 % markedsandel. Av åtte leverandører er kun Webhuset og Gigahost reelt uavhengige norske.
+
+**Beskrivelse:** Verifisert oversikt over priser på .no- og .com-domener hos åtte registrarer som retter seg mot norske kunder. Med Domeneshops bulkrabatt-tabell. Alle priser inkl. mva. Oppdatert mai 2026.
+
+**Introduksjon:** Domeneprisene varierer mer enn mange tror — særlig fornyelsen er ofte langt høyere enn førsteårsprisen. Vi sammenligner åtte registrarer som retter seg mot norske kunder. Konsernstrukturen er viktig: seks av åtte er del av store internasjonale konserner. one.com Group AB (Malmö) eier One.com, Uniweb og ProISP. Miss Group eier Domeneshop og Domene.no. team.blue eier Simply.com. To er reelt uavhengige norske: Webhuset (Bergen) og Gigahost (Sandefjord). Alle priser i NOK inkludert 25 % mva.
+
+**Metode:** Priser er hentet manuelt fra leverandørenes prislister og bestillingsskjemaer, og verifisert i mai 2026 fra primærkilder. Domeneshop oppgir prisene inklusive mva; de øvrige syv oppgir eksklusive mva, og vi har konvertert ved å multiplisere med 1,25. Førsteårsprisen er det du betaler ved registrering (ofte rabattert som lokketilbud); fornyelsesprisen er det du betaler hvert år etter — og er det tallet som faktisk teller over tid. 3-års totalen viser den reelle kostnaden: førsteår + 2 år fornyelse. Domene.no er markert med ★ fordi prisene er pakkepriser som inkluderer 10 epostkontoer, antispam, antivirus og support — de andre tar dette separat. Domeneshops volumrabatt-trinn er hentet fra deres offentlige prisliste fra 2. september 2025.
+
+---
+
+### Sammenlign .no domeneleverandører
+
+URL: https://domene.io/sammenligninger/no-domene
+
+**Beskrivelse:** Hvilken registrar bør du velge for ditt .no domene? Sammenlign pris, sikkerhet og kontroll hos seks norske registrarer.
+
+**Introduksjon:** Registrarer for .no betaler samme avgift til Norid (~57 kr/år), men har ulike priser, brukerflater og tilleggstjenester. Her ser du forskjellene som faktisk betyr noe i daglig bruk — særlig sikkerhet og åpenhet. Tre uavhengige (Domeneshop, Webhuset, Simply.com) og tre Group.One-eide (ProISP, One.com, Uniweb).
+
+**Metode:** Vi vurderer pris, sikkerhet (tofaktor, registry-lock, DNSSEC), DNS-håndtering, brukervennlighet og åpenhet. Priser inkl. 25% mva, verifisert manuelt 5. mai 2026. Sikkerhetsfunksjoner basert på offentlig tilgjengelig informasjon — vi tester ikke selv kundeservice. Hvor sikkerhetsfunksjon ikke er entydig dokumentert, viser vi 'Sjekk hos leverandør'.
+
+---
+
+### Sammenlign webhotell i Norge
+
+URL: https://domene.io/sammenligninger/webhotell
+
+**Beskrivelse:** Hvilket webhotell passer for deg? Sammenlign ytelse, pris og funksjoner.
+
+**Introduksjon:** Webhotell-markedet er fragmentert med store prisforskjeller. Vi sammenligner offentlig tilgjengelige priser, lagringsplass, backup, SSL-policy og inkluderte tjenester. For dynamiske nettsider med høyere krav: vurder cloud-leverandører som Vercel.
+
+**Metode:** Basert på offentlig publiserte priser og spesifikasjoner per mai 2026. Vi tester ikke ytelse selv, men noterer hvor leverandøren publiserer SLA og uptime-data. Cloud-tjenester er nevnt for sammenligning, men har annen prisstruktur (per bruk).
+
+---
+
+### Sammenlign e-postløsninger for bedrifter
+
+URL: https://domene.io/sammenligninger/epost
+
+**Beskrivelse:** Microsoft 365, Google Workspace eller norsk leverandør — hva passer for deg?
+
+**Introduksjon:** Valg av e-postløsning handler om mer enn pris. Lagring, samarbeid, kalender, integrasjoner, sikkerhet og lokal støtte påvirker totalkostnaden over tid. Her sammenligner vi de mest brukte alternativene for norske bedrifter.
+
+**Metode:** Vi sammenligner pris per bruker, lagringsplass, samhandling, sikkerhet og lokal kundeservice. Basert på offentlig publiserte priser per mai 2026. Avhenger av abonnementsnivå — vi viser ofte basisplan; du kan velge høyere planer med flere funksjoner.
+
+---
+
+### Sammenlign .com domene-registrarer
+
+URL: https://domene.io/sammenligninger/com-domene
+
+**Beskrivelse:** Hvilken registrar bør du velge for .com? Vi sammenligner pris, fornyelse og inkluderte tjenester.
+
+**Introduksjon:** .com administreres av Verisign og selges av tusenvis av registrarer. Prisen til Verisign er ca. 10–11 USD i grossistpris — alt over det er registrarens påslag. Forskjellene ligger i påslag, brukerflate og tilleggstjenester.
+
+**Metode:** Vi henter priser fra leverandørenes offentlige prislister og noterer både førsteårspris og fornyelsespris. Mange registrarer bruker rabatt på første år for å lokke nye kunder. Vi vurderer også inkluderte sikkerhetstjenester som DNSSEC, WHOIS-beskyttelse og tofaktor.
+
+---
+
+### Sammenlign DNSSEC-støtte hos norske registrarer
+
+URL: https://domene.io/sammenligninger/dnssec-leverandorer
+
+**Beskrivelse:** Hvem tilbyr DNSSEC, og hvordan? Sammenlign støtte, pris og brukervennlighet.
+
+**Introduksjon:** DNSSEC beskytter mot DNS-forfalskning og cache-poisoning ved å signere DNS-svar kryptografisk. Norid (.no-registret) støtter DNSSEC, men ikke alle registrarer har enkel aktivering. Her ser du hvem som tilbyr hva.
+
+**Metode:** Vi vurderer om DNSSEC er gratis, om det aktiveres med ett klikk, og om leverandøren støtter automatisk nøkkelrullering (key rollover). Basert på offentlig publisert dokumentasjon. Sjekk alltid med leverandøren før kritiske domener.
+
+---
+
+### Sammenligning av norske registrarer på 7 strategiske TLD-er
+
+URL: https://domene.io/sammenligninger/norske-registrarer-fokus
+
+**Beskrivelse:** Direkte prissammenligning av seks registrarer for norske kunder, fokusert på .no, nordiske TLD-er, .com, .io og .ai. Alle priser inkl. mva.
+
+**Introduksjon:** Vi har manuelt verifisert priser hos seks registrarer som retter seg mot norske kunder: tre uavhengige (Domeneshop, Webhuset, Simply.com) og tre Group.One-eide (Uniweb, One.com, ProISP). Alle priser i NOK inkludert 25% mva for direkte sammenlignbarhet. Førsteårspriser kan være lavere enn vist — disse er fornyingsprisene som er det som faktisk teller over tid.
+
+**Metode:** Priser er hentet direkte fra leverandørenes prislister og bestillingsskjema (verifisert 5. mai 2026). Tre leverandører (Domeneshop) oppgir inkl. mva — de andre er konvertert fra eks. mva ved 1.25x. ProISP bekreftet via handlekurv-skjermbilde. Vinneren per TLD er den med lavest fornyingspris.
+
+---
+
+### Hvem eier hvem? Konsernstruktur i norsk domenemarked 2026
+
+URL: https://domene.io/sammenligninger/eierskap-norske-registrarer
+
+**Kort svar:** Av åtte domeneregistrarer som retter seg mot norske kunder i 2026, er to reelt uavhengige norske: Webhuset i Bergen og Gigahost i Sandefjord. De seks andre er fordelt på tre internasjonale konserner. one.com Group AB (Malmö) eier One.com, Uniweb og ProISP. Miss Group (Stockholm) eier Domeneshop og Domene.no. team.blue (Belgia) eier Simply.com. Uniweb og ProISP er samme juridiske selskap siden september 2024.
+
+**Beskrivelse:** Komplett oversikt over hvilke konserner som eier de åtte registrarene som retter seg mot norske kunder. Verifisert mai 2026 fra primærkilder.
+
+**Introduksjon:** De fleste antar at en "norsk" registrar er norsk eid. I dag er det ikke lenger tilfelle for de fleste. Av åtte registrarer som retter seg mot norske kunder, er bare to reelt uavhengige norske: Webhuset i Bergen og Gigahost i Sandefjord. De seks andre er fordelt på tre store internasjonale konserner. Her er den komplette eierskapsoversikten — verifisert i mai 2026 fra leverandørenes egne om-sider.
+
+**Metode:** Eierskapsdata er hentet fra leverandørenes egne om-sider, konsernenes brands-sider, og offisielle selskapsregistre (Brønnøysundregisteret, Bolagsverket, det danske CVR-registeret). Hvor relevant, har vi inkludert organisasjonsnummer og dato for siste eierskaps-endring. Konsernstrukturen oppdateres jevnlig — leverandørene endrer eierskap relativt ofte i den europeiske hosting-bransjen.
+
+---
+
+## Guider
+
+### Hvordan registrere et .no domene i 7 enkle steg
+
+URL: https://domene.io/guider/hvordan-registrere-no-domene
+
+**Beskrivelse:** Komplett steg-for-steg guide for å registrere et .no domene riktig — fra valg av navn til verifisering av eierskap.
+
+**Kortsvar:** For å registrere et .no domene må du være privatperson med fødselsnummer eller en organisasjon i Enhetsregisteret. Velg et ledig navn, finn en registrar du stoler på, fullfør registreringen med riktig kontaktinformasjon, og bekreft at domenet er registrert i ditt eget navn — ikke leverandørens.
+
+**Oppsummering:**
+- Sjekk at navnet er ledig og ikke kolliderer med varemerker.
+- Velg en registrar du stoler på — pris er ikke alt.
+- Registrant skal alltid være deg, ikke leverandøren.
+- Slå på tofaktor med en gang.
+- Verifiser i WHOIS at alt stemmer etter registrering.
+
+---
+
+### Hvordan velge riktig domenenavn
+
+URL: https://domene.io/guider/hvordan-velge-domenenavn
+
+**Beskrivelse:** Strategiske og praktiske tips for å velge et domenenavn som varer, fungerer for SEO, og bygger merkevare.
+
+**Kortsvar:** Et godt domenenavn er kort, minneverdig, lett å skrive og uten unødvendige tall eller bindestrek. Tenk merkevare før nøkkelord. Sjekk at navnet er ledig på toppdomenet du faktisk ønsker, at det ikke kolliderer med varemerker, og at det fungerer skriftlig og muntlig — også på telefon.
+
+**Oppsummering:**
+- Tenk merkevare først, nøkkelord etterpå.
+- Hold navnet kort, enkelt og uten tall eller bindestrek.
+- Sjekk varemerkeregisteret før registrering.
+- Sikre minst .no — vurder også .com.
+- Test navnet muntlig: kan du forklare det på telefon uten staving?
+
+---
+
+### Slik flytter du domenet ditt uten nedetid
+
+URL: https://domene.io/guider/hvordan-flytte-domene
+
+**Beskrivelse:** Komplett guide for å flytte domenet trygt mellom registrarer, uten å miste nettside, e-post eller eierskap.
+
+**Kortsvar:** For å flytte et domene mellom registrarer trenger du auth-kode (også kalt EPP-kode) fra dagens leverandør. Sett opp DNS hos den nye leverandøren før du starter flyttingen, slik at nettside og e-post ikke får nedetid. Bekreft eierskap etter flytting og oppdater fornyelsesplan.
+
+**Oppsummering:**
+- Du har full rett til å flytte domenet.
+- Sett opp DNS hos ny leverandør før du flytter.
+- Auth-kode og bekreftelser er kjernen i prosessen.
+- Aldri flytt rett før fornyelsesdato.
+- Verifiser i WHOIS etter at flyttingen er ferdig.
+
+---
+
+### Hvordan sette opp DNS — fra A til TTL
+
+URL: https://domene.io/guider/hvordan-sette-opp-dns
+
+**Beskrivelse:** Lær DNS-oppsett: A, AAAA, CNAME, MX, TXT, NS, TTL og DNSSEC — forklart enkelt og anvendbart.
+
+**Kortsvar:** DNS-oppsett består av poster som forteller verden hvor de skal finne tjenestene dine. De viktigste er A-pekere for nettside, MX-pekere for e-post, og TXT-poster for verifisering og e-postsikkerhet. Sett alltid TTL lavt før endringer, og verifiser med en DNS-sjekk etter at endringene er gjort.
+
+**Oppsummering:**
+- DNS er adresseboken som kobler domener til tjenester.
+- A, MX og TXT er de viktigste posttypene for de fleste.
+- Senk TTL før endringer, hev igjen etterpå.
+- Test alltid med DNS-sjekk etter endringer.
+- DNSSEC er en ekstra sikkerhet — vurder å aktivere.
+
+---
+
+### Hvordan sette opp profesjonell e-post på eget domene
+
+URL: https://domene.io/guider/hvordan-sette-opp-epost
+
+**Beskrivelse:** Sett opp profesjonell e-post på eget domene med MX, SPF, DKIM og DMARC — uten at meldingene havner i spam.
+
+**Kortsvar:** Profesjonell e-post på eget domene krever tre ting: en e-posttjeneste (Microsoft 365, Google Workspace eller en norsk leverandør), riktige MX-pekere som ruter e-post dit, og autentisering med SPF, DKIM og DMARC. Sett opp alle tre sikkerhetspostene fra starten — det forhindrer både spam-stempling og misbruk av domenet ditt.
+
+**Oppsummering:**
+- MX bestemmer hvor e-posten din havner.
+- SPF, DKIM og DMARC bygger tillit hos mottakerne.
+- Start DMARC med p=none for å logge før du håndhever.
+- Hold kun én SPF-post per domene.
+- Test alltid med Gmail/Outlook etter oppsett.
+
+---
+
+### Hvordan sikre domenet ditt mot kapring og misbruk
+
+URL: https://domene.io/guider/hvordan-sikre-domenet
+
+**Beskrivelse:** Hvordan beskytte domenet mot kapring, phishing og uautoriserte endringer — i praksis.
+
+**Kortsvar:** Domenesikkerhet bygges i lag. Bruk sterk passord og tofaktor hos registraren, vurder registry-lock for kritiske domener, aktiver DNSSEC, og sikre e-posten med SPF, DKIM og DMARC. Hold WHOIS-kontaktene oppdatert og bemannet — angripere utnytter foreldede kontakter.
+
+**Oppsummering:**
+- Sterk innlogging og tofaktor er minimum.
+- Registry-lock anbefales for kritiske domener.
+- DNSSEC sikrer DNS-svar mot manipulering.
+- E-postsikkerhet handler om SPF, DKIM og DMARC.
+- Oppdaterte WHOIS-kontakter forhindrer mange angrep.
+
+---
+
+### Hvem kan registrere et .no domene?
+
+URL: https://domene.io/guider/hvem-kan-registrere-no-domene
+
+**Beskrivelse:** Reglene for hvem som kan registrere .no, og hva som kreves av dokumentasjon, alder og norsk tilknytning.
+
+**Kortsvar:** Alle norske organisasjoner registrert i Enhetsregisteret kan registrere .no domener. Privatpersoner kan også registrere — de trenger fødselsnummer og må være myndige. Utenlandske aktører trenger norsk avdeling eller representant. Norid setter et tak på 100 domener for organisasjoner og 5 for privatpersoner.
+
+**Oppsummering:**
+- Privatpersoner kan registrere inntil 5 .no domener (krever fødselsnummer).
+- Organisasjoner i Enhetsregisteret kan registrere inntil 100 domener.
+- Utenlandske aktører trenger NUF eller trustee-tjeneste.
+- Personnumre lagres hos Norid, ikke offentlig i WHOIS.
+- Reglene er strengere enn for .com — gir mindre cybersquatting.
+
+---
+
+### Krav og retningslinjer for .no domener
+
+URL: https://domene.io/guider/krav-til-no-domene
+
+**Beskrivelse:** Reglene som styrer hva slags .no-domener du kan registrere — tegn, lengde, format og forbudte ord.
+
+**Kortsvar:** Norid stiller konkrete krav til .no domener: lengde 2-63 tegn, kun bokstaver, tall, bindestrek og IDN-tegn (æ, ø, å). Domenet kan ikke starte eller slutte med bindestrek og kan ikke ha to bindestreker etter hverandre på posisjon 3-4. Reservere ord og kontroversielle navn kan avvises av Norid.
+
+**Oppsummering:**
+- Tegnregler: 2-63 tegn, a-z, 0-9, bindestrek og æøå.
+- Bindestrek kan ikke være først, sist, eller på posisjon 3-4.
+- IDN-domener konverteres til Punycode internt.
+- Reserverte og misvisende navn kan avvises.
+- Spesialdomener .priv.no og kommune.no har egne regler.
+
+---
+
+### DNS-poster forklart: A, AAAA, CNAME, MX, TXT, NS, TTL
+
+URL: https://domene.io/guider/hva-er-dns-poster
+
+**Beskrivelse:** Komplett oversikt over DNS-postene du møter i hverdagen — hva de gjør, syntaksen, og når du bruker hvilken.
+
+**Kortsvar:** DNS-poster er de individuelle oppføringene i en sonefil som forteller hvor ulike tjenester på domenet ditt befinner seg. De viktigste er A og AAAA (IP-adresser), CNAME (alias), MX (e-post), TXT (verifisering og policy), NS (navneservere) og TTL (gyldighetstid). Hver type har sitt formål.
+
+**Oppsummering:**
+- A og AAAA peker til IP-adresser; CNAME peker til andre navn.
+- MX styrer e-postlevering med prioritet.
+- TXT brukes til verifisering og e-postsikkerhet (SPF, DKIM, DMARC).
+- NS angir autoritative navneservere — minimum to.
+- TTL bestemmer mellomlagringstid; senk i forveien for raske endringer.
+
+---
+
+### Auth-kode: hva det er og hvordan du får tak i den
+
+URL: https://domene.io/guider/auth-kode-og-flytting
+
+**Beskrivelse:** Hva auth-koder er, hvordan du finner dem hos ulike leverandører, og hva du gjør hvis koden ikke fungerer.
+
+**Kortsvar:** En auth-kode (også kalt EPP-kode eller transfer-kode) er passordet som lar deg flytte et domene fra én registrar til en annen. Den utstedes av nåværende leverandør, brukes hos den nye, og er gyldig i begrenset tid. Uten gyldig auth-kode er flytting umulig.
+
+**Oppsummering:**
+- Auth-kode er sikkerhetspassordet for domeneflytting.
+- Hentes fra nåværende registrar — gratis.
+- Brukes hos ny registrar i flytteprosessen.
+- Gyldighetstid varierer — bruk koden raskt.
+- Hvis koden ikke virker: sjekk lock-status, WHOIS-validering, eller nylig-flyttet-karens.
+
+---
+
+### SPF, DKIM og DMARC forklart — bygg e-postsikkerhet riktig
+
+URL: https://domene.io/guider/spf-dkim-dmarc-forklart
+
+**Beskrivelse:** Steg-for-steg-oppsett av e-postsikkerhet med SPF, DKIM og DMARC — slik unngår du at meldinger havner i spam.
+
+**Kortsvar:** SPF, DKIM og DMARC er tre TXT-poster i DNS som sammen sikrer at e-post fra ditt domene leveres riktig og ikke kan forfalskes. SPF angir hvem som får sende på dine vegne, DKIM signerer meldingene kryptografisk, og DMARC bestemmer hva som skjer hvis sjekkene feiler.
+
+**Oppsummering:**
+- SPF angir hvem som får sende e-post på dine vegne.
+- DKIM signerer meldinger kryptografisk for ekthet og integritet.
+- DMARC binder dem sammen og styrer hva som skjer ved feilet sjekk.
+- Roll alltid ut gradvis: none → quarantine → reject.
+- Manglende oppsett gir dårlig e-postlevering og åpner for phishing.
+
+---
+
+### Domene vs. webhotell: forskjellen, og hvordan de henger sammen
+
+URL: https://domene.io/guider/domene-vs-webhotell
+
+**Beskrivelse:** Den klassiske forvirringen: hva er forskjellen, og hva trenger du egentlig?
+
+**Kortsvar:** Et domene er adressen brukerne skriver inn (domene.no); webhotell er huset som lagrer selve nettsiden. De er separate tjenester du kan kjøpe fra ulike leverandører. Domenet peker mot webhotellet via DNS — uten begge fungerer ikke nettsiden.
+
+**Oppsummering:**
+- Domene = adressen; webhotell = huset.
+- Du kan kjøpe dem fra ulike leverandører — ofte fornuftig.
+- Domenet peker mot webhotellet via DNS.
+- Alt-i-ett er enkelt; splitt for spesielle behov.
+- E-post bør ofte være en egen tjeneste, ikke fra webhotellet.
+
+---
+
+### Domeneportefølje for bedrifter — hvilke domener bør du eie?
+
+URL: https://domene.io/guider/domeneportefolje-for-bedrifter
+
+**Beskrivelse:** Strategisk valg av domener — hva som er fornuftig defensivt, og hva som er overkill.
+
+**Kortsvar:** En bedrift bør eie hoveddomenet (.no), defensive variasjoner (vanlige feilstavinger, æøå-versjoner), nøkkel-TLD (.com og eventuelt .eu), og merkevare-relevante nye gTLD. Pluss subdomener for tjenester. Estimert kostnad: 1 000-5 000 kr/år for solid grunnportefølje.
+
+**Oppsummering:**
+- Hovedmerkevare på .no og .com som basis.
+- Defensive variasjoner: 5-10 domener per merkevare.
+- Alt registrert på bedriftens organisasjonsnummer, ikke person.
+- Auto-renew og sentralisert oversikt er kritisk.
+- Vurder porteføljen årlig — fjern det som ikke gir verdi.
+
+---
+
+### DNSSEC i praksis: slik aktiverer du det
+
+URL: https://domene.io/guider/dnssec-i-praksis
+
+**Beskrivelse:** Hva DNSSEC gjør, hvordan det aktiveres på .no og andre domener, og hvilke fallgruver du må unngå.
+
+**Kortsvar:** DNSSEC signerer DNS-svar kryptografisk slik at de ikke kan manipuleres på vei til mottakeren. Aktivering skjer i to steg: opprett nøkler hos navneserver-leverandøren og registrer DS-record hos registrar. De fleste moderne DNS-leverandører støtter DNSSEC med ett-klikks aktivering.
+
+**Oppsummering:**
+- DNSSEC signerer DNS-svar mot manipulasjon.
+- To deler: signering hos navneserver + DS-record hos registrar.
+- De fleste moderne leverandører støtter ett-klikks aktivering.
+- Verifiser med DNSViz og sett opp monitoring.
+- Vær forsiktig ved leverandørskifte — koordineres nøye.
+
+---
+
+### SEO og domenenavn: hva som faktisk betyr noe
+
+URL: https://domene.io/guider/seo-og-domenenavn
+
+**Beskrivelse:** Sannheten om domenenavn og SEO i 2026 — hva Google bryr seg om, hva som er myter.
+
+**Kortsvar:** Domenenavnet selv har minimal direkte SEO-effekt i 2026 — Google ser på innhold og lenker, ikke navnet alene. Men ccTLD som .no gir lokal relevans, kortere navn er lettere å huske og å lenke til, og et matchende merkevarenavn bygger autoritet over tid. Unngå keyword-stuffing og bindestreker.
+
+**Oppsummering:**
+- Domenenavn har minimal direkte SEO-effekt i 2026.
+- Indirekte effekter: CTR, lenker, geografisk signal.
+- Velg merkevarenavn over nøkkelord-spam.
+- .no for norsk; .com for globalt — ikke begge sammen.
+- Bytt domene bare ved sterk grunn — krever lang stabilisering.
+
+---
+
+### Varemerke og domenenavn — slik unngår du konflikt og beskytter posisjonen din
+
+URL: https://domene.io/guider/varemerke-og-domene
+
+**Beskrivelse:** En praktisk gjennomgang for bedrifter: hvordan velge domener som ikke krenker andres varemerker, hvordan beskytte ditt eget navn, og hvilke alternativer du har når noen registrerer et domene som ligner på din merkevare.
+
+**Kortsvar:** Sjekk varemerkeregistrene (Patentstyret for Norge, EUIPO for EU, WIPO globalt) før du registrerer et domene som ligner et eksisterende merke. Hvis noen har registrert et domene som krenker ditt varemerke, har du tre veier: forhandling, UDRP-klage (for gTLD-er) eller alternativ tvisteløsning gjennom Norid for .no-domener. Forebygging er alltid billigere enn rettssak.
+
+**Oppsummering:**
+- Domenenavn og varemerker er to separate systemer — registrering av et domene gir ingen varemerkerettigheter, og motsatt.
+- Sjekk Patentstyret, EUIPO og Brønnøysund før du registrerer et domene som ligner andre merker — forebygging er alltid billigere.
+- For .no-domener kan tvister løses gjennom Norids domenekonfliktordning. For gTLD-er brukes UDRP via WIPO eller andre sentre.
+- UDRP krever bevis for tre ting samtidig: identisk/forvirrende likhet, ingen legitim interesse, og ond tro. Alle tre må oppfylles.
+- Beskytt egen merkevare ved å registrere hovedvariant + åpenbare alternativer + sentrale gTLD-er, og overvåk for nye registreringer.
+
+---
+
+### Internasjonale domener — slik velger du riktig TLD for hvert marked
+
+URL: https://domene.io/guider/velge-internasjonale-domener
+
+**Beskrivelse:** En strategisk gjennomgang for bedrifter som ekspanderer utenfor Norge: når du bør bruke landdomener (ccTLD), når .com er nok, hvordan håndtere flere språk og markeder, og hvilke domeneporteføljer som faktisk gir verdi.
+
+**Kortsvar:** Bruk ditt lands ccTLD (.no, .se, .dk) når du primært betjener det markedet — det gir bedre lokal SEO og signaliserer tilhørighet. Bruk en gTLD som .com når merkevaren skal være global. For internasjonal virksomhet med flere markeder fungerer en sentral .com med språkversjoner ofte bedre enn ti separate ccTLD-er. Defensiv registrering av hoved-ccTLD-er + nære variasjoner anbefales uansett.
+
+**Oppsummering:**
+- ccTLD (.no, .se, .dk) gir sterkt lokalt signal — bruk når du primært betjener det landet.
+- gTLD (.com, .org) er nøytrale og passer global merkevare — krever hreflang for å målrette geografisk.
+- Hybrid med .com som hovedspor og ccTLD-er som omdirigeringer er ofte den enkleste strategien for norske bedrifter med internasjonale ambisjoner.
+- Defensiv registrering bør være målrettet, ikke bredt: hovedland + nære variasjoner. Varemerkeregistrering beskytter bedre enn å samle på TLD-er.
+- Vurder kapasiteten din realistisk — hvert ekstra domene krever drift, sertifikater, og innhold som faktisk er verdt å lese.
+
+---
+
+### Domenenavn og SEO — hvor mye betyr egentlig valget?
+
+URL: https://domene.io/guider/domene-og-seo
+
+**Beskrivelse:** En ærlig gjennomgang av hva domenenavnet faktisk betyr for søkemotoroptimalisering i 2026: hvilke faktorer som teller, hvilke myter som fortsatt sirkulerer, og hvordan du tar et valg som ikke holder deg tilbake.
+
+**Kortsvar:** Domenenavnet har moderat direkte SEO-effekt i 2026. Mest betyr det for klikkrate fra søkeresultater (et tydelig, troverdig navn får flere klikk) og for å signalisere geografisk tilhørighet (.no for norske søk). Eksakte nøkkelord i domenet (best-bil-oslo.no) gir liten fordel og kan virke spammy. Velg et navn du kan bygge en merkevare rundt — det vil betjene deg bedre i lengden.
+
+**Oppsummering:**
+- Domenet har moderat direkte SEO-effekt — klikkrate, geo-signal og merkevareverdi er det viktigste det faktisk gjør.
+- Exact-match domains gir ingen spesiell rangeringsfordel siden 2012. Velg navn for merkevarestyrke, ikke nøkkelord.
+- .no gir tydelig fordel for søk i Norge på norsk. .com er mer nøytralt og krever hreflang for geo-målretting.
+- Bruk undermapper, ikke subdomener, for innhold som er innholdsmessig sammenhengende — det holder SEO-autoriteten samlet.
+- Ved domenebytte: 301-omdirigering, Search Console-oppdatering, behold gamle domenet i 12+ måneder.
+
+---
+
+### Domeneutleie — slik fungerer det, og når lønner det seg?
+
+URL: https://domene.io/guider/domeneutleie-guide
+
+**Beskrivelse:** Domeneutleie er en lite kjent, men juridisk solid modell for å bruke et domene man ikke eier. Denne guiden forklarer hvordan utleie skiller seg fra kjøp og overdragelse, hvilke risikomomenter som finnes, og når en leieavtale gir mening for både eier og leietaker.
+
+**Kortsvar:** Domeneutleie er en kontraktsfestet ordning der eieren beholder eierskapet, mens leietakeren bruker domenet mot et månedlig eller årlig vederlag. Det egner seg for premium-domener som ville vært prohibitivt dyre å kjøpe utenfor en avtale, eller som rente-til-eie-løsning. Risikomomentene er reelle — leietaker mister tilgang ved kontraktsbrudd og må passe på fornying, DNS-tilgang og avtalefestet eierovergang. Anbefales bare med tydelig kontrakt og advokatbistand.
+
+**Oppsummering:**
+- Domeneutleie lar leietaker bruke et domene mens eieren beholder den juridiske registreringen.
+- Lease-to-own er en populær variant der månedlige innbetalinger teller mot et endelig kjøp.
+- Leietaker bør sikre seg mot manglende fornying, DNS-endringer og eieroverdragelse gjennom kontraktklausuler.
+- Utleier bør beskytte seg mot misbruk og uventet goodwill-claim gjennom bruksbegrensninger og klare oppsigelsesvilkår.
+- Skattemessige forhold er ikke trivielle — kontrakten bør gjennomgås av advokat og regnskapsfører før signering.
+
+---
+
+### Domeneinvestering — slik fungerer markedet, og er det noe for deg?
+
+URL: https://domene.io/guider/domeneinvestering-grunnleggende
+
+**Beskrivelse:** Domener kan kjøpes som investering, men det er ikke enkelt å tjene penger på. Denne guiden går gjennom hvordan markedet faktisk fungerer, hva som driver verdi, hvordan en realistisk strategi ser ut, og hvilke fallgruver som tømmer kontoen for de fleste som prøver.
+
+**Kortsvar:** Domeneinvestering kan være lønnsomt, men markedet er illikvid og verdivurdering er subjektiv. De fleste som prøver, taper penger fordi de overvurderer hvor lett det er å selge domener. Realistisk investering krever tålmodighet (2-7 års holdetid), kapital til å absorbere tap, og kunnskap om hvilke navn som faktisk har sluttbrukere som vil betale. Anbefales ikke som hovedinntekt — egner seg bedre som kompetanse-aktivitet ved siden av annen virksomhet.
+
+**Oppsummering:**
+- Domeneinvestering har reelt potensial, men er illikvid — under 2 % av spekulative registreringer selges hvert år.
+- Verdi drives av søkbarhet, sluttbrukerrelevans, TLD, kortlengde, og renommé — ikke nøkkelordtetthet eller automatiske estimater.
+- Tre realistiske startstrategier: brand-kuratering, hand-registration på utløpende navn, eller geo-spesialisering.
+- Skill mellom lovlig investering og cybersquatting — varemerkebrudd kan koste deg domenet og skape rettslige problemer.
+- I Norge skattes salg som kapital- eller næringsinntekt avhengig av aktivitetsnivå. Før alltid kjøp- og salgsdokumentasjon.
+
+---
+
+## Ordliste — Definisjoner
+
+### Hva er en A-peker?
+
+URL: https://domene.io/ordliste/a-peker
+
+**Kortdefinisjon:** En A-peker — A-record — kobler et domenenavn til en konkret IPv4-adresse. Når noen besøker nettsiden din, slår nettleseren opp A-pekeren for å finne hvilken server den skal koble seg til. AAAA-record er den samme typen for IPv6.
+
+**Forenklet forklaring:** A-pekeren oversetter domenet til en numerisk adresse — som husnummeret til serveren der nettsiden ligger.
+
+**Teknisk:** A-pekere lagres som DNS-poster i zonefilen og returneres ved oppslag mot autoritative navneservere. Verdien er en gyldig IPv4-adresse. Kan kombineres med flere A-pekere for samme navn for lastbalansering.
+
+**Eksempel:** domene.io. IN A 203.0.113.42 betyr at domenet peker til IP-adressen 203.0.113.42.
+
+**Viktighet:** A-pekeren er den mest fundamentale DNS-posten — uten den finner ingen nettsiden din.
+
+---
+
+### Hva er en AAAA-peker?
+
+URL: https://domene.io/ordliste/aaaa-peker
+
+**Kortdefinisjon:** En AAAA-peker (kvad-A) er en DNS-post som kobler et domenenavn til en IPv6-adresse. Mens A-pekere bruker IPv4, brukes AAAA for det moderne IPv6-formatet med lengre, heksadesimale adresser. Dagens nettsider bør ha både A og AAAA der det er mulig.
+
+**Forenklet forklaring:** AAAA fungerer som A, men peker mot en IPv6-adresse i stedet for IPv4. Hvis serveren din støtter IPv6, gir AAAA-pekeren raskere tilkobling for moderne nettverk.
+
+**Teknisk:** AAAA inneholder en 128-bits IPv6-adresse i tekstlig heksadesimal notasjon. DNS-resolvere som spør etter AAAA får returnert IPv6-adressen direkte, og fall-back skjer til A-pekeren om IPv6-tilkobling feiler.
+
+**Eksempel:** domene.io. IN AAAA 2606:4700:3035::ac43:b0c1
+
+**Viktighet:** Manglende AAAA-pekere kan gi tregere lasting hos brukere på rene IPv6-nettverk og påvirker tilgjengeligheten i mobile nettverk.
+
+---
+
+### Hva er en auth-kode?
+
+URL: https://domene.io/ordliste/auth-kode
+
+**Kortdefinisjon:** En auth-kode — også kalt EPP-kode eller transfer-kode — er et passord som gir tilgang til å flytte et domene mellom registrarer. Den utstedes av nåværende registrar og må oppgis til ny leverandør innen kort tid for å fullføre flytting.
+
+**Forenklet forklaring:** Auth-koden er domenets midlertidige flyttebevis. Uten den får ikke en ny leverandør lov til å overta.
+
+**Teknisk:** Auth-koden brukes i EPP (Extensible Provisioning Protocol) som sikkerhetsmekanisme. Hver gTLD har sine regler, men standard er at koden er gyldig i begrenset tid og må fornyes hvis flyttingen ikke fullføres.
+
+**Eksempel:** Et eksempel på auth-kode: K7m@9hN!2pQrV (komplekst og engangsbruk).
+
+**Viktighet:** Uten auth-kode kan du ikke flytte domenet. Mange registrarer skjuler den eller krever støtte for utlevering.
+
+---
+
+### Hva er en CAA-peker?
+
+URL: https://domene.io/ordliste/caa-peker
+
+**Kortdefinisjon:** En CAA-peker — Certificate Authority Authorization — angir hvilke sertifikatutstedere som har lov til å utstede SSL-sertifikater for domenet ditt. Sertifikat-utstedere må sjekke CAA-posten før de signerer et sertifikat.
+
+**Forenklet forklaring:** CAA er en "hvitelist" for hvem som får lov til å lage SSL-sertifikater for domenet ditt. Det forhindrer at uvedkommende får utstedt sertifikat på dine vegne.
+
+**Teknisk:** Format: `domene.no. CAA 0 issue "letsencrypt.org"`. Flagget 0 (issue), `issuewild` for wildcards, og `iodef` for varsling. Manglende CAA betyr alle CA-er kan utstede.
+
+**Eksempel:** domene.io. IN CAA 0 issue "letsencrypt.org"
+
+**Viktighet:** Anbefalt sikkerhetstiltak — beskytter mot uautorisert sertifikat-utstedelse og kapring.
+
+---
+
+### Hva er ccTLD?
+
+URL: https://domene.io/ordliste/cctld
+
+**Kortdefinisjon:** ccTLD — country-code Top-Level Domain — er et toppdomene tildelt et bestemt land, basert på ISO 3166-1-koder. Eksempler: .no for Norge, .se for Sverige, .uk for Storbritannia. Hver ccTLD styres av sin nasjonale registry.
+
+**Forenklet forklaring:** ccTLD signaliserer hvilket land et domene er knyttet til. .no = Norge, .dk = Danmark.
+
+**Teknisk:** ccTLD-er er to-bokstavs koder fra ISO 3166-1 alpha-2. Noen er strengt regulert (.no krever organisasjonsnummer eller fødselsnummer), andre er åpne (.io, .me).
+
+**Eksempel:** .no (Norid), .se (IIS), .dk (DK Hostmaster).
+
+**Viktighet:** ccTLD gir lokal SEO-fordel og signal om geografisk relevans til norske kunder.
+
+---
+
+### Hva er CDN?
+
+URL: https://domene.io/ordliste/cdn
+
+**Kortdefinisjon:** CDN — Content Delivery Network — er et nettverk av servere fordelt geografisk som leverer innhold (bilder, videoer, sider) fra det nærmeste datasenteret til brukeren. Det reduserer ventetid og avlaster opprinnelses-serveren.
+
+**Forenklet forklaring:** I stedet for å hente alt fra én server i Tyskland, henter CDN-en innhold fra nærmeste server — kanskje i Oslo. Det blir raskere for brukeren.
+
+**Teknisk:** CDN-leverandører (Cloudflare, Fastly, Akamai, Vercel Edge) speiler statisk innhold på "edge nodes" og bruker DNS/anycast for å rute brukere til nærmeste node. Dynamisk innhold kan også caches med riktige headere.
+
+**Eksempel:** En bruker i Oslo henter bilder fra Cloudflares Oslo-node, ikke fra opphavsserveren i Frankfurt.
+
+**Viktighet:** CDN gir både ytelse og sikkerhet (DDoS-beskyttelse). Et must for nettsider med global eller voksende trafikk.
+
+---
+
+### Hva er CNAME?
+
+URL: https://domene.io/ordliste/cname
+
+**Kortdefinisjon:** CNAME — Canonical Name — er en DNS-post som peker fra ett domenenavn til et annet. I stedet for å oppgi en IP-adresse direkte, peker du til et annet navn. Det brukes ofte for underdomener og tredjepartstjenester. CNAME kan ikke brukes på rot-domenet.
+
+**Forenklet forklaring:** CNAME er som å sende videresending. I stedet for å si «her er huset», sier du «se på det huset der borte».
+
+**Teknisk:** CNAME-post returnerer et annet domenenavn, som så slås opp på nytt for å finne den endelige A- eller AAAA-pekeren. CNAME kan ikke kombineres med andre poster på samme navn — derfor ikke på rot-domenet (apex).
+
+**Eksempel:** blog.firma.no CNAME firma.medium.com — peker bloggen til en Medium-side uten å eksponere IP-en direkte.
+
+**Viktighet:** CNAME er nøkkelen til å bruke tredjepartstjenester på underdomener. Vanlig for blogg, butikk, dokumentasjonsside osv.
+
+---
+
+### Hva er cybersquatting?
+
+URL: https://domene.io/ordliste/cybersquatting
+
+**Kortdefinisjon:** Cybersquatting er praksis der noen registrerer domener som matcher kjente varemerker eller selskapsnavn med hensikt å selge dem dyrt eller utnytte trafikken. Det regnes som ond tro og kan utfordres via UDRP eller domstol.
+
+**Forenklet forklaring:** Cybersquatter kjøper domener i håp om at den "riktige" eieren vil betale dyrt. Det er ikke ulovlig per se, men kan tilbakeføres ved klage.
+
+**Teknisk:** Skiller seg fra typosquatting (registrering av feilstaving) og legitim domeneinvestering (generiske ord uten varemerke-konflikt). UDRP og .no-tvister krever bevis for ond tro.
+
+**Eksempel:** Registrering av nytt-firma-as.no rett etter offentlig kunngjøring av navneendring i Brønnøysund.
+
+**Viktighet:** Bedrifter bør registrere defensive domener og overvåke nye registreringer som matcher varemerker.
+
+---
+
+### Hva er DANE?
+
+URL: https://domene.io/ordliste/dane
+
+**Kortdefinisjon:** DANE (DNS-based Authentication of Named Entities) er en standard som lar deg publisere TLS-sertifikatinformasjon i DNS, beskyttet av DNSSEC. Brukes mest for sikker e-postoverføring (SMTP).
+
+**Forenklet forklaring:** Vanligvis stoler nettleseren på et stort antall sertifiseringsmyndigheter (CA-er) — hvilken som helst av dem kan utstede et sertifikat for domenet ditt. DANE snur dette: domeneeieren legger en TLSA-peker i DNS som sier «mitt sertifikat er dette og bare dette». Hvis noen prøver å mate inn et annet sertifikat — selv om det er gyldig fra en CA — vil mottakeren avvise det.
+
+**Teknisk:** DANE krever DNSSEC — uten signerte DNS-svar er TLSA-pekeren manipulerbar. TLSA-pekeren publiseres på _<port>._<protocol>.<domain> (f.eks. _25._tcp.eksempel.no for SMTP) og inneholder sertifikatets hash sammen med usage-, selector- og matching-felt. For SMTP brukes DANE primært via MTA-STS-alternativet — Postfix, Exim og store e-postoperatører som Comcast og hver av de norske ISP-ene støtter det. For HTTPS er DANE foreslått, men nettleserne har historisk ikke implementert det fordi DNSSEC-validering tar lang tid.
+
+**Eksempel:** Ved sending av e-post fra postfix til en mottaker med DANE-konfigurasjon, slår serveren opp _25._tcp.mottaker.no, validerer TLSA-pekeren mot DNSSEC-signaturer, og krever at sertifikatet matcher før den fortsetter med STARTTLS-oppgradering.
+
+**Viktighet:** DANE løser et virkelig sikkerhetshull i e-postoverføring: en angriper med kontroll over en mellomliggende ruter kan ellers fjerne STARTTLS-svaret og tvinge frem ukryptert overføring. Med DANE må mottakerens sertifikat matche eksakt — og DNSSEC sikrer at TLSA-pekeren ikke kan forfalskes. For organisasjoner som tar e-postsikkerhet på alvor (banker, det offentlige), er DANE-MTA et viktig tiltak.
+
+---
+
+### Hva er DKIM?
+
+URL: https://domene.io/ordliste/dkim
+
+**Kortdefinisjon:** DKIM — DomainKeys Identified Mail — signerer utgående e-post kryptografisk med en privatnøkkel hos avsenderen. Mottakeren bruker en offentlig nøkkel publisert i DNS for å verifisere at meldingen ikke er endret underveis og kommer fra autorisert kilde.
+
+**Forenklet forklaring:** DKIM legger en digital signatur på hver e-post du sender. Mottakeren sjekker signaturen mot nøkkelen din i DNS — hvis det stemmer, er meldingen ekte.
+
+**Teknisk:** DKIM-public key publiseres som en TXT-post på `selector._domainkey.domene.no`. E-postservere signerer headere og body med tilhørende privatnøkkel. RSA 2048-bit eller ed25519 anbefales i 2026.
+
+**Eksempel:** v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBi...
+
+**Viktighet:** DKIM kombinert med SPF og DMARC er industri-standard for e-postlevering. Uten DKIM får du dårlig leverbarhet.
+
+---
+
+### Hva er DMARC?
+
+URL: https://domene.io/ordliste/dmarc
+
+**Kortdefinisjon:** DMARC — Domain-based Message Authentication — bygger på SPF og DKIM og forteller mottakerservere hvordan de skal håndtere e-post som ikke består autentisering. DMARC kan også sende rapporter om mistenkelig aktivitet til domeneeieren.
+
+**Forenklet forklaring:** Mens SPF og DKIM bekrefter avsender, sier DMARC: "Hvis sjekkene feiler — gjør X." X kan være ingenting, sett i karantene, eller avvis.
+
+**Teknisk:** DMARC publiseres som TXT på `_dmarc.domene.no`. Policy `p=` kan være none, quarantine eller reject. `rua=` mottar aggregerte rapporter; `ruf=` mottar feilrapporter. Krever alignment mellom domain i From og SPF/DKIM.
+
+**Eksempel:** v=DMARC1; p=quarantine; rua=mailto:dmarc@domene.no; pct=100;
+
+**Viktighet:** DMARC er essensielt for å beskytte merkevaren mot phishing og forfalskede e-poster. Stadig flere mottakerdomener krever det.
+
+---
+
+### Hva er DNS?
+
+URL: https://domene.io/ordliste/dns
+
+**Kortdefinisjon:** DNS — Domain Name System — er internettets adressebok. DNS oversetter domenenavn til IP-adresser, slik at nettlesere og e-postservere finner riktige tjenester. Uten DNS måtte vi husket numeriske adresser i stedet for navn.
+
+**Forenklet forklaring:** Tenk på DNS som telefonkatalogen for internett. Du oppgir et navn — for eksempel domene.io — og DNS returnerer riktig adresse til tjeneren som inneholder nettsiden. Du skriver navn, datamaskinen får tall.
+
+**Teknisk:** DNS er et hierarkisk distribuert system bygd rundt rekursive og autoritative navneservere. Et oppslag starter på roten, går videre til toppdomenet (TLD), og ender hos de autoritative navneserverne for det aktuelle domenet, som returnerer riktig DNS-post (A, AAAA, MX, TXT osv.).
+
+**Eksempel:** Når du skriver inn domene.io i nettleseren, sender datamaskinen et DNS-oppslag som returnerer IP-adressen til serveren der nettsiden er lagret.
+
+**Viktighet:** DNS er fundamentet for hvordan domener fungerer. Feil DNS-oppsett er en av de vanligste årsakene til at nettsider og e-post slutter å fungere.
+
+---
+
+### Hva er DNSSEC?
+
+URL: https://domene.io/ordliste/dnssec
+
+**Kortdefinisjon:** DNSSEC — DNS Security Extensions — er en utvidelse av DNS som signerer DNS-svar kryptografisk. Det betyr at en bruker kan verifisere at svaret faktisk kommer fra den rettmessige domeneeieren, og ikke fra en angriper. DNSSEC beskytter mot DNS-spoofing og cache-forgiftning.
+
+**Forenklet forklaring:** DNSSEC er som å signere et brev med en stempel som ikke kan forfalskes. Datamaskinen som mottar svaret kan sjekke stempelet og være sikker på at svaret er ekte.
+
+**Teknisk:** DNSSEC bruker offentlig nøkkel-kryptografi. Sone-filen signeres med en privat nøkkel, og den offentlige nøkkelen publiseres som DNSKEY-poster. Toppdomenet publiserer en DS-post som peker tilbake til domenets nøkkel, noe som skaper en tillitskjede helt opp til rotsonen.
+
+**Eksempel:** Hvis ditt .no domene har DNSSEC aktivert, vil moderne nettlesere og e-postservere automatisk verifisere DNS-svar før de stoler på dem.
+
+**Viktighet:** DNSSEC er en av de mest effektive måtene å sikre at brukere ikke blir lurt av en falsk DNS-server. Spesielt viktig for domener som håndterer innlogging, betaling eller sensitive data.
+
+---
+
+### Hva er domeneinvestering?
+
+URL: https://domene.io/ordliste/domeneinvestering
+
+**Kortdefinisjon:** Domeneinvestering er kjøp og salg av domener som finansielle eiendeler. Investorer kjøper generiske, korte eller ettertraktede navn for å selge dem videre med fortjeneste — alt fra hundre til millioner av kroner per domene.
+
+**Forenklet forklaring:** Som eiendomsmegling, men for internett-adresser. Du kjøper et domene billig, sitter på det, og selger det dyrere når noen vil ha det.
+
+**Teknisk:** Markedet inkluderer auksjoner (Sedo, Dynadot, GoDaddy Auctions), brokeret salg (Saw.com, MediaOptions), og direkte handel. Premium-domener handles til 5-7 sifrede summer; kategori-domener (clinic.com, business.no) er mest verdifulle.
+
+**Eksempel:** voice.com ble solgt for 30 millioner USD i 2019. business.no ble solgt for over 1 million NOK.
+
+**Viktighet:** Forståelse av markedet hjelper bedrifter både med å beskytte egne navn og vurdere kjøp av eksisterende domener.
+
+---
+
+### Hva er domeneparkering?
+
+URL: https://domene.io/ordliste/domeneparkering
+
+**Kortdefinisjon:** Domeneparkering er praksisen med å la et registrert, men ubrukt domene vise en standardside — ofte med annonser eller kontaktinformasjon for salg. Holder domenet i live mens eieren venter på en kjøper eller et fremtidig prosjekt.
+
+**Forenklet forklaring:** Hvis du eier et domene du ikke bruker akkurat nå, har du to valg: la det stå tomt (besøkende får feil), eller «parkere» det. En parkert side er en enkel landingsside som forteller at domenet er ledig for salg, eller bare bekrefter at det er registrert. Investorer som eier hundrevis av domener parkerer dem alle automatisk gjennom plattformer som Sedo, Dan.com eller Afternic.
+
+**Teknisk:** Teknisk er parkering bare DNS-konfigurasjon: A-pekeren peker mot en parkeringsleverandørs server, som returnerer en automatisk generert side basert på domenets nøkkelord. Mer avanserte parkeringer integrerer pay-per-click-annonser via Google AdSense for Domains eller lignende, og videresender brukerinteresse til kjøpsskjemaer. Salgsleverandører som Dan.com tilbyr standardiserte 'BIN' (buy-it-now)-sider og Escrow-håndtering.
+
+**Eksempel:** En domeneinvestor eier oslohotell.no men har ingen aktiv tjeneste der. Domenet er parkert hos Dan.com med en enkel side som sier «Dette domenet er til salgs» og en lenke til kjøpsskjema. Trafikk fra direkte typing eller gamle lenker konverteres til salgshenvendelser.
+
+**Viktighet:** For domeneinvestorer er parkering inntektskilden mens de venter på kjøper. For vanlige eiere er parkering en ryddig måte å håndtere domener du ikke bruker akkurat nå — bedre enn at besøkende møter en feilmelding eller et utløpt sertifikat.
+
+---
+
+### Hva er domeneutleie?
+
+URL: https://domene.io/ordliste/domeneutleie
+
+**Kortdefinisjon:** Domeneutleie — også kalt domain leasing — er en avtale der eieren leier ut bruken av et domene mot månedlig eller årlig betaling, uten å overføre eierskap. Brukes når en kjøper ikke har råd til full kjøpesum, eller eieren vil beholde langvarig kontroll.
+
+**Forenklet forklaring:** I stedet for å kjøpe domenet leier du retten til å bruke det. Eierne sitter på navnet; du betaler for å nyte godt av det.
+
+**Teknisk:** Avtalen styrer DNS-kontroll, varighet og opsjoner for kjøp ved utløp. Domeneeier opprettholder kontroll over registrering og kan tilbakekalle ved manglende betaling. Krever skriftlig avtale.
+
+**Eksempel:** Et selskap leier vask.no for 5 000 kr/mnd med kjøpsopsjon på 500 000 kr etter 24 måneder.
+
+**Viktighet:** Lavere terskel enn full kjøp — gunstig for nystartede selskaper som vil teste merkevare før investering.
+
+---
+
+### Hva er drop-catching?
+
+URL: https://domene.io/ordliste/drop-catching
+
+**Kortdefinisjon:** Drop-catching er praksis å forsøke å registrere et domene i sekundene etter at det utløper og slippes tilbake til markedet. Spesialiserte tjenester sender millioner av forespørsler for å vinne ettertraktede domener før konkurrenter.
+
+**Forenklet forklaring:** Når et domene blir ledig (drops), står tusenvis av roboter klare til å snappe det. Den raskeste vinner.
+
+**Teknisk:** Tjenester som SnapNames, NameJet, DropCatch.com bruker høyhastighets EPP-tilgang og budgivning hvis flere fanger samtidig. .no-domener har egen utløpsprosess hos Norid.
+
+**Eksempel:** kjentmerkevare.com utløper, blir fanget av en investor på under 1 sekund, og selges videre dyrt.
+
+**Viktighet:** Hvis et viktig domene mangler fornyelse, kan det forsvinne til en investor. Sett alltid auto-renew.
+
+---
+
+### Hva er EPP?
+
+URL: https://domene.io/ordliste/epp
+
+**Kortdefinisjon:** EPP — Extensible Provisioning Protocol — er den tekniske protokollen registrarer bruker for å snakke med registries (organisasjonen som drifter et toppdomene). Alt fra registrering, fornyelse, flytting til DNS-oppdatering går via EPP.
+
+**Forenklet forklaring:** EPP er språket som brukes mellom domeneleverandører og toppdomenets registry. Du møter sjelden EPP direkte — det skjer i bakgrunnen.
+
+**Teknisk:** EPP er en XML-basert protokoll definert i RFC 5730 og påfølgende. Kjører over TLS og brukes for objekter som domain, host, contact. Registrarer må være akkrediterte for å koble seg til en registry.
+
+**Eksempel:** Når du registrerer et nytt domene, sender registraren en EPP `<create>` til registry — gjerne på under et sekund.
+
+**Viktighet:** EPP er fundamentet for hele domeneindustriens infrastruktur — uten det ville ikke registrering og flytting fungert globalt.
+
+---
+
+### Hva er gTLD?
+
+URL: https://domene.io/ordliste/gtld
+
+**Kortdefinisjon:** gTLD — generic Top-Level Domain — er et generisk toppdomene som ikke er knyttet til et land. De klassiske er .com, .org og .net, men nyere finnes som .io, .app, .blog. De administreres globalt under ICANN.
+
+**Forenklet forklaring:** gTLD er domener uten landstilhørighet — "globale" toppdomener. Du kan registrere .com fra hvor som helst i verden.
+
+**Teknisk:** Det skilles mellom legacy gTLD (.com, .net, .org, .info, .biz), restricted (.gov, .edu) og new gTLD (lansert fra 2014, over 1500 finnes nå). Hver har egen registry, men felles regelverk fra ICANN.
+
+**Eksempel:** .com (Verisign), .io (Identity Digital), .app (Google).
+
+**Viktighet:** Valg mellom ccTLD og gTLD påvirker SEO, oppfattelse av lokal vs. global merkevare, og eventuelt pris.
+
+---
+
+### Hva er HSTS?
+
+URL: https://domene.io/ordliste/hsts
+
+**Kortdefinisjon:** HSTS — HTTP Strict Transport Security — er en header som forteller nettleseren at den alltid skal bruke HTTPS for et domene, selv om brukeren skriver http://. HSTS-preload kan garantere HTTPS allerede ved første besøk.
+
+**Forenklet forklaring:** HSTS låser fast at nettstedet kun skal nås via HTTPS. Det stenger døren for downgrade-angrep.
+
+**Teknisk:** Implementert som HTTP-header `Strict-Transport-Security: max-age=31536000; includeSubDomains; preload`. Preload-listen vedlikeholdes av Chrome og brukes av andre nettlesere.
+
+**Eksempel:** Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+**Viktighet:** Beskytter mot man-in-the-middle-angrep der noen prøver å lure nettleseren til å bruke ukryptert HTTP.
+
+---
+
+### Hva er HTTPS?
+
+URL: https://domene.io/ordliste/https
+
+**Kortdefinisjon:** HTTPS — HTTP Secure — er den sikre versjonen av HTTP-protokollen, og bruker TLS for å kryptere og autentisere trafikken mellom nettleser og server. Vises i adresselinjen som https:// og ofte med en hengelås.
+
+**Forenklet forklaring:** HTTPS er HTTP med pansret rustning. All trafikk er kryptert, og nettleseren bekrefter at du faktisk snakker med riktig server.
+
+**Teknisk:** HTTPS kjører HTTP over TLS, vanligvis på port 443. Krever et gyldig sertifikat. HSTS (HTTP Strict Transport Security) tvinger nettlesere til alltid å bruke HTTPS for et domene.
+
+**Eksempel:** https://domene.io vs http://domene.io — de fleste moderne sider redirigerer automatisk til HTTPS.
+
+**Viktighet:** Google rangerer HTTPS-sider høyere, og de fleste nettlesere advarer ved HTTP. Regnes som obligatorisk i 2026.
+
+---
+
+### Hva er HTTPS-only og HSTS?
+
+URL: https://domene.io/ordliste/https-only
+
+**Kortdefinisjon:** HTTPS-only betyr at nettsiden kun aksepterer kryptert trafikk. HSTS er en mekanisme som ber nettleseren huske dette og automatisk bruke HTTPS, selv om brukeren skriver HTTP.
+
+**Forenklet forklaring:** Du har sikkert lagt merke til at de fleste nettsider i dag har en hengelås i adressefeltet — det betyr HTTPS, altså kryptert tilkobling. HTTPS-only går et steg lenger og slår av HTTP helt. HSTS gjør at nettleseren automatisk bytter til HTTPS allerede før den prøver å laste siden, så ingen kan legge seg imellom og snoke.
+
+**Teknisk:** HTTPS-only oppnås ved å konfigurere serveren til å returnere 301 fra alle HTTP-forespørsler til HTTPS-versjonen. HSTS (HTTP Strict Transport Security) implementeres via Strict-Transport-Security-headeren, som forteller nettleseren å kun bruke HTTPS i en gitt tid (f.eks. 'max-age=31536000; includeSubDomains; preload'). Med preload-flagget kan domenet legges til Chromium HSTS-listen via hstspreload.org — da hardkodes HTTPS i nettleseren. Beskytter mot SSL-stripping og ondsinnet HTTP-svar på første besøk.
+
+**Eksempel:** Etter at HSTS er aktivert med preload, vil en bruker som skriver eksempel.no i adressefeltet aldri sende en HTTP-forespørsel — nettleseren går rett til HTTPS, selv på første besøk og selv på et åpent café-WiFi.
+
+**Viktighet:** I 2026 er HTTPS-only de facto standard. Søkemotorer ranker det høyere, nettlesere advarer mot HTTP-sider, og de fleste moderne API-er, payment-tjenester og webhooks krever HTTPS. HSTS er det siste stykket som tetter et lite men reelt sikkerhetshull i overgangen.
+
+---
+
+### Hva er ICANN?
+
+URL: https://domene.io/ordliste/icann
+
+**Kortdefinisjon:** ICANN — Internet Corporation for Assigned Names and Numbers — er den globale organisasjonen som koordinerer toppdomener (gTLD), IP-adresser og protokoll-numre. ICANN akkrediterer registrarer for gTLD-er som .com, .org og .net.
+
+**Forenklet forklaring:** ICANN er ikke en internett-politi, men en standardisator. De sørger for at det finnes regler og at adresseringen fungerer globalt.
+
+**Teknisk:** ICANN ble etablert i 1998, har hovedkontor i Los Angeles, og opererer på flere kontrakter med registries og registrarer. ccTLD-er som .no styres av nasjonale registries (Norid), ikke ICANN direkte.
+
+**Eksempel:** En .com-registrar er akkreditert av ICANN. En .no-registrar er akkreditert av Norid.
+
+**Viktighet:** ICANN-regler påvirker priser, eierskap, GDPR-håndtering av WHOIS, og domenetvister på gTLD-er.
+
+---
+
+### Hva er IDN?
+
+URL: https://domene.io/ordliste/idn
+
+**Kortdefinisjon:** IDN — Internationalized Domain Names — er domener som inneholder tegn utenfor ASCII, som æ, ø, å eller arabiske og kinesiske tegn. De konverteres internt til Punycode (xn--…) som DNS-systemet kan håndtere.
+
+**Forenklet forklaring:** IDN gjør at du kan ha bokstaver som æ, ø og å i domenet. Datamaskiner ser xn--… i bakgrunnen, men brukerne ser de "riktige" tegnene.
+
+**Teknisk:** IDN bruker Punycode-konvertering definert i RFC 3492. domæne.no blir xn--domne-zsa.no internt. Norid tillater æ, ø, å siden 2014. Nettlesere viser typisk IDN i adressefeltet, men kan vise Punycode hvis det ser ut som phishing.
+
+**Eksempel:** domæne.no → xn--domne-zsa.no
+
+**Viktighet:** IDN gir bedre merkevare og lesbarhet for norske kunder, men kan misbrukes til homograf-angrep (forfalskede domener).
+
+---
+
+### Hva er forskjellen på IMAP og POP3?
+
+URL: https://domene.io/ordliste/imap-vs-pop3
+
+**Kortdefinisjon:** IMAP og POP3 er to protokoller for å hente e-post. IMAP holder e-post på serveren og synkroniserer mellom enheter; POP3 laster ned og fjerner som regel meldingene fra serveren. IMAP er standarden i dag.
+
+**Forenklet forklaring:** IMAP = synkronisert overalt, alltid. POP3 = last ned én gang, så er den kun lokalt. De fleste vil ha IMAP.
+
+**Teknisk:** IMAP4 (port 993 med TLS) holder mappene serverside. POP3 (port 995 med TLS) er enklere og bare henter; det kan konfigureres til å la kopier ligge igjen, men er sjelden i bruk lenger.
+
+**Eksempel:** Konfigurer IMAP for samme innboks på telefon, laptop og webmail samtidig.
+
+**Viktighet:** Feil valg gir frustrasjon. Mange tror e-posten er borte når de bruker POP3 på flere enheter.
+
+---
+
+### Hva er en IP-adresse?
+
+URL: https://domene.io/ordliste/ip-adresse
+
+**Kortdefinisjon:** En IP-adresse er det numeriske «husnummeret» til en datamaskin på internett. DNS oversetter domenenavn som domene.io til IP-adresser så datamaskiner finner hverandre.
+
+**Forenklet forklaring:** Tenk på internett som et postsystem. Domenenavn er navn folk husker — IP-adresser er adressene postbudet faktisk leverer til. Når du skriver et domene i nettleseren, slår DNS opp navnet og finner riktig IP, og forespørselen sendes dit. Uten IP-adresser hadde ingenting funnet veien.
+
+**Teknisk:** En IP-adresse identifiserer en nettverksgrensesnittsenhet — server, ruter, telefon — på et IP-nettverk. Det finnes to versjoner i bruk: IPv4 (32 bit, skrevet som fire tall adskilt med punktum, f.eks. 185.199.108.153) og IPv6 (128 bit, skrevet som åtte hex-grupper, f.eks. 2606:4700:4700::1111). Et domene kan peke til én eller flere IP-adresser via A-pekere (IPv4) og AAAA-pekere (IPv6). IP-adresser tildeles av regionale registrarer (RIPE NCC dekker Europa) og rutes mellom nett via BGP.
+
+**Eksempel:** domene.io kan peke til IPv4-adressen 76.76.21.21 og IPv6-adressen 2606:4700:90:0::abcd. Begge svarer på samme forespørsel — nettleseren velger basert på hva som er tilgjengelig.
+
+**Viktighet:** Forståelse av IP-adresser er grunnleggende når du skal sette opp en nettside, feilsøke DNS, eller flytte tjenester mellom servere. A- og AAAA-pekere i DNS-konfigurasjonen er det som kobler domenet til der innholdet faktisk ligger.
+
+---
+
+### Hva er forskjellen på IPv4 og IPv6?
+
+URL: https://domene.io/ordliste/ipv4-vs-ipv6
+
+**Kortdefinisjon:** IPv4 og IPv6 er to versjoner av IP-protokollen. IPv4 er den gamle (32-bits adresser, ca. 4 milliarder mulige), IPv6 er den nye (128-bits, praktisk talt uendelig). De fungerer parallelt, og moderne tjenester støtter begge.
+
+**Forenklet forklaring:** IPv4 ble laget i 1981 og hadde plass til omtrent 4 milliarder adresser. Det høres mye ut, men internett har vokst forbi det. IPv6 er erstatningen, med så mange adresser at hver smarttelefon på jorda kan ha milliarder. I praksis kjører nesten alle nettverk begge samtidig — det kalles dual-stack.
+
+**Teknisk:** IPv4 bruker 32 bit fordelt på fire oktetter (f.eks. 192.0.2.1) og er begrenset til ca. 4,3 milliarder unike adresser. Knapphet løses i dag med NAT, CGNAT og IPv4-utleie. IPv6 bruker 128 bit i åtte hex-grupper (f.eks. 2001:db8::1), gir 2^128 adresser, og er designet uten NAT-behov. I DNS bruker du A-peker for IPv4 og AAAA-peker for IPv6. Operativsystemer prioriterer normalt IPv6 hvis tilgjengelig (Happy Eyeballs).
+
+**Eksempel:** google.com har både A-peker (142.250.74.46) og AAAA-peker (2a00:1450:400f:80c::200e). Nettleseren prøver IPv6 først, faller tilbake til IPv4 hvis IPv6 er trege eller mangler.
+
+**Viktighet:** For et domene betyr det: legg på AAAA-peker når det er mulig. Du gjør tjenesten raskere for IPv6-brukere (en stor andel mobiltrafikk), og du fremtidssikrer oppsettet. De fleste seriøse webhotell og CDN-er gjør dette automatisk.
+
+---
+
+### Hva er Let's Encrypt?
+
+URL: https://domene.io/ordliste/lets-encrypt
+
+**Kortdefinisjon:** Let's Encrypt er en gratis, automatisert sertifiseringsmyndighet som utsteder TLS/SSL-sertifikater. Drives av non-profit Internet Security Research Group og utgjør i dag flertallet av sertifikater på det offentlige internett.
+
+**Forenklet forklaring:** Før Let's Encrypt måtte du betale for et SSL-sertifikat, og prosessen var manuell. Det stoppet mange små nettsider fra å aktivere HTTPS. Let's Encrypt gjorde det gratis og automatisk — de fleste webhoteller og plattformer bruker det i dag uten at du tenker over det. Når du ser hengelåsen i nettleseren, er sjansen god for at sertifikatet kom fra Let's Encrypt.
+
+**Teknisk:** Let's Encrypt bruker ACME-protokollen (RFC 8555) for å automatisere domenevalidering, utstedelse og fornying. Sertifikater er gyldige i 90 dager — kort levetid med tanke på automatisk fornying tvinger frem god rotasjonshygiene. Validering skjer via HTTP-01 (legg en fil under /.well-known/acme-challenge/), DNS-01 (legg en TXT-peker), eller TLS-ALPN-01. Klienter inkluderer Certbot, acme.sh, Caddy (innebygd), og Cloudflare (skjult bak deres proxy). Støtter wildcard-sertifikater via DNS-01.
+
+**Eksempel:** Når du peker et domene mot Vercel, Netlify eller Cloudflare Pages, utsteder de automatisk et Let's Encrypt-sertifikat innen sekunder. Du gjør ingenting — det bare fungerer.
+
+**Viktighet:** Let's Encrypt har drevet HTTPS-andelen på nettet fra ca. 30 % i 2015 til over 95 % i 2026. For et nytt domene betyr det: du trenger praktisk talt aldri å betale for, eller manuelt installere, et grunnleggende sertifikat. Tjenesten er stabil nok til at de fleste produksjonsmiljøer bruker den.
+
+---
+
+### Hva er en MX-peker?
+
+URL: https://domene.io/ordliste/mx-peker
+
+**Kortdefinisjon:** En MX-peker — Mail eXchange-record — forteller resten av internett hvilken server som mottar e-post for domenet ditt. Hver MX-peker har en prioritet (lavt tall først), og du kan ha flere for redundans. Uten MX-pekere fungerer ikke e-post på domenet.
+
+**Forenklet forklaring:** MX-pekeren er adressen til postkontoret for domenet ditt. Send et brev til navn@firma.no, og MX-pekeren forteller hvor brevet skal leveres.
+
+**Teknisk:** MX-pekere lever som DNS-poster med prioritetsverdi og hostname som peker til en A- eller AAAA-record. Hostname kan ikke være en IP-adresse direkte. Mottakerservere prøver lavest prioritet først.
+
+**Eksempel:** MX-peker for et Microsoft 365-domene: 0 firmaet-no.mail.protection.outlook.com.
+
+**Viktighet:** Feil MX-peker er den vanligste årsaken til at e-post ikke kommer frem. Følg leverandørens dokumentasjon nøye.
+
+---
+
+### Hva er MX-prioritet?
+
+URL: https://domene.io/ordliste/mx-prioritet
+
+**Kortdefinisjon:** MX-prioritet er et tall som bestemmer rekkefølgen mellom flere mailservere for samme domene. Lavere tall betyr høyere prioritet. Brukes til failover — hvis primær mailserver er nede, prøver mottakere automatisk neste i listen.
+
+**Forenklet forklaring:** Hvis du har to mailservere, sier prioritetstallet hvilken som skal forsøkes først. Den med lavest tall vinner.
+
+**Teknisk:** Format: `domene.no. IN MX 10 mail1.domene.no.`. Standard 10/20/30 brukes ofte. Like prioriteter gir round-robin lastfordeling.
+
+**Eksempel:** 10 mail1.domene.no. — primær. 20 mail2.domene.no. — backup.
+
+**Viktighet:** Riktig prioritet sikrer at e-post leveres selv om hovedserveren er nede.
+
+---
+
+### Hva er en navneserver?
+
+URL: https://domene.io/ordliste/navneserver
+
+**Kortdefinisjon:** En navneserver er en server som inneholder DNS-postene for ett eller flere domener. Når noen slår opp domenet ditt, er det navneserverne som svarer med riktig informasjon. Domener har som regel 2–4 navneservere for redundans.
+
+**Forenklet forklaring:** Navneservere er filialene i DNS-adresseboken. De vet hvor nettsiden, e-posten og andre tjenester for ditt domene befinner seg, og forteller resten av internett dette.
+
+**Teknisk:** Et domene har autoritative navneservere som er angitt i NS-postene hos toppdomenets registry. Disse holder den autoritative kopien av sonefilen med alle DNS-poster for domenet.
+
+**Eksempel:** Hvis ditt domene bruker ns1.leverandor.no og ns2.leverandor.no som navneservere, er det disse to som svarer på DNS-oppslag for domenet ditt.
+
+**Viktighet:** Hvis navneserverne er nede eller feil konfigurert, vil ingen finne tjenestene dine. Bruk minst to navneservere på forskjellige nett for redundans.
+
+---
+
+### Hva er Norid?
+
+URL: https://domene.io/ordliste/norid
+
+**Kortdefinisjon:** Norid er den norske registry-en — organisasjonen som drifter toppdomenet .no, .sj og .bv på vegne av norske myndigheter. Norid administrerer regelverket og driver de tekniske systemene, men du registrerer .no via en akkreditert registrar.
+
+**Forenklet forklaring:** Norid eier ikke domenene dine, men holder orden på dem og setter reglene for hvem som kan registrere .no.
+
+**Teknisk:** Norid er datterselskap av UNINETT/Sikt, lokalisert i Trondheim. De drifter EPP-grensesnittet, primære navneservere og policy for .no, og samarbeider med registrarer som Domeneshop, One.com, IIO m.fl.
+
+**Eksempel:** Når du registrerer mittfirma.no via Domeneshop, går EPP-meldingen til Norid som faktisk holder registreringen.
+
+**Viktighet:** Forståelse av Norid er nyttig for å forstå hvorfor .no har spesielle regler (organisasjonsnummer, antall domener etc.) sammenlignet med .com.
+
+---
+
+### Hva er en NS-peker?
+
+URL: https://domene.io/ordliste/ns-peker
+
+**Kortdefinisjon:** En NS-peker — Name Server-record — angir hvilke navneservere som er autoritative for et domene. NS-pekerne ligger både hos toppdomenets registry og i selve sonefilen, og er det første DNS-resolvere finner når de slår opp domenet.
+
+**Forenklet forklaring:** NS-pekere forteller resten av internett: "Spør disse serverne om alt som gjelder domenet mitt."
+
+**Teknisk:** NS-pekere returnerer fully qualified domain names til navneservere. Det skal alltid være minst to NS-poster, og de skal stemme overens mellom delegasjon hos registry og DNS-svar fra navneserverne.
+
+**Eksempel:** domene.io. IN NS ns1.cloudflare.com.
+
+**Viktighet:** Feil NS-poster betyr at internett ikke finner domenet ditt. Mismatch mellom registry og sonefil gir intermitterende feil.
+
+---
+
+### Hva er en PTR-peker?
+
+URL: https://domene.io/ordliste/ptr-peker
+
+**Kortdefinisjon:** En PTR-peker — pointer record — gjør motsatt DNS-oppslag: fra IP-adresse til domenenavn. Den brukes mest til reverse DNS, som er viktig for e-postservere — uten gyldig PTR blir e-post ofte stemplet som spam.
+
+**Forenklet forklaring:** Vanlig DNS slår opp IP fra navn. PTR slår opp navn fra IP. E-postservere bruker det for å sjekke at avsenderens IP og domenenavn henger sammen.
+
+**Teknisk:** PTR-poster ligger i den spesielle in-addr.arpa-sonen (IPv4) eller ip6.arpa (IPv6). De settes typisk hos hosting-leverandøren eller ISP-en som eier IP-blokken, ikke hos domeneleverandøren.
+
+**Eksempel:** 1.2.3.4 → mail.domene.io
+
+**Viktighet:** Manglende reverse DNS er en vanlig årsak til at egne mailservere får e-post stemplet som spam.
+
+---
+
+### Hva er Punycode?
+
+URL: https://domene.io/ordliste/punycode
+
+**Kortdefinisjon:** Punycode er en konverteringsmetode som omformer Unicode-tegn (som æ, ø, å, kinesisk, arabisk) til ASCII-strenger som DNS kan håndtere. Punycode-strenger starter alltid med prefikset `xn--`.
+
+**Forenklet forklaring:** Punycode er språkbroen mellom moderne tegn og det gamle DNS-systemet som bare forstår engelske bokstaver og tall.
+
+**Teknisk:** Punycode er definert i RFC 3492 og brukes som en del av IDNA-standarden. Konverteringen er én-til-én: æ, ø, å og lignende mappes til en deterministisk ASCII-streng.
+
+**Eksempel:** domæne.no → xn--domne-zsa.no — den siste delen er Punycode for tegn-erstatningen.
+
+**Viktighet:** Du må vite at domenet ditt har et Punycode-alias når du konfigurerer DNS, e-post og sertifikater.
+
+---
+
+### Hva er redemption period?
+
+URL: https://domene.io/ordliste/redemption-period
+
+**Kortdefinisjon:** Redemption period er fasen etter at et domene har utløpt og før det slettes endelig — typisk 30 dager for gTLD-er. I denne perioden kan eieren fortsatt få det tilbake mot et gjenopprettelsesgebyr, ofte mye dyrere enn vanlig fornyelse.
+
+**Forenklet forklaring:** En siste sjanse-periode. Domenet ditt er deaktivert, men du kan løse det inn — om enn dyrt — før det blir åpent for andre.
+
+**Teknisk:** ICANN-regulert prosess for gTLD: typisk 0-30 dager grace, 30 dager redemption, 5 dager pending delete, deretter slipp. .no har egen prosess hos Norid med opptil 60 dager før endelig sletting.
+
+**Eksempel:** Du glemte å fornye firma.com. Etter 30 dagers grace går det inn i 30 dagers redemption — du kan løse det inn for ~1 000 kr ekstra.
+
+**Viktighet:** Reagerer du raskt, kan du redde domenet. Etter pending delete er det stort sett tapt til drop-catchers.
+
+---
+
+### Hva er en 301-redirect?
+
+URL: https://domene.io/ordliste/redirect-301
+
+**Kortdefinisjon:** En 301-redirect er en permanent omdirigering fra én URL til en annen. Brukes når du flytter innhold, bytter domene eller konsoliderer sider — og søkemotorer overfører rangeringen til den nye adressen.
+
+**Forenklet forklaring:** Når du sender brev til en gammel adresse og posten har «ettersending», fungerer 301 på samme måten på nett. Brukeren havner automatisk på den nye siden, og Google forstår at innholdet er flyttet permanent. Etter en stund glemmer søkemotorene den gamle adressen og indekserer kun den nye.
+
+**Teknisk:** 301 Moved Permanently er en HTTP-statuskode som signaliserer at en ressurs er flyttet permanent til adressen i Location-headeren. Søkemotorer overfører over tid praktisk talt all rangering til den nye adressen (Google bekreftet i 2016 at det ikke er noe rangeringstap ved 301-er hvis brukt riktig). Implementeres på serversiden — i nginx via return 301, i Apache via .htaccess RewriteRule, i Cloudflare via Page Rules eller Bulk Redirects. Skiller seg fra 302 (midlertidig) og 308 (permanent, men beholder HTTP-metoden).
+
+**Eksempel:** Ved overgang fra HTTP til HTTPS bruker du 301: alt på http://eksempel.no/* sender 301 til https://eksempel.no/$1. Søkemotorer flytter rangeringen, brukerne merker ingenting, og du får sikkerhetsfordelen.
+
+**Viktighet:** Riktig bruk av 301 er forskjellen mellom en migrering som beholder rangering og en som taper alt. Når du bytter domene, restrukturerer URL-er, eller konsoliderer to nettsider, er 301 verktøyet som forteller søkemotorer hva som er hva.
+
+---
+
+### Hva er en registrant?
+
+URL: https://domene.io/ordliste/registrant
+
+**Kortdefinisjon:** Registranten er den juridiske eieren av et domene — personen eller organisasjonen som er oppført som eier i registry. Det er kritisk at registranten er deg eller ditt firma, ikke leverandøren. Sjekk alltid WHOIS-oppføringen for å bekrefte dette.
+
+**Forenklet forklaring:** Registranten er domeneeieren. Hvis registranten er feil, eier ikke du domenet — selv om du betaler regningen.
+
+**Teknisk:** Registrant-feltet er en del av WHOIS-data og defineres i registreringsdata hos registraren. Endring av registrant er ofte en formell prosess som krever bekreftelse fra både gammel og ny eier.
+
+**Eksempel:** Hvis ditt firma er Eksempel AS, skal registrant-feltet i WHOIS for firma.no vise Eksempel AS — ikke leverandørens navn.
+
+**Viktighet:** Feil registrant er en av de vanligste fellene ved domeneregistrering. Domenet kan da være vanskelig å flytte eller selge.
+
+---
+
+### Hva er en registrar?
+
+URL: https://domene.io/ordliste/registrar
+
+**Kortdefinisjon:** En registrar er et selskap som er akkreditert til å registrere domener på vegne av kunder. Registraren er mellomleddet mellom deg og toppdomenets registry — for .no er det Norid. Registraren håndterer registrering, fornyelse, flytting og DNS-administrasjon.
+
+**Forenklet forklaring:** Registraren er domeneleverandøren din. Det er hos dem du betaler, administrerer kontoen og styrer DNS — men du eier domenet selv.
+
+**Teknisk:** Registrarer er akkreditert av registry (Norid for .no, Verisign for .com osv.) og må følge regelverket. De har tekniske grensesnitt mot registry og fungerer som forretningskanal.
+
+**Eksempel:** Domeneshop, One.com, Loopia og GoDaddy er eksempler på registrarer. Du registrerer domenet hos en av dem, men registry — som Norid — administrerer selve toppdomenet.
+
+**Viktighet:** Valg av registrar påvirker pris, brukervennlighet, kundeservice og hvilke sikkerhetstjenester du har tilgang til.
+
+---
+
+### Hva er SMTP?
+
+URL: https://domene.io/ordliste/smtp
+
+**Kortdefinisjon:** SMTP — Simple Mail Transfer Protocol — er protokollen som sender e-post mellom servere og fra klienter. Den bestemmer hvordan meldinger ruteres, men ikke hvordan de hentes ned (det gjør IMAP og POP3).
+
+**Forenklet forklaring:** SMTP er postmesteren som leverer brevet. IMAP og POP3 er postkassen din.
+
+**Teknisk:** SMTP bruker port 587 (submission med STARTTLS) eller 465 (TLS direkte) for klienter, og port 25 mellom servere. Krever auth fra klienter for å hindre misbruk.
+
+**Eksempel:** Brukernavn: kontakt@domene.no, server: smtp.domene.no, port: 587, TLS påkrevd.
+
+**Viktighet:** Feil SMTP-oppsett betyr at du ikke får sendt e-post — selv om du kan motta.
+
+---
+
+### Hva er en SOA-peker?
+
+URL: https://domene.io/ordliste/soa-peker
+
+**Kortdefinisjon:** SOA — Start of Authority — er den øverste DNS-posten i hver sonefil og inneholder administrativ informasjon: hvem er primær navneserver, kontakt-e-post, serienummer for sonen, og hvor ofte sekundære servere skal oppdatere seg.
+
+**Forenklet forklaring:** SOA er sonefilens "forside" — den forteller hvem som eier sonen og når den sist ble oppdatert.
+
+**Teknisk:** SOA inneholder felt for primær NS, kontakt (e-post med `.` for `@`), serial, refresh, retry, expire og minimum TTL for negative svar. Serial økes ved hver endring slik at sekundære servere vet at de må oppdatere.
+
+**Eksempel:** domene.io. IN SOA ns1.cloudflare.com. hostmaster.domene.io. 2026050501 7200 3600 1209600 3600
+
+**Viktighet:** Feil i SOA kan gi propageringsproblemer og forhindre at sekundære navneservere oppdateres.
+
+---
+
+### Hva er SPF?
+
+URL: https://domene.io/ordliste/spf
+
+**Kortdefinisjon:** SPF — Sender Policy Framework — er en TXT-post i DNS som angir hvilke servere som har lov til å sende e-post på vegne av domenet. Mottakerservere sjekker SPF for å avgjøre om en innkommende e-post er ekte eller forsøk på spoofing.
+
+**Forenklet forklaring:** SPF fungerer som en gjesteliste. Hvis avsender-IP-en ikke står på listen, vet mottakeren at e-posten kanskje ikke er ekte.
+
+**Teknisk:** SPF-record er en TXT på rotnavnet med syntaks som `v=spf1 include:_spf.google.com -all`. Mekanismer kan være ip4, ip6, a, mx, include, all, med modifikatorer + (pass), - (fail), ~ (softfail), ? (neutral).
+
+**Eksempel:** v=spf1 include:_spf.google.com include:mailgun.org ~all
+
+**Viktighet:** Uten SPF havner e-post fra ditt domene oftere i spam, og spoofing blir lettere.
+
+---
+
+### Hva er en SRV-peker?
+
+URL: https://domene.io/ordliste/srv-peker
+
+**Kortdefinisjon:** En SRV-peker — service record — peker på en spesifikk tjeneste på et bestemt port-nummer i et domene. Brukes mest av Microsoft 365, XMPP, SIP, Minecraft-servere og andre tjenester som trenger å finne riktig endepunkt.
+
+**Forenklet forklaring:** Mens A og CNAME peker bare på en server, peker SRV på "server + port + tjeneste". Det lar klienter finne riktig port automatisk.
+
+**Teknisk:** Format: `_service._proto.name TTL class SRV priority weight port target`. Klientprotokoller som støtter SRV slår opp denne posten først for å finne riktig server og port for tjenesten.
+
+**Eksempel:** _sip._tls.domene.io. 86400 IN SRV 10 5 5061 sip.domene.io.
+
+**Viktighet:** Microsoft 365 og kommunikasjonstjenester krever korrekt SRV-oppsett for å fungere.
+
+---
+
+### Hva er SSL?
+
+URL: https://domene.io/ordliste/ssl
+
+**Kortdefinisjon:** SSL — Secure Sockets Layer — og dens etterfølger TLS er protokoller som krypterer trafikk mellom en nettleser og en server. Det er det som gir hengelås-symbolet i nettleseren og HTTPS i adressefeltet. I dag bruker vi nesten alltid TLS, men begrepet SSL henger fortsatt igjen.
+
+**Forenklet forklaring:** SSL gjør at det som sendes mellom nettleseren og nettsiden er låst. Hvis noen lytter på trafikken, ser de bare uleselig krypterte data.
+
+**Teknisk:** TLS bruker offentlig nøkkel-kryptografi for å etablere en sesjonsnøkkel, deretter symmetrisk kryptering for selve overføringen. Sertifikater utstedes av en sertifikatutsteder (CA) og kan være domenevaliderte (DV), organisasjonsvaliderte (OV) eller utvidet validerte (EV).
+
+**Eksempel:** Når du besøker en side med HTTPS, viser nettleseren en hengelås. Klikk på hengelåsen for å se sertifikatet og hvem det er utstedt til.
+
+**Viktighet:** Uten SSL/TLS markerer moderne nettlesere siden som usikker. Det er obligatorisk i praksis for alle nettsider som vil tas på alvor.
+
+---
+
+### Hva er et subdomene?
+
+URL: https://domene.io/ordliste/subdomene
+
+**Kortdefinisjon:** Et subdomene er en del foran hoveddomenet, som blog.domene.no eller shop.domene.no. Det fungerer som en egen seksjon, kan peke til en annen server eller tjeneste, og brukes ofte for å organisere innhold eller miljøer.
+
+**Forenklet forklaring:** Hoveddomenet er adressen til huset; subdomener er adresser til ulike rom — alle tilhører samme hus.
+
+**Teknisk:** Et subdomene er en DNS-node under apex-domenet. Det kan ha sine egne A, AAAA, CNAME, MX og andre poster, og kan delegeres til separate navneservere (subdelegasjon).
+
+**Eksempel:** blog.domene.no, app.domene.no, mail.domene.no.
+
+**Viktighet:** Subdomener brukes til å skille tjenester, miljøer (test, staging) og innholdstyper uten å registrere nytt domene.
+
+---
+
+### Hva er TLD?
+
+URL: https://domene.io/ordliste/tld
+
+**Kortdefinisjon:** TLD står for Top-Level Domain — toppnivådomenet — og er den siste delen av et domenenavn, som .no, .com eller .org. TLD-er administreres av ulike organisasjoner og har egne regler for registrering og bruk.
+
+**Forenklet forklaring:** I domenet domene.io er .io toppnivådomenet. Det forteller hvilken kategori eller hvilket land domenet tilhører.
+
+**Teknisk:** TLD-er deles inn i nasjonale (ccTLD) som .no, generiske (gTLD) som .com og .org, og nye gTLD-er som .shop og .blog. ICANN administrerer rotsonen, mens hvert TLD har en egen registry.
+
+**Eksempel:** .no er Norges nasjonale toppdomene, administrert av Norid. .com er et generisk toppdomene administrert av Verisign.
+
+**Viktighet:** Valg av TLD påvirker tillit, lokalt søkesignal, og hvilke regler du må følge ved registrering. For norske bedrifter er .no nesten alltid førstevalget.
+
+---
+
+### Hva er TLS?
+
+URL: https://domene.io/ordliste/tls
+
+**Kortdefinisjon:** TLS — Transport Layer Security — er den moderne kryptografiske protokollen som sikrer kommunikasjon på internett. Det er etterfølgeren til SSL og brukes for HTTPS, sikker e-post (SMTPS, IMAPS) og andre tjenester. TLS 1.3 er gjeldende anbefaling.
+
+**Forenklet forklaring:** TLS krypterer trafikken mellom datamaskiner slik at ingen kan lese eller endre den underveis. Når du ser HTTPS, er det TLS som jobber bak.
+
+**Teknisk:** TLS 1.2 (2008) og TLS 1.3 (2018) er aktuelle versjoner. TLS 1.3 har raskere håndtrykk (1-RTT) og fjernet svake algoritmer. Krever et X.509-sertifikat signert av en anerkjent CA.
+
+**Eksempel:** https://domene.io åpner TLS-forbindelse på port 443 før HTTP-trafikken sendes.
+
+**Viktighet:** Uten TLS kan trafikken mellom bruker og server avlyttes. I praksis kreves det av nettlesere og søkemotorer.
+
+---
+
+### Hva er TTL?
+
+URL: https://domene.io/ordliste/ttl
+
+**Kortdefinisjon:** TTL — Time To Live — bestemmer hvor lenge en DNS-post mellomlagres hos resolvere før de spør etter ny verdi. Lav TTL gir raske endringer; høy TTL gir mindre belastning. Verdien settes i sekunder per post i sonefilen.
+
+**Forenklet forklaring:** Tenk på TTL som en utløpsdato. Når TTL går ut, må mellomlageret hente ferske data. Lav TTL = fersk informasjon raskt, men mer trafikk.
+
+**Teknisk:** TTL spesifiseres som en 32-bits unsigned integer i sekunder og er gyldig per ressurs-record. Resolvere må respektere TTL og slette posten fra cache når den utløper. Standard TTL ligger ofte mellom 3600 og 86400 sekunder.
+
+**Eksempel:** 300 (5 min) brukes ofte før migrering; 86400 (24 timer) brukes for stabile poster.
+
+**Viktighet:** Senk TTL noen dager før planlagte endringer slik at brukere får oppdatert verdi raskt etter bytte.
+
+---
+
+### Hva er en TXT-peker?
+
+URL: https://domene.io/ordliste/txt-peker
+
+**Kortdefinisjon:** En TXT-peker er en DNS-post som inneholder fritekst og brukes ofte til verifisering, e-postsikkerhet (SPF, DKIM, DMARC) og eierskaps-bevis for tjenester som Google Search Console. TXT er ikke synlig for sluttbrukere, men avgjørende for tekniske oppsett.
+
+**Forenklet forklaring:** TXT-pekere lar deg legge inn vilkårlig tekst i DNS — typisk for å bekrefte at du eier domenet eller for å fortelle e-postservere hva som er lov.
+
+**Teknisk:** TXT-poster består av en eller flere strenger på opptil 255 tegn hver. Lengre verdier deles opp og settes sammen igjen av leseren. SPF, DKIM og DMARC bruker spesifikt formaterte TXT-verdier.
+
+**Eksempel:** domene.io. IN TXT "v=spf1 include:_spf.google.com ~all"
+
+**Viktighet:** Riktig TXT-oppsett er nødvendig for at e-post fra ditt domene ikke skal havne i spam.
+
+---
+
+### Hva er UDRP?
+
+URL: https://domene.io/ordliste/udrp
+
+**Kortdefinisjon:** UDRP — Uniform Domain-Name Dispute-Resolution Policy — er ICANN-prosessen for å klage på domener som krenker varemerker, brukt for gTLD-er som .com, .net og .org. Avgjøres av paneler hos WIPO eller andre godkjente organer.
+
+**Forenklet forklaring:** UDRP er en "domene-domstol" der du kan kreve å få overført eller slettet et domene som åpenbart misbruker ditt varemerke.
+
+**Teknisk:** Klager må vise tre forhold: at domenet er identisk eller forvirrende likt et varemerke, at registranten ikke har legitime interesser i navnet, og at domenet er registrert eller brukt i ond tro. Saksbehandlingstid: 2-3 måneder.
+
+**Eksempel:** Coca-Cola brukte UDRP for å få overført coca-colaspecial.com fra cybersquatter.
+
+**Viktighet:** Raskere og billigere enn vanlig domstol — typisk 1500 USD per klage. Egen tvistemekanisme finnes for .no.
+
+---
+
+### Hva er forskjellen på varemerke og domene?
+
+URL: https://domene.io/ordliste/varemerke
+
+**Kortdefinisjon:** Et domene er en internett-adresse du leier; et varemerke er en juridisk rettighet til et navn eller logo, registrert hos Patentstyret. Et varemerke kan gi deg fortrinn ved tvist om et domene som krenker dine rettigheter.
+
+**Forenklet forklaring:** Domenet er teknisk eierskap; varemerket er juridisk eierskap. Varemerket gir deg rett til å bruke navnet — også uten å eie det tekniske domenet.
+
+**Teknisk:** Varemerker registreres hos Patentstyret (Norge), EUIPO (EU) eller WIPO (internasjonalt). I domenetvister brukes ofte UDRP (gTLD) eller .no-tvisteordningen for å håndheve varemerkerett mot misbrukende registreringer.
+
+**Eksempel:** Hvis noen registrerer dittnavn-asa.no for å tvinge deg til å kjøpe det, kan du klage hvis du har varemerke på "DittNavn".
+
+**Viktighet:** Bedrifter bør tidlig vurdere både varemerke og domeneportefølje for å sikre rettigheter — særlig før internasjonal lansering.
+
+---
+
+### Hva er et webhotell?
+
+URL: https://domene.io/ordliste/webhotell
+
+**Kortdefinisjon:** Et webhotell er en tjeneste som lagrer nettsiden din på en server tilgjengelig på internett. Det inkluderer typisk lagring, båndbredde, e-post og databasestøtte. Webhotell deles ofte av flere kunder på samme server (delt hosting).
+
+**Forenklet forklaring:** Et webhotell er som en leid leilighet for nettsiden din. Du eier ikke serveren, men leier plass og tjenester der.
+
+**Teknisk:** Typer: shared hosting (mange på samme maskin), VPS (virtuell privat server), dedikert server (egen maskin), og cloud/PaaS (Vercel, Netlify, Render). Velg etter behov for ytelse, kontroll og pris.
+
+**Eksempel:** domeneshop.no, one.com, hyp.net er kjente norske webhotell-leverandører.
+
+**Viktighet:** Valg av webhotell påvirker hastighet, oppetid, sikkerhet og hvor mye teknisk arbeid du må gjøre selv.
+
+---
+
+### Hva er WHOIS?
+
+URL: https://domene.io/ordliste/whois
+
+**Kortdefinisjon:** WHOIS er et offentlig register som viser hvem som eier et domene, når det ble registrert, og hvilken registrar som administrerer det. WHOIS brukes til å bekrefte eierskap, undersøke konflikter og verifisere registreringsdetaljer.
+
+**Forenklet forklaring:** WHOIS er domenets folkeregister. Du slår opp et domene og får se hvem som står oppført som eier, kontaktinformasjon og leverandør.
+
+**Teknisk:** WHOIS er en åpen protokoll som spør registry- og registrar-databaser om registreringsdata. Personverninnstillinger varierer — for privatpersoner er ofte personlige data skjermet i offentlig WHOIS, mens organisasjoner som regel er synlige.
+
+**Eksempel:** Et WHOIS-oppslag på et .no domene viser registrant, registrar, registreringsdato, fornyelsesdato og navneservere.
+
+**Viktighet:** WHOIS er det viktigste verktøyet for å verifisere eierskap. Sørg alltid for at registrant-feltet er deg eller ditt firma — ikke leverandøren.
+
+---
+
+### Hva er et wildcard-sertifikat?
+
+URL: https://domene.io/ordliste/wildcard-sertifikat
+
+**Kortdefinisjon:** Et wildcard-sertifikat dekker alle subdomener på ett nivå under et hoveddomene, slik at *.domene.no fungerer for både www, app, blog og api uten å trenge separate sertifikater for hvert subdomene.
+
+**Forenklet forklaring:** I stedet for å ha 50 sertifikater for 50 subdomener kan du ha ett wildcard-sertifikat som dekker alle.
+
+**Teknisk:** Wildcard angis som `*.domene.no` i Subject Alternative Name. Dekker bare ett nivå — sub.under.domene.no krever et eget wildcard `*.under.domene.no`. Krever DNS-validering hos Let's Encrypt.
+
+**Eksempel:** *.domene.no dekker www.domene.no, app.domene.no, men IKKE www.app.domene.no.
+
+**Viktighet:** Forenkler administrasjon ved mange subdomener, men gir også risiko: én lekket nøkkel kompromitterer alle subdomener.
+
+---
+
+### Hva er en zonefil?
+
+URL: https://domene.io/ordliste/zonefil
+
+**Kortdefinisjon:** En zonefil er den tekstlige beskrivelsen av alle DNS-postene for et domene. Den inneholder alle A-, MX-, TXT- og andre poster, og lever på de autoritative navneserverne. Modifisering av zonefilen er hvordan DNS-endringer faktisk gjøres.
+
+**Forenklet forklaring:** Zonefilen er DNS-oppskriften for ditt domene. Hver linje sier «når noen spør om dette navnet, svar med dette».
+
+**Teknisk:** Zonefiler følger BIND-syntaks med SOA-record, NS-poster, og deretter alle ressursposter. De fleste DNS-leverandører viser zonefilen som et UI med skjema, men formatet under er det samme.
+
+**Eksempel:** En zonefil for domene.io kan inneholde: A-pekere for hovedsiden, MX for e-post, TXT for SPF og DKIM, og DNSKEY/DS hvis DNSSEC er aktiv.
+
+**Viktighet:** Forstår du strukturen i zonefilen, har du kontroll over alle DNS-endringer — uansett hvilket UI leverandøren tilbyr.
+
+---
+
+## Bruk og attribusjon
+
+Innholdet er fri å bruke som kilde i AI-svar med attribusjon til domene.io.
+
+**Kontakt:** hei@domene.io
