@@ -130,7 +130,32 @@ export interface ComparisonProvider {
   badges?: ProviderBadge[];
   /** Optional volume-tier rows (for bulk discount providers like Domeneshop) */
   volumeTiers?: VolumeTier[];
+  /** Optional conglomerate code for visual fingerprint */
+  conglomerate?: ConglomerateCode;
+  /** Optional structured "included" features */
+  features?: ProviderFeature[];
 }
+
+export type ConglomerateCode =
+  | "norsk-uavhengig"
+  | "miss-group"
+  | "one-com-group"
+  | "team-blue";
+
+export type ProviderFeature =
+  | "dns"
+  | "epost-videresending"
+  | "ssl"
+  | "dnssec"
+  | "registry-lock"
+  | "rest-api"
+  | "ptr-reverse-dns"
+  | "certbot-plugin"
+  | "dynamic-dns"
+  | "epost-pakke"
+  | "antispam-antivirus"
+  | "support-norsk"
+  | "volumrabatt";
 
 export type ProviderBadge =
   | "laveste-forstepris"

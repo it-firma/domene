@@ -40,6 +40,8 @@ export const comparisons: Comparison[] = [
         },
         note: "Norsk uavhengig, Sandefjord-basert siden 2006. Eier tre egne datasentre. NORID-akkreditert. \"Norges rimeligste fornyelse\" på .no — samme pris ved registrering og fornyelse, ingen lokketilbud. Egen REST API gjør den til favoritt blant utviklere.",
         badges: ["laveste-fornyelse", "norsk-uavhengig"],
+        conglomerate: "norsk-uavhengig",
+        features: ["dns", "rest-api", "ptr-reverse-dns", "certbot-plugin", "dynamic-dns", "support-norsk"],
       },
       {
         name: "Webhuset",
@@ -54,6 +56,8 @@ export const comparisons: Comparison[] = [
         },
         note: "Norsk uavhengig, Bergensbasert siden 1998. Norid-akkreditert. Lavest .no-totalpris over 3 år takket være kraftig lokketilbud første år.",
         badges: ["laveste-3ar-no", "norsk-uavhengig"],
+        conglomerate: "norsk-uavhengig",
+        features: ["dns", "epost-videresending", "support-norsk"],
       },
       {
         name: "Simply.com",
@@ -68,6 +72,8 @@ export const comparisons: Comparison[] = [
         },
         note: "Dansk leverandør i Skanderborg (tidligere UnoEuro frem til 2020). Del av team.blue — europeisk konsern med 60+ brands i 22 EU-land. Lavest .com-totalpris.",
         badges: ["laveste-3ar-com"],
+        conglomerate: "team-blue",
+        features: ["dns", "epost-videresending", "ssl"],
       },
       {
         name: "Domeneshop",
@@ -82,6 +88,8 @@ export const comparisons: Comparison[] = [
         },
         note: "Norges desidert største .no-registrar med 45 % markedsandel, 25+ års erfaring og 650 000+ domener. Eneste ICANN-akkrediterte registrar i Norge. Eid av Miss Group siden august 2024. Volumrabatt automatisk fra 5 domener — se egen tabell under. * Tilbud — ordinær pris 199 kr.",
         badges: ["bedrifter", "mange-domener"],
+        conglomerate: "miss-group",
+        features: ["dns", "epost-videresending", "ssl", "dnssec", "registry-lock", "support-norsk", "volumrabatt"],
         volumeTiers: [
           {
             range: "1-4 domener",
@@ -152,6 +160,8 @@ export const comparisons: Comparison[] = [
           included: "DNS, SSL, e-post i webhotell-pakker",
         },
         note: "Norsk leverandør etablert 2002. Siden september 2024 fusjonert med Uniweb i Group.One Norway AS — samme juridiske selskap, men opererer som separat merkevare. Eid av one.com Group AB.",
+        conglomerate: "one-com-group",
+        features: ["dns", "ssl", "support-norsk"],
       },
       {
         name: "One.com",
@@ -165,6 +175,8 @@ export const comparisons: Comparison[] = [
           included: "DNS, e-post 1 GB, SSL",
         },
         note: "Dansk-grunnlagt (2002), nå med globalt hovedkontor i Malmö som one.com Group AB. Group.Ones flaggskip-merkevare. Aggressivt lokketilbud — fornyelse mer enn doblerer prisen. Beregn alltid totalkostnad over flere år.",
+        conglomerate: "one-com-group",
+        features: ["dns", "ssl", "epost-pakke"],
       },
       {
         name: "Uniweb",
@@ -178,6 +190,8 @@ export const comparisons: Comparison[] = [
           included: "DNS, SSL",
         },
         note: "Norsk merkevare under Group.One Norway AS — samme juridiske enhet som ProISP siden september 2024. Eid av one.com Group AB. Dyrere enn ProISP på .com (420 vs 336 kr) selv om det er samme selskap.",
+        conglomerate: "one-com-group",
+        features: ["dns", "ssl", "support-norsk"],
       },
       {
         name: "Domene.no ★",
@@ -191,6 +205,8 @@ export const comparisons: Comparison[] = [
           included: "10 epostkontoer (5 GB), antispam, antivirus, DNS, SSL, support",
         },
         note: "★ Pakkepris-modell — inkluderer 10 epostkontoer som de andre tar separat. Domene AS (org.nr. 880478982) ble grunnlagt i 1998 og er eid av Miss Group. Norsk drevet, basert i Norge. Egen pakke gjør sammenligning vanskelig.",
+        conglomerate: "miss-group",
+        features: ["dns", "ssl", "epost-pakke", "antispam-antivirus", "support-norsk"],
       },
     ],
     importantNotes: [
