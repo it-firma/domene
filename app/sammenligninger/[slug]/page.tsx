@@ -1,18 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { FAQ } from "@/components/FAQ";
-import { CTA } from "@/components/CTA";
-import { AnswerBox } from "@/components/AnswerBox";
-import { ComparisonTOC } from "@/components/ComparisonTOC";
 import { StructuredData } from "@/components/StructuredData";
-import {
-  buildMetadata,
-  ldBreadcrumb,
-  ldFaq,
-} from "@/lib/seo";
+import { buildMetadata, ldBreadcrumb, ldFaq } from "@/lib/seo";
 import { comparisons, findComparison } from "@/data/comparisons";
 import type {
   ProviderBadge,
@@ -20,6 +12,8 @@ import type {
   ProviderFeature,
   ComparisonProvider,
   ComparisonColumn,
+  HeroStat,
+  ComparisonHighlight,
 } from "@/lib/types";
 
 export function generateStaticParams() {
@@ -78,22 +72,10 @@ const CONGLOMERATE_META: Record<
   ConglomerateCode,
   { label: string; dotClass: string }
 > = {
-  "norsk-uavhengig": {
-    label: "Norsk uavhengig",
-    dotClass: "bg-emerald-500",
-  },
-  "miss-group": {
-    label: "Miss Group",
-    dotClass: "bg-brand",
-  },
-  "one-com-group": {
-    label: "one.com Group AB",
-    dotClass: "bg-navy",
-  },
-  "team-blue": {
-    label: "team.blue",
-    dotClass: "bg-brand-light",
-  },
+  "norsk-uavhengig": { label: "Norsk uavhengig", dotClass: "bg-emerald-500" },
+  "miss-group": { label: "Miss Group", dotClass: "bg-brand" },
+  "one-com-group": { label: "one.com Group AB", dotClass: "bg-navy" },
+  "team-blue": { label: "team.blue", dotClass: "bg-brand-light" },
 };
 
 const FEATURE_META: Record<ProviderFeature, { label: string }> = {
@@ -112,18 +94,11 @@ const FEATURE_META: Record<ProviderFeature, { label: string }> = {
   volumrabatt: { label: "Automatisk volumrabatt" },
 };
 
-/**
- * Determine table layout mode based on column structure and content.
- * - "price"  → narrow numeric columns, all 1fr is fine
- * - "wide"   → long-text columns (eierskap), use auto sizing
- * - "compact"→ short labels (ja/nei, ratings) — same as price
- */
-function getTableMode(columns: ComparisonColumn[]): "price" | "wide" | "compact" {
+function getTableMode(columns: ComparisonColumn[]): "price" | "wide" {
   const hasLongTextKey = columns.some((c) =>
     ["fakta", "konsern", "hovedkontor", "juridisk"].includes(c.key)
   );
-  if (hasLongTextKey) return "wide";
-  return "price";
+  return hasLongTextKey ? "wide" : "price";
 }
 
 export default function ComparisonPage({
@@ -145,263 +120,368 @@ export default function ComparisonPage({
     .filter((rc): rc is NonNullable<typeof rc> => !!rc && rc.slug !== c.slug);
 
   const isPriceComparison = c.slug === "domenepriser";
-
-  // TOC items
-  const tocItems = [
-    { id: "metode", label: "Slik sammenligner vi" },
-    { id: "tabell", label: "Sammenligningstabell" },
-    ...(isPriceComparison
-      ? [{ id: "konsernkart", label: "Konsernstruktur" }]
-      : []),
-    ...(c.recommendations && c.recommendations.length > 0
-      ? [{ id: "anbefalinger", label: "Anbefaling per situasjon" }]
-      : []),
-    { id: "viktig", label: "Viktig å vite" },
-    { id: "faq", label: "Ofte stilte spørsmål" },
-    ...(related.length > 0
-      ? [{ id: "relaterte", label: "Relaterte sammenligninger" }]
-      : []),
-  ];
-
-  const conglomeratesShown = new Set(
-    (c.providers ?? [])
-      .map((p) => p.conglomerate)
-      .filter((cl): cl is ConglomerateCode => !!cl)
-  );
+  const showOwnership = isPriceComparison || c.slug === "eierskap-norske-registrarer";
 
   return (
     <>
-      <article className="bg-white">
-        <div className="container-prose pt-32 pb-16">
-          <Breadcrumbs items={crumbs} />
+      <article>
+        {/* ─────────── 1. HERO (NAVY) ─────────── */}
+        <section className="relative overflow-hidden bg-navy text-white pt-32 pb-16">
+          {/* Subtle radial accents */}
+          <div
+            className="absolute -top-1/3 -right-[10%] w-[700px] h-[700px] pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(123,160,255,0.18) 0%, transparent 60%)",
+            }}
+            aria-hidden="true"
+          />
+          <div
+            className="absolute -bottom-1/2 -left-[10%] w-[500px] h-[500px] pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(circle, rgba(37,99,255,0.12) 0%, transparent 60%)",
+            }}
+            aria-hidden="true"
+          />
 
-          <div className="mt-8 grid gap-12 lg:grid-cols-[minmax(0,1fr)_240px]">
-            <div className="min-w-0">
-              <div className="font-serif italic text-muted text-[14px] mb-2">
-                Redaksjonell sammenligning
+          <div className="container-prose relative z-10">
+            <Breadcrumbs items={crumbs} variant="dark" />
+
+            {c.tagline && (
+              <div className="mt-6 font-display text-[11px] font-medium uppercase tracking-[0.18em] text-brand-light">
+                {c.tagline}
               </div>
-              <h1 className="font-display text-[36px] md:text-[44px] font-medium tracking-[-0.025em] leading-[1.1] text-ink m-0">
-                {c.title}
-              </h1>
+            )}
 
-              {c.answerBox && <AnswerBox>{c.answerBox}</AnswerBox>}
-
-              <p className="mt-6 font-display text-[16px] leading-[1.65] text-muted m-0">
-                {c.intro}
-              </p>
-
-              {/* Methodology */}
-              <section
-                id="metode"
-                className="mt-12 scroll-mt-32 rounded-2xl border border-line bg-surface-100 p-7"
-                aria-labelledby="metode-heading"
-              >
-                <h2
-                  id="metode-heading"
-                  className="font-display text-[16px] font-semibold uppercase tracking-[0.12em] text-brand mb-3"
-                >
-                  Slik sammenligner vi
-                </h2>
-                <p className="font-display text-[14.5px] leading-[1.7] text-ink/85 m-0">
-                  {c.methodology}
-                </p>
-                {isPriceComparison && (
-                  <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-5">
-                    <MethodIcon
-                      src="/icons/check-quality.png"
-                      label="Manuell kvalitetssjekk"
-                    />
-                    <MethodIcon
-                      src="/icons/price-update.png"
-                      label="Månedlig prisinnsamling"
-                    />
-                    <MethodIcon
-                      src="/icons/mass-admin.png"
-                      label="Konsernstruktur verifisert"
-                    />
-                    <MethodIcon
-                      src="/icons/nordic-tlds.png"
-                      label="Norsk markedsfokus"
-                    />
-                  </div>
-                )}
-              </section>
-
-              {/* Provider table */}
-              {c.columns && c.providers && c.providers.length > 0 ? (
-                <section id="tabell" className="mt-12 scroll-mt-32">
-                  <div className="flex items-baseline justify-between flex-wrap gap-3 mb-4">
-                    <h2 className="font-display text-[22px] font-medium tracking-[-0.01em] text-ink m-0">
-                      Sammenligningstabell
-                    </h2>
-                    <p className="font-display text-[12px] text-muted-light m-0">
-                      Klikk leverandørnavn for detaljer
-                    </p>
-                  </div>
-
-                  <ProviderTable
-                    columns={c.columns}
-                    providers={c.providers}
-                  />
-
-                  {conglomeratesShown.size > 0 && (
-                    <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 font-display text-[12px] text-muted">
-                      <span className="text-[11px] uppercase tracking-[0.12em] text-muted-light">
-                        Konsern:
-                      </span>
-                      {(Object.keys(CONGLOMERATE_META) as ConglomerateCode[])
-                        .filter((k) => conglomeratesShown.has(k))
-                        .map((k) => (
-                          <span
-                            key={k}
-                            className="inline-flex items-center gap-1.5"
-                          >
-                            <span
-                              className={`h-2 w-2 rounded-full ${CONGLOMERATE_META[k].dotClass}`}
-                              aria-hidden="true"
-                            />
-                            {CONGLOMERATE_META[k].label}
-                          </span>
-                        ))}
-                    </div>
-                  )}
-
-                  <p className="mt-4 font-display text-[12px] text-muted-light italic">
-                    Priser hentet manuelt fra leverandørens offentlige
-                    prisliste. Verifiser alltid hos leverandøren før bestilling.
-                  </p>
-                </section>
+            <h1
+              className={`${c.tagline ? "mt-4" : "mt-6"} max-w-[820px] font-display text-[36px] md:text-[48px] font-medium tracking-[-0.025em] leading-[1.05] text-white m-0`}
+            >
+              {c.editorialTitle ? (
+                <>
+                  {c.editorialTitle.lead}{" "}
+                  <em className="font-serif italic font-normal text-brand-light">
+                    {c.editorialTitle.emphasis}
+                  </em>
+                  {c.editorialTitle.tail && <> {c.editorialTitle.tail}</>}
+                </>
               ) : (
-                <section id="tabell" className="mt-12 scroll-mt-32">
-                  <h2 className="font-display text-[22px] font-medium tracking-[-0.01em] text-ink mb-4">
-                    Sammenligningstabell
-                  </h2>
-                  <div className="rounded-xl border border-line p-8 text-center">
-                    <p className="font-display text-[14px] text-muted-light italic m-0">
-                      Tabelldata kommer — vi oppdaterer manuelt fra åpne priser.
-                    </p>
+                c.title
+              )}
+            </h1>
+
+            {c.answerBox && (
+              <p className="mt-5 max-w-[640px] font-display text-[16px] leading-[1.65] text-white/72 m-0">
+                {c.answerBox}
+              </p>
+            )}
+
+            {c.heroStats && c.heroStats.length > 0 && (
+              <div className="mt-10 max-w-[760px] grid grid-cols-2 md:grid-cols-4 border-t border-white/10 pt-7">
+                {c.heroStats.map((stat, i) => (
+                  <div
+                    key={i}
+                    className={`px-0 md:px-6 ${
+                      i > 0 ? "md:border-l border-white/10" : ""
+                    } ${i < c.heroStats!.length - 1 ? "" : "md:pr-0"} ${
+                      i === 0 ? "md:pl-0" : ""
+                    } pb-4 md:pb-0`}
+                  >
+                    <div className="font-display text-[10px] font-medium uppercase tracking-[0.15em] text-white/55 mb-2">
+                      {stat.label}
+                    </div>
+                    <div className="font-display text-[28px] font-medium tracking-[-0.02em] leading-none">
+                      {stat.value}
+                      {stat.unit && (
+                        <span className="ml-1.5 text-[13px] font-normal text-white/55">
+                          {stat.unit}
+                        </span>
+                      )}
+                    </div>
                   </div>
-                </section>
-              )}
+                ))}
+              </div>
+            )}
+          </div>
+        </section>
 
-              {/* Ownership chart — only on price comparison page */}
-              {isPriceComparison && <OwnershipChart />}
+        {/* ─────────── 2. VINNERE (SURFACE-100) ─────────── */}
+        {c.highlights && c.highlights.length > 0 && (
+          <section className="bg-surface-100 py-14" id="vinnere">
+            <div className="container-prose">
+              <SectionEyebrow>Vinnere etter kategori</SectionEyebrow>
+              <SectionH2>
+                Tre vinnere — én vinner{" "}
+                <em className="font-serif italic font-normal text-brand">
+                  ikke alle
+                </em>
+              </SectionH2>
+              <SectionIntro>
+                Hvilken leverandør som er best avhenger av hvordan du skal bruke
+                tjenesten. Her er våre anbefalinger basert på faktisk
+                bruksmønster.
+              </SectionIntro>
 
-              {/* Recommendations */}
-              {c.recommendations && c.recommendations.length > 0 && (
-                <section
-                  id="anbefalinger"
-                  className="mt-12 scroll-mt-32 rounded-2xl border border-line p-7"
+              <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 max-w-[980px]">
+                {c.highlights.map((h, i) => (
+                  <WinnerCard key={i} highlight={h} />
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* ─────────── 3. SLIK SAMMENLIGNER VI (SURFACE-200) ─────────── */}
+        <section className="bg-surface-200 py-14" id="metode">
+          <div className="container-prose">
+            <SectionEyebrow>Slik sammenligner vi</SectionEyebrow>
+            <SectionH2>
+              Manuelt verifisert{" "}
+              <em className="font-serif italic font-normal text-brand">
+                fra primærkilder
+              </em>
+            </SectionH2>
+            <SectionIntro>{c.methodology}</SectionIntro>
+          </div>
+        </section>
+
+        {/* ─────────── 4. TABELL (HVIT) ─────────── */}
+        {c.columns && c.providers && c.providers.length > 0 && (
+          <section className="bg-white py-14" id="tabell">
+            <div className="container-prose">
+              <SectionEyebrow muted>Sammenligningstabell</SectionEyebrow>
+              <SectionH2>
+                {c.providers.length} {pluralize("leverandør", c.providers.length)}{" "}
+                <em className="font-serif italic font-normal text-brand">
+                  side om side
+                </em>
+              </SectionH2>
+              <SectionIntro>
+                Klikk leverandørnavn for å se hva som er inkludert, badge-er og
+                detaljer.
+              </SectionIntro>
+
+              <div className="mt-8">
+                <ProviderTable
+                  columns={c.columns}
+                  providers={c.providers}
+                />
+              </div>
+
+              <p className="mt-4 font-display text-[12.5px] text-muted-light italic">
+                Priser hentet manuelt fra leverandørens offentlige prisliste.
+                Verifiser alltid hos leverandøren før bestilling.
+              </p>
+            </div>
+          </section>
+        )}
+
+        {/* ─────────── 5. KONSERNKART (NAVY) ─────────── */}
+        {showOwnership && (
+          <section className="bg-navy text-white py-14" id="konsernkart">
+            <div className="container-prose">
+              <SectionEyebrow inverse>Konsernstruktur</SectionEyebrow>
+              <SectionH2 inverse>
+                Hvem eier{" "}
+                <em className="font-serif italic font-normal text-brand-light">
+                  hvem?
+                </em>
+              </SectionH2>
+              <SectionIntro inverse>
+                Av åtte registrarer som retter seg mot norske kunder er to reelt
+                uavhengige norske. De seks andre fordeler seg på tre
+                internasjonale konserner.
+              </SectionIntro>
+
+              <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+                <ConglomerateCard
+                  name="one.com Group"
+                  location="Malmö, Sverige"
+                  brands={["One.com", "Uniweb", "ProISP"]}
+                  dotClass="bg-brand"
+                  count="3 brands"
+                  note="Uniweb og ProISP er samme juridiske selskap (Group.One Norway AS) siden september 2024."
+                />
+                <ConglomerateCard
+                  name="Miss Group"
+                  location="Stockholm, Sverige"
+                  brands={["Domeneshop", "Domene.no"]}
+                  dotClass="bg-brand-light"
+                  count="2 brands"
+                  note="Domeneshop er Norges største .no-registrar med 45 % markedsandel."
+                />
+                <ConglomerateCard
+                  name="team.blue"
+                  location="Gent, Belgia"
+                  brands={["Simply.com"]}
+                  dotClass="bg-white/40"
+                  count="1 brand"
+                  note="Europas største digital-økosystem med 60+ brands i 22 EU-land."
+                />
+                <ConglomerateCard
+                  name="Norsk uavhengig"
+                  location="Bergen + Sandefjord"
+                  brands={["Webhuset", "Gigahost"]}
+                  dotClass="bg-emerald-400"
+                  count="2 brands"
+                  note="De reelt uavhengige norske aktørene. Webhuset siden 1998, Gigahost siden 2006."
+                  highlight
+                />
+              </div>
+
+              {c.slug !== "eierskap-norske-registrarer" && (
+                <Link
+                  href="/sammenligninger/eierskap-norske-registrarer"
+                  className="mt-7 inline-flex items-center gap-1.5 font-display text-[14px] font-medium text-brand-light hover:text-white transition"
                 >
-                  <h2 className="font-display text-[22px] font-medium tracking-[-0.01em] text-ink mb-3 mt-0">
-                    Anbefaling per situasjon
-                  </h2>
-                  <p className="font-display text-[14.5px] leading-[1.65] text-muted m-0 mb-6">
-                    Det finnes ikke én leverandør som er best for alle. Her er
-                    våre anbefalinger basert på hva du faktisk skal bruke
-                    domenet til.
-                  </p>
-                  <ul className="flex flex-col gap-3 list-none m-0 p-0">
-                    {c.recommendations.map((rec, i) => (
-                      <li
-                        key={i}
-                        className="rounded-xl bg-surface-100 px-5 py-4 border border-line/60"
-                      >
-                        <div className="flex items-baseline justify-between flex-wrap gap-2">
-                          <span className="font-display text-[14px] font-medium text-ink">
-                            {rec.persona}
-                          </span>
-                          <span className="inline-flex items-center gap-1.5 rounded-full bg-brand text-white px-3 py-1 text-[12px] font-medium">
-                            Anbefalt: {rec.recommended}
-                          </span>
-                        </div>
-                        <p className="mt-2 font-display text-[13.5px] leading-[1.6] text-ink/75 m-0">
-                          {rec.reason}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
+                  Les full eierskapsoversikt <span aria-hidden="true">→</span>
+                </Link>
               )}
+            </div>
+          </section>
+        )}
 
-              {/* Important to know */}
-              <section
-                id="viktig"
-                className="mt-12 scroll-mt-32 rounded-2xl border border-line p-7"
+        {/* ─────────── 6. ANBEFALING PER SITUASJON (SURFACE-300) ─────────── */}
+        {c.recommendations && c.recommendations.length > 0 && (
+          <section className="bg-surface-300 py-14" id="anbefalinger">
+            <div className="container-prose">
+              <SectionEyebrow>Anbefaling per situasjon</SectionEyebrow>
+              <SectionH2>
+                Hva passer{" "}
+                <em className="font-serif italic font-normal text-brand">
+                  for deg?
+                </em>
+              </SectionH2>
+              <SectionIntro>
+                Det finnes ikke én leverandør som er best for alle. Her er våre
+                anbefalinger basert på hva du faktisk skal bruke tjenesten til.
+              </SectionIntro>
+
+              <ul className="mt-8 flex flex-col gap-2.5 max-w-[980px] list-none m-0 p-0">
+                {c.recommendations.map((rec, i) => (
+                  <li
+                    key={i}
+                    className="bg-white border border-line rounded-2xl px-5 py-4 sm:px-6 sm:py-5 flex items-start sm:items-center justify-between gap-4 flex-col sm:flex-row hover:border-line-hover transition-colors"
+                  >
+                    <div className="flex-1">
+                      <div className="font-display text-[14.5px] font-medium text-ink mb-1">
+                        {rec.persona}
+                      </div>
+                      <div className="font-display text-[12.5px] leading-[1.55] text-muted">
+                        {rec.reason}
+                      </div>
+                    </div>
+                    <span className="bg-brand text-white px-4 py-2 rounded-full font-display text-[12.5px] font-medium flex-shrink-0 whitespace-nowrap">
+                      {rec.recommended}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
+
+        {/* ─────────── 7. VIKTIG Å VITE (NAVY-MID) ─────────── */}
+        {c.importantNotes && c.importantNotes.length > 0 && (
+          <section className="bg-navy-mid text-white py-14" id="viktig">
+            <div className="container-prose">
+              <SectionEyebrow inverse>Viktig å vite</SectionEyebrow>
+              <SectionH2 inverse>
+                {c.importantNotes.length} ting{" "}
+                <em className="font-serif italic font-normal text-brand-light">
+                  før du velger
+                </em>
+              </SectionH2>
+
+              <ul className="mt-8 max-w-[760px] flex flex-col gap-3.5 list-none m-0 p-0">
+                {c.importantNotes.map((note, i) => (
+                  <li key={i} className="flex gap-3.5 items-start">
+                    <span
+                      className="mt-2.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand-light"
+                      aria-hidden="true"
+                    />
+                    <span className="font-display text-[14.5px] leading-[1.65] text-white/85">
+                      {note}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
+
+        {/* ─────────── 8. FAQ + CTA + RELATED (SURFACE-KB) ─────────── */}
+        <section className="bg-surface-kb py-14" id="faq">
+          <div className="container-prose">
+            {c.faq.length > 0 && (
+              <>
+                <SectionEyebrow>FAQ</SectionEyebrow>
+                <SectionH2>
+                  Ofte stilte{" "}
+                  <em className="font-serif italic font-normal text-brand">
+                    spørsmål
+                  </em>
+                </SectionH2>
+                <div className="mt-8 max-w-[880px]">
+                  <FAQ items={c.faq} />
+                </div>
+              </>
+            )}
+
+            {/* CTA */}
+            <div className="mt-10 max-w-[980px] bg-brand text-white px-8 py-9 sm:px-10 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
+              <div>
+                <h3 className="font-display text-[22px] font-medium tracking-[-0.01em] m-0 mb-1">
+                  Trenger du eksperthjelp?
+                </h3>
+                <p className="font-display text-[14px] leading-[1.55] text-white/85 m-0">
+                  Snakk med våre rådgivere om domener, DNS, e-post eller
+                  domenestrategi.
+                </p>
+              </div>
+              <Link
+                href="/eksperthjelp"
+                className="bg-white text-brand px-6 py-3 rounded-full font-display text-[14px] font-semibold hover:bg-white/90 transition flex-shrink-0 whitespace-nowrap"
               >
-                <h2 className="font-display text-[18px] font-medium text-ink mb-4 mt-0">
-                  Viktig å vite før du sammenligner
-                </h2>
-                <ul className="flex flex-col gap-2.5 list-none m-0 p-0 font-display text-[14.5px] leading-[1.6] text-ink/85">
-                  {(c.importantNotes ?? [
-                    "Førsteårsprisen er ofte rabattert — det viktigste er fornyelsesprisen.",
-                    "Sjekk hva som faktisk er inkludert: DNS, e-post, SSL, backup.",
-                    "Vurder hvilken kontroll du har: kan du flytte, eier du domenet, har du tofaktor og DNSSEC-støtte?",
-                  ]).map((note, i) => (
-                    <li key={i} className="flex gap-3">
-                      <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-brand" />
-                      <span>{note}</span>
+                Få eksperthjelp →
+              </Link>
+            </div>
+
+            {/* Related */}
+            {related.length > 0 && (
+              <div className="mt-12 max-w-[980px]">
+                <SectionEyebrow>Relaterte sammenligninger</SectionEyebrow>
+                <ul className="mt-5 flex flex-col gap-3 list-none m-0 p-0">
+                  {related.map((rc) => (
+                    <li key={rc.slug}>
+                      <Link
+                        href={`/sammenligninger/${rc.slug}`}
+                        className="block group bg-white border border-line rounded-xl px-5 py-4 hover:border-line-hover transition-colors"
+                      >
+                        <span className="font-display text-[15px] font-medium text-ink group-hover:text-brand transition-colors">
+                          {rc.title}
+                        </span>
+                        <span className="block mt-0.5 font-display text-[13px] text-muted leading-snug">
+                          {rc.description}
+                        </span>
+                      </Link>
                     </li>
                   ))}
                 </ul>
-              </section>
-
-              {c.faq.length > 0 && (
-                <div id="faq" className="scroll-mt-32">
-                  <FAQ items={c.faq} />
-                </div>
-              )}
-
-              {/* Related comparisons */}
-              {related.length > 0 && (
-                <section
-                  id="relaterte"
-                  className="mt-12 scroll-mt-32 rounded-2xl border border-line bg-surface-100 p-7"
-                >
-                  <h2 className="font-display text-[16px] font-semibold uppercase tracking-[0.12em] text-brand mb-4 mt-0">
-                    Relaterte sammenligninger
-                  </h2>
-                  <ul className="flex flex-col gap-3 list-none m-0 p-0">
-                    {related.map((rc) => (
-                      <li key={rc.slug}>
-                        <Link
-                          href={`/sammenligninger/${rc.slug}`}
-                          className="block group"
-                        >
-                          <span className="font-display text-[15px] font-medium text-ink group-hover:text-brand transition-colors">
-                            {rc.title}
-                          </span>
-                          <span className="block mt-0.5 font-display text-[13px] text-muted leading-snug">
-                            {rc.description}
-                          </span>
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              )}
-
-              <div className="mt-10 font-display text-[12.5px] text-muted-light">
-                Sist oppdatert{" "}
-                {new Date(c.updatedAt).toLocaleDateString("nb-NO", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-                . Verifiser alltid hos leverandøren før bestilling.
               </div>
+            )}
 
-              <div className="mt-10">
-                <CTA variant="light" />
-              </div>
+            <div className="mt-10 font-display text-[12.5px] text-muted-light">
+              Sist oppdatert{" "}
+              {new Date(c.updatedAt).toLocaleDateString("nb-NO", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+              . Verifiser alltid hos leverandøren før bestilling.
             </div>
-
-            {/* Sidebar */}
-            <aside className="hidden lg:block">
-              <ComparisonTOC items={tocItems} />
-            </aside>
           </div>
-        </div>
+        </section>
       </article>
 
       <StructuredData
@@ -415,7 +495,171 @@ export default function ComparisonPage({
 }
 
 /* ─────────────────────────────────────────────────────────────
-   PROVIDER TABLE — smart layout based on content type
+   SECTION HELPERS
+   ───────────────────────────────────────────────────────────── */
+
+function SectionEyebrow({
+  children,
+  muted,
+  inverse,
+}: {
+  children: React.ReactNode;
+  muted?: boolean;
+  inverse?: boolean;
+}) {
+  const color = inverse
+    ? "text-brand-light"
+    : muted
+    ? "text-muted"
+    : "text-brand";
+  return (
+    <div
+      className={`font-display text-[11px] font-medium uppercase tracking-[0.14em] ${color} mb-2.5`}
+    >
+      {children}
+    </div>
+  );
+}
+
+function SectionH2({
+  children,
+  inverse,
+}: {
+  children: React.ReactNode;
+  inverse?: boolean;
+}) {
+  return (
+    <h2
+      className={`font-display text-[28px] md:text-[32px] font-medium tracking-[-0.02em] leading-[1.15] m-0 mb-3.5 ${
+        inverse ? "text-white" : "text-ink"
+      }`}
+    >
+      {children}
+    </h2>
+  );
+}
+
+function SectionIntro({
+  children,
+  inverse,
+}: {
+  children: React.ReactNode;
+  inverse?: boolean;
+}) {
+  return (
+    <p
+      className={`font-display text-[15px] leading-[1.65] max-w-[640px] m-0 ${
+        inverse ? "text-white/70" : "text-muted"
+      }`}
+    >
+      {children}
+    </p>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   WINNER CARD
+   ───────────────────────────────────────────────────────────── */
+
+function WinnerCard({ highlight: h }: { highlight: ComparisonHighlight }) {
+  const isPrimary = h.variant !== "outline";
+  return (
+    <div className="relative bg-white border border-line rounded-2xl px-6 pt-7 pb-6 hover:border-line-hover hover:-translate-y-0.5 transition-all duration-200">
+      <span
+        className={`absolute -top-3 left-6 px-3 py-1.5 rounded-full font-display text-[10px] font-semibold uppercase tracking-[0.12em] ${
+          isPrimary
+            ? "bg-brand text-white"
+            : "bg-white text-brand border border-line-hover"
+        }`}
+      >
+        ★ {h.badge}
+      </span>
+      <div className="mt-5 mb-2.5 flex items-baseline gap-1.5">
+        <span className="font-display text-[38px] font-medium tracking-[-0.02em] leading-none text-ink">
+          {h.value}
+        </span>
+        {h.unit && (
+          <span className="font-display text-[13px] text-muted">{h.unit}</span>
+        )}
+      </div>
+      <div className="font-display text-[16px] font-semibold text-ink mb-1">
+        {h.name}
+      </div>
+      <div className="font-display text-[12.5px] text-muted">
+        <span
+          className="inline-block w-1.5 h-1.5 rounded-full bg-brand mr-1.5 align-middle"
+          aria-hidden="true"
+        />
+        {h.sub}
+      </div>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   CONGLOMERATE CARD (for navy section)
+   ───────────────────────────────────────────────────────────── */
+
+function ConglomerateCard({
+  name,
+  location,
+  brands,
+  dotClass,
+  count,
+  note,
+  highlight,
+}: {
+  name: string;
+  location: string;
+  brands: string[];
+  dotClass: string;
+  count: string;
+  note: string;
+  highlight?: boolean;
+}) {
+  return (
+    <div
+      className={`rounded-2xl p-5 ${
+        highlight
+          ? "bg-brand/10 border border-brand-light/25"
+          : "bg-white/5 border border-white/12"
+      }`}
+    >
+      <div className="flex items-center gap-2 mb-1">
+        <span
+          className={`h-2 w-2 rounded-full flex-shrink-0 ${dotClass}`}
+          aria-hidden="true"
+        />
+        <h3 className="font-display text-[14px] font-semibold text-white m-0 flex-1">
+          {name}
+        </h3>
+        <span className="font-display text-[10px] uppercase tracking-[0.08em] text-white/55 font-medium whitespace-nowrap">
+          {count}
+        </span>
+      </div>
+      <p className="font-display text-[12.5px] text-white/55 m-0 mb-3.5">
+        {location}
+      </p>
+      <ul className="flex flex-wrap gap-1.5 list-none m-0 p-0 mb-3">
+        {brands.map((b) => (
+          <li
+            key={b}
+            className="bg-white/8 border border-white/10 rounded-md px-2 py-0.5 font-display text-[11px] font-medium text-white"
+          >
+            {b}
+          </li>
+        ))}
+      </ul>
+      <p className="font-display text-[11.5px] leading-[1.45] text-white/60 m-0">
+        {note}
+      </p>
+    </div>
+  );
+}
+
+/* ─────────────────────────────────────────────────────────────
+   PROVIDER TABLE — preserved from previous version
+   (price-mode grid + wide-mode table + expanded details)
    ───────────────────────────────────────────────────────────── */
 
 function ProviderTable({
@@ -427,55 +671,27 @@ function ProviderTable({
 }) {
   const mode = getTableMode(columns);
   const isPriceTable = columns.some((c) => c.key === "no_first");
-
-  // For price tables, drop "included" — shown in expanded detail
   const visibleColumns = isPriceTable
     ? columns.filter((c) => c.key !== "included")
     : columns;
 
-  const numCols = visibleColumns.length;
-
-  // Two layout strategies depending on content type:
-  //
-  // PRICE/COMPACT MODE (5-7 narrow cols): use CSS grid with 1fr columns.
-  //   Total: 1.6fr (provider) + N×1fr (values). Scrolls horizontally if needed.
-  //
-  // WIDE MODE (long text content like eierskap): use a real <table> with
-  //   table-layout: auto so columns size to their content. The table wraps
-  //   in an overflow-x container for narrow viewports.
-  //
-  // Both modes use <details>/<summary> for expansion via internal markup.
-
   if (mode === "wide") {
     return <WideTable columns={visibleColumns} providers={providers} />;
   }
-
-  return (
-    <PriceTable
-      columns={visibleColumns}
-      providers={providers}
-      numCols={numCols}
-    />
-  );
+  return <PriceTable columns={visibleColumns} providers={providers} />;
 }
-
-/* ────── PRICE/COMPACT TABLE ────── */
 
 function PriceTable({
   columns,
   providers,
-  numCols,
 }: {
   columns: ComparisonColumn[];
   providers: ComparisonProvider[];
-  numCols: number;
 }) {
   const allColumns = providers[0]?.values
     ? Object.keys(providers[0].values).map((k) => ({ key: k, label: k }))
     : columns;
-
-  // Provider name col: 1.6fr; each value col: 1fr.
-  // For 7+ value cols we narrow provider col so it all fits.
+  const numCols = columns.length;
   const providerColWidth = numCols >= 6 ? "1.4fr" : "1.6fr";
   const gridStyle = {
     gridTemplateColumns: `${providerColWidth} ${columns
@@ -486,9 +702,8 @@ function PriceTable({
   return (
     <div className="overflow-x-auto rounded-2xl border border-line bg-white">
       <div className="min-w-[680px]">
-        {/* Header */}
         <div
-          className="hidden md:grid bg-surface-100 px-5 py-3 gap-3 font-display text-[11px] font-medium uppercase tracking-[0.08em] text-muted"
+          className="hidden md:grid bg-surface-100 px-6 py-3.5 gap-3 font-display text-[10.5px] font-medium uppercase tracking-[0.1em] text-muted"
           style={gridStyle}
         >
           <div>Leverandør</div>
@@ -498,8 +713,6 @@ function PriceTable({
             </div>
           ))}
         </div>
-
-        {/* Rows */}
         <ul className="list-none m-0 p-0 divide-y divide-line">
           {providers.map((p, idx) => (
             <li key={p.name}>
@@ -537,10 +750,9 @@ function PriceRow({
     <details className="group" {...(defaultOpen ? { open: true } : {})}>
       <summary className="cursor-pointer list-none [&::-webkit-details-marker]:hidden hover:bg-surface-100 transition-colors">
         <div
-          className="md:grid flex flex-col gap-2 md:gap-3 px-5 py-4 items-start md:items-center"
+          className="md:grid flex flex-col gap-2 md:gap-3 px-6 py-4 items-start md:items-center"
           style={gridStyle}
         >
-          {/* Provider cell */}
           <div className="flex items-start gap-2.5 min-w-0">
             <ChevronIcon />
             <div className="min-w-0 flex-1">
@@ -561,7 +773,6 @@ function PriceRow({
                   </span>
                 )}
               </div>
-
               {p.badges && p.badges.length > 0 && (
                 <div className="mt-1.5 flex flex-wrap gap-1">
                   {p.badges.map((b) => {
@@ -578,7 +789,6 @@ function PriceRow({
                   })}
                 </div>
               )}
-
               {p.volumeTiers && p.volumeTiers.length > 0 && (
                 <div className="mt-1.5">
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-50 border border-amber-200 px-2.5 py-0.5 text-[10.5px] font-medium text-amber-900">
@@ -589,13 +799,12 @@ function PriceRow({
             </div>
           </div>
 
-          {/* Value cells */}
           {columns.map((col) => {
             const value = p.values[col.key] ?? "—";
             return (
               <div
                 key={col.key}
-                className="font-display text-[14px] text-ink/90 whitespace-nowrap"
+                className="font-display text-[14px] text-ink/90 whitespace-nowrap tabular-nums"
               >
                 <span className="md:hidden text-[11px] uppercase tracking-[0.08em] text-muted-light mr-2">
                   {col.label}:
@@ -612,8 +821,6 @@ function PriceRow({
   );
 }
 
-/* ────── WIDE TABLE (long text content like eierskap) ────── */
-
 function WideTable({
   columns,
   providers,
@@ -626,13 +833,13 @@ function WideTable({
       <table className="w-full text-left font-display text-[13.5px]">
         <thead className="bg-surface-100">
           <tr>
-            <th className="px-5 py-3 font-medium text-[11px] uppercase tracking-[0.08em] text-muted whitespace-nowrap min-w-[180px]">
+            <th className="px-5 py-3.5 font-medium text-[10.5px] uppercase tracking-[0.1em] text-muted whitespace-nowrap min-w-[180px]">
               Leverandør
             </th>
             {columns.map((col) => (
               <th
                 key={col.key}
-                className="px-5 py-3 font-medium text-[11px] uppercase tracking-[0.08em] text-muted whitespace-nowrap"
+                className="px-5 py-3.5 font-medium text-[10.5px] uppercase tracking-[0.1em] text-muted whitespace-nowrap"
               >
                 {col.label}
               </th>
@@ -640,13 +847,8 @@ function WideTable({
           </tr>
         </thead>
         <tbody className="divide-y divide-line">
-          {providers.map((p, idx) => (
-            <WideRow
-              key={p.name}
-              provider={p}
-              columns={columns}
-              defaultOpen={idx === 0}
-            />
+          {providers.map((p) => (
+            <WideRow key={p.name} provider={p} columns={columns} />
           ))}
         </tbody>
       </table>
@@ -657,28 +859,21 @@ function WideTable({
 function WideRow({
   provider: p,
   columns,
-  defaultOpen,
 }: {
   provider: ComparisonProvider;
   columns: ComparisonColumn[];
-  defaultOpen: boolean;
 }) {
-  // For wide tables (eierskap), the conglomerate is already captured in the
-  // "konsern" column — so we don't show the colored-dot pill next to the
-  // provider name (would just duplicate the konsern column visually).
   const hasKonsernColumn = columns.some((col) => col.key === "konsern");
   const conglom =
-    p.conglomerate && !hasKonsernColumn ? CONGLOMERATE_META[p.conglomerate] : null;
+    p.conglomerate && !hasKonsernColumn
+      ? CONGLOMERATE_META[p.conglomerate]
+      : null;
 
   return (
     <>
-      <tr
-        className="cursor-pointer hover:bg-surface-100/60 transition-colors"
-        // Use a workaround: clicking the row toggles details below
-      >
+      <tr className="hover:bg-surface-100/60 transition-colors">
         <td className="px-5 py-4 align-top min-w-[180px]">
           <div className="flex items-start gap-2.5">
-            <ChevronIcon />
             <div className="min-w-0 flex-1">
               <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
                 <span className="font-display text-[15px] font-medium text-ink">
@@ -702,7 +897,6 @@ function WideRow({
         </td>
         {columns.map((col) => {
           const value = p.values[col.key] ?? "—";
-          // For konsern column, show value with colored dot
           if (col.key === "konsern" && p.conglomerate) {
             const cm = CONGLOMERATE_META[p.conglomerate];
             return (
@@ -720,7 +914,6 @@ function WideRow({
               </td>
             );
           }
-          // Long-text "fakta" column gets relaxed line-height
           if (col.key === "fakta") {
             return (
               <td
@@ -741,7 +934,6 @@ function WideRow({
           );
         })}
       </tr>
-      {/* Expanded note row */}
       {p.note && (
         <tr className="bg-surface-100/40">
           <td
@@ -749,27 +941,12 @@ function WideRow({
             className="px-5 pl-12 pb-4 pt-0 text-[13px] leading-[1.6] text-muted italic"
           >
             {p.note}
-            {p.href && (
-              <>
-                {" "}
-                <a
-                  href={p.href}
-                  target="_blank"
-                  rel="noopener nofollow sponsored"
-                  className="not-italic font-medium text-brand hover:underline"
-                >
-                  Besøk {p.name.replace(" ★", "")} ↗
-                </a>
-              </>
-            )}
           </td>
         </tr>
       )}
     </>
   );
 }
-
-/* ────── EXPANDED DETAIL (used by PriceRow) ────── */
 
 function ExpandedDetail({
   provider: p,
@@ -779,7 +956,7 @@ function ExpandedDetail({
   allColumns: ComparisonColumn[];
 }) {
   return (
-    <div className="px-5 pb-5 pt-1 md:pl-12 bg-surface-100/40 border-t border-line/60">
+    <div className="px-6 pb-5 pt-1 md:pl-12 bg-surface-100/40 border-t border-line/60">
       {p.note && (
         <p className="font-display text-[13.5px] leading-[1.6] text-ink/75 m-0 mb-4 max-w-[680px]">
           {p.note}
@@ -805,21 +982,18 @@ function ExpandedDetail({
         </div>
       )}
 
-      {/* Volume tiers — for bulk discount providers */}
       {p.volumeTiers && p.volumeTiers.length > 0 && (
         <div className="mt-4">
           <div className="font-display text-[11px] font-medium uppercase tracking-[0.12em] text-brand mb-2">
             Volumrabatt-trinn
           </div>
           <p className="font-display text-[13px] leading-[1.55] text-muted m-0 mb-3 max-w-[680px]">
-            Rabatten aktiveres automatisk på fakturatidspunktet basert på
-            hvor mange domener du har på samme brukerkonto.
+            Rabatten aktiveres automatisk på fakturatidspunktet basert på antall
+            domener på samme brukerkonto.
           </p>
           <VolumeTiersTable
             tiers={p.volumeTiers}
-            columns={allColumns.filter(
-              (c) => c.key !== "included"
-            )}
+            columns={allColumns.filter((c) => c.key !== "included")}
           />
         </div>
       )}
@@ -878,7 +1052,7 @@ function VolumeTiersTable({
               {columns.map((col) => (
                 <td
                   key={col.key}
-                  className="px-4 py-2.5 text-ink/80 whitespace-nowrap"
+                  className="px-4 py-2.5 text-ink/80 whitespace-nowrap tabular-nums"
                 >
                   {tier.values[col.key] ?? "—"}
                 </td>
@@ -894,7 +1068,9 @@ function VolumeTiersTable({
   );
 }
 
-/* ────── ICONS ────── */
+/* ─────────────────────────────────────────────────────────────
+   ICONS + UTILS
+   ───────────────────────────────────────────────────────────── */
 
 function ChevronIcon() {
   return (
@@ -934,136 +1110,7 @@ function CheckIcon() {
   );
 }
 
-function MethodIcon({ src, label }: { src: string; label: string }) {
-  return (
-    <div className="flex flex-col items-center text-center gap-2">
-      <Image
-        src={src}
-        alt=""
-        width={48}
-        height={48}
-        aria-hidden="true"
-      />
-      <span className="font-display text-[12px] font-medium leading-tight text-ink/80">
-        {label}
-      </span>
-    </div>
-  );
-}
-
-/* ────── OWNERSHIP CHART (price comparison only) ────── */
-
-function OwnershipChart() {
-  return (
-    <section
-      id="konsernkart"
-      className="mt-12 scroll-mt-32 rounded-2xl border border-line bg-surface-100 p-7"
-    >
-      <h2 className="font-display text-[22px] font-medium tracking-[-0.01em] text-ink mb-2 mt-0">
-        Konsernstruktur i norsk domenemarked
-      </h2>
-      <p className="font-display text-[14.5px] leading-[1.65] text-muted m-0 mb-6 max-w-[680px]">
-        Av åtte leverandører som retter seg mot norske kunder er to reelt
-        uavhengige norske. De seks andre fordeler seg på tre internasjonale
-        konserner.
-      </p>
-
-      <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-        <ConglomerateCard
-          name="one.com Group AB"
-          location="Malmö, Sverige"
-          brands={["One.com", "Uniweb", "ProISP"]}
-          dotClass="bg-navy"
-          highlight="3 brands"
-          extraNote="Uniweb og ProISP er samme juridiske selskap (Group.One Norway AS) siden september 2024."
-        />
-        <ConglomerateCard
-          name="Miss Group"
-          location="Stockholm, Sverige"
-          brands={["Domeneshop", "Domene.no"]}
-          dotClass="bg-brand"
-          highlight="2 brands"
-          extraNote="Domeneshop er Norges største .no-registrar med 45 % markedsandel."
-        />
-        <ConglomerateCard
-          name="team.blue"
-          location="Gent, Belgia"
-          brands={["Simply.com"]}
-          dotClass="bg-brand-light"
-          highlight="1 brand"
-          extraNote="Europas største digital-økosystem med 60+ brands i 22 EU-land."
-        />
-        <ConglomerateCard
-          name="Norsk uavhengig"
-          location="Bergen + Sandefjord"
-          brands={["Webhuset", "Gigahost"]}
-          dotClass="bg-emerald-500"
-          highlight="2 brands"
-          extraNote="De reelt uavhengige norske aktørene. Webhuset siden 1998, Gigahost siden 2006."
-          highlightAccent
-        />
-      </div>
-
-      <Link
-        href="/sammenligninger/eierskap-norske-registrarer"
-        className="mt-6 inline-flex items-center gap-1.5 font-display text-[14px] font-medium text-brand hover:underline"
-      >
-        Les full eierskapsoversikt
-        <span aria-hidden="true">→</span>
-      </Link>
-    </section>
-  );
-}
-
-function ConglomerateCard({
-  name,
-  location,
-  brands,
-  dotClass,
-  highlight,
-  extraNote,
-  highlightAccent,
-}: {
-  name: string;
-  location: string;
-  brands: string[];
-  dotClass: string;
-  highlight: string;
-  extraNote: string;
-  highlightAccent?: boolean;
-}) {
-  return (
-    <div
-      className={`rounded-xl border p-5 bg-white ${
-        highlightAccent ? "border-emerald-200" : "border-line"
-      }`}
-    >
-      <div className="flex items-center gap-2 mb-1">
-        <span
-          className={`h-2 w-2 rounded-full flex-shrink-0 ${dotClass}`}
-          aria-hidden="true"
-        />
-        <h3 className="font-display text-[14px] font-semibold text-ink m-0 flex-1 truncate">
-          {name}
-        </h3>
-        <span className="text-[10.5px] font-medium text-muted uppercase tracking-wider whitespace-nowrap">
-          {highlight}
-        </span>
-      </div>
-      <p className="font-display text-[12px] text-muted m-0 mb-3">{location}</p>
-      <ul className="flex flex-wrap gap-1.5 list-none m-0 p-0 mb-3">
-        {brands.map((b) => (
-          <li
-            key={b}
-            className="rounded-md bg-surface-100 border border-line px-2 py-0.5 font-display text-[11.5px] font-medium text-ink"
-          >
-            {b}
-          </li>
-        ))}
-      </ul>
-      <p className="font-display text-[11.5px] leading-snug text-ink/70 m-0">
-        {extraNote}
-      </p>
-    </div>
-  );
+function pluralize(word: string, n: number): string {
+  if (word === "leverandør") return n === 1 ? "leverandør" : "leverandører";
+  return word;
 }

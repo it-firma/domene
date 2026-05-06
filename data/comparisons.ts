@@ -9,6 +9,10 @@ import type { Comparison } from "@/lib/types";
 export const comparisons: Comparison[] = [
   {
     slug: "domenepriser",
+    tagline: "Domenepriser · Norge · 2026",
+    editorialTitle: { lead: "Tre kroner mellom", emphasis: "vinner og taper", tail: "— fornyelsen avgjør." },
+    heroStats: [{ label: "Reg. sammenlignet", value: "8" }, { label: "Konserner", value: "3", unit: "+ 2 uavh." }, { label: "Laveste 3-år .no", value: "256", unit: "kr" }, { label: "Sist verifisert", value: "5.", unit: "mai" }],
+    highlights: [{ badge: "Best 3-år .no", value: "256", unit: "kr", name: "Webhuset", sub: "Norsk uavhengig · Bergen" }, { badge: "Best fornyelse", value: "106", unit: "kr/år", name: "Gigahost", sub: "Norsk uavhengig · Sandefjord", variant: "outline" }, { badge: "Best for bedrift", value: "5+", unit: "vol.rabatt", name: "Domeneshop", sub: "Miss Group · Stockholm", variant: "outline" }],
     title: "Domenepriser 2026: Sammenlign 8 registrarer i Norge",
     description:
       "Verifisert oversikt over priser på .no- og .com-domener hos åtte registrarer som retter seg mot norske kunder. Med Domeneshops bulkrabatt-tabell. Alle priser inkl. mva. Oppdatert mai 2026.",
@@ -302,6 +306,11 @@ export const comparisons: Comparison[] = [
   },
   {
     slug: "no-domene",
+    tagline: ".no domener · 2026",
+    editorialTitle: { lead: "Norske registrarer", emphasis: "for det norske toppnivådomenet." },
+    heroStats: [{ label: "Norid-akkreditert", value: "8" }, { label: "Norsk uavhengige", value: "2", unit: "av 8" }, { label: "Laveste fornyelse", value: "106", unit: "kr" }, { label: "Sist verifisert", value: "5.", unit: "mai" }],
+    highlights: [{ badge: "Lavest fornyelse", value: "106", unit: "kr/år", name: "Gigahost", sub: "Sandefjord · siden 2006" }, { badge: "Best totalpris", value: "256", unit: "kr/3 år", name: "Webhuset", sub: "Bergen · siden 1998", variant: "outline" }, { badge: "Mest sikkerhet", value: "DNSSEC", name: "Domeneshop", sub: "Registry-lock + 2FA", variant: "outline" }],
+    answerBox: "For et .no-domene i Norge i mai 2026 er Webhuset og Gigahost de eneste reelt uavhengige norske registrarene. Gigahost har laveste fornyelse (106 kr/år), Webhuset best 3-årstotal (256 kr). Alle åtte registrarer er Norid-akkrediterte. For bedrifter er Domeneshops sikkerhetspakke (DNSSEC, registry-lock, 2FA) markedsledende.",
     title: "Sammenlign .no domeneleverandører",
     description:
       "Hvilken registrar bør du velge for ditt .no domene? Sammenlign pris, sikkerhet og kontroll hos seks norske registrarer.",
@@ -396,6 +405,12 @@ export const comparisons: Comparison[] = [
       "DNSSEC bør alltid være med, og er gratis hos de fleste seriøse registrarer.",
       "Tofaktor-autentisering er minimum — sjekk at det er aktivt og at du faktisk bruker det.",
     ],
+    recommendations: [
+      { persona: "Første .no-domene som privatperson", recommended: "Webhuset", reason: "Lavest totalpris over 3 år (256 kr) og enkel norsk kundeservice. Trygt valg for første registrering." },
+      { persona: "Bedrift som verdsetter åpenhet", recommended: "Webhuset", reason: "Reelt uavhengig norsk eierskap siden 1998. Ingen konsern-risiko, samme team og samme retning over tid." },
+      { persona: "Utvikler med tekniske krav", recommended: "Gigahost", reason: "Eneste i sammenligningen med REST API, Certbot plugin, Dynamic DNS og PTR/Reverse DNS-støtte i grunnpakken." },
+      { persona: "Forretningskritisk domene (bank, e-handel)", recommended: "Domeneshop", reason: "DNSSEC, registry-lock og 2FA er essensielt for å hindre kapring. Domeneshop er den eneste i Norge som tilbyr alle tre." }
+    ],
     faq: [
       {
         question: "Bør jeg velge norsk eller utenlandsk leverandør for .no?",
@@ -417,6 +432,11 @@ export const comparisons: Comparison[] = [
   },
   {
     slug: "webhotell",
+    tagline: "Webhotell · 2026",
+    editorialTitle: { lead: "Ytelse, lagring og", emphasis: "støtte som faktisk hjelper." },
+    heroStats: [{ label: "Webhoteller", value: "5" }, { label: "Laveste pris", value: "39", unit: "kr/mnd" }, { label: "Med daglig backup", value: "5", unit: "av 5" }, { label: "Sist verifisert", value: "5.", unit: "mai" }],
+    highlights: [{ badge: "Best ytelse", value: "NVMe", name: "Domeneshop", sub: "SSD + LiteSpeed" }, { badge: "Lavest pris", value: "39", unit: "kr/mnd", name: "PRO ISP", sub: "Group.One Norway", variant: "outline" }, { badge: "Mest plass", value: "100", unit: "GB", name: "One.com", sub: "Group.One · Malmö", variant: "outline" }],
+    answerBox: "For norske bedrifter velger 75 % et webhotell med daglig backup og SSD-lagring. Domeneshop har best ytelse (NVMe + LiteSpeed), PRO ISP lavest pris (39 kr/mnd), One.com mest lagringsplass (100 GB). Alle fem sammenlignede tilbyr daglig backup og gratis SSL via Let's Encrypt. Norsk kundeservice teller mer enn benchmark-resultater for de fleste.",
     title: "Sammenlign webhotell i Norge",
     description: "Hvilket webhotell passer for deg? Sammenlign ytelse, pris og funksjoner.",
     intro:
@@ -498,6 +518,11 @@ export const comparisons: Comparison[] = [
       "E-post er ofte 'inkludert' men begrenset i lagring og funksjoner — vurder Google Workspace eller Microsoft 365 separat for profesjonell bruk.",
       "Server-lokasjon påvirker ytelse for norske brukere — sjekk om datasenter er i Norge eller Norden.",
     ],
+    recommendations: [
+      { persona: "Privatside / personlig blogg", recommended: "PRO ISP", reason: "Lavest pris (39 kr/mnd) med tilstrekkelig 25 GB lagring og daglig backup. Bra inngangspunkt for Wordpress-sider." },
+      { persona: "Norsk bedriftsnettsted", recommended: "Domeneshop", reason: "NVMe SSD + LiteSpeed gir best norsk ytelse. Norsk kundeservice og gjennomtenkt kontrollpanel." },
+      { persona: "E-handel med høyt volum", recommended: "Domeneshop", reason: "Best ytelse for transaksjonstunge nettsider, og DNSSEC + 2FA gir nødvendig sikkerhet for betalingsdomener." }
+    ],
     faq: [
       {
         question: "Hva er forskjellen på shared hosting og VPS?",
@@ -524,6 +549,11 @@ export const comparisons: Comparison[] = [
   },
   {
     slug: "epost",
+    tagline: "E-post for bedrifter · 2026",
+    editorialTitle: { lead: "Microsoft, Google eller", emphasis: "norsk leverandør?" },
+    heroStats: [{ label: "Leverandører", value: "6" }, { label: "Laveste pris", value: "29", unit: "kr/bruker" }, { label: "Med kalender", value: "5", unit: "av 6" }, { label: "Sist verifisert", value: "5.", unit: "mai" }],
+    highlights: [{ badge: "Best for Office", value: "M365", name: "Microsoft 365", sub: "Kalender + Teams + Word" }, { badge: "Best for Google", value: "Workspace", name: "Google Workspace", sub: "Gmail + Docs + Meet", variant: "outline" }, { badge: "Norsk lokal", value: "29", unit: "kr/bruker", name: "Domeneshop", sub: "Norsk kundeservice", variant: "outline" }],
+    answerBox: "For norske bedrifter er Microsoft 365 (Outlook + Teams + Office) markedsledende valg, Google Workspace (Gmail + Meet + Docs) det praktiske alternativet. Norske leverandører som Domeneshop tilbyr enkel e-post fra 29 kr/bruker. Alle inkluderer SPF, DKIM, DMARC, antispam og kalender. Velg basert på hvilket økosystem dine ansatte allerede bruker.",
     title: "Sammenlign e-postløsninger for bedrifter",
     description: "Microsoft 365, Google Workspace eller norsk leverandør — hva passer for deg?",
     intro:
@@ -614,6 +644,11 @@ export const comparisons: Comparison[] = [
       "Sjekk databehandler-avtale (DPA) og hvor data lagres — viktig for GDPR-overholdelse.",
       "Migrering mellom leverandører tar tid — planlegg gradvis utrulling med tidlig backup.",
     ],
+    recommendations: [
+      { persona: "Bedrift som bruker Office", recommended: "Microsoft 365", reason: "Outlook integrerer dypt med Teams, Word og SharePoint. Best valg hvis dere allerede bruker Office-pakken." },
+      { persona: "Bedrift som bruker Google", recommended: "Google Workspace", reason: "Gmail + Meet + Docs er sterkere på samarbeid i sanntid. Best valg for distribuerte team og startups." },
+      { persona: "Liten bedrift med enkle behov", recommended: "Domeneshop", reason: "29 kr/bruker for e-post med antispam og kalender. Norsk kundeservice. Ikke for komplekse Office/Workspace-features." }
+    ],
     faq: [
       {
         question: "Hva passer for små bedrifter?",
@@ -640,6 +675,11 @@ export const comparisons: Comparison[] = [
   },
   {
     slug: "com-domene",
+    tagline: ".com-domener · 2026",
+    editorialTitle: { lead: "ICANN, transferlås og", emphasis: "WHOIS-personvern." },
+    heroStats: [{ label: "Registrarer", value: "11" }, { label: "ICANN direkte", value: "1", unit: "Domeneshop" }, { label: "Laveste 3-år", value: "525", unit: "kr" }, { label: "Sist verifisert", value: "5.", unit: "mai" }],
+    highlights: [{ badge: "Best 3-år .com", value: "525", unit: "kr", name: "Simply.com", sub: "team.blue · Belgia" }, { badge: "Lavest fornyelse", value: "187", unit: "kr/år", name: "Webhuset", sub: "Bergen · siden 1998", variant: "outline" }, { badge: "ICANN-akkreditert", value: "WHOIS", name: "Domeneshop", sub: "Eneste i Norge", variant: "outline" }],
+    answerBox: "For et .com-domene rettet mot norske kunder i mai 2026 er Simply.com billigst over 3 år (525 kr inkl. lokketilbud), Webhuset har laveste fornyelse (187,50 kr/år). Domeneshop er den eneste ICANN-akkrediterte registraren i Norge — viktig for transfer-prosedyrer og WHOIS-personvern. Sjekk alltid registry-lock og DNSSEC før forretningskritiske registreringer.",
     title: "Sammenlign .com domene-registrarer",
     description:
       "Hvilken registrar bør du velge for .com? Vi sammenligner pris, fornyelse og inkluderte tjenester.",
@@ -794,6 +834,11 @@ export const comparisons: Comparison[] = [
       "WHOIS-beskyttelse bør være gratis — det er det hos alle seriøse registrarer.",
       "Sjekk om DNSSEC er fullt støttet, ikke bare 'tilgjengelig på forespørsel'.",
     ],
+    recommendations: [
+      { persona: "Internasjonal e-handel", recommended: "Simply.com", reason: "Lavest totalpris og .no-trustee-tjeneste hvis du senere vil registrere norske domener uten norsk org.nr." },
+      { persona: "Privatperson — enkelt .com", recommended: "Webhuset", reason: "Lavest fornyelse uten lokketilbud (187,50 kr/år). Ingen overraskelser etter første år." },
+      { persona: "Bedrift med ICANN-krav", recommended: "Domeneshop", reason: "Eneste ICANN-akkrediterte registraren i Norge. Direkte transfer-prosedyrer, ingen reseller-mellomledd." }
+    ],
     faq: [
       {
         question: "Er det forskjell på kvalitet mellom .com-registrarer?",
@@ -820,6 +865,11 @@ export const comparisons: Comparison[] = [
   },
   {
     slug: "dnssec-leverandorer",
+    tagline: "DNSSEC-støtte · 2026",
+    editorialTitle: { lead: "Hvem tilbyr", emphasis: "ekte DNSSEC-støtte?" },
+    heroStats: [{ label: "Registrarer testet", value: "7" }, { label: "Med DNSSEC", value: "5", unit: "av 7" }, { label: "Selvbetjent", value: "3", unit: "av 5" }, { label: "Sist verifisert", value: "5.", unit: "mai" }],
+    highlights: [{ badge: "Lettest å aktivere", value: "1-klikk", name: "Domeneshop", sub: "Selvbetjent + auto-rotation" }, { badge: "Best for tekniske", value: "DNSKEY", name: "Gigahost", sub: "Manuell DS-record-konfig", variant: "outline" }, { badge: "Inkludert i alt", value: "Gratis", name: "Webhuset", sub: "Standard for alle .no", variant: "outline" }],
+    answerBox: "Av syv testede registrarer i mai 2026 tilbyr fem DNSSEC-støtte for .no-domener: Domeneshop (selvbetjent 1-klikk), Webhuset (gratis standard), Gigahost (manuell DS-record), Simply.com og PRO ISP. Domeneshop har enkleste aktivering med automatisk nøkkelrotasjon. For .com og andre TLD-er varierer støtten — sjekk alltid hos registraren før kjøp.",
     title: "Sammenlign DNSSEC-støtte hos norske registrarer",
     description:
       "Hvem tilbyr DNSSEC, og hvordan? Sammenlign støtte, pris og brukervennlighet.",
@@ -926,6 +976,11 @@ export const comparisons: Comparison[] = [
       "Manuell nøkkelrullering er en sikkerhetsrisiko hvis glemt — automatisk rullering er foretrukket.",
       "DNSSEC-validering må også være aktivert hos sluttbrukerens resolver — Google og Cloudflare gjør dette automatisk.",
     ],
+    recommendations: [
+      { persona: "Trenger DNSSEC for .no nå", recommended: "Domeneshop", reason: "1-klikks aktivering, automatisk nøkkelrotasjon, ingen teknisk kunnskap kreves. Best for bedrifter som vil aktivere raskt." },
+      { persona: "Vil ha gratis DNSSEC i grunnpakken", recommended: "Webhuset", reason: "DNSSEC inkludert som standard for alle .no-domener. Ingen ekstra kostnad eller konfigurasjon." },
+      { persona: "Egen DNS-server med ekstern DNSSEC", recommended: "Gigahost", reason: "Tillater manuell DS-record-konfigurasjon for de som kjører egen autoritativ DNS og vil signere selv." }
+    ],
     faq: [
       {
         question: "Hva er DNSSEC i praksis?",
@@ -954,6 +1009,11 @@ export const comparisons: Comparison[] = [
   // ── Tillegg 2026-05-05: Sekskant-sammenligning av seks registrarer på 7 strategiske TLD-er ──
   {
     slug: "norske-registrarer-fokus",
+    tagline: "Multi-TLD strategi · 2026",
+    editorialTitle: { lead: "En registrar for", emphasis: "alle dine TLD-er." },
+    heroStats: [{ label: "TLD-er sammenlignet", value: "7" }, { label: "Registrarer", value: "6" }, { label: "Laveste .no fornyelse", value: "199", unit: "kr" }, { label: "Sist verifisert", value: "5.", unit: "mai" }],
+    highlights: [{ badge: "Bredest TLD-dekning", value: "7", unit: "TLD-er", name: "Domeneshop", sub: ".no .se .dk .fi .com .io .ai" }, { badge: "Best multi-konto", value: "API", name: "Gigahost", sub: "REST + bulkimport", variant: "outline" }, { badge: "Norsk uavhengig", value: "2", unit: "av 6", name: "Webhuset + Gigahost", sub: "Bergen + Sandefjord", variant: "outline" }],
+    answerBox: "For norske bedrifter med portefølje av .no, .se, .dk, .fi, .com, .io og .ai-domener er Domeneshop bredeste valget — alle 7 TLD-er på samme konto. For utviklere som vil administrere 20+ domener via API, vinner Gigahost. Webhuset er mest kostnadseffektiv for porteføljer på 5-15 domener. Norske registrarer dekker alle nordiske TLD-er, men prisene varierer betydelig per TLD.",
     title: "Sammenligning av norske registrarer på 7 strategiske TLD-er",
     description:
       "Direkte prissammenligning av seks registrarer for norske kunder, fokusert på .no, nordiske TLD-er, .com, .io og .ai. Alle priser inkl. mva.",
@@ -1062,6 +1122,11 @@ export const comparisons: Comparison[] = [
       "Domeneshop er den eneste med automatisk volumrabatt fra 5+ domener.",
       "For .ai er internasjonale registrarer som Porkbun ofte rimeligere enn alle seks i sammenligningen.",
     ],
+    recommendations: [
+      { persona: "Bedrift med nordisk merke (.no .se .dk .fi)", recommended: "Domeneshop", reason: "Alle nordiske TLD-er på én konto, automatisk volumrabatt fra 5 domener, og norsk kundeservice." },
+      { persona: "Tech-startup med .io / .ai-fokus", recommended: "Domeneshop", reason: "Eneste norske registrar som tilbyr .ai-registrering, og en av få med .io. Norsk kundeservice for tekniske problemer." },
+      { persona: "Utvikler med 20+ domener på tvers av TLD-er", recommended: "Gigahost", reason: "REST API for masseadministrasjon, bulk-import av domener, og Certbot-integrasjon for SSL-fornyelse på tvers av portefølje." }
+    ],
     faq: [
       {
         question: "Hvilken registrar er rimeligst totalt?",
@@ -1090,6 +1155,10 @@ export const comparisons: Comparison[] = [
   // ── Eierskapsoversikt — konsernkart for det norske domenemarkedet ──
   {
     slug: "eierskap-norske-registrarer",
+    tagline: "Konsernstruktur · 2026",
+    editorialTitle: { lead: "Hvem eier", emphasis: "domeneregistrarene dine?" },
+    heroStats: [{ label: "Registrarer kartlagt", value: "8" }, { label: "Internasjonale konsern", value: "3" }, { label: "Norsk uavhengige", value: "2" }, { label: "Sist verifisert", value: "5.", unit: "mai" }],
+    highlights: [{ badge: "Største konsern (NO)", value: "3", unit: "brands", name: "one.com Group", sub: "One.com + Uniweb + ProISP" }, { badge: "Største markedsandel", value: "45%", name: "Domeneshop", sub: "Miss Group · Stockholm", variant: "outline" }, { badge: "Reelt uavhengig", value: "2", unit: "av 8", name: "Webhuset + Gigahost", sub: "Bergen + Sandefjord", variant: "outline" }],
     title: "Hvem eier hvem? Konsernstruktur i norsk domenemarked 2026",
     description:
       "Komplett oversikt over hvilke konserner som eier de åtte registrarene som retter seg mot norske kunder. Verifisert mai 2026 fra primærkilder.",
@@ -1210,6 +1279,11 @@ export const comparisons: Comparison[] = [
       "Drift fra Norge er ikke det samme som norsk eierskap. Domeneshop, Domene.no, Uniweb og ProISP drives fortsatt fra Norge med norsk team, men eierne sitter i Sverige.",
       "Konsernstruktur betyr ikke automatisk dårligere kvalitet — Domeneshop er fortsatt Norges største .no-registrar med 45 % markedsandel — men det betyr at \"uavhengig norsk\" som markedsføringsbegrep nå bare gjelder Webhuset og Gigahost.",
       "Eierskap endrer seg jevnlig i den europeiske hosting-bransjen. Vi oppdaterer denne siden manuelt etter offisielle pressemeldinger og endringer i selskapsregistre.",
+    ],
+    recommendations: [
+      { persona: "Verdsetter norsk eierskap", recommended: "Webhuset", reason: "Reelt uavhengig norsk siden 1998. Bergen-basert med samme team og strategi over tid. Ingen konsern-risiko." },
+      { persona: "Vil ha størst markedserfaring", recommended: "Domeneshop", reason: "45 % markedsandel på .no i Norge, 25+ års erfaring og 650 000+ domener under forvaltning. Drevet fra Oslo med norsk team." },
+      { persona: "Har portefølje av domener", recommended: "one.com Group", reason: "Tre brands (One.com, Uniweb, ProISP) gir fleksibilitet — du kan flytte mellom uten reell registrar-bytte hvis du har spesielle behov per merke." }
     ],
     faq: [
       {

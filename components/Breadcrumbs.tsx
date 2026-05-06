@@ -6,7 +6,18 @@ export interface Crumb {
   href: string;
 }
 
-export function Breadcrumbs({ items }: { items: Crumb[] }) {
+export function Breadcrumbs({
+  items,
+  variant = "light",
+}: {
+  items: Crumb[];
+  variant?: "light" | "dark";
+}) {
+  const inactiveColor =
+    variant === "dark" ? "text-white/55 hover:text-white" : "text-muted hover:text-brand";
+  const activeColor = variant === "dark" ? "text-white" : "text-ink";
+  const dividerColor = variant === "dark" ? "text-white/35" : "text-muted-light";
+
   return (
     <nav aria-label="Brødsmuler" className="flex items-center text-[13px]">
       <ol className="flex flex-wrap items-center gap-x-1.5 gap-y-1">
@@ -15,17 +26,14 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
           return (
             <li key={item.href} className="flex items-center gap-1.5">
               {i > 0 && (
-                <Icon.ChevronRight size={12} className="text-muted-light" />
+                <Icon.ChevronRight size={12} className={dividerColor} />
               )}
               {isLast ? (
-                <span
-                  className="font-medium text-ink"
-                  aria-current="page"
-                >
+                <span className={`font-medium ${activeColor}`} aria-current="page">
                   {item.label}
                 </span>
               ) : (
-                <Link href={item.href} className="text-muted hover:text-brand">
+                <Link href={item.href} className={inactiveColor}>
                   {item.label}
                 </Link>
               )}

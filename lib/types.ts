@@ -189,6 +189,34 @@ export interface ComparisonRecommendation {
   reason: string;
 }
 
+/**
+ * One stat in the hero stat-strip (4 total).
+ */
+export interface HeroStat {
+  label: string;
+  value: string;
+  /** Optional small unit suffix (e.g., "kr", "av 8") */
+  unit?: string;
+}
+
+/**
+ * One winner card in the "Vinnere" podium (typically 3).
+ */
+export interface ComparisonHighlight {
+  /** Badge label, e.g., "Best 3-år .no", "Mest kontroll" */
+  badge: string;
+  /** Big number/value shown in card */
+  value: string;
+  /** Unit displayed next to value, e.g., "kr", "kr/år", "vol.rabatt" */
+  unit?: string;
+  /** Provider name */
+  name: string;
+  /** Subtitle, e.g., "Norsk uavhengig · Bergen" */
+  sub: string;
+  /** Whether to show as filled (primary) or outlined (secondary) badge */
+  variant?: "primary" | "outline";
+}
+
 export interface Comparison {
   slug: string;
   title: string;
@@ -208,6 +236,14 @@ export interface Comparison {
   relatedSlugs?: string[];
   /** Optional persona-based recommendations */
   recommendations?: ComparisonRecommendation[];
+  /** Optional hero stat-strip — 4 stats shown in dark hero band */
+  heroStats?: HeroStat[];
+  /** Optional 3 winner cards shown above the table */
+  highlights?: ComparisonHighlight[];
+  /** Optional editorial title with italic emphasis (overrides default H1) */
+  editorialTitle?: { lead: string; emphasis: string; tail?: string };
+  /** Optional short tagline shown above H1 (e.g., "Domenepriser · Norge · 2026") */
+  tagline?: string;
   faq: Faq[];
   updatedAt: string;
 }
