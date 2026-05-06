@@ -179,6 +179,19 @@ export function IconByName({
   return <C {...props} />;
 }
 
+/**
+ * Mapper kategori-ikon-navn til BrandIcon PNG-navn der vi har en bedre branded versjon.
+ * Returns null hvis det ikke finnes en PNG-match (bruk SVG-fallback i så fall).
+ */
+export const categoryToBrandIcon: Record<string, string | undefined> = {
+  network: "dns",
+  "shield-check": "padlock",
+  mail: "envelope",
+  server: "server",
+  search: "whois",
+  lock: "padlock",
+};
+
 const nameMap: Record<string, IconName> = {
   globe: "Globe",
   network: "Network",

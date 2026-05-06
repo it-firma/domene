@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { IconByName } from "@/lib/icons";
+import { IconByName, categoryToBrandIcon } from "@/lib/icons";
+import { BrandIcon, type BrandIconName } from "@/components/BrandIcon";
 import type { Category } from "@/lib/types";
 
 export function CategoryCard({
@@ -10,6 +11,7 @@ export function CategoryCard({
   variant?: "light" | "dark";
 }) {
   const isDark = variant === "dark";
+  const brandIconName = categoryToBrandIcon[category.icon];
   return (
     <Link
       href={`/kunnskapsbase/${category.slug}`}
@@ -19,13 +21,19 @@ export function CategoryCard({
           : "border border-line bg-white hover:border-brand-light hover:shadow-card"
       }`}
     >
-      <span
-        className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl ${
-          isDark ? "bg-brand/15 text-brand-light" : "bg-brand/10 text-brand"
-        }`}
-      >
-        <IconByName name={category.icon} size={26} />
-      </span>
+      {brandIconName ? (
+        <span className="mb-4 inline-flex h-12 w-12 items-center justify-center">
+          <BrandIcon name={brandIconName as BrandIconName} size={48} />
+        </span>
+      ) : (
+        <span
+          className={`mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl ${
+            isDark ? "bg-brand/15 text-brand-light" : "bg-brand/10 text-brand"
+          }`}
+        >
+          <IconByName name={category.icon} size={26} />
+        </span>
+      )}
       <h3
         className={`font-display text-[15px] font-medium leading-tight ${
           isDark ? "text-white" : "text-ink"
