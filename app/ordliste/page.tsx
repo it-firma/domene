@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GlossaryCard } from "@/components/GlossaryCard";
-import { SectionHead } from "@/components/SectionHead";
-import { SectionSidebar } from "@/components/SectionSidebar";
 import { StructuredData } from "@/components/StructuredData";
 import { canonical, ldBreadcrumb, ldCollectionPage } from "@/lib/seo";
 import { glossary } from "@/data/glossary";
@@ -37,11 +34,11 @@ export default function GlossaryOverviewPage() {
       <div className="bg-white pt-32 pb-12">
         <div className="container-prose">
           <Breadcrumbs items={crumbs} />
-          <div className="mt-6 max-w-[720px]">
+          <div className="mt-6 max-w-[760px]">
             <div className="font-serif italic text-muted text-[14px] mb-2">
               Ordliste
             </div>
-            <h1 className="font-display text-[36px] md:text-[48px] font-medium tracking-[-0.025em] leading-[1.1] text-ink m-0">
+            <h1 className="font-display text-[36px] md:text-[52px] font-medium tracking-[-0.025em] leading-[1.05] text-ink m-0">
               Ordliste for domener
             </h1>
             <p className="mt-5 font-display text-[16px] leading-[1.65] text-muted">
@@ -71,28 +68,18 @@ export default function GlossaryOverviewPage() {
 
       <div className="bg-surface-100 py-16">
         <div className="container-prose">
-          <div className="grid gap-8 xl:gap-12 lg:grid-cols-[280px_minmax(0,1fr)]">
-            <aside className="hidden lg:block">
-              <div className="sticky top-24 max-h-[calc(100vh-100px)] overflow-y-auto overscroll-contain pr-1">
-                <SectionSidebar section="ordliste" />
+          {letters.map((l) => (
+            <section key={l} id={l} className="mb-14 scroll-mt-32">
+              <h2 className="font-display text-[28px] font-medium text-ink mb-6">
+                {l}
+              </h2>
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+                {byLetter[l].map((t) => (
+                  <GlossaryCard key={t.slug} term={t} />
+                ))}
               </div>
-            </aside>
-
-            <div className="min-w-0">
-              {letters.map((l) => (
-                <section key={l} id={l} className="mb-14 scroll-mt-32">
-                  <h2 className="font-display text-[28px] font-medium text-ink mb-6">
-                    {l}
-                  </h2>
-                  <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-                    {byLetter[l].map((t) => (
-                      <GlossaryCard key={t.slug} term={t} />
-                    ))}
-                  </div>
-                </section>
-              ))}
-            </div>
-          </div>
+            </section>
+          ))}
         </div>
       </div>
 
