@@ -6,7 +6,7 @@ export const categories: Category[] = [
     name: ".no domene",
     h1: "Alt om .no domener",
     shortDescription:
-      "Det norske toppnivådomenet — krav, registrering, eierskap og praksis.",
+      "Det norske toppnivådomenet - krav, registrering, eierskap og praksis.",
     intro:
       ".no er Norges nasjonale toppnivådomene, administrert av Norid. Her samler vi det du trenger å vite om hvem som kan registrere et .no domene, hvilke krav som gjelder, hvordan registrering og fornyelse fungerer, og hvordan du flytter eller overdrar et .no domene på riktig måte.",
     shortAnswer:
@@ -55,7 +55,7 @@ export const categories: Category[] = [
     summary: [
       ".no er Norges toppnivådomene, drevet av Norid.",
       "Privatpersoner og organisasjoner med norsk tilknytning kan registrere.",
-      "Du eier ikke domenet permanent — du har bruksrett som må fornyes.",
+      "Du eier ikke domenet permanent - du har bruksrett som må fornyes.",
       "Du kan flytte .no domenet ditt fritt mellom registrarer.",
       "Uten fornyelse går domenet i karantene før det frigis.",
     ],
@@ -66,11 +66,11 @@ export const categories: Category[] = [
     name: "Domeneregistrering",
     h1: "Alt om domeneregistrering",
     shortDescription:
-      "Hvordan registrere et domene riktig — fra valg av navn til eierskap og DNS.",
+      "Hvordan registrere et domene riktig - fra valg av navn til eierskap og DNS.",
     intro:
       "Domeneregistrering handler om mer enn å klikke kjøp. Riktig registrering sikrer at du eier domenet i eget navn, har kontroll på DNS, og unngår fallgruver som dårlig fornyelse, feil kontaktperson eller låst leverandør. Her finner du alt du trenger for å registrere domener trygt og strategisk.",
     shortAnswer:
-      "Domeneregistrering er prosessen der du reserverer et domenenavn hos en akkreditert registrar. Du eier ikke domenet permanent, men har bruksrett så lenge du fornyer. Registreringen knytter domenet til en eier (registrant), DNS-oppsett og fornyelsesplan — alle kritiske detaljer å få riktig fra starten.",
+      "Domeneregistrering er prosessen der du reserverer et domenenavn hos en akkreditert registrar. Du eier ikke domenet permanent, men har bruksrett så lenge du fornyer. Registreringen knytter domenet til en eier (registrant), DNS-oppsett og fornyelsesplan - alle kritiske detaljer å få riktig fra starten.",
     icon: "edit",
     guides: ["hvordan-registrere-no-domene", "hvordan-velge-domenenavn"],
     terms: ["registrar", "registrant", "tld", "whois"],
@@ -79,7 +79,7 @@ export const categories: Category[] = [
       {
         question: "Hva er forskjellen på registrar og registrant?",
         answer:
-          "Registraren er selskapet du registrerer domenet gjennom. Registranten er den juridiske eieren. Registranten skal alltid være deg eller ditt selskap — aldri leverandøren.",
+          "Registraren er selskapet du registrerer domenet gjennom. Registranten er den juridiske eieren. Registranten skal alltid være deg eller ditt selskap - aldri leverandøren.",
       },
       {
         question: "Hvor lenge varer en domeneregistrering?",
@@ -89,7 +89,7 @@ export const categories: Category[] = [
       {
         question: "Kan jeg registrere flere domener samtidig?",
         answer:
-          "Ja. Mange registrerer flere varianter av navnet sitt — for eksempel ulike toppdomener eller skrivemåter — for å beskytte merkevaren mot misbruk.",
+          "Ja. Mange registrerer flere varianter av navnet sitt - for eksempel ulike toppdomener eller skrivemåter - for å beskytte merkevaren mot misbruk.",
       },
       {
         question: "Hvordan vet jeg at jeg er registrert som eier?",
@@ -98,7 +98,7 @@ export const categories: Category[] = [
       },
     ],
     summary: [
-      "Du eier ikke domenet permanent — du har bruksrett.",
+      "Du eier ikke domenet permanent - du har bruksrett.",
       "Sjekk alltid at registrant-feltet i WHOIS er deg, ikke leverandøren.",
       "Sammenlign førstepris, fornyelsespris og flyttepris.",
       "Hold kontaktinformasjon oppdatert hos registraren.",
@@ -113,7 +113,7 @@ export const categories: Category[] = [
     shortDescription:
       "Flytt domenet ditt mellom leverandører trygt og uten nedetid.",
     intro:
-      "Domeneflytting er retten din som domeneeier. Hvis du er misfornøyd med leverandøren, vil samle alt på ett sted, eller bare ønsker bedre pris, kan du flytte. Riktig prosess unngår nedetid på nettside og e-post — feil prosess kan koste deg tid og kunder.",
+      "Domeneflytting er retten din som domeneeier. Hvis du er misfornøyd med leverandøren, vil samle alt på ett sted, eller bare ønsker bedre pris, kan du flytte. Riktig prosess unngår nedetid på nettside og e-post - feil prosess kan koste deg tid og kunder.",
     shortAnswer:
       "Domeneflytting er overføring av et domene fra én registrar til en annen, uten å miste eierskap eller funksjonalitet. Du trenger en autoriseringskode (auth-kode) fra dagens leverandør og må bekrefte flyttingen hos den nye. Med riktig forberedelse skjer det uten nedetid på nettside eller e-post.",
     icon: "arrow-right-left",
@@ -139,7 +139,7 @@ export const categories: Category[] = [
       {
         question: "Hvor lang tid tar en flytting?",
         answer:
-          "Vanligvis 1–7 dager. .no flyttinger går ofte raskere enn generiske domener fordi Norid har klare regler og rask saksbehandling.",
+          "Vanligvis 1-7 dager. .no flyttinger går ofte raskere enn generiske domener fordi Norid har klare regler og rask saksbehandling.",
       },
     ],
     summary: [
@@ -158,7 +158,7 @@ export const categories: Category[] = [
     shortDescription:
       "Systemet som kobler domenet ditt til nettside, e-post og andre tjenester.",
     intro:
-      "DNS — Domain Name System — er internettets adressebok. Hver gang noen besøker nettsiden din, sender e-post til deg, eller kobler til en tjeneste du har under domenet, er det DNS som peker dem riktig vei. Forstår du DNS, har du kontroll over alt som skjer rundt domenet ditt.",
+      "DNS - Domain Name System - er internettets adressebok. Hver gang noen besøker nettsiden din, sender e-post til deg, eller kobler til en tjeneste du har under domenet, er det DNS som peker dem riktig vei. Forstår du DNS, har du kontroll over alt som skjer rundt domenet ditt.",
     shortAnswer:
       "DNS står for Domain Name System og fungerer som internettets adressebok. DNS kobler domenenavnet ditt til riktig server, slik at nettsider, e-post og andre tjenester finner frem. Uten riktig DNS-oppsett vil domenet ikke peke til riktig sted, og tjenester slutter å fungere.",
     icon: "network",
@@ -180,7 +180,7 @@ export const categories: Category[] = [
       {
         question: "Hva er TTL?",
         answer:
-          "TTL — Time To Live — angir hvor lenge en DNS-post mellomlagres før den hentes på nytt. Lav TTL (f.eks. 300 sekunder) gir raske endringer; høy TTL (f.eks. 86400 sekunder) gir bedre ytelse.",
+          "TTL - Time To Live - angir hvor lenge en DNS-post mellomlagres før den hentes på nytt. Lav TTL (f.eks. 300 sekunder) gir raske endringer; høy TTL (f.eks. 86400 sekunder) gir bedre ytelse.",
       },
       {
         question: "Hvor lang tid tar det før DNS-endringer slår inn?",
@@ -209,7 +209,7 @@ export const categories: Category[] = [
     shortDescription:
       "Signaturer som bekrefter at DNS-svar er ekte og ikke manipulert.",
     intro:
-      "DNSSEC — DNS Security Extensions — er en sikkerhetsstandard som signerer DNS-svar kryptografisk. Det forhindrer angrep der noen forsøker å lure besøkende til en falsk server. For domener med høy verdi eller behov for tillit er DNSSEC praktisk talt nødvendig.",
+      "DNSSEC - DNS Security Extensions - er en sikkerhetsstandard som signerer DNS-svar kryptografisk. Det forhindrer angrep der noen forsøker å lure besøkende til en falsk server. For domener med høy verdi eller behov for tillit er DNSSEC praktisk talt nødvendig.",
     shortAnswer:
       "DNSSEC er en utvidelse av DNS som signerer svarene digitalt. Det betyr at brukerens datamaskin kan verifisere at DNS-svaret faktisk kommer fra den rettmessige eieren av domenet, og ikke fra en angriper. DNSSEC beskytter mot DNS-spoofing og cache-forgiftning.",
     icon: "shield-check",
@@ -220,7 +220,7 @@ export const categories: Category[] = [
       {
         question: "Trenger alle domener DNSSEC?",
         answer:
-          "Ikke teknisk, men det anbefales for alle profesjonelle domener — særlig der det håndteres innlogging, betaling, e-post eller sensitive data.",
+          "Ikke teknisk, men det anbefales for alle profesjonelle domener - særlig der det håndteres innlogging, betaling, e-post eller sensitive data.",
       },
       {
         question: "Kan DNSSEC føre til nedetid?",
@@ -237,7 +237,7 @@ export const categories: Category[] = [
       "DNSSEC signerer DNS-svar kryptografisk.",
       "Beskytter mot DNS-spoofing og cache-forgiftning.",
       "Krever støtte både hos registrar og DNS-leverandør.",
-      "Feil oppsett kan gi nedetid — bruk leverandør med automatikk.",
+      "Feil oppsett kan gi nedetid - bruk leverandør med automatikk.",
       "Sterkt anbefalt for forretningskritiske domener.",
     ],
     updatedAt: "2026-05-05",
@@ -249,7 +249,7 @@ export const categories: Category[] = [
     shortDescription:
       "Profesjonell e-post, MX-oppsett og sikkerhet med SPF, DKIM og DMARC.",
     intro:
-      "E-post på eget domene er ofte det første profesjonelle steget for en virksomhet. Men teknikken bak — MX, SPF, DKIM og DMARC — kan være forvirrende. Her samler vi det du trenger for å sette opp pålitelig e-post som ikke havner i spam-mappen.",
+      "E-post på eget domene er ofte det første profesjonelle steget for en virksomhet. Men teknikken bak - MX, SPF, DKIM og DMARC - kan være forvirrende. Her samler vi det du trenger for å sette opp pålitelig e-post som ikke havner i spam-mappen.",
     shortAnswer:
       "E-post på eget domene gir profesjonelt utseende og full kontroll. Det krever korrekt MX-pekere som ruter e-post til en e-posttjener, samt SPF, DKIM og DMARC for å forhindre at meldingene markeres som spam eller misbrukes til phishing.",
     icon: "mail",
@@ -261,7 +261,7 @@ export const categories: Category[] = [
       {
         question: "Trenger jeg eget domene for å ha profesjonell e-post?",
         answer:
-          "Ja, hvis du vil ha en e-postadresse som @firmaet-ditt.no. Du må også ha en e-posttjeneste — for eksempel Microsoft 365, Google Workspace eller en norsk leverandør.",
+          "Ja, hvis du vil ha en e-postadresse som @firmaet-ditt.no. Du må også ha en e-posttjeneste - for eksempel Microsoft 365, Google Workspace eller en norsk leverandør.",
       },
       {
         question: "Hva er forskjellen på MX, SPF, DKIM og DMARC?",
@@ -318,7 +318,7 @@ export const categories: Category[] = [
       "Webhotell lagrer nettsiden på en server.",
       "Domene og webhotell er separate tjenester.",
       "SSL er obligatorisk i praksis i dag.",
-      "Backup er nødvendig — ikke valgfritt.",
+      "Backup er nødvendig - ikke valgfritt.",
       "Ytelse påvirker både brukeropplevelse og søkemotorer.",
     ],
     updatedAt: "2026-05-05",
@@ -328,11 +328,11 @@ export const categories: Category[] = [
     name: "WHOIS",
     h1: "Alt om WHOIS",
     shortDescription:
-      "Det offentlige registeret over domeneeiere — hva det viser og hvordan du bruker det.",
+      "Det offentlige registeret over domeneeiere - hva det viser og hvordan du bruker det.",
     intro:
       "WHOIS er det offentlige registeret som viser hvem som eier et domene, når det ble registrert, og hvilken registrar som administrerer det. Det er et verktøy for åpenhet, juridisk oppfølging og sikkerhet.",
     shortAnswer:
-      "WHOIS er et offentlig oppslagssystem som viser registreringsinformasjon for et domene — inkludert eier, kontaktinformasjon, registreringsdato og navneservere. WHOIS brukes til å sjekke domeneeierskap, undersøke konflikter og bekrefte at registrant er korrekt oppført.",
+      "WHOIS er et offentlig oppslagssystem som viser registreringsinformasjon for et domene - inkludert eier, kontaktinformasjon, registreringsdato og navneservere. WHOIS brukes til å sjekke domeneeierskap, undersøke konflikter og bekrefte at registrant er korrekt oppført.",
     icon: "search",
     guides: ["hvordan-flytte-domene", "hvordan-sikre-domenet"],
     terms: ["whois", "registrar", "registrant"],
@@ -381,7 +381,7 @@ export const categories: Category[] = [
       {
         question: "Er .no bedre for SEO i Norge enn .com?",
         answer:
-          "For norsk publikum kan .no gi en geografisk signal til Google og en lokal forankring som styrker tillit. Det er likevel ingen garanti — innhold og tekniske faktorer betyr mer.",
+          "For norsk publikum kan .no gi en geografisk signal til Google og en lokal forankring som styrker tillit. Det er likevel ingen garanti - innhold og tekniske faktorer betyr mer.",
       },
       {
         question: "Påvirker domenets alder rangeringen?",
@@ -410,7 +410,7 @@ export const categories: Category[] = [
     shortDescription:
       "Hvordan du beskytter domenet mot kapring, phishing og uautoriserte endringer.",
     intro:
-      "Domenet ditt er ofte selve kjernen i merkevaren din — og en angriper som tar kontroll, kan stjele e-post, omdirigere trafikk eller utgi seg for å være deg. Her får du en strukturert oversikt over hvordan du sikrer domenet ditt.",
+      "Domenet ditt er ofte selve kjernen i merkevaren din - og en angriper som tar kontroll, kan stjele e-post, omdirigere trafikk eller utgi seg for å være deg. Her får du en strukturert oversikt over hvordan du sikrer domenet ditt.",
     shortAnswer:
       "Domenesikkerhet handler om å beskytte registreringen, DNS-oppsettet og e-postkonfigurasjonen mot uautorisert tilgang. De viktigste tiltakene er sterk innlogging hos registrar, tofaktor, registry-lock, DNSSEC, og e-postautentisering med SPF, DKIM og DMARC.",
     icon: "lock",
@@ -421,7 +421,7 @@ export const categories: Category[] = [
       {
         question: "Hva er domenekapring?",
         answer:
-          "Domenekapring skjer når noen får uautorisert kontroll over domenet ditt — enten ved å overta registreringskontoen, manipulere DNS, eller utnytte sosial manipulering hos leverandøren.",
+          "Domenekapring skjer når noen får uautorisert kontroll over domenet ditt - enten ved å overta registreringskontoen, manipulere DNS, eller utnytte sosial manipulering hos leverandøren.",
       },
       {
         question: "Hva er registry-lock?",
@@ -448,9 +448,9 @@ export const categories: Category[] = [
     name: "Juridisk og varemerke",
     h1: "Alt om juridiske forhold og varemerker for domener",
     shortDescription:
-      "Domener, varemerker, konflikter og rettigheter — hva du må vite før du registrerer.",
+      "Domener, varemerker, konflikter og rettigheter - hva du må vite før du registrerer.",
     intro:
-      "Et domene kan kollidere med eksisterende varemerker eller selskap, og en feil registrering kan gi rettslige problemer. Her samler vi grunnlaget — men dette erstatter ikke konkret juridisk rådgivning i en sak.",
+      "Et domene kan kollidere med eksisterende varemerker eller selskap, og en feil registrering kan gi rettslige problemer. Her samler vi grunnlaget - men dette erstatter ikke konkret juridisk rådgivning i en sak.",
     shortAnswer:
       "Domeneregistrering er først til mølla, men varemerkerett kan slå inn. Hvis du registrerer et domene som er identisk eller forvekslingsbart med et eksisterende varemerke, kan rettighetshaveren kreve domenet overført. Sjekk varemerkeregister og selskapsnavn før du registrerer kommersielle domener.",
     icon: "scale",
@@ -466,7 +466,7 @@ export const categories: Category[] = [
       {
         question: "Hva er UDRP?",
         answer:
-          "Uniform Domain-Name Dispute-Resolution Policy — en prosedyre for å løse domenetvister utenfor domstol. Brukes for de fleste generiske toppdomener.",
+          "Uniform Domain-Name Dispute-Resolution Policy - en prosedyre for å løse domenetvister utenfor domstol. Brukes for de fleste generiske toppdomener.",
       },
       {
         question: "Beskytter et registrert domene meg som varemerke?",
@@ -476,7 +476,7 @@ export const categories: Category[] = [
     ],
     summary: [
       "Domener og varemerker er adskilte rettigheter.",
-      "Først til mølla — men ikke uten unntak.",
+      "Først til mølla - men ikke uten unntak.",
       "Sjekk varemerkeregisteret før du registrerer kommersielle domener.",
       "Domenetvister kan løses gjennom UDRP eller .no-regler.",
       "Et domene gir ikke varemerkebeskyttelse.",
@@ -490,9 +490,9 @@ export const categories: Category[] = [
     shortDescription:
       "Skal du etablere deg utenfor Norge? Lær forskjellen på .no, .com, .eu og nye gTLD-er.",
     intro:
-      "Når du tenker bredere enn det norske markedet, åpner det seg hundrevis av toppdomener. Her får du oversikt over generiske (.com, .net), nasjonale (.no, .se, .dk), og nye gTLD-er som .io og .app — pluss reglene som gjelder for IDN-domener med æ, ø og å.",
+      "Når du tenker bredere enn det norske markedet, åpner det seg hundrevis av toppdomener. Her får du oversikt over generiske (.com, .net), nasjonale (.no, .se, .dk), og nye gTLD-er som .io og .app - pluss reglene som gjelder for IDN-domener med æ, ø og å.",
     shortAnswer:
-      "Internasjonale domener deles i tre: ccTLD (landskoder som .no, .se), gTLD (generiske som .com, .org), og nye gTLD (.app, .io). Velg basert på målgruppe — ccTLD signaliserer lokalt; gTLD passer for globale merkevarer. Norske bedrifter bør ofte registrere både .no og .com som minimum.",
+      "Internasjonale domener deles i tre: ccTLD (landskoder som .no, .se), gTLD (generiske som .com, .org), og nye gTLD (.app, .io). Velg basert på målgruppe - ccTLD signaliserer lokalt; gTLD passer for globale merkevarer. Norske bedrifter bør ofte registrere både .no og .com som minimum.",
     icon: "globe",
     guides: ["hvordan-velge-domenenavn"],
     terms: ["gtld", "cctld", "tld", "idn", "punycode", "icann", "norid"],
@@ -511,18 +511,18 @@ export const categories: Category[] = [
       {
         question: "Kan jeg registrere æ, ø, å i domenet?",
         answer:
-          "Ja, både Norid og mange gTLD-er tillater IDN-domener med norske tegn. De konverteres internt til Punycode (xn--…) men vises riktig i nettlesere.",
+          "Ja, både Norid og mange gTLD-er tillater IDN-domener med norske tegn. De konverteres internt til Punycode (xn--...) men vises riktig i nettlesere.",
       },
       {
         question: "Hvilke nye gTLD-er er populære?",
         answer:
-          ".app, .io, .dev, .ai og .blog er populære — særlig blant tech-selskaper. Pris og regler varierer mye, sjekk hos flere registrarer.",
+          ".app, .io, .dev, .ai og .blog er populære - særlig blant tech-selskaper. Pris og regler varierer mye, sjekk hos flere registrarer.",
       },
     ],
     summary: [
       "ccTLD signaliserer lokal tilhørighet; gTLD er globalt.",
       ".no er styrt av Norid; .com og lignende av ICANN-akkrediterte registries.",
-      "IDN tillater æ, ø og å — bra for merkevare, viktig som defensiv registrering.",
+      "IDN tillater æ, ø og å - bra for merkevare, viktig som defensiv registrering.",
       "Mange selskap kjøper både .no og .com for å beskytte merkevaren.",
       "Nye gTLD-er gir kreative muligheter, men sjekk pris og fornyelseskostnad.",
     ],
@@ -535,7 +535,7 @@ export const categories: Category[] = [
     shortDescription:
       "Lei et domene i stedet for å kjøpe. Slik fungerer leasing av premium-navn.",
     intro:
-      "Drømme-domenet er ofte tatt — og når det er til salgs, kan prisen være for høy. Domeneutleie (domain leasing) lar deg bruke et eksisterende premium-domene mot månedlig eller årlig betaling, ofte med opsjon for senere kjøp. Det senker terskelen for nye merkevarer som vil teste markedet før full investering.",
+      "Drømme-domenet er ofte tatt - og når det er til salgs, kan prisen være for høy. Domeneutleie (domain leasing) lar deg bruke et eksisterende premium-domene mot månedlig eller årlig betaling, ofte med opsjon for senere kjøp. Det senker terskelen for nye merkevarer som vil teste markedet før full investering.",
     shortAnswer:
       "Domeneutleie er en avtale der du leier bruken av et domene i en gitt periode mot betaling, uten å overføre eierskap. Avtalen gir deg DNS-kontroll og rett til å bruke domenet kommersielt, men eieren beholder formell registrering. Krever skriftlig kontrakt med tydelige vilkår om varighet, oppsigelse og kjøpsopsjoner.",
     icon: "key",
@@ -556,7 +556,7 @@ export const categories: Category[] = [
       {
         question: "Hva skjer hvis eieren går konkurs?",
         answer:
-          "Avhenger av avtalen og jurisdiksjonen. Sørg for klausuler om eierskifte og hva som skjer ved konkurs — eller registrer en kjøpsopsjon med fast pris.",
+          "Avhenger av avtalen og jurisdiksjonen. Sørg for klausuler om eierskifte og hva som skjer ved konkurs - eller registrer en kjøpsopsjon med fast pris.",
       },
       {
         question: "Bygger jeg SEO-verdi når jeg leier?",
@@ -578,11 +578,11 @@ export const categories: Category[] = [
     name: "Domeneinvestering",
     h1: "Alt om domeneinvestering",
     shortDescription:
-      "Domener som finansielle eiendeler — markedet, prisingen og strategiene.",
+      "Domener som finansielle eiendeler - markedet, prisingen og strategiene.",
     intro:
-      "Domener handles som digitale eiendeler — fra hundre kroner til millioner. Markedet inkluderer auksjoner, brokerede salg og direkte handel. Bedrifter bør forstå dette landskapet både for å beskytte egne navn og vurdere strategiske kjøp.",
+      "Domener handles som digitale eiendeler - fra hundre kroner til millioner. Markedet inkluderer auksjoner, brokerede salg og direkte handel. Bedrifter bør forstå dette landskapet både for å beskytte egne navn og vurdere strategiske kjøp.",
     shortAnswer:
-      "Domeneinvestering er kjøp og salg av domener som finansielle eiendeler. De mest verdifulle er korte, generiske og lett å huske — gjerne engelske substantiver på .com. Markedet drives av auksjoner (Sedo, GoDaddy), brokere og direkte handel. Profesjonelle investorer eier porteføljer på tusenvis av domener.",
+      "Domeneinvestering er kjøp og salg av domener som finansielle eiendeler. De mest verdifulle er korte, generiske og lett å huske - gjerne engelske substantiver på .com. Markedet drives av auksjoner (Sedo, GoDaddy), brokere og direkte handel. Profesjonelle investorer eier porteføljer på tusenvis av domener.",
     icon: "trending-up",
     guides: [],
     terms: ["domeneinvestering", "drop-catching", "redemption-period", "registrar"],
@@ -601,7 +601,7 @@ export const categories: Category[] = [
       {
         question: "Hva er drop-catching?",
         answer:
-          "Praksis å fange domener i sekundene etter de utløper. Spesialiserte tjenester konkurrerer om de mest ettertraktede. Vanlige brukere kan ikke konkurrere — bruk en backorder-tjeneste.",
+          "Praksis å fange domener i sekundene etter de utløper. Spesialiserte tjenester konkurrerer om de mest ettertraktede. Vanlige brukere kan ikke konkurrere - bruk en backorder-tjeneste.",
       },
       {
         question: "Hvor selger jeg et domene?",
@@ -614,7 +614,7 @@ export const categories: Category[] = [
       "Premium-domener er korte, generiske og lett å huske.",
       "Auksjonsplasser, brokere og drop-catching er hovedkanalene.",
       "Bedrifter bør registrere defensive domener før konkurrenter gjør det.",
-      "Få blir rike — markedet er konkurransepreget og krever ekspertise.",
+      "Få blir rike - markedet er konkurransepreget og krever ekspertise.",
     ],
     updatedAt: "2026-05-05",
   },

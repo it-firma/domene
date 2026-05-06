@@ -20,7 +20,7 @@ export function KnowledgeBaseSidebar({
       aria-label="Kunnskapsbase-navigasjon"
       className="rounded-2xl border border-line bg-surface-100 p-5"
     >
-      <SearchBar variant="kb" placeholder="Søk i kunnskapsbasen…" />
+      <SearchBar variant="kb" placeholder="Søk i kunnskapsbasen..." />
 
       <Link
         href="/kunnskapsbase"

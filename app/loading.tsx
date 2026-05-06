@@ -18,7 +18,7 @@ export default function Loading() {
           {/* Eyebrow */}
           <div className="mt-8 h-3 w-20 rounded bg-[#E5E7EB]" />
 
-          {/* H1 — two lines */}
+          {/* H1 - two lines */}
           <div className="mt-3 h-9 w-[88%] rounded-md bg-[#D1D5DB]" />
           <div className="mt-3 h-9 w-[64%] rounded-md bg-[#D1D5DB]" />
 

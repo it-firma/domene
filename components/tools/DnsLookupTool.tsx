@@ -108,7 +108,7 @@ export function DnsLookupTool() {
           disabled={loading}
           className="rounded-full bg-brand px-7 py-3.5 font-display text-[14px] font-semibold text-white hover:bg-brand-hover disabled:opacity-50 disabled:cursor-not-allowed transition-colors whitespace-nowrap"
         >
-          {loading ? "Søker…" : "Slå opp"}
+          {loading ? "Søker..." : "Slå opp"}
         </button>
       </form>
 
@@ -121,7 +121,7 @@ export function DnsLookupTool() {
       {noAnswers && !error && (
         <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 font-display text-[14px] text-amber-800">
           Ingen {type}-poster funnet for «{domain.trim().toLowerCase()}».
-          {status === 3 && " (NXDOMAIN — domenet finnes ikke.)"}
+          {status === 3 && " (NXDOMAIN - domenet finnes ikke.)"}
         </div>
       )}
 

@@ -41,7 +41,7 @@ export default function KbOverviewPage() {
             <p className="mt-5 font-display text-[16px] leading-[1.65] text-muted">
               Velg en kategori for å lære mer, eller bla deg gjennom guider,
               verktøy og ordlisteforklaringer. Alt er strukturert for å gjøre det
-              enkelt å finne svar — enten du er nybegynner eller jobber med
+              enkelt å finne svar - enten du er nybegynner eller jobber med
               domener til daglig.
             </p>
           </div>

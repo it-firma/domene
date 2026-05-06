@@ -314,7 +314,7 @@ function KunnskapsbaseFeatured() {
         </span>
       </h3>
       <p className="font-display text-[13.5px] leading-[1.6] text-white/65 m-0 mb-6">
-        Det norske toppnivådomenet — krav, registrering, eierskap og praksis. 4
+        Det norske toppnivådomenet - krav, registrering, eierskap og praksis. 4
         guider, 7 begreper, 1 sammenligning.
       </p>
 

@@ -71,7 +71,7 @@ export function DomainCheckTool() {
           disabled={loading}
           className="rounded-full bg-brand px-7 py-3.5 font-display text-[14px] font-semibold text-white hover:bg-brand-hover disabled:opacity-50 disabled:cursor-not-allowed transition-colors whitespace-nowrap"
         >
-          {loading ? "Sjekker…" : "Sjekk tilgjengelighet"}
+          {loading ? "Sjekker..." : "Sjekk tilgjengelighet"}
         </button>
       </form>
 
@@ -119,7 +119,7 @@ export function DomainCheckTool() {
                     )}
                   </td>
                   <td className="px-5 py-3 text-muted hidden sm:table-cell">
-                    {r.registrar ?? "—"}
+                    {r.registrar ?? "-"}
                   </td>
                 </tr>
               ))}

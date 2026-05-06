@@ -17,7 +17,7 @@ export function Logo({
     <Link
       href="/"
       className="flex items-center gap-2.5"
-      aria-label="domene.io – til forsiden"
+      aria-label="domene.io - til forsiden"
     >
       <DNMark size={dim} />
       <span className="leading-[1.05]">

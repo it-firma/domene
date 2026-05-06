@@ -17,7 +17,7 @@ export function KnowledgeBasePreview() {
             Inne i kunnskapsbasen
           </div>
           <h2 className="font-display text-[28px] md:text-[36px] font-medium tracking-[-0.02em] leading-[1.15] text-ink m-0">
-            Alt du trenger, organisert og lett å finne
+            Alt om domener, organisert og lett å finne
           </h2>
         </div>
 
@@ -70,9 +70,9 @@ export function KnowledgeBasePreview() {
                 <span className="flex items-center gap-1">
                   <Icon.Clock size={13} /> {featured.readingTime} min lesetid
                 </span>
-                <span aria-hidden>·</span>
+                <span aria-hidden>-</span>
                 <span className="capitalize">{featured.difficulty}</span>
-                <span aria-hidden>·</span>
+                <span aria-hidden>-</span>
                 <span>Sist oppdatert i dag</span>
               </div>
               <Link

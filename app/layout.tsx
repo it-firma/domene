@@ -47,13 +47,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "domene.io — Norges kunnskapsbase om domener",
+        alt: "domene.io - Norges kunnskapsbase om domener",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.name} — Norges kunnskapsbase om domener`,
+    title: `${site.name} - Norges kunnskapsbase om domener`,
     description: "Guider, verktøy og sammenligninger om domener.",
     images: ["/og-image.png"],
   },
@@ -100,7 +100,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
         {/*
-          Google Consent Mode v2 — initialiser FØR analytics-script lastes.
+          Google Consent Mode v2 - initialiser FØR analytics-script lastes.
           Setter alle samtykke-kategorier til "denied" som utgangspunkt;
           CookieConsentProvider oppdaterer dette når brukeren gir samtykke.
         */}

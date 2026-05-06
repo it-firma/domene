@@ -211,7 +211,7 @@ export default function ComparisonPage({
             <div className="container-prose">
               <SectionEyebrow>Vinnere etter kategori</SectionEyebrow>
               <SectionH2>
-                Tre vinnere — én vinner{" "}
+                Tre vinnere - én vinner{" "}
                 <em className="font-serif italic font-normal text-brand">
                   ikke alle
                 </em>
@@ -658,7 +658,7 @@ function ConglomerateCard({
 }
 
 /* ─────────────────────────────────────────────────────────────
-   PROVIDER TABLE — preserved from previous version
+   PROVIDER TABLE - preserved from previous version
    (price-mode grid + wide-mode table + expanded details)
    ───────────────────────────────────────────────────────────── */
 
@@ -800,7 +800,7 @@ function PriceRow({
           </div>
 
           {columns.map((col) => {
-            const value = p.values[col.key] ?? "—";
+            const value = p.values[col.key] ?? "-";
             return (
               <div
                 key={col.key}
@@ -896,7 +896,7 @@ function WideRow({
           </div>
         </td>
         {columns.map((col) => {
-          const value = p.values[col.key] ?? "—";
+          const value = p.values[col.key] ?? "-";
           if (col.key === "konsern" && p.conglomerate) {
             const cm = CONGLOMERATE_META[p.conglomerate];
             return (
@@ -1054,7 +1054,7 @@ function VolumeTiersTable({
                   key={col.key}
                   className="px-4 py-2.5 text-ink/80 whitespace-nowrap tabular-nums"
                 >
-                  {tier.values[col.key] ?? "—"}
+                  {tier.values[col.key] ?? "-"}
                 </td>
               ))}
               <td className="px-4 py-2.5 text-[12px] text-muted leading-snug">

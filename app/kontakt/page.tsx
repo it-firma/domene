@@ -7,7 +7,7 @@ import { Icon } from "@/lib/icons";
 
 export const metadata: Metadata = {
   title: "Kontakt",
-  description: `Ta kontakt med ${site.name} — vi svarer normalt innen én virkedag.`,
+  description: `Ta kontakt med ${site.name} - vi svarer normalt innen én virkedag.`,
   alternates: { canonical: canonical("/kontakt") },
 };
 
@@ -33,7 +33,7 @@ export default function ContactPage() {
             <Link href="/eksperthjelp" className="text-brand">
               eksperthjelp-skjemaet
             </Link>{" "}
-            — det gir oss bedre kontekst.
+            - det gir oss bedre kontekst.
           </p>
         </div>
 

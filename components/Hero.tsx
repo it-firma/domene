@@ -5,8 +5,9 @@ import { SearchBar } from "./SearchBar";
 
 const popularSearches = [
   ".no domene",
-  "DNS",
-  "Sett opp e-post",
+  "Hva er et domene",
+  "Sammenlign domeneleverandører",
+  "Sett opp DNS",
   "Flytt domene",
   "DNSSEC",
   "Velg domenenavn",
@@ -19,8 +20,7 @@ export function Hero() {
       <div className="absolute inset-0 -z-10">
         <Image
           src="/hero-banner.jpg"
-          alt=""
-          role="presentation"
+          alt="Domener i Norge - kunnskapsbase fra DomainNordic"
           fill
           priority
           quality={85}
@@ -39,34 +39,33 @@ export function Hero() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left column: heading */}
           <div className="lg:col-span-7">
-            <h1 className="font-display font-normal text-white tracking-[-0.035em] leading-[0.98] text-[clamp(48px,6.8vw,108px)] max-w-[640px] m-0">
-              Norges
-              <br />
-              ultimate
+            <h1 className="font-display font-normal text-white tracking-[-0.035em] leading-[0.98] text-[clamp(44px,6.4vw,100px)] max-w-[680px] m-0">
+              Alt om
               <br />
               <em className="font-serif italic font-normal text-white">
-                kunnskaps&shy;base,
+                domener
               </em>
               <br />
-              bygget for
+              for norske
               <br />
-              <span className="text-white/55">fremtiden.</span>
+              <span className="text-white/55">eiere.</span>
             </h1>
           </div>
 
           {/* Right column: description, search, CTAs */}
           <div className="lg:col-span-5 flex flex-col gap-5 max-w-[440px] lg:max-w-none">
             <p className="font-display text-[14.5px] leading-[1.65] text-white/80 m-0">
-              En komplett ressurs for norske domeneeier. Lær om domener fra A
-              til Å, sett opp DNS riktig, og finn verktøyene du trenger for å
-              gjøre trygge valg.
+              Et domene er nøkkelen til din digitale tilstedeværelse.
+              domene.io er Norges uavhengige kunnskapsbase om .no-domener,
+              DNS, e-post, sikkerhet og webhotell. Vi forklarer, sammenligner
+              og hjelper deg å eie domenet ditt riktig - uten salgsspråk.
             </p>
 
             <SearchBar variant="hero" />
 
             <div className="hidden lg:block">
               <div className="font-display text-[11px] uppercase tracking-[0.16em] text-white/50 mb-3">
-                Populære søk
+                Populære søk om domener
               </div>
               <ul className="flex flex-wrap gap-2 list-none m-0 p-0">
                 {popularSearches.map((s) => (
@@ -87,10 +86,10 @@ export function Hero() {
                 href="/kunnskapsbase"
                 className="inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3.5 font-display text-[14px] font-medium text-white transition hover:bg-brand-dark hover:-translate-y-0.5"
               >
-                Utforsk kunnskapsbasen <Icon.ArrowRight size={14} />
+                Lær mer om domener <Icon.ArrowRight size={14} />
               </Link>
-              <Link href="/verktoy" className="btn-ghost-light">
-                Verktøy
+              <Link href="/sammenligninger" className="btn-ghost-light">
+                Sammenlign leverandører
               </Link>
             </div>
           </div>

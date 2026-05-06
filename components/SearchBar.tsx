@@ -6,7 +6,7 @@ import { Icon } from "@/lib/icons";
 
 export function SearchBar({
   variant = "hero",
-  placeholder = "Søk i kunnskapsbasen — DNS, .no, e-post...",
+  placeholder = "Søk i kunnskapsbasen - DNS, .no, e-post...",
 }: {
   variant?: "hero" | "kb";
   placeholder?: string;

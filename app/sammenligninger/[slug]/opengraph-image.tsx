@@ -96,7 +96,7 @@ export default async function OGComparison({
           }}
         />
 
-        {/* TOPP — Logo + sammenligning-pille */}
+        {/* TOPP - Logo + sammenligning-pille */}
         <div
           style={{
             display: "flex",
@@ -158,13 +158,13 @@ export default async function OGComparison({
           >
             <span style={{ display: "flex" }}>
               {providerCount > 0
-                ? `Sammenligning · ${providerCount} aktører`
+                ? `Sammenligning - ${providerCount} aktører`
                 : "Sammenligning"}
             </span>
           </div>
         </div>
 
-        {/* MIDT — Tittel */}
+        {/* MIDT - Tittel */}
         <div
           style={{
             display: "flex",
@@ -202,11 +202,11 @@ export default async function OGComparison({
                 display: "flex",
               }}
             >
-              Pris og funksjon — side ved side
+              Pris og funksjon - side ved side
             </div>
           </div>
 
-          {/* Tittel — krymper for lange titler */}
+          {/* Tittel - krymper for lange titler */}
           <div
             style={{
               fontSize: title.length > 80 ? 48 : title.length > 60 ? 56 : 64,
@@ -222,7 +222,7 @@ export default async function OGComparison({
           </div>
         </div>
 
-        {/* BUNN — Trust-bånd */}
+        {/* BUNN - Trust-bånd */}
         <div
           style={{
             display: "flex",

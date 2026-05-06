@@ -79,7 +79,7 @@ export function NameserverTool() {
           disabled={loading}
           className="rounded-full bg-brand px-7 py-3.5 font-display text-[14px] font-semibold text-white hover:bg-brand-hover disabled:opacity-50 disabled:cursor-not-allowed transition-colors whitespace-nowrap"
         >
-          {loading ? "Søker…" : "Sjekk navneservere"}
+          {loading ? "Søker..." : "Sjekk navneservere"}
         </button>
       </form>
 

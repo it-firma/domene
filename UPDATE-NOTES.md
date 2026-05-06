@@ -1,4 +1,4 @@
-# domene.io — Oppdateringsnotater (5. mai 2026)
+# domene.io - Oppdateringsnotater (5. mai 2026)
 
 Komplett, kjørbart prosjekt med alle Phase 1-6 endringer flettet inn.
 
@@ -44,7 +44,7 @@ Komplett, kjørbart prosjekt med alle Phase 1-6 endringer flettet inn.
 - [ ] Verifiser `/personvern` og `/vilkar` viser riktig innhold
 - [ ] Sjekk OG-bilder via `/opengraph-image` og `/guider/[slug]/opengraph-image`
 - [ ] Sjekk at sammenligningen `/sammenligninger/norske-registrarer-fokus` viser alle 6 registrarer
-- [ ] Legg til `<CookieSettingsLink>` i Footer (valgfritt — la brukerne endre samtykke senere)
+- [ ] Legg til `<CookieSettingsLink>` i Footer (valgfritt - la brukerne endre samtykke senere)
 
 ## Sammenligning av registrarer (priser inkl. 25% mva, NOK fornying)
 

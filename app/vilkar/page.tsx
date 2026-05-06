@@ -56,8 +56,8 @@ export default function TermsPage() {
             Artiklene, guidene og ordlisten er ment som generell informasjon.
             De er ikke juridisk, teknisk eller forretningsmessig rådgivning
             tilpasset din situasjon. Hvis du står overfor en konkret beslutning
-            — for eksempel et varemerkespørsmål, en konflikt om et domene, eller
-            en migrering med store konsekvenser — bør du innhente kvalifisert
+            - for eksempel et varemerkespørsmål, en konflikt om et domene, eller
+            en migrering med store konsekvenser - bør du innhente kvalifisert
             rådgivning. Eksperthjelp-skjemaet kan brukes som inngang til slik
             rådgivning, men selve nettstedets innhold er ikke et
             rådgivningsforhold.
@@ -82,7 +82,7 @@ export default function TermsPage() {
             Tekst, redaksjonelt innhold, design og kode på domene.io er
             beskyttet av opphavsrett og tilhører {site.legalName}. Du står fritt
             til å sitere kortere utdrag i egne artikler, presentasjoner eller
-            skoleoppgaver, så lenge kilden oppgis tydelig — gjerne med lenke
+            skoleoppgaver, så lenge kilden oppgis tydelig - gjerne med lenke
             til den aktuelle siden.
           </p>
           <p>

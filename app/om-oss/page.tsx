@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Om oss",
   description:
-    "domene.io er en del av DomainNordic Advisory Group — en uavhengig nordisk rådgivningsgruppe som hjelper bedrifter med strategisk eierskap av domener.",
+    "domene.io er en del av DomainNordic Advisory Group - en uavhengig nordisk rådgivningsgruppe som hjelper bedrifter med strategisk eierskap av domener.",
   alternates: { canonical: canonical("/om-oss") },
 };
 
@@ -100,7 +100,7 @@ export default function AboutPage() {
                       <span className="text-ink/70 font-medium">{f.name}</span>
                     )}
                     <span className="text-muted-light text-[12.5px]">
-                      {live ? f.country : `${f.country} · kommer`}
+                      {live ? f.country : `${f.country} - kommer`}
                     </span>
                   </li>
                 );

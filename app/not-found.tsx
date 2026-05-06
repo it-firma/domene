@@ -13,7 +13,7 @@ const suggestions: { title: string; href: string; description: string }[] = [
   {
     title: "Kunnskapsbase",
     href: "/kunnskapsbase",
-    description: "Alle kategoriene — fra .no-domener til DNS, e-post og sikkerhet.",
+    description: "Alle kategoriene - fra .no-domener til DNS, e-post og sikkerhet.",
   },
   {
     title: "Ordliste",
@@ -23,12 +23,12 @@ const suggestions: { title: string; href: string; description: string }[] = [
   {
     title: "Guider",
     href: "/guider",
-    description: "Praktiske gjennomganger — registrering, flytting, oppsett.",
+    description: "Praktiske gjennomganger - registrering, flytting, oppsett.",
   },
   {
     title: "Verktøy",
     href: "/verktoy",
-    description: "Domenesjekk, DNS-oppslag, WHOIS — alt på én side.",
+    description: "Domenesjekk, DNS-oppslag, WHOIS - alt på én side.",
   },
 ];
 
@@ -77,7 +77,7 @@ export default function NotFound() {
             <Link href="/kontakt" className="text-brand hover:underline">
               Si fra her
             </Link>{" "}
-            — vi setter pris på det.
+            - vi setter pris på det.
           </p>
         </div>
       </div>

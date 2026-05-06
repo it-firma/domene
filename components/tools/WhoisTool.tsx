@@ -83,7 +83,7 @@ export function WhoisTool() {
           disabled={loading}
           className="rounded-full bg-brand px-7 py-3.5 font-display text-[14px] font-semibold text-white hover:bg-brand-hover disabled:opacity-50 disabled:cursor-not-allowed transition-colors whitespace-nowrap"
         >
-          {loading ? "Søker…" : "Slå opp"}
+          {loading ? "Søker..." : "Slå opp"}
         </button>
       </form>
 
@@ -102,7 +102,7 @@ export function WhoisTool() {
             </h3>
           </div>
           <p className="mt-2 font-display text-[14px] text-emerald-900/80 m-0">
-            Domenet ser ut til å være ledig — verifiser hos en registrar før du
+            Domenet ser ut til å være ledig - verifiser hos en registrar før du
             forsøker å registrere det.
           </p>
         </div>

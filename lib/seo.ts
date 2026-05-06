@@ -59,8 +59,11 @@ export function ldOrganization() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: site.name,
+    alternateName: ["domene.io", "Domene", "Domene.io"],
     url: site.url,
     legalName: site.legalName,
+    description:
+      "Norges uavhengige kunnskapsbase om domener: .no-domener, DNS, e-post, sikkerhet og webhotell.",
     parentOrganization: { "@type": "Organization", name: site.parentBrand },
     contactPoint: [
       {

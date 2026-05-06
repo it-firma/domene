@@ -74,7 +74,7 @@ export default function PrivacyPage() {
           </p>
           <p>
             <strong>Eksperthjelp og kontaktskjema.</strong> Hvis du sender oss
-            en henvendelse, mottar vi det du skriver — typisk navn, e-post og
+            en henvendelse, mottar vi det du skriver - typisk navn, e-post og
             beskjeden. Vi bruker dette kun til å svare deg, og oppbevarer
             korrespondansen så lenge det er rimelig (typisk inntil 24 måneder
             etter siste kontakt). Henvendelser slettes på forespørsel.
@@ -95,16 +95,16 @@ export default function PrivacyPage() {
           </p>
           <ul>
             <li>
-              <strong>Hosting og infrastruktur</strong> — nettsiden driftes på
+              <strong>Hosting og infrastruktur</strong> - nettsiden driftes på
               skytjenester som behandler tekniske logger på våre vegne.
             </li>
             <li>
-              <strong>Offentlige domeneregistre</strong> — når du bruker
+              <strong>Offentlige domeneregistre</strong> - når du bruker
               verktøyene, sendes domenenavnet videre til Cloudflare DNS, RDAP-
               eller WHOIS-tjenester for å hente svaret.
             </li>
             <li>
-              <strong>E-post</strong> — innkommende henvendelser leveres via
+              <strong>E-post</strong> - innkommende henvendelser leveres via
               standard e-postinfrastruktur.
             </li>
           </ul>

@@ -239,7 +239,7 @@ export function ArticleLayout({
                 Snakk med våre rådgivere
               </h2>
               <p className="font-display text-[14px] leading-[1.65] text-white/70 mb-5 m-0">
-                Skreddersydd rådgivning for{cat ? ` ${cat.name.toLowerCase()}` : " domener"} —
+                Skreddersydd rådgivning for{cat ? ` ${cat.name.toLowerCase()}` : " domener"} -
                 trygge råd, ingen forpliktelser.
               </p>
               <Link
@@ -275,11 +275,11 @@ function ArticleMeta({ guide }: { guide: Guide }) {
       <span className="flex items-center gap-1">
         <Icon.Clock size={13} /> {guide.readingTime} min lesetid
       </span>
-      <span aria-hidden="true">·</span>
+      <span aria-hidden="true">-</span>
       <span>Sist oppdatert {formatNorwegianDate(guide.updatedAt)}</span>
       {guide.author && (
         <>
-          <span aria-hidden="true">·</span>
+          <span aria-hidden="true">-</span>
           <span>Av {guide.author}</span>
         </>
       )}

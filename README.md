@@ -1,6 +1,6 @@
 # domene.io
 
-Norges kunnskapsbase om domener — bygget med Next.js 14, TypeScript og Tailwind CSS.
+Norges kunnskapsbase om domener - bygget med Next.js 14, TypeScript og Tailwind CSS.
 
 ## Stack
 
@@ -8,7 +8,7 @@ Norges kunnskapsbase om domener — bygget med Next.js 14, TypeScript og Tailwin
 - **TypeScript** strict mode
 - **Tailwind CSS** med tilpassede design-tokens
 - **DM Sans** og **Fraunces** via Google Fonts CDN (preconnect + preload for rask LCP)
-- Ingen runtime-database — alt innhold lever i `data/`-mappen som typescript-objekter
+- Ingen runtime-database - alt innhold lever i `data/`-mappen som typescript-objekter
 
 ## Filstruktur
 
@@ -74,8 +74,8 @@ npm run lint    # lint
 
 - **Per side**: title, description, canonical, Open Graph og Twitter via `lib/seo.ts → buildMetadata()`.
 - **Strukturert data (JSON-LD)** på hver side: Organization, WebSite+SearchAction, BreadcrumbList, Article, FAQPage, HowTo, DefinedTerm, CollectionPage og SoftwareApplication.
-- **AEO**: Hver viktig side har en kort svarboks (40–70 ord) rett etter H1.
-- **LLM-vennlig**: Konsistente mønstre — Hva, Hvorfor, Hvordan, Vanlige feil, Sjekkliste, FAQ, Oppsummering — og en `Summary`-komponent med 3–6 punkter nederst.
+- **AEO**: Hver viktig side har en kort svarboks (40-70 ord) rett etter H1.
+- **LLM-vennlig**: Konsistente mønstre - Hva, Hvorfor, Hvordan, Vanlige feil, Sjekkliste, FAQ, Oppsummering - og en `Summary`-komponent med 3-6 punkter nederst.
 - **robots.ts** tillater eksplisitt Googlebot, Bingbot, GPTBot, ClaudeBot, PerplexityBot, OAI-SearchBot, Google-Extended og Applebot-Extended.
 - **public/llms.txt** beskriver siden for AI-crawlere.
 - **sitemap.ts** genererer komplett sitemap med alle dynamiske ruter.
@@ -114,11 +114,11 @@ git push -u origin main
 1. Logg inn på <https://vercel.com>.
 2. Klikk **Add New** → **Project**.
 3. Importer GitHub-repoet `domene-io`.
-4. Vercel detekterer Next.js automatisk — ingen ekstra konfigurasjon trengs.
+4. Vercel detekterer Next.js automatisk - ingen ekstra konfigurasjon trengs.
 5. Klikk **Deploy**.
 6. Når deployet er ferdig, gå til **Settings → Domains** og legg til `domene.io`.
-7. Følg DNS-instruksjonene — pek hoveddomenet til Vercel sine servere via A-peker eller CNAME (avhengig av oppsett).
-8. Aktiver automatisk HTTPS — Vercel håndterer Let's Encrypt-sertifikat automatisk.
+7. Følg DNS-instruksjonene - pek hoveddomenet til Vercel sine servere via A-peker eller CNAME (avhengig av oppsett).
+8. Aktiver automatisk HTTPS - Vercel håndterer Let's Encrypt-sertifikat automatisk.
 9. Husk å oppdatere `lib/site.ts` med riktig `url` før første produksjonsdeploy hvis det er endringer.
 
 ### Miljøvariabler
@@ -127,12 +127,12 @@ Foreløpig trenger ikke prosjektet noen miljøvariabler. Når du kobler skjemaet
 
 ## Tilgjengelighet og ytelse
 
-- Semantisk HTML overalt — `<header>`, `<main>`, `<nav>`, `<article>`, `<section>`.
+- Semantisk HTML overalt - `<header>`, `<main>`, `<nav>`, `<article>`, `<section>`.
 - Skip-link øverst for tastaturnavigasjon.
 - Alle skjemaer har eksplisitte `<label>`-tagger.
 - Hero-bildet bruker `next/image` med `priority` for rask LCP.
 - Fontene lastes inline gjennom `next/font` (ingen CLS).
-- Tailwind purger ubrukt CSS automatisk — sluttbundlen er liten.
+- Tailwind purger ubrukt CSS automatisk - sluttbundlen er liten.
 
 ## Lisens
 

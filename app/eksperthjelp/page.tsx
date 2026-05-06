@@ -57,7 +57,7 @@ export default function ExpertHelpPage() {
             </h1>
             <p className="mt-5 font-display text-[16px] leading-[1.65] text-muted">
               Snakk med våre rådgivere når du trenger personlig hjelp. Vi gir
-              konkrete råd basert på din situasjon — ingen forpliktelser, ingen
+              konkrete råd basert på din situasjon - ingen forpliktelser, ingen
               skjulte priser.
             </p>
 
@@ -195,7 +195,7 @@ export default function ExpertHelpPage() {
                     rows={5}
                     value={form.message}
                     onChange={(e) => onChange("message", e.target.value)}
-                    placeholder="Fortell kort hva du trenger hjelp med…"
+                    placeholder="Fortell kort hva du trenger hjelp med..."
                     className="w-full rounded-xl border border-line bg-white px-4 py-3 font-display text-[14px] text-ink focus:border-brand"
                   />
                 </div>

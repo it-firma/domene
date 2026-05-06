@@ -55,7 +55,7 @@ export function Footer() {
             <p className="font-display text-sm leading-[1.6] text-white/55 max-w-[460px] mb-7">
               domene.io er en del av DomainNordic Advisory Group, en nordisk
               rådgivningsgruppe som hjelper bedrifter med strategisk eierskap av
-              domener — bygget for langsiktige eiendeler, ikke transaksjoner.
+              domener - bygget for langsiktige eiendeler, ikke transaksjoner.
             </p>
             {(hasLinkedin || hasX) && (
               <div className="flex gap-2.5">

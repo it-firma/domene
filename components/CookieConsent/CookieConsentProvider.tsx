@@ -28,7 +28,7 @@ import {
 export type ConsentCategory = "necessary" | "preferences" | "analytics";
 
 export type ConsentState = {
-  necessary: true; // Alltid true — kan ikke avslås
+  necessary: true; // Alltid true - kan ikke avslås
   preferences: boolean;
   analytics: boolean;
 };
@@ -120,7 +120,7 @@ export function CookieConsentProvider({ children }: { children: ReactNode }) {
     w.dataLayer.push({
       event: "consent_update",
       analytics_storage: consent.state.analytics ? "granted" : "denied",
-      ad_storage: "denied", // Vi bruker ikke ads — alltid avslått
+      ad_storage: "denied", // Vi bruker ikke ads - alltid avslått
       functionality_storage: consent.state.preferences ? "granted" : "denied",
       personalization_storage: consent.state.preferences
         ? "granted"

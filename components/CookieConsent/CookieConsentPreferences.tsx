@@ -126,7 +126,7 @@ export function CookieConsentPreferences() {
           <div className="space-y-4">
             <CategoryRow
               title="Strengt nødvendige"
-              description="Holder nettstedet i drift — autentisering, sikkerhet, lasting av innhold. Disse kan ikke skrus av."
+              description="Holder nettstedet i drift - autentisering, sikkerhet, lasting av innhold. Disse kan ikke skrus av."
               alwaysOn
               cookies={[
                 {
@@ -144,7 +144,7 @@ export function CookieConsentPreferences() {
 
             <CategoryRow
               title="Preferanser"
-              description="Husker valg du gjør på siden — språk, visningsmodus, lukket bannere. Forbedrer opplevelsen, men er ikke påkrevet."
+              description="Husker valg du gjør på siden - språk, visningsmodus, lukket bannere. Forbedrer opplevelsen, men er ikke påkrevet."
               checked={preferences}
               onChange={setPreferences}
               cookies={[
@@ -163,13 +163,13 @@ export function CookieConsentPreferences() {
 
             <CategoryRow
               title="Analyse"
-              description="Hjelper oss å forstå hvordan tjenesten brukes — hvilke guider som er populære, hvor folk faller av. Ingen profilering eller sporing på tvers av nettsteder."
+              description="Hjelper oss å forstå hvordan tjenesten brukes - hvilke guider som er populære, hvor folk faller av. Ingen profilering eller sporing på tvers av nettsteder."
               checked={analytics}
               onChange={setAnalytics}
               cookies={[
                 {
                   name: "_ga, _ga_*",
-                  purpose: "Google Analytics 4 — anonyme bruksdata",
+                  purpose: "Google Analytics 4 - anonyme bruksdata",
                   duration: "13 mnd",
                   provider: "Google (USA)",
                 },

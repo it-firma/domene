@@ -101,7 +101,7 @@ export default async function OGGuide({
           }}
         />
 
-        {/* TOPP — Logo + kategori-pille */}
+        {/* TOPP - Logo + kategori-pille */}
         <div
           style={{
             display: "flex",
@@ -174,11 +174,11 @@ export default async function OGGuide({
                 display: "flex",
               }}
             />
-            <span style={{ display: "flex" }}>Guide · {category}</span>
+            <span style={{ display: "flex" }}>Guide - {category}</span>
           </div>
         </div>
 
-        {/* MIDT — Tittel */}
+        {/* MIDT - Tittel */}
         <div
           style={{
             display: "flex",
@@ -204,7 +204,7 @@ export default async function OGGuide({
           </div>
         </div>
 
-        {/* BUNN — Lesetid + URL */}
+        {/* BUNN - Lesetid + URL */}
         <div
           style={{
             display: "flex",
