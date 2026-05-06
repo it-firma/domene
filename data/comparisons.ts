@@ -1116,6 +1116,7 @@ export const comparisons: Comparison[] = [
           fakta: "Stiftet 1998. 20 000+ kunder. Norid-akkreditert. En av to reelt uavhengige norske aktører.",
         },
         note: "Webhuset er per mai 2026 én av to registrarer i sammenligningen som ikke er del av et internasjonalt konsern.",
+        conglomerate: "norsk-uavhengig",
       },
       {
         name: "Gigahost",
@@ -1127,6 +1128,7 @@ export const comparisons: Comparison[] = [
           fakta: "Stiftet 2006 av gründerne. Tre egne datasentre i Sandefjord. Norid-akkreditert. Norges rimeligste fornyelse på .no.",
         },
         note: "Gigahost eies fortsatt av gründerne som startet selskapet i 2006. Eget datasenter, ingen konserneier.",
+        conglomerate: "norsk-uavhengig",
       },
       {
         name: "Domeneshop",
@@ -1138,6 +1140,7 @@ export const comparisons: Comparison[] = [
           fakta: "45 % markedsandel på .no. 25+ års erfaring. 650 000+ domener. Eneste ICANN-akkrediterte registrar i Norge. Eid av Miss Group siden august 2024.",
         },
         note: "Drives fortsatt fra Oslo med norsk team, men eierskapet ble overført til svenske Miss Group i 2024.",
+        conglomerate: "miss-group",
       },
       {
         name: "Domene.no (Domene AS)",
@@ -1149,6 +1152,7 @@ export const comparisons: Comparison[] = [
           fakta: "Stiftet 1998. 20+ år erfaring. 20 000+ kunder. Pakkepris-modell med epost inkludert. Eid av Miss Group.",
         },
         note: "Egen merkevare under Miss Group, separat fra Domeneshop. Bruker pakkepriser (epost inkludert) som forretningsmodell.",
+        conglomerate: "miss-group",
       },
       {
         name: "Simply.com",
@@ -1160,6 +1164,7 @@ export const comparisons: Comparison[] = [
           fakta: "Tidligere UnoEuro frem til 2020. Del av team.blue — europeisk konsern med 60+ brands i 22 EU-land.",
         },
         note: "Del av team.blue Denmark A/S sammen med ScanNet, Curanet og DanDomain. team.blue eier også svenske Loopia.",
+        conglomerate: "team-blue",
       },
       {
         name: "One.com",
@@ -1171,6 +1176,7 @@ export const comparisons: Comparison[] = [
           fakta: "Dansk-grunnlagt 2002. Group.Ones flaggskip-merkevare globalt. Kontorer i 11 land.",
         },
         note: "Eier også Uniweb, ProISP, checkdomain (Tyskland), dogado (Tyskland), metanet (Sveits), herold (Østerrike), hostnet (Nederland), Zoner og Webglobe.",
+        conglomerate: "one-com-group",
       },
       {
         name: "Uniweb",
@@ -1182,6 +1188,7 @@ export const comparisons: Comparison[] = [
           fakta: "Norsk merkevare under Group.One Norway AS. Samme juridiske selskap som ProISP siden september 2024.",
         },
         note: "Uniweb og ProISP er nå formelt samme selskap, men opererer som to separate merkevarer med egne nettsider og kundeservice.",
+        conglomerate: "one-com-group",
       },
       {
         name: "ProISP",
@@ -1193,6 +1200,7 @@ export const comparisons: Comparison[] = [
           fakta: "Etablert 2002. Ble del av Group.One i januar 2022. Fusjonerte med Uniweb i samme juridiske enhet september 2024.",
         },
         note: "Til tross for samme juridiske enhet som Uniweb, har ProISP rimeligere .com-pris (336,25 kr vs Uniweb 420 kr) — fusjonen har ikke samkjørt prisingen helt.",
+        conglomerate: "one-com-group",
       },
     ],
     importantNotes: [
