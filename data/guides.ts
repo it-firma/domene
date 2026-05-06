@@ -1474,7 +1474,7 @@ export const guides: Guide[] = [
     slug: "varemerke-og-domene",
     title: "Varemerke og domenenavn - slik unngår du konflikt og beskytter posisjonen din",
     description:
-      "En praktisk gjennomgang for bedrifter: hvordan velge domener som ikke krenker andres varemerker, hvordan beskytte ditt eget navn, og hvilke alternativer du har når noen registrerer et domene som ligner på din merkevare.",
+      "Velg domener som ikke krenker andres varemerker, og beskytt egne. Sjekkliste, juridiske grunnregler og gråsoner forklart for norske bedrifter.",
     category: "juridisk-og-varemerke",
     difficulty: "viderekommen",
     readingTime: 14,
@@ -1559,7 +1559,7 @@ export const guides: Guide[] = [
     slug: "velge-internasjonale-domener",
     title: "Internasjonale domener - slik velger du riktig TLD for hvert marked",
     description:
-      "En strategisk gjennomgang for bedrifter som ekspanderer utenfor Norge: når du bør bruke landdomener (ccTLD), når .com er nok, hvordan håndtere flere språk og markeder, og hvilke domeneporteføljer som faktisk gir verdi.",
+      "Strategi for bedrifter som ekspanderer: når du bør bruke ccTLD, når .com holder, hvordan håndtere flere markeder, og fallgruver å unngå.",
     category: "internasjonale-domener",
     difficulty: "viderekommen",
     readingTime: 12,
@@ -1648,7 +1648,7 @@ export const guides: Guide[] = [
     slug: "domene-og-seo",
     title: "Domenenavn og SEO - hvor mye betyr egentlig valget?",
     description:
-      "En ærlig gjennomgang av hva domenenavnet faktisk betyr for søkemotoroptimalisering i 2026: hvilke faktorer som teller, hvilke myter som fortsatt sirkulerer, og hvordan du tar et valg som ikke holder deg tilbake.",
+      "Hva domenenavnet faktisk betyr for SEO i 2026: TLDs påvirkning, søkeord i domenet, og når exact match domain (EMD) gir gevinst.",
     category: "seo-og-synlighet",
     difficulty: "nybegynner",
     readingTime: 11,
@@ -1733,7 +1733,7 @@ export const guides: Guide[] = [
     slug: "domeneutleie-guide",
     title: "Domeneutleie - slik fungerer det, og når lønner det seg?",
     description:
-      "Domeneutleie er en lite kjent, men juridisk solid modell for å bruke et domene man ikke eier. Denne guiden forklarer hvordan utleie skiller seg fra kjøp og overdragelse, hvilke risikomomenter som finnes, og når en leieavtale gir mening for både eier og leietaker.",
+      "Domeneutleie forklart: hvordan det fungerer juridisk og praktisk, hvilke kontrakter som kreves, og når det lønner seg å leie eller leie ut.",
     category: "domeneutleie",
     difficulty: "viderekommen",
     readingTime: 10,
@@ -1818,7 +1818,7 @@ export const guides: Guide[] = [
     slug: "domeneinvestering-grunnleggende",
     title: "Domeneinvestering - slik fungerer markedet, og er det noe for deg?",
     description:
-      "Domener kan kjøpes som investering, men det er ikke enkelt å tjene penger på. Denne guiden går gjennom hvordan markedet faktisk fungerer, hva som driver verdi, hvordan en realistisk strategi ser ut, og hvilke fallgruver som tømmer kontoen for de fleste som prøver.",
+      "Domener som investering: hva premium-domener er, hvordan auksjoner fungerer, risikoer, og hva som skal til for å lykkes som domeneinvestor.",
     category: "domeneinvestering",
     difficulty: "viderekommen",
     readingTime: 13,

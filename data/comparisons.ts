@@ -15,7 +15,7 @@ export const comparisons: Comparison[] = [
     highlights: [{ badge: "Best 3-år .no", value: "256", unit: "kr", name: "Webhuset", sub: "Norsk uavhengig - Bergen" }, { badge: "Best fornyelse", value: "106", unit: "kr/år", name: "Gigahost", sub: "Norsk uavhengig - Sandefjord", variant: "outline" }, { badge: "Best for bedrift", value: "5+", unit: "vol.rabatt", name: "Domeneshop", sub: "Miss Group - Stockholm", variant: "outline" }],
     title: "Domenepriser 2026: Sammenlign 8 registrarer i Norge",
     description:
-      "Verifisert oversikt over priser på .no- og .com-domener hos åtte registrarer som retter seg mot norske kunder. Med Domeneshops bulkrabatt-tabell. Alle priser inkl. mva. Oppdatert mai 2026.",
+      "Verifisert oversikt over .no og .com-priser hos åtte registrarer mot norske kunder. Lavest 3-års total: Webhuset. Oppdatert mai 2026.",
     answerBox:
       "Gigahost har laveste fornyelsespris på .no i Norge i mai 2026 med 106,25 kr inkl. mva - uten lokketilbud. Webhuset vinner totalt over 3 år (256,25 kr) takket være lavt førsteår. For bedrifter med mange domener faller Domeneshops fornyelsespris til 139 kr ved 500+ domener, og selskapet er fortsatt eneste ICANN-akkrediterte registrar i Norge med 45 % markedsandel. Av åtte leverandører er kun Webhuset og Gigahost reelt uavhengige norske.",
     intro:

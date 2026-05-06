@@ -115,6 +115,22 @@ export interface Tool {
   relatedGuides?: string[];
   /** Whether this is a real working tool or coming soon */
   status: "live" | "coming-soon";
+  /** Tagline shown above H1 (e.g., "Verktøy · Domeneregistrering") */
+  tagline?: string;
+  /** Editorial H1 with italic emphasis */
+  editorialTitle?: { lead: string; emphasis: string; tail?: string };
+  /** Featured-snippet answer for AEO (40-70 words) */
+  answerBox?: string;
+  /** Step-by-step usage (HowTo schema) */
+  howToUse?: { title: string; description: string }[];
+  /** What the result means / how to interpret */
+  resultExplained?: { heading: string; body: string }[];
+  /** Common errors and what they mean */
+  commonErrors?: { error: string; explanation: string }[];
+  /** When you typically need this tool */
+  whenNeeded?: string[];
+  /** Related tool slugs */
+  relatedTools?: string[];
 }
 
 export interface ComparisonProvider {
