@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { SectionHead } from "@/components/SectionHead";
+import { KnowledgeBaseSidebar } from "@/components/KnowledgeBaseSidebar";
 import { StructuredData } from "@/components/StructuredData";
 import { Icon } from "@/lib/icons";
 import { canonical, ldBreadcrumb, ldCollectionPage } from "@/lib/seo";
@@ -42,28 +43,39 @@ export default function ComparisonsOverviewPage() {
 
       <div className="bg-surface-100 py-16">
         <div className="container-prose">
-          <SectionHead
-            eyebrow="Alle sammenligninger"
-            title="Velg det du vurderer"
-          />
-          <div className="grid gap-4 md:grid-cols-2">
-            {comparisons.map((c) => (
-              <Link
-                key={c.slug}
-                href={`/sammenligninger/${c.slug}`}
-                className="group rounded-2xl border border-line bg-white p-7 transition hover:border-brand-light hover:shadow-card"
-              >
-                <h3 className="font-display text-[20px] font-medium tracking-[-0.01em] text-ink mb-3">
-                  {c.title}
-                </h3>
-                <p className="font-display text-[14px] leading-[1.6] text-muted m-0 mb-4">
-                  {c.description}
-                </p>
-                <div className="inline-flex items-center gap-1 font-display text-[13px] font-medium text-brand">
-                  Se sammenligning <Icon.ArrowRight size={13} />
-                </div>
-              </Link>
-            ))}
+          <div className="grid gap-8 xl:gap-12 lg:grid-cols-[280px_minmax(0,1fr)]">
+            <aside className="hidden lg:block">
+              <div className="sticky top-24 max-h-[calc(100vh-100px)] overflow-y-auto overscroll-contain pr-1">
+                <KnowledgeBaseSidebar />
+              </div>
+            </aside>
+
+            <div className="min-w-0">
+              <SectionHead
+                eyebrow="Alle sammenligninger"
+                title="Velg det du vurderer"
+                description="Klikk en sammenligning for å se metode, leverandører og anbefalinger."
+              />
+              <div className="grid gap-4 sm:grid-cols-2 2xl:grid-cols-3">
+                {comparisons.map((c) => (
+                  <Link
+                    key={c.slug}
+                    href={`/sammenligninger/${c.slug}`}
+                    className="group flex h-full flex-col rounded-2xl border border-line bg-white p-7 transition hover:border-brand-light hover:shadow-card"
+                  >
+                    <h3 className="font-display text-[18px] font-medium tracking-[-0.01em] text-ink mb-3 leading-snug">
+                      {c.title}
+                    </h3>
+                    <p className="font-display text-[14px] leading-[1.6] text-muted m-0 mb-4 flex-1">
+                      {c.description}
+                    </p>
+                    <div className="inline-flex items-center gap-1 font-display text-[13px] font-medium text-brand">
+                      Se sammenligning <Icon.ArrowRight size={13} />
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

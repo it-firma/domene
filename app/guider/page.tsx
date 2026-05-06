@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GuideCard } from "@/components/GuideCard";
 import { SectionHead } from "@/components/SectionHead";
+import { KnowledgeBaseSidebar } from "@/components/KnowledgeBaseSidebar";
 import { StructuredData } from "@/components/StructuredData";
 import { canonical, ldBreadcrumb, ldCollectionPage } from "@/lib/seo";
 import { guides } from "@/data/guides";
@@ -40,15 +41,25 @@ export default function GuidesOverviewPage() {
 
       <div className="bg-surface-100 py-16">
         <div className="container-prose">
-          <SectionHead
-            eyebrow="Alle guider"
-            title="Velg den som passer deg"
-            description="Vi merker hver guide med vanskelighetsgrad og lesetid, slik at du kan velge riktig nivå."
-          />
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {guides.map((g) => (
-              <GuideCard key={g.slug} guide={g} />
-            ))}
+          <div className="grid gap-8 xl:gap-12 lg:grid-cols-[280px_minmax(0,1fr)]">
+            <aside className="hidden lg:block">
+              <div className="sticky top-24 max-h-[calc(100vh-100px)] overflow-y-auto overscroll-contain pr-1">
+                <KnowledgeBaseSidebar />
+              </div>
+            </aside>
+
+            <div className="min-w-0">
+              <SectionHead
+                eyebrow="Alle guider"
+                title="Velg den som passer deg"
+                description="Vi merker hver guide med vanskelighetsgrad og lesetid, slik at du kan velge riktig nivå."
+              />
+              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+                {guides.map((g) => (
+                  <GuideCard key={g.slug} guide={g} />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

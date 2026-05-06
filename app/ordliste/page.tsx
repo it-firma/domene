@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { GlossaryCard } from "@/components/GlossaryCard";
 import { SectionHead } from "@/components/SectionHead";
+import { KnowledgeBaseSidebar } from "@/components/KnowledgeBaseSidebar";
 import { StructuredData } from "@/components/StructuredData";
 import { canonical, ldBreadcrumb, ldCollectionPage } from "@/lib/seo";
 import { glossary } from "@/data/glossary";
@@ -70,18 +71,28 @@ export default function GlossaryOverviewPage() {
 
       <div className="bg-surface-100 py-16">
         <div className="container-prose">
-          {letters.map((l) => (
-            <section key={l} id={l} className="mb-14 scroll-mt-32">
-              <h2 className="font-display text-[28px] font-medium text-ink mb-6">
-                {l}
-              </h2>
-              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                {byLetter[l].map((t) => (
-                  <GlossaryCard key={t.slug} term={t} />
-                ))}
+          <div className="grid gap-8 xl:gap-12 lg:grid-cols-[280px_minmax(0,1fr)]">
+            <aside className="hidden lg:block">
+              <div className="sticky top-24 max-h-[calc(100vh-100px)] overflow-y-auto overscroll-contain pr-1">
+                <KnowledgeBaseSidebar />
               </div>
-            </section>
-          ))}
+            </aside>
+
+            <div className="min-w-0">
+              {letters.map((l) => (
+                <section key={l} id={l} className="mb-14 scroll-mt-32">
+                  <h2 className="font-display text-[28px] font-medium text-ink mb-6">
+                    {l}
+                  </h2>
+                  <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
+                    {byLetter[l].map((t) => (
+                      <GlossaryCard key={t.slug} term={t} />
+                    ))}
+                  </div>
+                </section>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
