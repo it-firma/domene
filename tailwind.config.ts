@@ -41,7 +41,8 @@ const config: Config = {
         },
       },
       maxWidth: {
-        container: "1180px",
+        container: "1440px",
+        "container-narrow": "1180px",
       },
       boxShadow: {
         card: "0 16px 40px rgba(7,22,51,0.10), 0 4px 12px rgba(7,22,51,0.06)",
